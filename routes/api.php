@@ -20,4 +20,4 @@ use Illuminate\Http\Request;
 
 Route::resource('products', 'Api\ProductController');
 Route::resource('townships', 'Api\TownshipController');
-Route::resource('users', 'Api\UserController');
+Route::resource('customers', 'Api\CustomerController');
