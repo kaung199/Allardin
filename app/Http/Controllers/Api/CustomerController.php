@@ -73,7 +73,7 @@ class CustomerController extends Controller
             $user = User::find($id);
             $data = $user->toArray();
 
-            if (is_null($township)) {
+            if (is_null($user)) {
                 $response = [
                     'success' => false,
                     'data' => 'Empty',
