@@ -14,13 +14,13 @@ class TownshipController extends Controller
             $townships = Township::all();
             $data = $townships->toArray();
 
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'Township retrieved successfully.'
-            ];
+            // $response = [
+            //     'success' => true,
+            //     'data' => $data,
+            //     'message' => 'Township retrieved successfully.'
+            // ];
 
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 
 
@@ -51,13 +51,13 @@ class TownshipController extends Controller
             $townships = Township::create($input);
             $data = $townships->toArray();
 
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'Township stored successfully.'
-            ];
+            // $response = [
+            //     'success' => true,
+            //     'data' => $data,
+            //     'message' => 'Township stored successfully.'
+            // ];
 
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 
 
@@ -82,13 +82,13 @@ class TownshipController extends Controller
             }
 
 
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'Township retrieved successfully.'
-            ];
+            // $response = [
+            //     'success' => true,
+            //     'data' => $data,
+            //     'message' => 'Township retrieved successfully.'
+            // ];
 
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 
 
@@ -120,13 +120,13 @@ class TownshipController extends Controller
             $township->update($input);
             $data = $township->toArray();
 
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'Township updated successfully.'
-            ];
+            // $response = [
+            //     'success' => true,
+            //     'data' => $data,
+            //     'message' => 'Township updated successfully.'
+            // ];
 
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 
 
