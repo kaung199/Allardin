@@ -100,7 +100,7 @@ class CustomerController extends Controller
          * @param  int $id
          * @return \Illuminate\Http\Response
          */
-        public function update(Request $request, User $user)
+        public function update(Request $request, $id)
         {
             $input = $request->all();
 
@@ -118,7 +118,8 @@ class CustomerController extends Controller
                 ];
                 return response()->json($response, 404);
             }
-            
+
+            $user = User::find($id);
             $user->update($input);
             $data = $user->toArray();
 
@@ -138,8 +139,9 @@ class CustomerController extends Controller
          * @param  int $id
          * @return \Illuminate\Http\Response
          */
-        public function destroy(User $user)
+        public function destroy($id)
         {
+            $user = User::find($id);
             $user->delete();
             $data = $user->toArray();
 
