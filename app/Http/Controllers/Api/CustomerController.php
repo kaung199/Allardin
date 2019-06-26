@@ -14,13 +14,7 @@ class CustomerController extends Controller
             $users = User::all();
             $data = $users->toArray();
 
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'User retrieved successfully.'
-            ];
-
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 
 
@@ -52,13 +46,7 @@ class CustomerController extends Controller
             $users = User::create($input);
             $data = $users->toArray();
 
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'Township stored successfully.'
-            ];
-
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 
 
@@ -82,14 +70,7 @@ class CustomerController extends Controller
                 return response()->json($response, 404);
             }
 
-
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'User retrieved successfully.'
-            ];
-
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 
 
@@ -123,13 +104,7 @@ class CustomerController extends Controller
             $user->update($input);
             $data = $user->toArray();
 
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'User updated successfully.'
-            ];
-
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 
 
@@ -144,13 +119,6 @@ class CustomerController extends Controller
             $user = User::find($id);
             $user->delete();
             $data = $user->toArray();
-
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'User deleted successfully.'
-            ];
-
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 }
