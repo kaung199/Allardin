@@ -38,8 +38,7 @@ class ProductController extends Controller
                 $path = '/Photo/'.date("Y").'/'.date("m").'/'.date("d").'/';
                 $file = $request->photo;
                 $filepath = $path.$file->getClientOriginalName();
-                Storage::disk('public')->put($filepath, file_get_contents($file));
-
+                Storage::disk('public_uploads')->put($filepath, file_get_contents($file));
                 $input['photo'] = $filepath;
             }
 
