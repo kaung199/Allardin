@@ -12,8 +12,6 @@ class ProductController extends Controller
     public function index()
         {
             $products = Product::all();
-            $path = '/Photo/'.date("Y").'/'.date("m").'/'.date("d").'/';
-            $products->photo = $path;
             $data = $products->toArray();
 
             $response = [
@@ -42,7 +40,8 @@ class ProductController extends Controller
                 $filepath = $path.$file->getClientOriginalName();
                 Storage::disk('public')->put($filepath, file_get_contents($file));
 
-                $input['photo'] = $filepath;            }
+                $input['photo'] = $filepath;
+            }
 
             $validator = Validator::make($input, [
                 'name' => 'required',
