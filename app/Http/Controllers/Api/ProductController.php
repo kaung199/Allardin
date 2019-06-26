@@ -35,9 +35,9 @@ class ProductController extends Controller
             $input = $request->all();
 
             if($input['photo']){
-                $path = '/Photo/'.date("Y").'/'.date("m").'/'.date("d").'/';
+                // $path = '/Photo/'.date("Y").'/'.date("m").'/'.date("d").'/';
                 $file = $request->photo;
-                $filepath = $path.$file->getClientOriginalName();
+                $filepath = $file->getClientOriginalName();
                 Storage::disk('public_uploads')->put($filepath, file_get_contents($file));
                 $input['photo'] = $filepath;
             }
