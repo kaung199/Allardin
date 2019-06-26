@@ -14,13 +14,13 @@ class ProductController extends Controller
             $products = Product::all();
             $data = $products->toArray();
 
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'Product retrieved successfully.'
-            ];
+            // $response = [
+            //     'success' => true,
+            //     'data' => $data,
+            //     'message' => 'Product retrieved successfully.'
+            // ];
 
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 
 
@@ -61,13 +61,13 @@ class ProductController extends Controller
             $products = Product::create($input);
             $data = $products->toArray();
 
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'Product stored successfully.'
-            ];
+            // $response = [
+            //     'success' => true,
+            //     'data' => $data,
+            //     'message' => 'Product stored successfully.'
+            // ];
 
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 
 
@@ -92,13 +92,13 @@ class ProductController extends Controller
             }
 
 
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'Product retrieved successfully.'
-            ];
+            // $response = [
+            //     'success' => true,
+            //     'data' => $data,
+            //     'message' => 'Product retrieved successfully.'
+            // ];
 
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 
 
@@ -134,13 +134,13 @@ class ProductController extends Controller
             $product->update($input);
             $data = $product->toArray();
 
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'Product updated successfully.'
-            ];
+            // $response = [
+            //     'success' => true,
+            //     'data' => $data,
+            //     'message' => 'Product updated successfully.'
+            // ];
 
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 
 
@@ -155,12 +155,12 @@ class ProductController extends Controller
             $product->delete();
             $data = $product->toArray();
 
-            $response = [
-                'success' => true,
-                'data' => $data,
-                'message' => 'Product deleted successfully.'
-            ];
+            // $response = [
+            //     'success' => true,
+            //     'data' => $data,
+            //     'message' => 'Product deleted successfully.'
+            // ];
 
-            return response()->json($response, 200);
+            return response()->json($data, 200);
         }
 }
