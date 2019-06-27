@@ -14,7 +14,7 @@ class CreateTownshipsTable extends Migration
     public function up()
     {
         Schema::create('townships', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->Increments('id');
             $table->string('name');
             $table->unsignedInteger('deliveryprice');
             $table->timestamps();
