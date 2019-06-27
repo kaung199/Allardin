@@ -11,7 +11,7 @@ class CustomerController extends Controller
 {
     public function index()
         {
-            $users = User::all();
+            $users = User::orderBy('name', 'ASC')->get();
             $data = $users->toArray();
 
             return response()->json($data, 200);
