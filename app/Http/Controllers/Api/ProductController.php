@@ -13,13 +13,6 @@ class ProductController extends Controller
         {
             $products = Product::all();
             $data = $products->toArray();
-
-            // $response = [
-            //     'success' => true,
-            //     'data' => $data,
-            //     'message' => 'Product retrieved successfully.'
-            // ];
-
             return response()->json($data, 200);
         }
 
@@ -34,18 +27,20 @@ class ProductController extends Controller
         {
             $input = $request->all();
 
-            if($input['photo']){
+
+            $validator = Validator::make($input, [
+                'name' => 'required|max:50',
+                'quantity' => 'required',
+                'price' => 'required',
+                'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            ]);
+
+            if($request->photo){
                 $file = $request->photo;
                 $filepath = $file->getClientOriginalName();
                 Storage::disk('public_uploads')->put($filepath, file_get_contents($file));
                 $input['photo'] = $filepath;
             }
-
-            $validator = Validator::make($input, [
-                'name' => 'required',
-                'quantity' => 'required',
-                'price' => 'required'
-            ]);
 
             if ($validator->fails()) {
                 $response = [
@@ -58,12 +53,6 @@ class ProductController extends Controller
 
             $products = Product::create($input);
             $data = $products->toArray();
-
-            // $response = [
-            //     'success' => true,
-            //     'data' => $data,
-            //     'message' => 'Product stored successfully.'
-            // ];
 
             return response()->json($data, 200);
         }
@@ -89,13 +78,6 @@ class ProductController extends Controller
                 return response()->json($response, 404);
             }
 
-
-            // $response = [
-            //     'success' => true,
-            //     'data' => $data,
-            //     'message' => 'Product retrieved successfully.'
-            // ];
-
             return response()->json($data, 200);
         }
 
@@ -109,13 +91,21 @@ class ProductController extends Controller
          */
         public function update(Request $request, Product $product)
         {
-            $input = $request->all();
-
+            $input = $request->all();            
+            
             $validator = Validator::make($input, [
-                'name' => 'required',
+                'name' => 'required|max:50',
                 'quantity' => 'required',
-                'price' => 'required'
+                'price' => 'required',
+                'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
+
+            if($request->photo){
+                $file = $request->photo;
+                $filepath = $file->getClientOriginalName();
+                Storage::disk('public_uploads')->put($filepath, file_get_contents($file));
+                $input['photo'] = $filepath;
+            }
 
             if ($validator->fails()) {
                 $response = [
@@ -126,17 +116,8 @@ class ProductController extends Controller
                 return response()->json($response, 404);
             }
 
-            // $product->name = $input['name'];
-            // $product->decription = $input['decription'];
-            // $product->save();
             $product->update($input);
             $data = $product->toArray();
-
-            // $response = [
-            //     'success' => true,
-            //     'data' => $data,
-            //     'message' => 'Product updated successfully.'
-            // ];
 
             return response()->json($data, 200);
         }
@@ -152,12 +133,6 @@ class ProductController extends Controller
         {
             $product->delete();
             $data = $product->toArray();
-
-            // $response = [
-            //     'success' => true,
-            //     'data' => $data,
-            //     'message' => 'Product deleted successfully.'
-            // ];
 
             return response()->json($data, 200);
         }
