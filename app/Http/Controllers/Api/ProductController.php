@@ -11,7 +11,7 @@ class ProductController extends Controller
 {
     public function index()
         {
-            $products = Product::all();
+            $products = Product::latest()->get();
             $data = $products->toArray();
             return response()->json($data, 200);
         }
