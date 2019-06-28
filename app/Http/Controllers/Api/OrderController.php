@@ -10,48 +10,49 @@ use App\Order;
 use App\Order_detail;
 class OrderController extends Controller
 {
-        public function store(Request $request, $id)
+        public function store(Request $request, $uid, $pid)
         {    	
 
-        	//for Order table
-        	$totalprice = 0;
+        	  //for Order table
+        	  $totalprice = 0;
             $totalquantity = 0;
 
             //for Order_detail
             $totalq = 0;
             $totalp = 0;
 
-            $user = User::find($id);
+            $user = User::find($uid);
 
-            foreach( $examples as $example) {
+            foreach( $products as $product) {
 
         	    Order_detail::create([
-        	            'name' => $example->name,
-        	            'quantity' =>  $totalq += $example->quantity,
-        	            'price' =>  $totalp += $example->price,
+        	            'name' => $product->name,
+        	            'quantity' =>  $totalq += $product->quantity,
+        	            'price' =>  $totalp += $product->price,
         	            'user_id' => $user->id,
 
         	        ]);
 
-        		$totalprice += $example->price * $example->quantity;
-        		$totalquantity += $example->quantity;
+          		$totalprice += $product->price * $product->quantity;
+          		$totalquantity += $product->quantity;
 
 
-        		$product = Product::find($id);
-        		$grandqty = $product->quantity - $example->quantity;
+          		$productt = Product::find($pid);
+          		$grandqty = $productt->quantity - $product->quantity;
 
-        		
-        		$product->update([
-        		    'quantity' => $grandqty,
-        		]);
+          		
+          		$productt->update([
+          		    'quantity' => $grandqty,
+          		]);
 
             }
             
             $order = Order::create([
-    			'totalquantity' => $totalquantity,
-    			'totalprice' =>  $totalprice,
-                'orderdate' => $example->orderdate,
-    			'user_id' => $user->id,
+      			'totalquantity' => $totalquantity,
+      			'totalprice' =>  $totalprice,
+            'deliverystatus' =>  $request->deliverystatus,
+            'orderdate' => $request->orderdate,
+      			'user_id' => $user->id,
 
     		]);
             
