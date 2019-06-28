@@ -23,7 +23,7 @@ class OrderController extends Controller
 
             $user = User::find($id);
 
-            foreach( $products as $pid => $product) {
+            foreach( $request->products as $pid => $product) {
 
         	    Order_detail::create([
         	            'name' => $product->name,
