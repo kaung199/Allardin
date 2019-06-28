@@ -10,7 +10,7 @@ use App\Order;
 use App\Order_detail;
 class OrderController extends Controller
 {
-        public function store(Request $request, $uid, $pid)
+        public function store(Request $request, $id)
         {    	
 
         	  //for Order table
@@ -21,9 +21,9 @@ class OrderController extends Controller
             $totalq = 0;
             $totalp = 0;
 
-            $user = User::find($uid);
+            $user = User::find($id);
 
-            foreach( $products as $product) {
+            foreach( $products as $pid => $product) {
 
         	    Order_detail::create([
         	            'name' => $product->name,

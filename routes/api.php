@@ -22,5 +22,5 @@ Route::resource('products', 'Api\ProductController');
 Route::resource('townships', 'Api\TownshipController');
 Route::resource('customers', 'Api\CustomerController');
 
-Route::get('photo', 'Api/ProductController@store');
-Route::post('order', 'Api/OrderController@store');
+// Route::get('photo', 'Api/ProductController@store');
+Route::post('order/{id}', 'Api\OrderController@store');
