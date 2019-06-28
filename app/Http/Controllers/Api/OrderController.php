@@ -10,8 +10,7 @@ use App\Order;
 use App\Order_detail;
 class OrderController extends Controller
 {
-        public function store(Request $request, $id)
-        {    	
+          	
 
 
             public function store(Request $request)
@@ -35,7 +34,7 @@ class OrderController extends Controller
                 return response()->json($data, 200);
             }
 
-            
+
       //   	  //for Order table
       //   	  $totalprice = 0;
       //       $totalquantity = 0;
@@ -143,5 +142,5 @@ class OrderController extends Controller
       //   	return redirect('/')->with('email', 'Checkout Successfully check you email!');       
 
 
-        }
+        
 }
