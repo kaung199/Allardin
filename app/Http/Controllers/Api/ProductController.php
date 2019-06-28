@@ -38,7 +38,7 @@ class ProductController extends Controller
             if($request->photo){
                 $file = $request->photo;
                 $filepath = $file->getClientOriginalName();
-                Storage::disk('public_uploads')->put($filepath, file_get_contents($file));
+                Storage::disk('public')->put($filepath, file_get_contents($file));
                 $input['photo'] = $filepath;
             }
 
