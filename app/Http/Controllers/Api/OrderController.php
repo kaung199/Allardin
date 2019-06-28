@@ -13,48 +13,71 @@ class OrderController extends Controller
         public function store(Request $request, $id)
         {    	
 
-        	  //for Order table
-        	  $totalprice = 0;
-            $totalquantity = 0;
 
-            //for Order_detail
-            $totalq = 0;
-            $totalp = 0;
+            public function store(Request $request)
+            {
+              foreach($request->products as $id => $product) {
 
-            $user = User::find($id);
+                $order_detail = new Order_detail();
+                $order_detail->name = $product[0];
+                $order_detail->quantity = $product[1];
+                $order_detail->price = $product[2];
+                $order_detail->user_id = $product[3];
+                $order_detail->save();
 
-            foreach( $request->products as $pid => $product) {
-
-        	    Order_detail::create([
-        	            'name' => $product->name,
-        	            'quantity' =>  $totalq += $product->quantity,
-        	            'price' =>  $totalp += $product->price,
-        	            'user_id' => $user->id,
-
-        	        ]);
-
-          		$totalprice += $product->price * $product->quantity;
-          		$totalquantity += $product->quantity;
+                $data = $order_detail->toArray();
 
 
-          		$productt = Product::find($pid);
-          		$grandqty = $productt->quantity - $product->quantity;
+              }
+
+              
+
+                return response()->json($data, 200);
+            }
+
+            
+      //   	  //for Order table
+      //   	  $totalprice = 0;
+      //       $totalquantity = 0;
+
+      //       //for Order_detail
+      //       $totalq = 0;
+      //       $totalp = 0;
+
+      //       $user = User::find($id);
+
+      //       foreach( $request->products as $pid => $product) {
+
+      //   	    Order_detail::create([
+      //   	            'name' => $product->name,
+      //   	            'quantity' =>  $totalq += $product->quantity,
+      //   	            'price' =>  $totalp += $product->price,
+      //   	            'user_id' => $user->id,
+
+      //   	        ]);
+
+      //     		$totalprice += $product->price * $product->quantity;
+      //     		$totalquantity += $product->quantity;
+
+
+      //     		$productt = Product::find($pid);
+      //     		$grandqty = $productt->quantity - $product->quantity;
 
           		
-          		$productt->update([
-          		    'quantity' => $grandqty,
-          		]);
+      //     		$productt->update([
+      //     		    'quantity' => $grandqty,
+      //     		]);
 
-            }
+      //       }
             
-            $order = Order::create([
-      			'totalquantity' => $totalquantity,
-      			'totalprice' =>  $totalprice,
-            'deliverystatus' =>  $request->deliverystatus,
-            'orderdate' => $request->orderdate,
-      			'user_id' => $user->id,
+      //       $order = Order::create([
+      // 			'totalquantity' => $totalquantity,
+      // 			'totalprice' =>  $totalprice,
+      //       'deliverystatus' =>  $request->deliverystatus,
+      //       'orderdate' => $request->orderdate,
+      // 			'user_id' => $user->id,
 
-    		]);
+    		// ]);
             
 
             // foreach(session('cart') as $cart => $details) {
