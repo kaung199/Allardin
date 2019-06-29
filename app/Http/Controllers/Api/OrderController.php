@@ -16,39 +16,70 @@ class OrderController extends Controller
 
             {
 
+
+              $data = $request->json()->all();
+              $name = $data['name'];
+              $quantity = $data['quantity'];
+              $price = $data['price'];
+              $user_id = $data['user_id'];
+
+
+              for($i=0; $i<$quantity; $i++){
+                $products = new Order_detail();
+                $products->name = $name;
+                $products->quantity = $quantity;
+                $products->price = $price;
+                $products->user_id = $user_id;
+                $products->save();
+
+                $data = $products->toArray();
+
+                }
+
+               
+                return response()->json($data, 200);
+
+
+
+
               // $products = $request->json()->all();
               // $rqall = $products['products'];
               // $arrays = json_decode($rqall, true);
 
               // // if($products) {
 
-                foreach($request->products as $id => $product) {
+              //   foreach($request->products as $id => $product) {
 
-                  $order_detail = new Order_detail();
-                  $order_detail->name = $product->name;
-                  $order_detail->quantity = (int)$product->quantity;
-                  $order_detail->price = (int)$product->price;
-                  $order_detail->user_id = (int)$product->user_id;
-                  $order_detail->save();
+              //     $order_detail = new Order_detail();
+              //     $order_detail->name = $product->name;
+              //     $order_detail->quantity = (int)$product->quantity;
+              //     $order_detail->price = (int)$product->price;
+              //     $order_detail->user_id = (int)$product->user_id;
+              //     $order_detail->save();
 
-                  $data = $order_detail->toArray();
+              //     $data = $order_detail->toArray();
 
 
-                }
-                return response()->json($data, 200);
+              //   }
+              //   return response()->json($data, 200);
 
-              // }
+              // // }
               
               
-                //   $product = $request->products;
-                //   $order_detail = new Order_detail();
-                //   $order_detail->name = $product['name'];
-                //   $order_detail->quantity = (int)$product['quantity'];
-                //   $order_detail->price = (int)$product['price'];
-                //   $order_detail->user_id = (int)$product['user_id'];                      
-                //   $order_detail->save();
+                //   $products = $request->products;
 
-                //   $data = $order_detail->toArray();
+                //   foreach($products as $product) {
+                //     $order_detail = new Order_detail();
+                //     $order_detail->name = $product['name'];
+                //     $order_detail->quantity = (int)$product['quantity'];
+                //     $order_detail->price = (int)$product['price'];
+                //     $order_detail->user_id = (int)$product['user_id'];                      
+                //     $order_detail->save();
+
+                //   }
+                  
+
+                // $data = $order_detail->toArray();
 
                 // return response()->json($data, 200);
             }
