@@ -47,7 +47,7 @@ class OrderController extends Controller
 
                   $data = $order_detail->toArray();
 
-                return response()->json($products, 200);
+                return response()->json($data, 200);
             }
 
 
