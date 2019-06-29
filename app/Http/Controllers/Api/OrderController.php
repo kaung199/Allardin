@@ -19,7 +19,7 @@ class OrderController extends Controller
               $products = $request->json()->all();
 
               if($products) {
-                
+
                 foreach($products as $id => $product) {
 
                   $order_detail = new Order_detail();
@@ -33,11 +33,12 @@ class OrderController extends Controller
 
 
                 }
+                return response()->json($data, 200);
               }
               
               
 
-                return response()->json($data, 200);
+                return response()->json($products, 200);
             }
 
 
