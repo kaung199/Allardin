@@ -18,20 +18,23 @@ class OrderController extends Controller
 
               $products = $request->json()->all();
 
+              if($products) {
+                
+                foreach($products as $id => $product) {
 
-              foreach($products as $id => $product) {
+                  $order_detail = new Order_detail();
+                  $order_detail->name = $product['name'];
+                  $order_detail->quantity = $product['quantity'];
+                  $order_detail->price = $product['price'];
+                  $order_detail->user_id = $product['user_id'];
+                  $order_detail->save();
 
-                $order_detail = new Order_detail();
-                $order_detail->name = $product['name'];
-                $order_detail->quantity = $product['quantity'];
-                $order_detail->price = $product['price'];
-                $order_detail->user_id = $product['user_id'];
-                $order_detail->save();
-
-                $data = $order_detail->toArray();
+                  $data = $order_detail->toArray();
 
 
+                }
               }
+              
               
 
                 return response()->json($data, 200);
