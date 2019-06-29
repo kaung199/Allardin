@@ -9,29 +9,28 @@ use App\Product;
 use App\Order;
 use App\Order_detail;
 class OrderController extends Controller
-{
-          	
+{         	
 
 
             public function store(Request $request)
             {
-              foreach($request->products as $id => $product) {
+              // foreach($request->products as $id => $product) {
 
-                $order_detail = new Order_detail();
-                $order_detail->name = $product[0];
-                $order_detail->quantity = $product[1];
-                $order_detail->price = $product[2];
-                $order_detail->user_id = $product[3];
-                $order_detail->save();
+              //   $order_detail = new Order_detail();
+              //   $order_detail->name = $product[0];
+              //   $order_detail->quantity = $product[1];
+              //   $order_detail->price = $product[2];
+              //   $order_detail->user_id = $product[3];
+              //   $order_detail->save();
 
-                $data = $order_detail->toArray();
+              //   $data = $order_detail->toArray();
 
 
-              }
+              // }
 
               
 
-                return response()->json($data, 200);
+                return response()->json($request->products, 200);
             }
 
 
