@@ -22,35 +22,35 @@ class OrderController extends Controller
 
               // // if($products) {
 
-              //   foreach($arrays as $id => $product) {
+                foreach($request->products as $id => $product) {
 
-              //     $order_detail = new Order_detail();
-              //     $order_detail->name = $product->name;
-              //     $order_detail->quantity = (int)$product->quantity;
-              //     $order_detail->price = (int)$product->price;
-              //     $order_detail->user_id = (int)$product->user_id;
-              //     $order_detail->save();
-
-              //     $data = $order_detail->toArray();
-
-
-              //   }
-              //   return response()->json($data, 200);
-                
-              // // }
-              
-              
-                  $product = $request->products;
                   $order_detail = new Order_detail();
-                  $order_detail->name = $product['name'];
-                  $order_detail->quantity = (int)$product['quantity'];
-                  $order_detail->price = (int)$product['price'];
-                  $order_detail->user_id = (int)$product['user_id'];                      
+                  $order_detail->name = $product->name;
+                  $order_detail->quantity = (int)$product->quantity;
+                  $order_detail->price = (int)$product->price;
+                  $order_detail->user_id = (int)$product->user_id;
                   $order_detail->save();
 
                   $data = $order_detail->toArray();
 
+
+                }
                 return response()->json($data, 200);
+
+              // }
+              
+              
+                //   $product = $request->products;
+                //   $order_detail = new Order_detail();
+                //   $order_detail->name = $product['name'];
+                //   $order_detail->quantity = (int)$product['quantity'];
+                //   $order_detail->price = (int)$product['price'];
+                //   $order_detail->user_id = (int)$product['user_id'];                      
+                //   $order_detail->save();
+
+                //   $data = $order_detail->toArray();
+
+                // return response()->json($data, 200);
             }
 
 
