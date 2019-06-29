@@ -25,10 +25,10 @@ class OrderController extends Controller
                 foreach($arrays as $id => $product) {
 
                   $order_detail = new Order_detail();
-                  $order_detail->name = $product['name'];
-                  $order_detail->quantity = (int)$product['quantity'];
-                  $order_detail->price = (int)$product['price'];
-                  $order_detail->user_id = (int)$product['user_id'];
+                  $order_detail->name = $product->name;
+                  $order_detail->quantity = (int)$product->quantity;
+                  $order_detail->price = (int)$product->price;
+                  $order_detail->user_id = (int)$product->user_id;
                   $order_detail->save();
 
                   $data = $order_detail->toArray();
