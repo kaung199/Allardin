@@ -32,11 +32,11 @@ class OrderController extends Controller
                 $products->user_id = $user_id;
                 $products->save();
 
-                $data = $products->toArray();
+
 
                 }
 
-               
+                $data = $products->toArray();
                 return response()->json($data, 200);
 
 
