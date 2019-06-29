@@ -13,24 +13,36 @@ class OrderController extends Controller
 
 
             public function store(Request $request)
+
             {
-              // foreach($request->products as $id => $product) {
 
-              //   $order_detail = new Order_detail();
-              //   $order_detail->name = $product[0];
-              //   $order_detail->quantity = $product[1];
-              //   $order_detail->price = $product[2];
-              //   $order_detail->user_id = $product[3];
-              //   $order_detail->save();
-
-              //   $data = $order_detail->toArray();
+              $products = $request->json()->all();
 
 
-              // }
+              foreach($products as $id => $product) {
 
+                $order_detail = new Order_detail();
+                $order_detail->name = $product['name'];
+                $order_detail->quantity = $product['quantity'];
+                $order_detail->price = $product['price'];
+                $order_detail->user_id = $product['user_id'];
+                $order_detail->save();
+
+                $data = $order_detail->toArray();
+
+
+              }
               
 
-                return response()->json($request->products, 200);
+                return response()->json($data, 200);
+            }
+
+
+            public function show()
+            {
+              $order_detail = Order_detail::all();
+              $data = $order_detail->toArray();
+              return response()->json($data, 200);
             }
 
 
