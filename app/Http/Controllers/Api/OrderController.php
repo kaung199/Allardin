@@ -24,7 +24,7 @@ class OrderController extends Controller
               $user_id = $data['user_id'];
 
 
-              for($i=0; $i<$quantity; $i++){
+              for($i=0; $i<$quantity; $i++) {
                 $products = new Order_detail();
                 $products->name = $name;
                 $products->quantity = $quantity;
@@ -38,50 +38,6 @@ class OrderController extends Controller
 
                 $data = $products->toArray();
                 return response()->json($data, 200);
-
-
-
-
-              // $products = $request->json()->all();
-              // $rqall = $products['products'];
-              // $arrays = json_decode($rqall, true);
-
-              // // if($products) {
-
-              //   foreach($request->products as $id => $product) {
-
-              //     $order_detail = new Order_detail();
-              //     $order_detail->name = $product->name;
-              //     $order_detail->quantity = (int)$product->quantity;
-              //     $order_detail->price = (int)$product->price;
-              //     $order_detail->user_id = (int)$product->user_id;
-              //     $order_detail->save();
-
-              //     $data = $order_detail->toArray();
-
-
-              //   }
-              //   return response()->json($data, 200);
-
-              // // }
-              
-              
-                //   $products = $request->products;
-
-                //   foreach($products as $product) {
-                //     $order_detail = new Order_detail();
-                //     $order_detail->name = $product['name'];
-                //     $order_detail->quantity = (int)$product['quantity'];
-                //     $order_detail->price = (int)$product['price'];
-                //     $order_detail->user_id = (int)$product['user_id'];                      
-                //     $order_detail->save();
-
-                //   }
-                  
-
-                // $data = $order_detail->toArray();
-
-                // return response()->json($data, 200);
             }
 
 
