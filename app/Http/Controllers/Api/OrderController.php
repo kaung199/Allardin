@@ -16,11 +16,13 @@ class OrderController extends Controller
 
             {
 
-              // $products = $request->json()->all();
+              $products = $request->json()->all();
+              $rqall = $products['products'];
+              $arrays = json_decode($rqall, true);
 
               // if($products) {
 
-                foreach($request->products as $id => $product) {
+                foreach($arrays as $id => $product) {
 
                   $order_detail = new Order_detail();
                   $order_detail->name = $product['name'];
