@@ -15,64 +15,61 @@ class OrderController extends Controller
             public function store(Request $request)
 
             {
-
               $gtotalprice = 0;
               $gtotalquantity = 0;
 
-              $data = $request->json()->all();
-              $id = $data['product_id'];
-              $name = $data['name'];
-              $quantity = $data['quantity'];
-              $price = $data['price'];
-              $totalprice = $data['totalprice'];
-              $user_id = $data['user_id'];
-              $township_id = $data['township_id'];
-
-
-              for($i=0; $i<$quantity; $i++) {
-                $products = new Order_detail();
-                $products->name = $name;
-                $products->quantity = $quantity;
-                $products->price = $price;
-                $products->user_id = $user_id;
-                $products->product_id = $id;
-                $products->save();
-
-                // $product = Product::find($id);
-                // $grandqty = $product->quantity - $quantity;
+              $products = $request->json()->all();
+              foreach($products as $product) {
+                $pro = Order_detail::create([
+                  'name' => $product['name'],
+                  'quantity' => $product['quantity'],
+                  'price' => $product['price'],
+                  'totalprice' => $product['totalprice'],
+                  'user_id' => $product['user_id'],
+                  'product_id' => $product['id'],
+                ]);
                 
-                // $product->update([
-                //     'quantity' => $grandqty,
-                // ]);
+                $productt = Product::find($product['id']);               
+                $productt->update([
+                     'quantity' => $productt->quantity - $product['quantity'],
+                 ]);
 
-                // $gtotalprice += $totalprice * $quantity;
-                // $gtotalquantity += $quantity;
+                $gtotalprice += $product['totalprice'];
+                $gtotalquantity += $product['quantity'];
 
 
               }
 
-              // $order = Order::create([
-              //   'totalquantity' => $gtotalquantity,
-              //   'totalprice' =>  $gtotalprice,
-              //   'orderdate' => date('d-m-y'),
-              //   'user_id' => $user_id,
-              //   'township_id' => $township_id,
-              //   'deliverystatus' => 1,
+              $order = Order::create([
+                'totalquantity' => $gtotalquantity,
+                'totalprice' =>  $gtotalprice,
+                'orderdate' => date('d-m-y'),
+                'user_id' => $product['user_id'],
+                'township_id' => $product['township_id'],
+                'deliverystatus' => 1,
 
-              // ]);
-              // $dataorder = $order->toArray(); 
-              // $dataproduct = $product->toArray(); 
-              // $data = $products->toArray();
-              // return response()->json([$data,$dataorder,$dataproduct], 200);
+              ]);
+              $data1 = $order->toArray();
+              $data2 = $pro->toArray();
+              $data3 = $productt->toArray();
 
-              $data = $products->toArray();
-              return response()->json($data, 200);
+              return response()->json([$data1,$data2,$data3], 200);
+             
+
             }
 
 
             public function show()
             {
-              $order_detail = Order_detail::all();
+              $order_detail = Order_detail::latest()->get();
+              $data = $order_detail->toArray();
+              return response()->json($data, 200);
+            }
+
+            public function orders()
+            {
+
+              $order_detail = Order::latest()->get();
               $data = $order_detail->toArray();
               return response()->json($data, 200);
             }
