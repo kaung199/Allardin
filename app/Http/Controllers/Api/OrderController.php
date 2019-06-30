@@ -54,7 +54,7 @@ class OrderController extends Controller
               $order = Order::create([
                 'totalquantity' => $gtotalquantity,
                 'totalprice' =>  $gtotalprice,
-                'orderdate' => date('d-m-y');,
+                'orderdate' => date('d-m-y'),
                 'user_id' => $user_id,
                 'township_id' => $township_id,
                 'deliverystatus' => 1,
