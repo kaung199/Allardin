@@ -38,32 +38,35 @@ class OrderController extends Controller
                 $products->product_id = $id;
                 $products->save();
 
-                $product = Product::find($id);
-                $grandqty = $product->quantity - $quantity;
+                // $product = Product::find($id);
+                // $grandqty = $product->quantity - $quantity;
                 
-                $product->update([
-                    'quantity' => $grandqty,
-                ]);
+                // $product->update([
+                //     'quantity' => $grandqty,
+                // ]);
 
-                $gtotalprice += $totalprice * $quantity;
-                $gtotalquantity += $quantity;
+                // $gtotalprice += $totalprice * $quantity;
+                // $gtotalquantity += $quantity;
 
 
               }
 
-              $order = Order::create([
-                'totalquantity' => $gtotalquantity,
-                'totalprice' =>  $gtotalprice,
-                'orderdate' => date('d-m-y'),
-                'user_id' => $user_id,
-                'township_id' => $township_id,
-                'deliverystatus' => 1,
+              // $order = Order::create([
+              //   'totalquantity' => $gtotalquantity,
+              //   'totalprice' =>  $gtotalprice,
+              //   'orderdate' => date('d-m-y'),
+              //   'user_id' => $user_id,
+              //   'township_id' => $township_id,
+              //   'deliverystatus' => 1,
 
-              ]);
-              $dataorder = $order->toArray(); 
-              $dataproduct = $product->toArray(); 
+              // ]);
+              // $dataorder = $order->toArray(); 
+              // $dataproduct = $product->toArray(); 
+              // $data = $products->toArray();
+              // return response()->json([$data,$dataorder,$dataproduct], 200);
+
               $data = $products->toArray();
-              return response()->json([$data,$dataorder,$dataproduct], 200);
+              return response()->json($data, 200);
             }
 
 
