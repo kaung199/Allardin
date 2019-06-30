@@ -16,12 +16,17 @@ class OrderController extends Controller
 
             {
 
+              $gtotalprice = 0;
+              $gtotalquantity = 0;
 
               $data = $request->json()->all();
+              $id = $data['product_id'];
               $name = $data['name'];
               $quantity = $data['quantity'];
               $price = $data['price'];
+              $totalprice = $data['totalprice'];
               $user_id = $data['user_id'];
+              $township_id = $data['township_id'];
 
 
               for($i=0; $i<$quantity; $i++) {
@@ -30,12 +35,35 @@ class OrderController extends Controller
                 $products->quantity = $quantity;
                 $products->price = $price;
                 $products->user_id = $user_id;
+                $products->product_id = $id;
                 $products->save();
 
-                }
+                $product = Product::find($id);
+                $grandqty = $product->quantity - $quantity;
+                
+                $product->update([
+                    'quantity' => $grandqty,
+                ]);
 
-                $data = $products->toArray();
-                return response()->json($data, 200);
+                $gtotalprice += $totalprice * $quantity;
+                $gtotalquantity += $quantity;
+
+
+              }
+
+              $order = Order::create([
+                'totalquantity' => $gtotalquantity,
+                'totalprice' =>  $gtotalprice,
+                'orderdate' => date('d-m-y');,
+                'user_id' => $user_id,
+                'township_id' => $township_id,
+                'deliverystatus' => 1,
+
+              ]);
+              $dataorder = $order->toArray(); 
+              $dataproduct = $product->toArray(); 
+              $data = $products->toArray();
+              return response()->json([$data,$dataorder,$dataproduct], 200);
             }
 
 
