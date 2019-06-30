@@ -18,7 +18,6 @@ class CreateOrdersTable extends Migration
             $table->unsignedInteger('totalquantity');
             $table->unsignedInteger('totalprice');
             $table->string('deliverystatus');
-            $table->date('orderdate');
             $table->timestamps();
         });
     }
