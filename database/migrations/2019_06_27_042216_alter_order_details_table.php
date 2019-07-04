@@ -19,12 +19,6 @@ class AlterOrderDetailsTable extends Migration
                 ->references('id')->on('users')
                 ->onUpdate('cascade')
                 ->onDelete('set null');
-
-            $table->unsignedInteger('product_id')->nullable();
-            $table->foreign('product_id')
-                ->references('id')->on('products')
-                ->onUpdate('cascade')
-                ->onDelete('set null');
         });
     }
 

@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class AlterOrdersTable extends Migration
+class AlterUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class AlterOrdersTable extends Migration
      */
     public function up()
     {
-        Schema::table('orders', function (Blueprint $table) {
-            $table->unsignedInteger('user_id')->nullable();
-            $table->foreign('user_id')
-                ->references('id')->on('users')
+        Schema::table('users', function (Blueprint $table) {
+            
+            $table->unsignedInteger('township_id')->nullable();
+            $table->foreign('township_id')
+                ->references('id')->on('townships')
                 ->onUpdate('cascade')
                 ->onDelete('set null');
         });
@@ -29,7 +30,7 @@ class AlterOrdersTable extends Migration
      */
     public function down()
     {
-        Schema::table('orders', function (Blueprint $table) {
+        Schema::table('users', function (Blueprint $table) {
             //
         });
     }
