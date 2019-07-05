@@ -20,7 +20,7 @@ class OrderController extends Controller
       $gtotalprice = 0;
       $gtotalquantity = 0;
       $products = $request->json()->all();
-
+    
       foreach($products as $product) {
         $pro = Order_detail::create([
           'name' => $product['name'],
@@ -28,6 +28,7 @@ class OrderController extends Controller
           'price' => $product['price'],
           'totalprice' => $product['totalprice'],
           'user_id' => $product['user_id'],
+          'order_id' => $product['id'],
         ]);
         
         $productt = Product::find($product['product_id']);               
