@@ -42,7 +42,6 @@ class OrderController extends Controller
         'user_id' => $product['user_id'],
         'deliverystatus' => 1,
       ]);
-
       foreach($products as $product) {
         $pro = Order_detail::create([
           'name' => $product['name'],
@@ -50,15 +49,16 @@ class OrderController extends Controller
           'price' => $product['price'],
           'totalprice' => $product['totalprice'],
           'user_id' => $product['user_id'],
-          'order_id' => $product['id'],
+          'order_id' => $order['id'],
         ]);
 
       }
 
-      $data1 = $order->toArray();
-      $data2 = $pro->toArray();
-      $data3 = $productt->toArray();
-      return response()->json([$data1,$data2,$data3], 200);
+      $response = [
+                  'success' => true
+              ];
+
+      return response()->json($response, 200);
      
     }
 
