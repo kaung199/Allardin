@@ -31,6 +31,7 @@ class TownshipController extends Controller
             $validator = Validator::make($input, [
                 'name' => 'required',
                 'deliveryprice' => 'required',
+                'deliveryman' => 'required',
             ]);
 
             if ($validator->fails()) {
@@ -86,7 +87,8 @@ class TownshipController extends Controller
 
             $validator = Validator::make($input, [
                 'name' => 'required',
-                'deliveryprice' => 'required'
+                'deliveryprice' => 'required',
+                'deliveryman' => 'required',
             ]);
 
             if ($validator->fails()) {
