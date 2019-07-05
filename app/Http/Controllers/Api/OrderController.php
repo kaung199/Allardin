@@ -27,10 +27,11 @@ class OrderController extends Controller
           'quantity' => $product['quantity'],
           'price' => $product['price'],
           'totalprice' => $product['totalprice'],
-          'user_id' => $product['user_id']
+          'user_id' => $product['user_id'],
+          'order_id' => $product['id'],
         ]);
         
-        $productt = Product::find($product['id']);               
+        $productt = Product::find($product['product_id']);               
         $productt->update([
              'quantity' => $productt->quantity - $product['quantity'],
          ]);
@@ -40,9 +41,12 @@ class OrderController extends Controller
 
       }
 
+      $userlocation = User::find($product['user_id']);
+      $deliveryprice = $userlocation->township['deliveryprice'];
+
       $order = Order::create([
         'totalquantity' => $gtotalquantity,
-        'totalprice' =>  $gtotalprice,
+        'totalprice' =>  $gtotalprice + $deliveryprice,
         'user_id' => $product['user_id'],
         'deliverystatus' => 1,
       ]);
@@ -58,21 +62,11 @@ class OrderController extends Controller
     public function orderdetail($id)
     {
 
-      $user = User::find($id);     
-      foreach($user->orderdetails as $order) {
-        $userdetail = [
-          'username' => $user['name'],
-          'productname' => $order['name'],
-          'quantity' => $order['quantity'],
-          'price' => $order['price'],
-          'totalprice' => $order['totalprice'],
-          'deliveryprice' => $user->township['deliveryprice'],
-          'grandtotal' => $order['totalprice'] + $user->township['deliveryprice'],
-          'address' => $user['address'],
-          'phone' => $user['phone'],
-        ];
-      }      
-      return response()->json($userdetail, 200);
+      $order = Order::find($id);         
+      $order->orderdetails;  
+      $order->user;     
+      $order->user->township;          
+      return response()->json($order, 200);
 
     }
 
