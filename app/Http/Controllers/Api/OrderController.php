@@ -27,8 +27,7 @@ class OrderController extends Controller
           'quantity' => $product['quantity'],
           'price' => $product['price'],
           'totalprice' => $product['totalprice'],
-          'user_id' => $product['user_id'],
-          // 'order_id' => $product['o_id'],
+          'user_id' => $product['user_id']
         ]);
         
         $productt = Product::find($product['product_id']);               
