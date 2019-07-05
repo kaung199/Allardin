@@ -20,16 +20,8 @@ class OrderController extends Controller
       $gtotalprice = 0;
       $gtotalquantity = 0;
       $products = $request->json()->all();
-    
+
       foreach($products as $product) {
-        $pro = Order_detail::create([
-          'name' => $product['name'],
-          'quantity' => $product['quantity'],
-          'price' => $product['price'],
-          'totalprice' => $product['totalprice'],
-          'user_id' => $product['user_id'],
-          'order_id' => $product['id'],
-        ]);
         
         $productt = Product::find($product['product_id']);               
         $productt->update([
@@ -50,6 +42,18 @@ class OrderController extends Controller
         'user_id' => $product['user_id'],
         'deliverystatus' => 1,
       ]);
+
+      foreach($products as $product) {
+        $pro = Order_detail::create([
+          'name' => $product['name'],
+          'quantity' => $product['quantity'],
+          'price' => $product['price'],
+          'totalprice' => $product['totalprice'],
+          'user_id' => $product['user_id'],
+          'order_id' => $product['id'],
+        ]);
+
+      }
 
       $data1 = $order->toArray();
       $data2 = $pro->toArray();
