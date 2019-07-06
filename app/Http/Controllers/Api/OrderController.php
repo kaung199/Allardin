@@ -60,7 +60,8 @@ class OrderController extends Controller
     public function orderdetail($id)
     {
 
-      $order = Order::find($id)->join('users', 'users.id', '=', 'orders.user_id')
+      $order = Order::where('orders.id', $id)
+                  ->join('users', 'users.id', '=', 'orders.user_id')
                   ->join('townships', 'townships.id', '=', 'users.township_id')
                   ->join('order_details', 'order_details.order_id', '=', 'orders.id')
                   ->select('order_details.name as product_name',
