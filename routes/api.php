@@ -27,4 +27,10 @@ Route::post('order', 'Api\OrderController@store');
 
 Route::get('/getorderdetail/{id}', 'Api\OrderController@orderdetail');
 
+
 Route::get('getorder', 'Api\OrderController@orders');
+Route::post('/deliverystatus/{id}', 'Api\OrderController@deliverystatus');
+Route::get('orderprepare', 'Api\OrderController@orderprepare');
+Route::get('delivery', 'Api\OrderController@delivery');
+Route::get('payment', 'Api\OrderController@payment');
+Route::get('complete', 'Api\OrderController@complete');
