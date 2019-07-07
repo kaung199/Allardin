@@ -107,6 +107,7 @@ class OrderController extends Controller
     public function orders()
     {
 
+
       $orders = Order::orderBy('orders.id', 'desc')
                 ->join('users', 'users.id', '=', 'orders.user_id')
                 ->join('townships', 'townships.id', '=', 'users.township_id')
