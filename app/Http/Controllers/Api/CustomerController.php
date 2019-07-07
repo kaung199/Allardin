@@ -30,7 +30,7 @@ class CustomerController extends Controller
 
             $validator = Validator::make($input, [
                 'name' => 'required|max:50',
-                'phone' => 'required|min:11|max:40',
+                'phone' => 'required|max:40',
                 'address' => 'required|max:2048',
                 'township_id' => 'required',
             ]);
@@ -88,7 +88,7 @@ class CustomerController extends Controller
 
             $validator = Validator::make($input, [
                 'name' => 'required|max:50',
-                'phone' => 'required|min:11|max:40',
+                'phone' => 'required|max:40',
                 'address' => 'required|2048',
                 'township_id' => 'required'
             ]);
