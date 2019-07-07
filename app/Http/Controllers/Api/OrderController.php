@@ -117,7 +117,7 @@ class OrderController extends Controller
 
     public function orderprepare()
     {
-      $order = Order::where('deliverystatus', 1)
+      $order = Order::orderBy('orders.id', 'desc')->where('deliverystatus', 1)
               ->join('users', 'users.id', '=', 'orders.user_id')
               ->join('townships', 'townships.id', '=', 'users.township_id')
               ->select('orders.id as order_id',
@@ -139,7 +139,7 @@ class OrderController extends Controller
 
     public function delivery()
     {
-      $order = Order::where('deliverystatus', 2)
+      $order = Order::orderBy('orders.id', 'desc')->where('deliverystatus', 2)
               ->join('users', 'users.id', '=', 'orders.user_id')
               ->join('townships', 'townships.id', '=', 'users.township_id')
               ->select('orders.id as order_id',
@@ -160,7 +160,7 @@ class OrderController extends Controller
 
     public function payment()
     {
-      $order = Order::where('deliverystatus', 3)
+      $order = Order::orderBy('orders.id', 'desc')->where('deliverystatus', 3)
               ->join('users', 'users.id', '=', 'orders.user_id')
               ->join('townships', 'townships.id', '=', 'users.township_id')
               ->select('orders.id as order_id',
@@ -181,7 +181,7 @@ class OrderController extends Controller
 
     public function complete()
     {
-      $order = Order::where('deliverystatus', 4)
+      $order = Order::orderBy('orders.id', 'desc')->where('deliverystatus', 4)
                 ->join('users', 'users.id', '=', 'orders.user_id')
                 ->join('townships', 'townships.id', '=', 'users.township_id')
                 ->select('orders.id as order_id',
@@ -198,6 +198,14 @@ class OrderController extends Controller
                   'townships.deliveryman')
                 ->get();
       return response()->json($order, 200);
+    }
+
+    public function deleteorder($id)
+    {
+      $order = Order::find($id);
+      $order->delete();
+      $response = [ 'success' => true ];
+      return response()->json($response, 200);
     }
 
 
