@@ -29,9 +29,9 @@ class TownshipController extends Controller
             $input = $request->all();
 
             $validator = Validator::make($input, [
-                'name' => 'required',
-                'deliveryprice' => 'required',
-                'deliveryman' => 'required',
+                'name' => 'required|max:50',
+                'deliveryprice' => 'required|max:100',
+                'deliveryman' => 'required|max:50',
             ]);
 
             if ($validator->fails()) {
@@ -86,9 +86,9 @@ class TownshipController extends Controller
             $input = $request->all();
 
             $validator = Validator::make($input, [
-                'name' => 'required',
-                'deliveryprice' => 'required',
-                'deliveryman' => 'required',
+                'name' => 'required|max:50',
+                'deliveryprice' => 'required|max:100',
+                'deliveryman' => 'required|max:50',
             ]);
 
             if ($validator->fails()) {

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Validator;
 use App\User;
 use App\Product;
 use App\Order;
@@ -22,6 +23,22 @@ class OrderController extends Controller
       $products = $request->json()->all();
 
       foreach($products as $product) {
+
+        $validator = Validator::make($product, [
+            'name' => 'required|max:50',
+            'quantity' => 'required|max:100',
+            'price' => 'required|max:100',
+            'totalprice' => 'required|max:100',
+        ]);
+
+        if ($validator->fails()) {
+            $response = [
+                'success' => false,
+                'data' => 'Validation Error.',
+                'message' => $validator->errors()
+            ];
+            return response()->json($response, 404);
+        }
         
         $productt = Product::find($product['product_id']);
 

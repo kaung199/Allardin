@@ -30,8 +30,8 @@ class ProductController extends Controller
 
             $validator = Validator::make($input, [
                 'name' => 'required|max:50',
-                'quantity' => 'required',
-                'price' => 'required',
+                'quantity' => 'required|max:100',
+                'price' => 'required|max:100',
                 'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
 
@@ -95,8 +95,8 @@ class ProductController extends Controller
             
             $validator = Validator::make($input, [
                 'name' => 'required|max:50',
-                'quantity' => 'required',
-                'price' => 'required',
+                'quantity' => 'required|max:100',
+                'price' => 'required|max:100',
                 'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
             ]);
 
