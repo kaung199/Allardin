@@ -82,11 +82,22 @@ class OrderController extends Controller
     public function orders()
     {
 
-      $orders = Order::latest()->get();
-      foreach($orders as $od) {        
-        $od->user;
-        $od->user['township'];          
-      }
+      $orders = Order::orderBy('orders.id', 'desc')
+                ->join('users', 'users.id', '=', 'orders.user_id')
+                ->join('townships', 'townships.id', '=', 'users.township_id')
+                ->select('orders.id as order_id',
+                  'orders.totalquantity',
+                  'orders.totalprice',
+                  'orders.deliverystatus',
+                  'users.id as user_id',
+                  'users.name',
+                  'users.phone',
+                  'users.address',
+                  'townships.id as township_id',
+                  'townships.name as township_name',
+                  'townships.deliveryprice',
+                  'townships.deliveryman')
+                ->get();
 
       return response()->json($orders, 200);
       
@@ -106,25 +117,86 @@ class OrderController extends Controller
 
     public function orderprepare()
     {
-      $order = Order::where('deliverystatus', 1)->latest()->get();
+      $order = Order::where('deliverystatus', 1)
+              ->join('users', 'users.id', '=', 'orders.user_id')
+              ->join('townships', 'townships.id', '=', 'users.township_id')
+              ->select('orders.id as order_id',
+                'orders.totalquantity',
+                'orders.totalprice',
+                'orders.deliverystatus',
+                'users.id as user_id',
+                'users.name',
+                'users.phone',
+                'users.address',
+                'townships.id as township_id',
+                'townships.name as township_name',
+                'townships.deliveryprice',
+                'townships.deliveryman')
+              ->get();
+              
       return response()->json($order, 200);
     }
 
     public function delivery()
     {
-      $order = Order::where('deliverystatus', 2)->latest()->get();
+      $order = Order::where('deliverystatus', 2)
+              ->join('users', 'users.id', '=', 'orders.user_id')
+              ->join('townships', 'townships.id', '=', 'users.township_id')
+              ->select('orders.id as order_id',
+                'orders.totalquantity',
+                'orders.totalprice',
+                'orders.deliverystatus',
+                'users.id as user_id',
+                'users.name',
+                'users.phone',
+                'users.address',
+                'townships.id as township_id',
+                'townships.name as township_name',
+                'townships.deliveryprice',
+                'townships.deliveryman')
+              ->get();
       return response()->json($order, 200);
     }
 
     public function payment()
     {
-      $order = Order::where('deliverystatus', 3)->latest()->get();
+      $order = Order::where('deliverystatus', 3)
+              ->join('users', 'users.id', '=', 'orders.user_id')
+              ->join('townships', 'townships.id', '=', 'users.township_id')
+              ->select('orders.id as order_id',
+                'orders.totalquantity',
+                'orders.totalprice',
+                'orders.deliverystatus',
+                'users.id as user_id',
+                'users.name',
+                'users.phone',
+                'users.address',
+                'townships.id as township_id',
+                'townships.name as township_name',
+                'townships.deliveryprice',
+                'townships.deliveryman')
+              ->get();
       return response()->json($order, 200);
     }
 
     public function complete()
     {
-      $order = Order::where('deliverystatus', 4)->latest()->get();
+      $order = Order::where('deliverystatus', 4)
+                ->join('users', 'users.id', '=', 'orders.user_id')
+                ->join('townships', 'townships.id', '=', 'users.township_id')
+                ->select('orders.id as order_id',
+                  'orders.totalquantity',
+                  'orders.totalprice',
+                  'orders.deliverystatus',
+                  'users.id as user_id',
+                  'users.name',
+                  'users.phone',
+                  'users.address',
+                  'townships.id as township_id',
+                  'townships.name as township_name',
+                  'townships.deliveryprice',
+                  'townships.deliveryman')
+                ->get();
       return response()->json($order, 200);
     }
 
