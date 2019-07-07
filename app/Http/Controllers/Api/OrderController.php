@@ -23,16 +23,24 @@ class OrderController extends Controller
 
       foreach($products as $product) {
         
-        $productt = Product::find($product['product_id']);               
+        $productt = Product::find($product['product_id']);
+
+        if( $productt->quantity < $product['quantity'] ) {
+          $response = "Out Of Stock";
+          return response()->json($response, 400);
+        }  
+
         $productt->update([
-             'quantity' => $productt->quantity - $product['quantity'],
-         ]);
+          'quantity' => $productt->quantity - $product['quantity'],
+        ]);
+
         $gtotalprice += $product['totalprice'];
         $gtotalquantity += $product['quantity'];
+
       }
 
       $userlocation = User::find($product['user_id']);
-      $deliveryprice = $userlocation->township['deliveryprice'];
+      $deliveryprice = $userlocation['township']['deliveryprice'];
       $order = Order::create([
         'totalquantity' => $gtotalquantity,
         'totalprice' =>  $gtotalprice + $deliveryprice,
@@ -204,6 +212,7 @@ class OrderController extends Controller
     {
       $order = Order::find($id);
       $order->delete();
+
       $response = [ 'success' => true ];
       return response()->json($response, 200);
     }
