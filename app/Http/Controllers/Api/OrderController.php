@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Validator;
+use Carbon\Carbon;
 use App\User;
 use App\Product;
 use App\Order;
@@ -235,6 +236,12 @@ class OrderController extends Controller
       return response()->json($response, 200);
     }
 
+    public function dailyorder() 
+    {
+        $today = Carbon::now()->toDateString();
+        $todayorder = Order::where('created_at', $today)->get();
+        dd($todayorder);      
+    }
 
          
 }
