@@ -37,4 +37,7 @@ Route::get('orderprepare', 'Api\OrderController@orderprepare');
 Route::get('delivery', 'Api\OrderController@delivery');
 Route::get('payment', 'Api\OrderController@payment');
 Route::get('complete', 'Api\OrderController@complete');
+
 Route::get('dailyorder', 'Api\OrderController@dailyorder');
+Route::get('monthlyorder', 'Api\OrderController@monthlyorder');
+Route::get('yearlyorder', 'Api\OrderController@yearlyorder');
