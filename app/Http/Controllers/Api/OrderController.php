@@ -307,8 +307,13 @@ class OrderController extends Controller
     public function search(Request $request) 
     {
       $product_search = $request->search;
-      $products = Order::where('orderdate', 'LIKE', '%' . $product_search . '%')->get();
+      $products = Order::where('orderdate', 'LIKE', '%' . $product_search . '%')
+                  ->orWhere('monthly', 'LIKE', '%' . $product_search . '%')
+                  ->orWhere('yearly', 'LIKE', '%' . $product_search . '%')
+                  ->get();
       return response()->json($products, 200);
+        
+
     }
          
 }
