@@ -18,20 +18,16 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {
-
       $gtotalprice = 0;
       $gtotalquantity = 0;
       $products = $request->json()->all();
-
       foreach($products as $product) {
-
         $validator = Validator::make($product, [
             'name' => 'required|max:50',
             'quantity' => 'required|max:100',
             'price' => 'required|max:100',
             'totalprice' => 'required|max:100',
         ]);
-
         if ($validator->fails()) {
             $response = [
                 'success' => false,
@@ -42,21 +38,16 @@ class OrderController extends Controller
         }
         
         $productt = Product::find($product['product_id']);
-
         if( $productt->quantity < $product['quantity'] ) {
           $response = "Out Of Stock";
           return response()->json($response, 400);
         }  
-
         $productt->update([
           'quantity' => $productt->quantity - $product['quantity'],
         ]);
-
         $gtotalprice += $product['totalprice'];
         $gtotalquantity += $product['quantity'];
-
       }
-
       $userlocation = User::find($product['user_id']);
       $deliveryprice = $userlocation['township']['deliveryprice'];
       $order = Order::create([
@@ -68,7 +59,6 @@ class OrderController extends Controller
         'user_id' => $product['user_id'],
         'deliverystatus' => 1,
       ]);
-
       foreach($products as $product) {
         $pro = Order_detail::create([
           'name' => $product['name'],
@@ -79,7 +69,6 @@ class OrderController extends Controller
           'order_id' => $order['id'],
         ]);
       }
-
       $response = [ 'success' => true ];
       return response()->json($response, 200);
      
@@ -291,7 +280,7 @@ class OrderController extends Controller
           return response()->json($todayorder, 200);
     }
 
-     public function yearlyorder() 
+    public function yearlyorder() 
     {
       $today = Carbon::now()->format('Y');
       $todayorder = Order::where('yearly', $today)
@@ -313,6 +302,13 @@ class OrderController extends Controller
                     ->get();
 
           return response()->json($todayorder, 200);
+    }
+
+    public function search(Request $request) 
+    {
+      $product_search = $request->search;
+      $products = Order::where('orderdate', 'LIKE', '%' . $product_search . '%')->get();
+      return response()->json($products, 200);
     }
          
 }

@@ -41,3 +41,6 @@ Route::get('complete', 'Api\OrderController@complete');
 Route::get('dailyorder', 'Api\OrderController@dailyorder');
 Route::get('monthlyorder', 'Api\OrderController@monthlyorder');
 Route::get('yearlyorder', 'Api\OrderController@yearlyorder');
+
+
+Route::post('search', 'Api\OrderController@search');
