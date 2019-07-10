@@ -62,6 +62,7 @@ class OrderController extends Controller
       $order = Order::create([
         'totalquantity' => $gtotalquantity,
         'totalprice' =>  $gtotalprice + $deliveryprice,
+        'orderdate' =>  date('Y-m-d'),
         'user_id' => $product['user_id'],
         'deliverystatus' => 1,
       ]);
@@ -116,6 +117,8 @@ class OrderController extends Controller
                   'orders.totalquantity',
                   'orders.totalprice',
                   'orders.deliverystatus',
+                  'orders.created_at',
+                  'orders.orderdate',
                   'users.id as user_id',
                   'users.name',
                   'users.phone',
@@ -238,9 +241,29 @@ class OrderController extends Controller
 
     public function dailyorder() 
     {
+
         $today = Carbon::now()->toDateString();
-        $todayorder = Order::where('created_at', $today)->get();
-        dd($todayorder);      
+
+        $todayorder = Order::where('orderdate', $today)
+                      ->join('users', 'users.id', '=', 'orders.user_id')
+                      ->join('townships', 'townships.id', '=', 'users.township_id')
+                      ->select('orders.id as order_id',
+                        'orders.totalquantity',
+                        'orders.totalprice',
+                        'orders.deliverystatus',
+                        'orders.created_at',
+                        'orders.orderdate',
+                        'users.id as user_id',
+                        'users.name',
+                        'users.phone',
+                        'users.address',
+                        'townships.id as township_id',
+                        'townships.name as township_name',
+                        'townships.deliveryprice',
+                        'townships.deliveryman')
+                      ->get();
+
+            return response()->json($todayorder, 200);    
     }
 
          
