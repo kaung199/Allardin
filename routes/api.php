@@ -24,6 +24,8 @@ Route::resource('customers', 'Api\CustomerController');
 
 // Route::get('photo', 'Api/ProductController@store');
 Route::post('order', 'Api\OrderController@store');
+Route::post('od', 'Api\OrderController@stor');
+
 
 Route::get('/getorderdetail/{id}', 'Api\OrderController@orderdetail');
 
