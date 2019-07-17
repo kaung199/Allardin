@@ -10683,7 +10683,7 @@ a:hover {
 
 @media (max-width: 576px) {
   .card {
-    width: 22rem !important;
+    width: 20rem !important;
   }
 }
 
