@@ -7,6 +7,47 @@
 require('./bootstrap');
 
 window.Vue = require('vue');
+import VueRouter from 'vue-router'
+
+import App from './AppComponent'
+import Home from './components/HomeComponent'
+import Example from './components/ExampleComponent'
+import IndexLayout from './components/Layouts/IndexLayoutComponent'
+import Detail from './components/DetailComponent'
+
+
+
+Vue.use(VueRouter)
+
+const router = new VueRouter({
+    mode: 'history',
+    routes: [
+        {
+            path: '/',
+            redirect: '/',
+            component: App,
+            children: [
+                {
+                    path: '/',
+                    redirect: '/',
+                    component: IndexLayout,
+                    children: [
+                        {
+                            path: '/',
+                            name: 'Home',
+                            component: Home,
+                        },
+                        {
+                            path: '/detail',
+                            name: 'detail',
+                            component: Detail,                            
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+});
 
 /**
  * The following block of code may be used to automatically register your
@@ -19,7 +60,9 @@ window.Vue = require('vue');
 // const files = require.context('./', true, /\.vue$/i);
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default));
 
-Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+// Vue.component('example-component', require('./components/ExampleComponent.vue').default);
+Vue.component('App', require('./AppComponent.vue').default);
+
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to
@@ -29,4 +72,6 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 
 const app = new Vue({
     el: '#app',
+    render: h => h(App),
+    router
 });

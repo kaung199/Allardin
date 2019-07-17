@@ -6,3 +6,60 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+body {
+    font-family: 'Roboto', sans-serif;
+}
+a {
+    color : black;
+}
+a:hover {
+    text-decoration: none;
+    color: black;
+    font-style: italic;
+}
+.navagation {
+    background: #29487d;    
+    a {
+        font-family: 'DM Serif Text', serif;
+        color: #ffffff; 
+        text-decoration: none;
+        padding: 10px 0 10px 10px;
+        font-size: 18px;
+    } 
+           
+    margin: 0 auto;
+}
+.card {
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+@media (max-width: 1200px) {  }
+@media (max-width: 992px) {  }
+@media (max-width: 768px) { 
+    .card {
+        width: 13rem !important;
+    }
+ }
+@media (max-width: 576px) {  
+    .card {
+        width: 18rem !important;
+    }
+}
+
+@media (max-width: 375px) {  
+    .card {
+        width: 18rem !important;
+    }
+}
+
+@media (max-width: 320px) {  
+    .card {
+        width: 15rem !important;
+    }
+}
