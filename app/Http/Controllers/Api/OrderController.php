@@ -87,6 +87,7 @@ class OrderController extends Controller
       ]);
       foreach($products as $product) {
         $pro = Order_detail::create([
+          'product_id' => $product['product_id'],
           'name' => $product['name'],
           'quantity' => $product['quantity'],
           'price' => $product['price'],
@@ -125,6 +126,8 @@ class OrderController extends Controller
 
     public function orders()
     {
+      // $orders = Order::all();
+      // dd($orders);
 
 
       $orders = Order::orderBy('orders.id', 'desc')
@@ -250,6 +253,16 @@ class OrderController extends Controller
     public function deleteorder($id)
     {
       $order = Order::find($id);
+
+      foreach($order['orderdetails'] as $orderdetail) {
+        // dd($orderdetail);
+        $product = Product::find($orderdetail['id']);
+        // dd($product);
+        $product->update([
+          'quantity' => $product['quantity'] + $orderdetail['quantity']
+        ]);
+      }
+      // dd($order['orderdetails']['id']);
       $order->delete();
 
       $response = [ 'success' => true ];
@@ -336,6 +349,21 @@ class OrderController extends Controller
       $products = Order::where('orderdate', 'LIKE', '%' . $product_search . '%')
                   ->orWhere('monthly', 'LIKE', '%' . $product_search . '%')
                   ->orWhere('yearly', 'LIKE', '%' . $product_search . '%')
+                  ->join('users', 'users.id', '=', 'orders.user_id')
+                  ->join('townships', 'townships.id', '=', 'users.township_id')
+                  ->select('orders.id as order_id',
+                    'orders.totalquantity',
+                    'orders.totalprice',
+                    'orders.deliverystatus',
+                    'orders.orderdate',
+                    'users.id as user_id',
+                    'users.name',
+                    'users.phone',
+                    'users.address',
+                    'townships.id as township_id',
+                    'townships.name as township_name',
+                    'townships.deliveryprice',
+                    'townships.deliveryman')
                   ->get();
       return response()->json($products, 200);
         
