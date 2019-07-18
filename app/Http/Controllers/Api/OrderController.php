@@ -72,7 +72,10 @@ class OrderController extends Controller
           'totalprice' => 'required',
           'user_id' => 'required',
         ]);
-
+        if($product['user_id'] == 0) {
+          $required = 'user_id required!';
+          return response()->json($required, 404); 
+        }
         if ($validator->fails()) {
             $response = [
                 'success' => false,
