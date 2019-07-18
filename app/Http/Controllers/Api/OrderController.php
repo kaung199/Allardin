@@ -253,18 +253,14 @@ class OrderController extends Controller
     public function deleteorder($id)
     {
       $order = Order::find($id);
-
       foreach($order['orderdetails'] as $orderdetail) {
-        // dd($orderdetail);
-        $product = Product::find($orderdetail['id']);
-        // dd($product);
+        $product = Product::find($orderdetail['product_id']);
         $product->update([
           'quantity' => $product['quantity'] + $orderdetail['quantity']
         ]);
       }
-      // dd($order['orderdetails']['id']);
       $order->delete();
-
+      
       $response = [ 'success' => true ];
       return response()->json($response, 200);
     }
