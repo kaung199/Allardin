@@ -341,10 +341,14 @@ class OrderController extends Controller
 
     public function search(Request $request) 
     {
-      $product_search = $request->search;
-      $products = Order::where('orderdate', 'LIKE', '%' . $product_search . '%')
-                  ->orWhere('monthly', 'LIKE', '%' . $product_search . '%')
-                  ->orWhere('yearly', 'LIKE', '%' . $product_search . '%')
+       $product_search = $request->search;
+      $products = Order::where('deliverystatus', 4)
+                  ->where(function ($gg) {
+                          global $product_search;
+                          $gg->where('orderdate', 'LIKE', '%' . $product_search . '%')
+                          ->orWhere('monthly', 'LIKE', '%' . $product_search . '%')
+                          ->orWhere('yearly', 'LIKE', '%' . $product_search . '%');
+                  })            
                   ->join('users', 'users.id', '=', 'orders.user_id')
                   ->join('townships', 'townships.id', '=', 'users.township_id')
                   ->select('orders.id as order_id',
