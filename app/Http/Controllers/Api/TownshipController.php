@@ -11,7 +11,7 @@ class TownshipController extends Controller
 {
     public function index()
         {
-            $townships = Township::all();
+            $townships = Township::orderBy('name', 'ASC')->get();
             $data = $townships->toArray();
 
             return response()->json($data, 200);

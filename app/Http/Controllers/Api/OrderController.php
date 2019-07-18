@@ -55,14 +55,34 @@ class OrderController extends Controller
       }
       $response = [ 'success' => true ];
       return response()->json($response, 200);
-
     }
+
     public function store(Request $request)
     {
       $gtotalprice = 0;
       $gtotalquantity = 0;
       $products = $request->json()->all();
       foreach($products as $product) {
+
+        $validator = Validator::make($product, [
+          'product_id' => 'required',
+          'name' => 'required',
+          'quantity' => 'required',
+          'price' => 'required',
+          'totalprice' => 'required',
+          'user_id' => 'required',
+        ]);
+
+        if ($validator->fails()) {
+            $response = [
+                'success' => false,
+                'data' => 'Validation Error.',
+                'message' => $validator->errors()
+            ];
+            return response()->json($response, 404);
+        }
+
+
         $productt = Product::find($product['product_id']);
         if( $productt->quantity < $product['quantity'] ) {
           $response = "Out Of Stock";
@@ -97,14 +117,11 @@ class OrderController extends Controller
         ]);
       }
       $response = [ 'success' => true ];
-      return response()->json($response, 200);
-     
+      return response()->json($response, 200); 
     }
-
 
     public function orderdetail($id)
     {
-
       $order = Order::where('orders.id', $id)
                   ->join('users', 'users.id', '=', 'orders.user_id')
                   ->join('townships', 'townships.id', '=', 'users.township_id')
@@ -120,16 +137,10 @@ class OrderController extends Controller
                   ->get();  
                
       return response()->json($order, 200);
-
     }
-
 
     public function orders()
     {
-      // $orders = Order::all();
-      // dd($orders);
-
-
       $orders = Order::orderBy('orders.id', 'desc')
                 ->join('users', 'users.id', '=', 'orders.user_id')
                 ->join('townships', 'townships.id', '=', 'users.township_id')
@@ -147,16 +158,13 @@ class OrderController extends Controller
                   'townships.name as township_name',
                   'townships.deliveryprice',
                   'townships.deliveryman')
-                ->get();
+                ->latest()->get();
 
-      return response()->json($orders, 200);
-      
+      return response()->json($orders, 200);    
     }
-
 
     public function deliverystatus(Request $request, $id)
     {
-
       $order = Order::find($id);
       $order->update([
         'deliverystatus' => $request->deliverystatus
@@ -267,28 +275,26 @@ class OrderController extends Controller
 
     public function dailyorder() 
     {
+      $today = Carbon::now()->toDateString();
+      $todayorder = Order::where('orderdate', $today)
+                    ->join('users', 'users.id', '=', 'orders.user_id')
+                    ->join('townships', 'townships.id', '=', 'users.township_id')
+                    ->select('orders.id as order_id',
+                      'orders.totalquantity',
+                      'orders.totalprice',
+                      'orders.deliverystatus',
+                      'orders.orderdate',
+                      'users.id as user_id',
+                      'users.name',
+                      'users.phone',
+                      'users.address',
+                      'townships.id as township_id',
+                      'townships.name as township_name',
+                      'townships.deliveryprice',
+                      'townships.deliveryman')
+                    ->get();
 
-        $today = Carbon::now()->toDateString();
-
-        $todayorder = Order::where('orderdate', $today)
-                      ->join('users', 'users.id', '=', 'orders.user_id')
-                      ->join('townships', 'townships.id', '=', 'users.township_id')
-                      ->select('orders.id as order_id',
-                        'orders.totalquantity',
-                        'orders.totalprice',
-                        'orders.deliverystatus',
-                        'orders.orderdate',
-                        'users.id as user_id',
-                        'users.name',
-                        'users.phone',
-                        'users.address',
-                        'townships.id as township_id',
-                        'townships.name as township_name',
-                        'townships.deliveryprice',
-                        'townships.deliveryman')
-                      ->get();
-
-            return response()->json($todayorder, 200);    
+      return response()->json($todayorder, 200);    
     }
 
     public function monthlyorder() 
@@ -312,7 +318,7 @@ class OrderController extends Controller
                       'townships.deliveryman')
                     ->get();
 
-          return response()->json($todayorder, 200);
+      return response()->json($todayorder, 200);
     }
 
     public function yearlyorder() 
@@ -341,7 +347,7 @@ class OrderController extends Controller
 
     public function search(Request $request) 
     {
-       $product_search = $request->search;
+      $product_search = $request->search;
       $products = Order::where('deliverystatus', 4)
                   ->where(function ($gg) {
                           global $product_search;
@@ -365,9 +371,7 @@ class OrderController extends Controller
                     'townships.deliveryprice',
                     'townships.deliveryman')
                   ->get();
-      return response()->json($products, 200);
-        
-
+      return response()->json($products, 200);     
     }
          
 }
