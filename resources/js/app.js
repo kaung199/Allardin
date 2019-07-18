@@ -14,6 +14,19 @@ import Home from './components/HomeComponent'
 import Example from './components/ExampleComponent'
 import IndexLayout from './components/Layouts/IndexLayoutComponent'
 import Detail from './components/DetailComponent'
+import Page1 from './components/Page1'
+import Page2 from './components/Page2'
+import Page3 from './components/Page3'
+import Page4 from './components/Page4'
+import Page5 from './components/Page5'
+import Page6 from './components/Page6'
+import Page7 from './components/Page7'
+import Page8 from './components/Page8'
+import Page9 from './components/Page9'
+import Page10 from './components/Page10'
+import Page11 from './components/Page11'
+import Page12 from './components/Page12'
+import Page13 from './components/Page13'
 
 
 
@@ -41,6 +54,71 @@ const router = new VueRouter({
                             path: '/detail',
                             name: 'detail',
                             component: Detail,                            
+                        },
+                        {
+                            path: '/page1',
+                            name: 'page1',
+                            component: Page1,                            
+                        },
+                        {
+                            path: '/page2',
+                            name: 'page2',
+                            component: Page2,                            
+                        },
+                        {
+                            path: '/page3',
+                            name: 'page3',
+                            component: Page3,                            
+                        },
+                        {
+                            path: '/page4',
+                            name: 'page4',
+                            component: Page4,                            
+                        },
+                        {
+                            path: '/page5',
+                            name: 'page5',
+                            component: Page5,                            
+                        },
+                        {
+                            path: '/page6',
+                            name: 'page6',
+                            component: Page6,                            
+                        },
+                        {
+                            path: '/page7',
+                            name: 'page7',
+                            component: Page7,                            
+                        },
+                        {
+                            path: '/page8',
+                            name: 'page8',
+                            component: Page8,                            
+                        },
+                        {
+                            path: '/page9',
+                            name: 'page9',
+                            component: Page9,                            
+                        },
+                        {
+                            path: '/page10',
+                            name: 'page10',
+                            component: Page10,                            
+                        },
+                        {
+                            path: '/page11',
+                            name: 'page11',
+                            component: Page11,                            
+                        },
+                        {
+                            path: '/page12',
+                            name: 'page12',
+                            component: Page12,                            
+                        },
+                        {
+                            path: '/page13',
+                            name: 'page13',
+                            component: Page13,                            
                         }
                     ]
                 }

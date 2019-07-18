@@ -1740,6 +1740,38 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -1830,6 +1862,171 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
@@ -1862,6 +2059,1071 @@ __webpack_require__.r(__webpack_exports__);
   components: {
     Navigation: _NavigationComponent__WEBPACK_IMPORTED_MODULE_0__["default"],
     Footer: _FooterComponent__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page1.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page1.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page10.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page10.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page11.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page11.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page12.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page12.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page13.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page13.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page2.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page2.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page3.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page3.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page4.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page4.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page5.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page5.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page6.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page6.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page7.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page7.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page8.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page8.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page9.vue?vue&type=script&lang=js&":
+/*!****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page9.vue?vue&type=script&lang=js& ***!
+  \****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
   }
 });
 
@@ -37203,41 +38465,83 @@ var staticRenderFns = [
                 staticClass: "card-img-top img-responsive",
                 attrs: {
                   src:
-                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66618316_319646868938978_8090963111370031104_n.jpg?_nc_cat=101&_nc_oc=AQladsvVeyzsSrwL2mpbjyl5ZoiWV7MbqguLlzV0JXUTVZlkXBG8sCemsOisLV7hmig&_nc_ht=scontent.frgn4-1.fna&oh=5bc9bcda00c20d496f5c5c0c0ae39287&oe=5DA64AD9",
-                  alt: "..."
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66874549_320731328830532_4490416998349537280_n.jpg?_nc_cat=104&_nc_oc=AQlMJDEYVjFSc61lhdRI_SeWh94oi3IM95Uj1lHLLb1SDBOxqmFPvzPDS2x6u26Gsjc&_nc_ht=scontent.frgn4-1.fna&oh=779d9381a91c0e9046ce8a6fd387b07a&oe=5DB5767F",
+                  alt: "Electric pump"
                 }
               }),
               _vm._v(" "),
               _c("div", { staticClass: "card-body" }, [
-                _c("b", [_vm._v("Unicon Lamp")]),
+                _c("b", [_vm._v(" ေရသန့္ပံုးေမာ္တာ (Electric pump)💦💦💦")]),
                 _vm._v(" "),
                 _c("p", { staticClass: "card-text" }, [
                   _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
+                    "                           \n\n                        💦ခလုတ္တစ္ခ်က္နိွပ္လုိက္တာနဲ့ ေသာက္ေရသန့္ပံုးထဲက ေရကို အဆင္ေျပေျပေသာက္လုိ့ရေစမဲ့ ေရသန့္ပံုးေမာ္တာ Electric pump ေလးပါ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67174355_320731955497136_2856444132795088896_n.jpg?_nc_cat=110&_nc_oc=AQkHutEjVr_5Oou4dq9RKcqyW3GMENXlir0o7MOg_1Itr0C3-xqOZqy66WeHPKe1NLg&_nc_ht=scontent.frgn4-1.fna&oh=aadf429788d08ac7114779decc6794a9&oe=5DB42962",
+                      alt: "Electric pump"
+                    }
+                  }),
                   _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
+                    "\n\n                        🔋အား ၃ နာရီ သြင္းထားတာနဲ့ 20L ေရပံုးၾကီး 8 ပံုးကို ေတာက္ေလ်ွာက္အသံုးျပဳလုိ့ရပါတယ္။ ပံုမွန္အားျဖင့္သံုးရင္ တစ္လေလာက္ က အားျပန္သြင္းစရာ မလိုဘဲအသံုးျပဳႏိုင္ပါတယ္။ 👍🏻👍🏻👍🏻\n\n                        💦ေရဘံုဘိုင္မပါတဲ့ ေရသန့္ပံုးၾကီးေတြအတြက္ဆိုအထူးသင့္ေလ်ာ္ပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67093332_320731335497198_1291989105382522880_n.jpg?_nc_cat=104&_nc_oc=AQkP156CWj4n04_F6S7cwDKu3DAGOrcaSwAecWPkqdamw4MEqwgWhVgHer09pzNRfN0&_nc_ht=scontent.frgn4-1.fna&oh=547bd62f6058855c1a94b233c435971d&oe=5DA03A75",
+                      alt: "Electric pump"
+                    }
+                  }),
                   _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
+                    "\n                        💦ေရဘံုဘိုင္ပါတဲ့ ပံုးေတြဆိုလည္း ေရဘံုဘိုင္ ေရဗူးေရျဖည့္တာ၊ ကရားအိုးထဲေရျဖည့္တာေတြမွာ ခါးကုန္းျပီး ထည့္ရတဲ့ ျပသနာမ်ိဳးေတြရိွပါတယ္။ ဒီ electric pump ေလးတပ္ထားလုိက္ရင္သက္သက္သာသာပဲ ခလုတ္ေလးနိွပ္ျပီး ေရျဖည့္လုိ့ရပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66742538_320731428830522_8501462161237737472_n.jpg?_nc_cat=108&_nc_oc=AQmHSTUUPKmUz4rVqSHe-kg4m7jJQ3ogFAAcZgKwfswdG36djfmYonT_HzgagPYYSVA&_nc_ht=scontent.frgn4-1.fna&oh=10c6a4d70cba87b62b42bcaec31ecc0c&oe=5DA4F51A",
+                      alt: "Electric pump"
+                    }
+                  }),
                   _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
-                  )
-                ]),
-                _vm._v(" "),
-                _c("p", { staticClass: "card-text" }, [
+                    "\n\n                        💦ပံုမွန္ ေရဘံုဘိုင္ထိပ္မွာဆုိရင္ ပိတ္စရာမရိွေတာ့ ေလထဲက ေရာဂါပိုးေတြလည္းကူးစက္လြယ္ပါတယ္။\n\n                        💦ဒီ လ်ွပ္စစ္ေရပန္းေလးရဲ့ ႏႈတ္သီးမွာအဖံုးေလး ပိတ္စရာလည္းပါလုိ့ သန့္သန့္ရွင္းရွင္းနဲ့ ေသာက္သံုးလို့ရပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66710933_320731372163861_8321827743947816960_n.jpg?_nc_cat=101&_nc_oc=AQn9NPjdUhXmiTJ8I_sDofbjZudPjwAYH4P7Anzb5lMIR-0kUA0imeFryF-8LlFWg-Y&_nc_ht=scontent.frgn4-1.fna&oh=4e1e2866d2149ac27728629ef3ea3ecd&oe=5DAABDD1",
+                      alt: "Electric pump"
+                    }
+                  }),
                   _vm._v(
-                    "Some quick example text to build on the card title and make up the bulk of the card's content."
+                    "\n                    \n\n                        💦Manual ေရတံုကင္ေတြလို အားနဲ့ဖိစရာလည္းမလုိေတာ့ဘူးေနာ္။\n\n                        💦ဘယ္ေရပံုးအမ်ိဳးအစားမွာပဲျဖစ္ျဖစ္တပ္ဆင္အသံုးျပဳလုိ့ရပါတယ္။\n\n                        👉🏻ေစ်းႏႈန္း- ၁၄၀၀၀ က်ပ္\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66784870_320731388830526_7008520250564018176_n.jpg?_nc_cat=108&_nc_oc=AQlJ2JnrVawjMZBCnV6TXqV2k0TbDbVUInZ7XMdwBCdctYA1hy2qHjddVLjksYjMNFY&_nc_ht=scontent.frgn4-1.fna&oh=6d97117f9cd0b5529990f6da4e13d402&oe=5DAD1C66",
+                      alt: "Electric pump"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။ ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၃၀၀၀ အတြင္းက်သင့္ပါမယ္ရွင့္။ပစၥည္းေရာက္မွေငြေခ်လုိ့ရပါတယ္ရွင့္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: "card-img-top pt-1 pb-1 img-responsive",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67430224_320731415497190_4912644113548967936_n.jpg?_nc_cat=108&_nc_oc=AQnbCk4IG2QvT-8Mn9APWlzHWwd087hU8y8h7n_Ji7Uh4-fAKpxvQ9Tm-Ge7xayqOG0&_nc_ht=scontent.frgn4-1.fna&oh=6209b9a804ce353033b8770353f93c5c&oe=5DB07931",
+                      alt: "electric pump"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါတယ္ရွင့္။ နယ္ျမိဳ့မ်ားကေတာ့ေငြၾကိဳလႊဲေပးရပါတယ္ရွင့္။\n\n                        👉🏻ဆက္သြယ္မွာယူလုိပါက\n                        ဖုန္း-📞 09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါတယ္။\n\n                        ☀️☀️☀️Aladdin မွပစၥည္းမ်ားအစံုအလင္ကို ၾကည့္ရွဳလုိပါက messenger တြင္ Hi ဟုပို့ျပီးၾကည့္ရွဳနုိင္ပါတယ္။\n                    "
                   )
                 ])
               ])
@@ -37331,17 +38635,413 @@ var render = function() {
                   staticClass: "card-img-top img-responsive",
                   attrs: {
                     src:
-                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66618316_319646868938978_8090963111370031104_n.jpg?_nc_cat=101&_nc_oc=AQladsvVeyzsSrwL2mpbjyl5ZoiWV7MbqguLlzV0JXUTVZlkXBG8sCemsOisLV7hmig&_nc_ht=scontent.frgn4-1.fna&oh=5bc9bcda00c20d496f5c5c0c0ae39287&oe=5DA64AD9",
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66874549_320731328830532_4490416998349537280_n.jpg?_nc_cat=104&_nc_oc=AQlMJDEYVjFSc61lhdRI_SeWh94oi3IM95Uj1lHLLb1SDBOxqmFPvzPDS2x6u26Gsjc&_nc_ht=scontent.frgn4-1.fna&oh=779d9381a91c0e9046ce8a6fd387b07a&oe=5DB5767F",
                     alt: "..."
                   }
                 }),
                 _vm._v(" "),
                 _c("div", { staticClass: "card-body" }, [
-                  _c("b", [_vm._v("Unicon Lamp")]),
+                  _c("b", { staticClass: "pb-1" }, [
+                    _vm._v("ေရသန့္ပံုးေမာ္တာ(Electric pump)💦💦💦")
+                  ]),
                   _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
+                  _c("p", { staticClass: "card-text contentmax" }, [
                     _vm._v(
-                      "Some quick example text to build on the card title and make up the bulk of the card's content."
+                      "\n                            💦ခလုတ္တစ္ခ်က္နိွပ္လုိက္တာနဲ့ ေသာက္ေရသန့္ပံုးထဲက ေရကို အဆင္ေျပေျပေသာက္လုိ့ရေစမဲ့ ေရသန့္ပံုးေမာ္တာ Electric pump ေလးပါ။\n\n                            🔋အား ၃ နာရီ သြင္းထားတာနဲ့ 20L ေရပံုးၾကီး 8 ပံုးကို ေတာက္ေလ်ွာက္အသံုးျပဳလုိ့ရပါတယ္။ ပံုမွန္အားျဖင့္သံုးရင္ တစ္လေလာက္ က အားျပန္သြင္းစရာ မလိုဘဲအသံုးျပဳႏိုင္ပါတယ္။ 👍🏻👍🏻👍🏻\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-4 pb-2" },
+        [
+          _c("router-link", { attrs: { to: "page1" } }, [
+            _c(
+              "div",
+              { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+              [
+                _c("img", {
+                  staticClass: "card-img-top img-responsive",
+                  attrs: {
+                    src:
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66755940_320729095497422_3331061001373089792_n.jpg?_nc_cat=102&_nc_oc=AQmBJCyliwQvmlwKESKtzU_N1i4NddjckHunGNsoJRqEyTYH5313KSdkiQRwtcnOoJo&_nc_ht=scontent.frgn4-1.fna&oh=92c52665fbfa4a3c974d4c41e98e87fd&oe=5DA742A8",
+                    alt: "brush"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("b", { staticClass: "pb-1" }, [
+                    _vm._v("Brush လက္အိတ္ 🤲🏻. Buy 2 Get 1")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text contentmax" }, [
+                    _vm._v(
+                      "\n                          \n                            လက္သည္းရွည္ရွည္ေလးနဲ့လက္သည္းနီလွလွေလးဆိုးထားျပီးမွပန္းကန္ေဆး၊ အ၀တ္ေလ်ွာ္ရမယ္ဆို နွေျမာစရာၾကီးေနာ္။💅🏻💅🏻💅🏻\n\n                            💦အိုးခြက္ပန္းကန္ေတြေဆးရတာ၊ အ၀တ္ေတြေလ်ွာ္ရတာကုိ လက္နဲ့ဆပ္ျပာမထိဘဲေဆးလို့ရရင္သိပ္ေကာင္းမွာပဲေနာ္။\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-4 pb-2" },
+        [
+          _c("router-link", { attrs: { to: "page2" } }, [
+            _c(
+              "div",
+              { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+              [
+                _c("img", {
+                  staticClass: "card-img-top img-responsive",
+                  attrs: {
+                    src:
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66712248_320719382165060_7479449494581411840_n.jpg?_nc_cat=107&_nc_oc=AQkexSlq2M41-Phx_IqbkK8i4ApeDqQXxBqa-sTrXmqo95lpB7PMZefBYt25bsrCpPw&_nc_ht=scontent.frgn4-1.fna&oh=84814458e98f3c0183b219e3c5f14d39&oe=5DB4B57A",
+                    alt: "brush"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("b", { staticClass: "pb-1" }, [
+                    _vm._v("Automatic ဆပ္ျပာ ညွစ္ ( automatic soap dispenser)")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text contentmax" }, [
+                    _vm._v(
+                      "                         \n                            \n\n                            👋လက္အရိပ္ျပတာနဲ့ ဆပ္ျပာရည္ က်လာ တဲ့ ဆပ္ျပာညွစ္စက္ ေလးကို အိမ္္တုိင္းမွာေရာ၊ ရံုးတို္င္း၊ ေဆးရံု၊ ေဆးခန္းတိုင္းမွာ အဆင့္ျမင့္ျမင့္ တပ္ဆင္အသံုးျပဳနုိင္ပါျပီ။\n\n                            ✅Fully automatic, touch free ပါ။\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-4 pb-2" },
+        [
+          _c("router-link", { attrs: { to: "page3" } }, [
+            _c(
+              "div",
+              { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+              [
+                _c("img", {
+                  staticClass: "card-img-top img-responsive",
+                  attrs: {
+                    src:
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66866539_320316088872056_3154295141200560128_n.jpg?_nc_cat=110&_nc_oc=AQl7tpx9CPkkYkwW90mf2kRn2S78heh9wPVxREgck5-8HO4hjotbukmFUqUCQ-XWWC8&_nc_ht=scontent.frgn4-1.fna&oh=af17ea4b4561a67bbf187d823483ea86&oe=5DA5F853",
+                    alt: "brush"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("b", { staticClass: "pb-1" }, [
+                    _vm._v(" Automatic သြားတုိက္တံ")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text contentmax" }, [
+                    _vm._v(
+                      "\n                            🧚‍♀️သြားတုိက္ရာတြင္ ပိုမိုထိေရာက္ျပီး ေကာင္းမြန္စြာတုိက္နုိင္ေသာ automatic toothbrush ေလးပါ။\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-4 pb-2" },
+        [
+          _c("router-link", { attrs: { to: "page4" } }, [
+            _c(
+              "div",
+              { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+              [
+                _c("img", {
+                  staticClass: "card-img-top img-responsive",
+                  attrs: {
+                    src:
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67389082_320312082205790_5158167916184600576_n.jpg?_nc_cat=102&_nc_oc=AQk3qHo9aAQCa31ty_a31IAKATrjxb9-WxyN85qNPQQ1CY-gj1BgHDC5nCF41Msn3mg&_nc_ht=scontent.frgn4-1.fna&oh=5151cc4f693dfa57d41421f56b283f1d&oe=5DB0CCF3",
+                    alt: "key finder"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("b", { staticClass: "pb-1" }, [
+                    _vm._v(" ရႊီရႊီ ေသာ့ခ်ိတ္(key finder)")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text contentmax" }, [
+                    _vm._v(
+                      "                             \n\n                        ☘️ဥာဏ္ေကာင္းတဲ့လူေတြဟာ သတိပိုေမ့တတ္ၾကတယ္တဲ့။\n\n                        ☘️ပစၥည္းေတြခဏခဏ ေပ်ာက္တတ္တာ အျပစ္တစ္ခုမဟုတ္ပါဘူး။\n\n                        ☘️ပိုက္ဆံအိတ္၊ ကားေသာ့၊ အိမ္ေသာ့ စတဲ့အေရးၾကီးတာေတြမွ မၾကာခဏ ေရြးေပ်ာက္တတ္တာ သဘာ၀ပါ။\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-4 pb-2" },
+        [
+          _c("router-link", { attrs: { to: "page5" } }, [
+            _c(
+              "div",
+              { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+              [
+                _c("img", {
+                  staticClass: "card-img-top img-responsive",
+                  attrs: {
+                    src:
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66687347_320187158884949_9211708284363341824_n.jpg?_nc_cat=108&_nc_oc=AQmCdXCHWYUz5lmir10XycHvWsjWuoKNQaUAJoXt8Qh2tONeQzG_gGT5sLNAIO9nGqM&_nc_ht=scontent.frgn4-1.fna&oh=347a2df13fe9e6ac8ff019860a51cc90&oe=5DA2561C",
+                    alt: " Disposable cup dispenser (ခြက္ကိုင္)"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("b", { staticClass: "pb-1" }, [
+                    _vm._v(" Disposable cup dispenser (ခြက္ကိုင္)")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text contentmax" }, [
+                    _vm._v(
+                      "\n\n                            တစ္ခါသံုးခြက္ေလးေတြကို သန့္သန့္ရွင္းရွင္းအသံုးျပဳလို့ရေစတဲ့ ေရသန္႔စက္ေလးေတြေဘးမွာခ်ိတ္ထားလို႔ရတဲ့ cup dispenser ခြက္ကိုင္ဗူးေလးပါ။\n\n                            Watercooler သုိ့မဟုတ္နံရံမွာကပ္ထားဖုိ့ ကပ္ခြာလည္းပါသလုိ့ မူလီစုပ္ဖို့ မူလီေလးေတြလည္းအပါအျပီးပါ။\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-4 pb-2" },
+        [
+          _c("router-link", { attrs: { to: "page6" } }, [
+            _c(
+              "div",
+              { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+              [
+                _c("img", {
+                  staticClass: "card-img-top img-responsive",
+                  attrs: {
+                    src:
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66867225_319732578930407_6399690369860108288_n.jpg?_nc_cat=105&_nc_oc=AQl7YIzkMfe8Ne-LEJEJ6q7xznZEAQrXW0ulFvYDXHrQlDAGzCVP7PD2vhjJSXeZVh4&_nc_ht=scontent.frgn4-1.fna&oh=29291fbeecfcbd0fe0d1cb0075c56425&oe=5DEC1585",
+                    alt: "2 in 1 တုတ္ေကာက္ထိုင္ခံု"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("b", { staticClass: "pb-1" }, [
+                    _vm._v("2 in 1 တုတ္ေကာက္ထိုင္ခံု")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text contentmax" }, [
+                    _vm._v(
+                      "                                               \n\n                            ဒူးနာ၊ခါးနာရွွိသူမ်ားအတြက္ တုတ္ေကာက္ကဲ့သုိ့လည္းအသံုးျပဳနုိင္ေသာ၊ မတ္တပ္ရပ္တန္းစီရေသာကိစၥမ်ား၊လမ္းမ်ားမ်ားေလ်ွာက္ရေသာခရီးမ်ားတြင္\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-4 pb-2" },
+        [
+          _c("router-link", { attrs: { to: "page7" } }, [
+            _c(
+              "div",
+              { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+              [
+                _c("img", {
+                  staticClass: "card-img-top img-responsive",
+                  attrs: {
+                    src:
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66618316_319646868938978_8090963111370031104_n.jpg?_nc_cat=101&_nc_oc=AQn0-IKozaNVhiyc5IHiOAc8dgt442CZryvfayxBdw_R_Zi0FXd4SJMBjNs-EMaomBs&_nc_ht=scontent.frgn4-1.fna&oh=25c7f91540a7fe1ea0a36b38d5239333&oe=5DA64AD9",
+                    alt: "Unicorn"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("b", { staticClass: "pb-1" }, [_vm._v("Unicorn Lamp")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text contentmax" }, [
+                    _vm._v(
+                      "\n                          \n                        🦄🦄🦄\n                        Unicorn ကမ႓ာေလးမွ ႀကိဳဆိုပါတယ္ရွင့္။\n\n                        Unicorn ခ်စ္သူ ေလးေတြ အတြက္ unicorn မီးအိမ္ေလးေတြလာပါၿပီေနာ္။\n\n                        💁‍♀️အရမ္းခ်စ္စရာေကာင္းတဲ့ unicorn အ႐ုပ္ေလးေတြသာမက ပဲ hello kitty နဲ႔ ဆင္ပ်ံေလး Dumbo မီးအိမ္ေလးေတြလည္းရွိတယ္ေနာ္။\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-4 pb-2" },
+        [
+          _c("router-link", { attrs: { to: "page8" } }, [
+            _c(
+              "div",
+              { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+              [
+                _c("img", {
+                  staticClass: "card-img-top img-responsive",
+                  attrs: {
+                    src:
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/64693345_319041592332839_2644195550630510592_n.jpg?_nc_cat=111&_nc_oc=AQkYdjqXUtgzfLxJCHec2axGsFr6e6xqMSuI26VADMeLoA-ekCn1W8Po600490u5Adc&_nc_ht=scontent.frgn4-1.fna&oh=76178892da92ef8cd11bcd2483a3d315&oe=5DB7C73C",
+                    alt: "Automatic ဖြင့္/ပိတ္ေခါက္ထီး☔️☔️☔️"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("b", { staticClass: "pb-1" }, [
+                    _vm._v("Automatic ဖြင့္/ပိတ္ေခါက္ထီး☔️☔️☔️")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text contentmax" }, [
+                    _vm._v(
+                      "\n                        ⛈မိုးေလးဖြဲတဲ့ မိုးရာသီ ေရာက္လာျပီေနာ္။\n\n                        🐻ခလုတ္တစ္ခ်က္နိွပ္လုိက္တာနဲ့ ရႊတ္ခနဲ ၁ စကၠန့္ အတြင္း ပြင့္သြားျပီး ခလုတ္တစ္ခ်က္ထပ္နိွပ္လုိက္ရင္ ရႊတ္ခနဲ ျပန္ပိတ္သြားတဲ့ စတုိင္က်တဲ့ထီးေလးနဲ့ဆို ေဘးကလူေတြ ပါးစပ္အေဟာင္းသားနဲ့ေငးၾကည့္ေနမွာေနာ္။\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-4 pb-2" },
+        [
+          _c("router-link", { attrs: { to: "page9" } }, [
+            _c(
+              "div",
+              { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+              [
+                _c("img", {
+                  staticClass: "card-img-top img-responsive",
+                  attrs: {
+                    src:
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66744036_318030482433950_3686365160231927808_n.jpg?_nc_cat=106&_nc_oc=AQn9e9v8p37w16KFTlxirOZ8_J8Z8uwfGcB97zTtoCF7uHrrF_8k-aBjcIues6OIDN0&_nc_ht=scontent.frgn4-1.fna&oh=e9539cbf94508e45581e3ffc8c53eef3&oe=5DB2897A",
+                    alt: " စက္ရုပ္ဖုန္စုပ္စက္ (3 in 1)"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("b", { staticClass: "pb-1" }, [
+                    _vm._v(" စက္ရုပ္ဖုန္စုပ္စက္ (3 in 1)")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text contentmax" }, [
+                    _vm._v(
+                      "            \n                            အခ်ိန္တုိင္း၊စကၠန့္တုိင္းက တန္ဖိုးရိွပါတယ္။ အိမ္ေထာင္ရွင္ေမေမ တစ္ေယာက္အေနနဲ့မိမိ အိမ္ေလးဖုန္၊အမိႈက္ေတြကင္းစင္ေအာင္ထိန္းသိမ္းရမွာျဖစ္ေပမဲ့ ေမေမတို့မွာလည္းကိုယ္ပိုင္ အခ်ိန္ဆိုတာရိွပါတယ္။ အနား\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-4 pb-2" },
+        [
+          _c("router-link", { attrs: { to: "page10" } }, [
+            _c(
+              "div",
+              { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+              [
+                _c("img", {
+                  staticClass: "card-img-top img-responsive",
+                  attrs: {
+                    src:
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66478576_315581122678886_5714275363933126656_n.jpg?_nc_cat=110&_nc_oc=AQlG9XnvhkN5G9VCQwtLNaMbBTYJyfZWwQRnHG9YJGqu9H4umcvR1IzFlMbCgV_TpvY&_nc_ht=scontent.frgn4-1.fna&oh=ee8ead41a176df892a44d63446ba04a7&oe=5DBD9B2D",
+                    alt: "ၾကမ္းတုိက္စက္🧹🧹🧹"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("b", { staticClass: "pb-1" }, [
+                    _vm._v("ၾကမ္းတုိက္စက္🧹🧹🧹")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text contentmax" }, [
+                    _vm._v(
+                      "\n                            ၾကမ္းတုိက္တာမွာ အားအင္ထုတ္စရာမလိုဘဲေျပာင္စင္သြားေစမဲ့နည္းလမ္းေကာင္းေလးကေတာ့ ၾကမ္းတုိက္စက္ေလးပါ။\n                        "
+                    )
+                  ])
+                ])
+              ]
+            )
+          ])
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c(
+        "div",
+        { staticClass: "col-md-4 pb-2" },
+        [
+          _c("router-link", { attrs: { to: "page11" } }, [
+            _c(
+              "div",
+              { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+              [
+                _c("img", {
+                  staticClass: "card-img-top img-responsive",
+                  attrs: {
+                    src:
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65745749_313933009510364_2735049957370232832_o.jpg?_nc_cat=101&_nc_oc=AQm0fyjH17PNXAbn3lO8QT1yGz9vGu4luhF4QPlhDvlq9ehth9r744vUh5Y5fh7C9Wc&_nc_ht=scontent.frgn4-1.fna&oh=a1fa8619f506c50d8e563f5cd60fffa0&oe=5DAA0DF5",
+                    alt: "ဒုကၡေပးေသာက်ီးေပါင္းေရာဂါ"
+                  }
+                }),
+                _vm._v(" "),
+                _c("div", { staticClass: "card-body" }, [
+                  _c("b", { staticClass: "pb-1" }, [
+                    _vm._v("ဒုကၡေပးေသာက်ီးေပါင္းေရာဂါ")
+                  ]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "card-text contentmax" }, [
+                    _vm._v(
+                      "\n                            ⚠️က်ီးေပါင္းဆုိသည္မွာအရိုး မွအတက္ကေလးမ်ားထြက္ျခင္းျဖစ္ျပီး ထုိအတက္ကေလးမ်ားမွ ေဘးရိွၾကြက္သားမ်ား၊ အာရံုေၾကာမ်ားကိုပိညက္ေစျခင္းတုိ့ေၾကာင့္ ေဘးရိွၾကြက္သားမ်ား ေတာင့္တင္းျခင္း၊ နာက်င္ျခင္\n                        "
                     )
                   ])
                 ])
@@ -37365,51 +39065,17 @@ var render = function() {
                   staticClass: "card-img-top img-responsive",
                   attrs: {
                     src:
-                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66618316_319646868938978_8090963111370031104_n.jpg?_nc_cat=101&_nc_oc=AQladsvVeyzsSrwL2mpbjyl5ZoiWV7MbqguLlzV0JXUTVZlkXBG8sCemsOisLV7hmig&_nc_ht=scontent.frgn4-1.fna&oh=5bc9bcda00c20d496f5c5c0c0ae39287&oe=5DA64AD9",
-                    alt: "..."
+                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66617967_313871352849863_6994897778237243392_n.jpg?_nc_cat=101&_nc_oc=AQnR_DTnAscaXVQ0GXwbR55O3yWiRbelJZHGldcgXpg0PKVYw27i9GwxTgVarLPHyw8&_nc_ht=scontent.frgn4-1.fna&oh=1afaa44d3ac277dfef97bd709868ea2c&oe=5DAE5B5F",
+                    alt: "အေမႊးနံ႔လႊတ္စက္"
                   }
                 }),
                 _vm._v(" "),
                 _c("div", { staticClass: "card-body" }, [
-                  _c("b", [_vm._v("Unicon Lamp")]),
+                  _c("b", { staticClass: "pb-1" }, [_vm._v("အေမႊးနံ႔လႊတ္စက္")]),
                   _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
+                  _c("p", { staticClass: "card-text contentmax" }, [
                     _vm._v(
-                      "Some quick example text to build on the card title and make up the bulk of the card's content."
-                    )
-                  ])
-                ])
-              ]
-            )
-          ])
-        ],
-        1
-      ),
-      _vm._v(" "),
-      _c(
-        "div",
-        { staticClass: "col-md-4 pb-2" },
-        [
-          _c("router-link", { attrs: { to: "detail" } }, [
-            _c(
-              "div",
-              { staticClass: "card shadow", staticStyle: { width: "18rem" } },
-              [
-                _c("img", {
-                  staticClass: "card-img-top img-responsive",
-                  attrs: {
-                    src:
-                      "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66618316_319646868938978_8090963111370031104_n.jpg?_nc_cat=101&_nc_oc=AQladsvVeyzsSrwL2mpbjyl5ZoiWV7MbqguLlzV0JXUTVZlkXBG8sCemsOisLV7hmig&_nc_ht=scontent.frgn4-1.fna&oh=5bc9bcda00c20d496f5c5c0c0ae39287&oe=5DA64AD9",
-                    alt: "..."
-                  }
-                }),
-                _vm._v(" "),
-                _c("div", { staticClass: "card-body" }, [
-                  _c("b", [_vm._v("Unicon Lamp")]),
-                  _vm._v(" "),
-                  _c("p", { staticClass: "card-text" }, [
-                    _vm._v(
-                      "Some quick example text to build on the card title and make up the bulk of the card's content."
+                      "\n                            🌷🌷🌷Lily ပန္းခင္းေလးထဲ မွာထုိင္ျပီး ရံုးအလုပ္ေတြလုပ္မလား။\n\n                            🌊🌊🌊Ocean ထဲမွာပင္လယ္ရနံ႔ေတြနဲ့ အိပ္ရာ၀င္မလား။\n                        "
                     )
                   ])
                 ])
@@ -37524,6 +39190,2001 @@ var render = function() {
   ])
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page1.vue?vue&type=template&id=046ed727&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page1.vue?vue&type=template&id=046ed727& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: "card-img-top img-responsive",
+                attrs: {
+                  src:
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66755940_320729095497422_3331061001373089792_n.jpg?_nc_cat=102&_nc_oc=AQmBJCyliwQvmlwKESKtzU_N1i4NddjckHunGNsoJRqEyTYH5313KSdkiQRwtcnOoJo&_nc_ht=scontent.frgn4-1.fna&oh=92c52665fbfa4a3c974d4c41e98e87fd&oe=5DA742A8",
+                  alt: ""
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [_vm._v(" Brush လက္အိတ္ 🤲🏻. Buy 2 Get 1")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "                            \n\n                        လက္သည္းရွည္ရွည္ေလးနဲ့လက္သည္းနီလွလွေလးဆိုးထားျပီးမွပန္းကန္ေဆး၊ အ၀တ္ေလ်ွာ္ရမယ္ဆို နွေျမာစရာၾကီးေနာ္။💅🏻💅🏻💅🏻\n\n                        💦အိုးခြက္ပန္းကန္ေတြေဆးရတာ၊ အ၀တ္ေတြေလ်ွာ္ရတာကုိ လက္နဲ့ဆပ္ျပာမထိဘဲေဆးလို့ရရင္သိပ္ေကာင္းမွာပဲေနာ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66630936_320729125497419_4698351414714302464_n.jpg?_nc_cat=103&_nc_oc=AQm5nb9U_7NUvWQEPWpBDooG1Ln5t3shiOyuXThDiL3VCF0V09FYAINVe8z5Tl1_VbM&_nc_ht=scontent.frgn4-1.fna&oh=9f2e8892a5f7bbb481503da0932ab985&oe=5DE98AB4",
+                      alt: "brush"
+                    }
+                  }),
+                  _vm._v(
+                    "                        \n\n                        💦Brush ေမႊးေလးေတြပါတဲ႔ ဒီလက္အိတ္္ေလးနဲ့ဆို အိုးေတြပန္္းကန္ေတြ၊ အ၀တ္ေတြကို လက္နဲ့ေတာင္မထိဘဲေဆးလုိ့ရျပီေပါ့။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67665637_320729155497416_4138365843425722368_n.jpg?_nc_cat=105&_nc_oc=AQkbrNyFy1kg4W-rCfZUav5Rc-JbKZaQug6RF-mqNxWnHWJO83moGMo4K_27QAKWHPE&_nc_ht=scontent.frgn4-1.fna&oh=56cca081ded0d5bf14f8fef89eaf8250&oe=5DE8997A",
+                      alt: "brush"
+                    }
+                  }),
+                  _vm._v(
+                    "                      \n\n                        👍🏻အေမႊးၾကမ္းၾကမ္းေလးေတြပါေတာ့ ပန္းကန္ကဆီေခ်းေတြ၊ အညစ္ေၾကးေတြကို လက္နဲ႔ဆပ္ျပာနဲ့ေတာင္ထိစရာမလိုဘဲ ပြတ္တုိက္ေဆးေၾကာလုိ့ရျပီေနာ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66646648_320729198830745_6816373399539941376_n.jpg?_nc_cat=103&_nc_oc=AQlF-GYP1ilj3Em8mLF5kho1UcixlU7KuodZUI7cg_t6uqCIVsBAORtF-7TZS6fkDGw&_nc_ht=scontent.frgn4-1.fna&oh=4e84ef8224dbc4cb1c1208ffbab89732&oe=5DEB46B6",
+                      alt: "brush"
+                    }
+                  }),
+                  _vm._v(
+                    "                      \n                        👍🏻အခ်ိန္ကုန္လဲသက္သာ၊လူပင္ပန္းလဲသက္သာမဲ့အျပင္ လက္သည္းနီလွလွေလေတြ၊ လက္သည္းရွည္ရွည္ေလးေတြလည္း မပ်က္စီးေတာ့ဘူးေနာ္။\n\n                        👍🏻လက္ဖ၀ါးႏုႏုေလးေတြလည္းေသြးေျခမဥေတာ့ဘူးေပါ့။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66979028_320729178830747_1996241498567344128_n.jpg?_nc_cat=108&_nc_oc=AQnRdCPI-0Yhak0_SQ8mV6L28yeeRT6aSpvtwZIlTwfSSkZME6Cf56EJXGbSFTfTJkY&_nc_ht=scontent.frgn4-1.fna&oh=2cffee9f79e20854708a553efbde128d&oe=5DBFCD11",
+                      alt: "brush"
+                    }
+                  }),
+                  _vm._v(
+                    "                      \n\n                        ☘️စားေသာက္ဆုိင္ေတြ၊ ဟိုတယ္ေတြမွာလည္း ပန္းကန္ေတႊ တစ္ထပ္ၾကီးေဆးရတဲ႔အခါ ေရနဲ့ေတာက္ေလ်ွာက္ထိေတြ႔ေနရေတာ့ လက္ေတြေရ၀ဲစားတာ၊ ဆပ္ျပာစားတာေတြျဖစ္လာတတ္ပါတယ္။\n\n                        ✅ပန္းကန္ေဆး၊ အ၀တ္ေလ်ွာ္သာမက ေဘစင္ တုိ့ စားပြဲခံုတို့ပါတုိက္လုိ့ရေတာ့ တစ္ခုတည္းနဲ့အစံုသံုးလို့ရတဲ့ brush လက္အိတ္ေလးပါေနာ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66705114_320729235497408_3893467980733874176_n.jpg?_nc_cat=101&_nc_oc=AQnow330Z2fcxARerupXegNbEWfxJP4trTtCmMGA9G8FyDABBRjARdSXATXajrPMg4U&_nc_ht=scontent.frgn4-1.fna&oh=f4f749f5c5209dc10abda0a31cc1c4cf&oe=5DB97E4E",
+                      alt: "brush"
+                    }
+                  }),
+                  _vm._v(
+                    "                      \n\n                        ✅ဒီပန္းကန္ေဆးလက္အိတ္ေလး ကို အသံုးျပဳ ျပီး အားအင္ေတြကိုေခၽြတာလုိက္ပါေနာ္။\n\n                        ✅Free size မို့ လက္ကဘယ္ေလာက္ၾကီးၾကီးေတာ္ပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67384910_320729218830743_441708094716641280_n.jpg?_nc_cat=101&_nc_oc=AQmJYi57qbQvWEzVaQd4zh4tqcBA_Fe8PguZIlS0NY6vlMX0k-Dwyfg_VTZganawmDo&_nc_ht=scontent.frgn4-1.fna&oh=40a53526b7a631c617bb0e4e7ddfa0f2&oe=5DEC061A",
+                      alt: "brush"
+                    }
+                  }),
+                  _vm._v(
+                    "                      \n\n                        ✅heat insulator လည္းျဖစ္လို႔ ဒယ္အိုးအပူ သံျပားအပူကိုလည္း လက္နွီးမလိုဘဲကိုင္လို႔ရပါတယ္။\n\n                        ✅ဆီးဂ်ီးေတြသုတ္သင္ၿပီး လက္အိတ္ကို ေရေႏြးနဲ႔ ျပဳတ္ေလွ်ာ္လို႔ ရပါတယ္ရွင့္။ heat resistant glove ေလးပါေနာ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67409841_320729262164072_5028583435694768128_n.jpg?_nc_cat=105&_nc_oc=AQmakqK5GIeons3E2gid7r1-qXNCGbKtPpnd57-l-FicnNgXEPM94iUT-LP_r0UKd6k&_nc_ht=scontent.frgn4-1.fna&oh=2576d432a81346391d6ab4ab6d00e21e&oe=5DACDD71",
+                      alt: "brush"
+                    }
+                  }),
+                  _vm._v(
+                    "                      \n\n                        🌸Size= 33.5 cm အရွည္၊ 12cm လက္အ၀\n\n                        🌸Weight- 260 gram\n\n                        🌸ေစ်းႏႈန္း- တစ္စံု ၈၅၀၀ က်ပ္ ( ၂ စံု၀ယ္ ၁ စံုလက္ေဆာင္)\n\n                        🌸အေရာင္- ပန္းေရာင္၊ခရမ္းေရာင္၊ ခဲေရာင္\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67184838_320729272164071_5887327795381534720_o.jpg?_nc_cat=102&_nc_oc=AQkp6sHng969yYCaGi_ysBkxGsfUsNXc6JbQHkdeyF0fxl3GEbzWolKkpFXYEG3OINA&_nc_ht=scontent.frgn4-1.fna&oh=99adef2433c9d6035f85caa16f8ff126&oe=5DACFB38",
+                      alt: "brush"
+                    }
+                  }),
+                  _vm._v(
+                    "                      \n\n                        ✅အသားလည္းထူျပီး quality ေကာင္းတာအာမခံပါတယ္ေနာ္။\n\n                        ✅Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67210093_320729312164067_3199815996332310528_n.jpg?_nc_cat=101&_nc_oc=AQlTx4FVlZ_Pn9dYGfJA8xRvxu8f-Kxiwvn0BFziWGsbWhWtp5lccm8wXe1Kqb_bQto&_nc_ht=scontent.frgn4-1.fna&oh=75a0604b7f1dc859ff036147dff5de02&oe=5DA5038B",
+                      alt: "brush"
+                    }
+                  }),
+                  _vm._v(
+                    "                      \n\n                        ✅ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၃၀၀၀ အတြင္းက်သင့္ပါမယ္။ ရန္ကုန္ျမိဳ႔တြင္း ေရာက္မွေငြရွင္းစနစ္ပါရွင့္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66692324_320729335497398_5881229375612911616_n.jpg?_nc_cat=106&_nc_oc=AQnB7yFSkAXeaZiO-K5gjSVIQ-N4l2DkLL0X6SbEsAmkHrRTGheFhJJBYHI22i7z1Eo&_nc_ht=scontent.frgn4-1.fna&oh=5ca4a824f9fec4aeac839ae3132fb746&oe=5DAD4A4B",
+                      alt: "brush"
+                    }
+                  }),
+                  _vm._v(
+                    "                      \n\n                        ✅နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါတယ္။ \n                        နယ္ကေတာ့ေငြၾကိဳလႊဲေပးရပါတယ္ရွင့္။\n                        ✅ဆက္သြယ္မွာယူလုိပါက \n                        ဖုန္း- 📞09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါတယ္။\n\n                        Aladdin မွ ပစၥည္းမ်ားအစံုအလင္ ကိုၾကည့္ရႈလိုပါက messenger တြင္ Hi ဟုပို႔ၿပီးၾကည့္ရႈႏိုင္ပါတယ္ရွင့္။\n                    "
+                  )
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page10.vue?vue&type=template&id=ed30efce&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page10.vue?vue&type=template&id=ed30efce& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: "card-img-top img-responsive",
+                attrs: {
+                  src:
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66478576_315581122678886_5714275363933126656_n.jpg?_nc_cat=110&_nc_oc=AQlG9XnvhkN5G9VCQwtLNaMbBTYJyfZWwQRnHG9YJGqu9H4umcvR1IzFlMbCgV_TpvY&_nc_ht=scontent.frgn4-1.fna&oh=ee8ead41a176df892a44d63446ba04a7&oe=5DBD9B2D",
+                  alt: "ၾကမ္းတုိက္စက္"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [_vm._v(" ၾကမ္းတုိက္စက္🧹🧹🧹")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "\n                        \n                        ၾကမ္းတုိက္တာမွာ အားအင္ထုတ္စရာမလိုဘဲေျပာင္စင္သြားေစမဲ့နည္းလမ္းေကာင္းေလးကေတာ့ ၾကမ္းတုိက္စက္ေလးပါ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66498006_315581112678887_3228621624727044096_n.jpg?_nc_cat=103&_nc_oc=AQlH-I3Bew0G09OkXpXJvOCUdrP6a0si5Z_oqFcXa8Otalp74sfsK3Rnj8EnH7nfVUc&_nc_ht=scontent.frgn4-1.fna&oh=b2a7317b2f68893350145157b14aa931&oe=5DB159AB",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅လ်ွပ္စစ္အားနဲ့ ခလုတ္တစ္ခ်က္နိွပ္လုိက္တာနဲ့ ေအာက္က အ၀ိုင္းေလးနွစ္ခုကလည္ျပီး အေကာင္းဆံုး mopping effect ကိုေပးစြမ္းနုိင္ပါတယ္။\n\n                        ✅႐ိုး႐ိုး ၾကမ္းတိုက္တံနဲ႔တိုက္ရင္ ဂ်ီးေပေနတဲ့ေနရာေတြကို ေရွ႕တိုးေနာက္ဆုတ္ ပြတ္တိုက္ရေတာ့ အားကုန္ပင္ပန္းေစပါတယ္။\n\n                        ✅ဒီ ၾကမ္းတိုက္စက္ေလးရဲ႕ Function ကေတာ့ ၾကမ္းသုတ္ကေလးက ထိပ္မွာ လွည့္ျပီး ေမႊ႔ေနတဲ့အတြက္ ကိုယ္က ေရွ႔တုိးေနာက္ဆုတ္လုပ္စရာမလုိဘဲ သူဘာသာၾကမ္းသုတ္သလုိ ပြတ္တုိက္ေပးသြားေတာ့ လူကို အမ်ားၾကီးသက္သာေစပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66381852_315581162678882_6281290160302718976_o.jpg?_nc_cat=110&_nc_oc=AQmXgfJP3BCq7bqDklbSFrXq4f2ZBOUht7yVCyfBqMKYKh8U_8yUdiUOVnUpPEfpTTQ&_nc_ht=scontent.frgn4-1.fna&oh=0ea30af7688c2b6f3c58eb1dd71bec1f&oe=5DEE0E3F",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅အေမႊးၾကမ္းသုတ္ တစ္စံုေရာ၊ ေဖာ့ၾကမ္းသုတ္တစ္စံု ေရာ စုစုေပါင္း ၂ စံုပါလုိ့ အဆင္ေျပသလုိလဲလွယ္သံုးစြဲနုိင္ပါတယ္။\n\n                        🧚‍♀️အေမႊးၾကမ္းသုတ္ေလးကေတာ့ ေပါလစ္တုိက္ထားတဲ့ ပါေကးေပၚမွာဆို အေမႊးၾကမ္းသုတ္ နဲ့အသံုးျပဳလုိ့ရျပီး ေၾကြျပား၊ ေက်ာက္ျပားေတြေပၚမွာဆုိရင္ေတာ့ ေဖာ့ၾကမ္းသုတ္နဲ့သံုးလုိ့ရပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66530409_315581196012212_6245084586724818944_n.jpg?_nc_cat=111&_nc_oc=AQnQ3i-EXnhMw8NjQaBJ1dS_JTmoWzcxYjrNaCmmH_TWNaGF5do_b6s0pMvLVv-wssc&_nc_ht=scontent.frgn4-1.fna&oh=bb9f56a7807254a673cd616145d371a2&oe=5DB026A1",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        🧚‍♀️အားတစ္ခါသြင္းျပီးရင္ ၁ နာရီခြဲ တိတိ အလုပ္လုပ္နုိင္ျပီး ၾကိဳးမပါဘဲ လြတ္လြတ္လပ္လပ္ အသံုးျပဳနုိင္ပါတယ္။\n\n                        ☘️အေမႊးၾကမ္းသုတ္ေရာ၊ ေဖာ့ၾကမ္းသုတ္ေရာ ျပန္ေလ်ွာ္ျပီးအသံုးျပဳနုိင္သလို ေဟာင္းသြားလုိ့အသစ္လဲခ်င္လည္း extra မ်ားကို အလြယ္တကူ၀ယ္ယူနုိင္ပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66291442_315581219345543_5542283763637026816_n.jpg?_nc_cat=102&_nc_oc=AQmDidlfXd3XSz2zS-LbEmUgr78xUw8sk7znBhPOGIQeCPLFj6GFv63NEOOnNAu1sXA&_nc_ht=scontent.frgn4-1.fna&oh=db3661949b4aff4881c253cbb2390207&oe=5DA2EAF4",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👍🏻ၾကမ္းတုိက္စက္ေလးနဲ့ ၾကမ္းတုိက္ရတာ အားေတာင္မသံုးရလုိ့ ၾကမ္းတုိက္တံေလးကိုင္ျပီး အခန္းတစ္ပတ္လမ္းေလ်ွာက္သလုိပါပဲ။ ေခၽြးတစ္စက္မွေတာင္မထြက္ဘဲ အခန္းတစ္ခုလံုး သန့္ရွင္း ေျပာင္လက္သြားမွာအမွန္ပါေနာ္။\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66714910_315581262678872_6327123281031725056_n.jpg?_nc_cat=106&_nc_oc=AQl7y5nzuz2Ev-V6ai77_pRR2IBuY-lyg2V0QA3TgfWBjAlwIjB5JFNG7v2Qjcpa2Gs&_nc_ht=scontent.frgn4-1.fna&oh=cc97b8dc9f7d81d7d9516b37fd4f089d&oe=5DA823FA",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        👉🏻ပံုထဲမွာ အတုိင္းအတာနဲ့ အျမင့္ေတြကိုျပထားပါတယ္ရွင့္။\n\n                        👉🏻အေလးခ်ိန္ကေတာ့ 1 kg ေက်ာ္ေက်ာ္ေလးပဲမို့လို့ ေပါ့ေပါ့ပါးပါး အသံုးျပဳလုိ့ရပါတယ္။\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66470624_315581282678870_1519939886117814272_n.jpg?_nc_cat=110&_nc_oc=AQkDD3lI-ZS-6dVTWW38waNDl4Ff-aDJtxy2L0EMllodOuGaHIF9JzWAf8axrYGR-B4&_nc_ht=scontent.frgn4-1.fna&oh=038e5bf93d0e6a66e2756b62c2584832&oe=5DA5F544",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        👉🏻အတုိအရွည္လည္းကိုယ္လုိသလုိခ်ိန္လို့ရတယ္ေနာ္။\n\n                        ☘️ေစ်းႏႈန္း- 38000 က်ပ္ ( ၾကမ္းသုတ္တစ္စံုစီပါၿပီး)\n\n                        ☘️အေမႊးၾကမ္းသုတ္ တစ္စံု- 3500 က်ပ္\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66030758_315581319345533_8286342999026171904_n.jpg?_nc_cat=111&_nc_oc=AQkcFJd5Yjd2OFw8vq886rdtVEscHKUKEBmKUo6hInkHUIbNWEjeG4gztz-paJ2MXdo&_nc_ht=scontent.frgn4-1.fna&oh=2c7aeac6e94bed16a27ef1c7bdb1e12f&oe=5DA10142",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        ☘️ေဖာ့ၾကမ္းသုတ္ တစ္စံု- 3500 က်ပ္\n\n                        Comment မွာ video ေလးၾကည့္ၾကည့္ပါေနာ္။\n\n                        👉🏻Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။ ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၃၀၀၀ အတြင္းက်သင့္ပါမယ္ရွင့္။ ေရာက္မွ ပိုက္ဆံရွင္းလို့ရပါတယ္။\n\n                        👉🏻နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါတယ္ရွင့္။ နယ္ျမိဳ႔မ်ားအတြက္ေတာ့ ေငြၾကိဳရွင္းစနစ္ပါရွင့္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66452817_315581342678864_830325402902724608_o.jpg?_nc_cat=110&_nc_oc=AQlrqPHN7u9sQ8s7csniKynYXK_E4Pm0F0u9onGUClE7fV-h6VWJPmuirJHDabtMz5Q&_nc_ht=scontent.frgn4-1.fna&oh=341a6c0567d90b2f6dea1f8be0d837d9&oe=5DAE1685",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ဆက္သြယ္မွာယူလုိပါက\n                        ဖုန္း- 📞09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါတယ္။\n\n                        Aladdin မွ ပစၥည္းမ်ားအစံုအလင္ ကိုၾကည့္ရႈလိုပါက messenger တြင္ Hi ဟုပို႔ၿပီးၾကည့္ရႈႏိုင္ပါတယ္ရွင့္။\n                    "
+                  )
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page11.vue?vue&type=template&id=ed14c0cc&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page11.vue?vue&type=template&id=ed14c0cc& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: "card-img-top img-responsive",
+                attrs: {
+                  src:
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65745749_313933009510364_2735049957370232832_o.jpg?_nc_cat=101&_nc_oc=AQm0fyjH17PNXAbn3lO8QT1yGz9vGu4luhF4QPlhDvlq9ehth9r744vUh5Y5fh7C9Wc&_nc_ht=scontent.frgn4-1.fna&oh=a1fa8619f506c50d8e563f5cd60fffa0&oe=5DAA0DF5",
+                  alt: "ဒုကၡေပးေသာက်ီးေပါင္းေရာဂါ"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [_vm._v(" ဒုကၡေပးေသာက်ီးေပါင္းေရာဂါ")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "\n                        ⚠️က်ီးေပါင္းဆုိသည္မွာအရိုး မွအတက္ကေလးမ်ားထြက္ျခင္းျဖစ္ျပီး ထုိအတက္ကေလးမ်ားမွ ေဘးရိွၾကြက္သားမ်ား၊ အာရံုေၾကာမ်ားကိုပိညက္ေစျခင္းတုိ့ေၾကာင့္ ေဘးရိွၾကြက္သားမ်ား ေတာင့္တင္းျခင္း၊ နာက်င္ျခင္း၊ အထိုင္အထမ်ားတြင္ နာက်င္ျခင္းတုိ့ျဖစ္တတ္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66294791_313933022843696_4917870800985391104_n.jpg?_nc_cat=110&_nc_oc=AQnow0VjAr7aSZchg5ti4YOlT0DUS0eKL-8L3dIuEixnhMzq7MAx_v8df2fin9sjNNI&_nc_ht=scontent.frgn4-1.fna&oh=23835fc690196bb4caf5ae1e581cc341&oe=5DEA4C40",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ⚠️အာရံုေၾကာမ်ားပိညက္ျခင္းေၾကာင့္ ထံုျခင္း၊က်ဥ္ျခင္း ၊ ေျခလက္မ်ားမလႈပ္ရွားနုိင္ျဖစ္ျခင္း၊ လည္ပင္းက်ီးေပါင္းဆိုလ်ွင္ လက္ေမာင္းတစ္ေလ်ွာက္ထံုက်ဥ္ျခင္း၊ ခ်ာခ်ာလည္ မူးေ၀ျခင္း၊ ခါးက်ီးေပါင္းဆိုလ်ွင္ ေပါင္နွင့္ ေျခေထာက္တစ္ေလွ်ာက္ ထံုက်ဥ္ျခင္းတုိ့ျဖစ္ေစတတ္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65995001_313933066177025_3894133971247693824_n.jpg?_nc_cat=104&_nc_oc=AQk_dd4P46UgfdLhe7DdlF1fCyZ2JIKI13y3jttLdlQjKNKcoCUxfhhVzjBHvu5fy-M&_nc_ht=scontent.frgn4-1.fna&oh=66a2fce0b024de4543d4bb130bf69821&oe=5DB44D42",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ⚠️ထုိသုိ့က်ီးေပါင္းလကၡဏာမ်ားရိွပါက supportive treatment အေနျဖင့္ memory foam ေခါင္းအံုးကို အသံုးျပဳျခင္းျဖင့္ သက္သာေစမည္ျဖစ္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65439222_313933072843691_3914029659922104320_n.jpg?_nc_cat=105&_nc_oc=AQlTa6IU3WS8j3UnJGqn6KSqh95sM3Dk6QJLaN-abtnEWUzpcen3VSC83_fZb6795LU&_nc_ht=scontent.frgn4-1.fna&oh=106aa1222537e11d93e51c39ae8021c5&oe=5DB443C7",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ⚠️က်ီးေပါင္းေရာဂါအစပိုင္းအဆင့္တြင္ မိမိ၏လည္ပင္းအေနအထား၊ ခါးအေနအထားတို႔ကို ပံုစံမမွန္အိပ္ျခင္း၊ ျပဳမူေနထိုင္ျခင္းတို႔မျဖစ္ေအာင္သတိထားျခင္းျဖင့္ က်ီးေပါင္းေရာဂါမျဖစ္ေအာင္ကာကြယ္ႏိုင္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65885950_313933112843687_9153855706246414336_n.jpg?_nc_cat=105&_nc_oc=AQl7AT8bcj3yGoX15mEA1hGD2AWP0jlIw2utOfYiLNJdAI8K11BoZ7iZsQQEqNaeD6Q&_nc_ht=scontent.frgn4-1.fna&oh=cadac79286394ee027934ba7fa04a72e&oe=5DA62FB0",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        Memory foam ဆုိတာဘာလဲ။\n\n                        ✅Memory foam ဆုိသည္မွာ ဖိလုိက္ရင္နစ္၀င္သြားျပီး ႏူးညံ႔ေသာေခါင္းအံုးအမ်ိဳးအစားျဖစ္ပါသည္။ လည္ပင္းက်ီးေပါင္းနွင့္ ခါးနာျခင္းတုိ့တြင္ memory foam ေခါင္းအံုးျဖင့္အိပ္လွ်င္ လည္ပင္း၊ ခါးအ႐ိုးဆစ္မ်ား၏ပံုစံကိုမွန္ေစသျဖင့္ သိသိသာသာ သက္သာေစပါသည္။\n\n                        ✅လည္ပင္းက်ီးေပါင္းဆိုလ်ွင္ လည္ပင္း၏ curvature( အေကြးအေကာက္) အတုိင္း ေခါင္းအံုးသည္ပံုသြင္းလုိက္သလုိျဖစ္သြားျပီး ၾကာလ်ွင္ ျပားသြားျခင္းမ်ိဳးလည္းမရိွေပ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65886746_313933132843685_3211591091555926016_n.jpg?_nc_cat=100&_nc_oc=AQn3lgB99d08qTjj4auLDQVvR0GRm48oiAD_KPsU-JLLAJstaX5PNYSt164jT68xJu0&_nc_ht=scontent.frgn4-1.fna&oh=d7feef4f29f129c9ae75f0960a114f54&oe=5DB19DD0",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅ခါးက်ီးေပါင္းဆုိလ်ွင္လည္း ခါး၏ curvature အတုိင္းနစ္၀င္ျပီးပံုစံ၀င္သြားေသာ ခါးခုေခါင္းအံုးသည္ ခါးက်ီးေပါင္းအတြက္အထူးသင့္ေလ်ာ္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66266676_313933169510348_6752377467706540032_n.jpg?_nc_cat=109&_nc_oc=AQluqzD6gka8oOXP_Uh7QDxdwmnNxTVI-BPrp9GrNmO0af5xbbPNsHRrdwl21iXh2Ow&_nc_ht=scontent.frgn4-1.fna&oh=6f6c5b826f0006a29c4574bbbc2b6b0e&oe=5DA1717C",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅ခါးနာျခင္းတြင္ မာလြန္းေသာ၊ ေပ်ာ့လြန္းေသာ ၾကမ္းျပင္ေပၚတြင္ အိပ္ပါက ပို၍ဆုိးရြားေစပါသည္။ memory foam အမ်ိဳးအစားခါးခုေခါင္းအံုး သည္ ေပ်ာ့လြန္းမာလြန္းျခင္းမရိွဘဲ curvature အလိုက္ေျပာင္းလဲသြားျပီးထလုိက္လ်ွင္ပံုမွန္အေနအထားသို့ ျပန္လည္ေရာက္ရိွသြားပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66490648_313933192843679_4852692975756509184_n.jpg?_nc_cat=104&_nc_oc=AQmtxuQK34CF1IVscAsQqNLCYZ9GSMFbqrqZbNklLaIBDhYAN9YCytWEY8I9QMMryJw&_nc_ht=scontent.frgn4-1.fna&oh=9d64bf09b163d773be2d2ef93ac0fbdc&oe=5DEC3A71",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ❇️Memory foam က်ီးေပါင္းေခါင္းအံုးနွင့္ ခါးခုေခါင္းအံုးကို ကၽြန္မတို့ Aladdin - အာလာဒင္ online shopping မွ ေရာင္းခ်ေပးေနျပီျဖစ္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65786035_313933226177009_6445555960541872128_n.jpg?_nc_cat=101&_nc_oc=AQnU5Rk93QzM6ftNlhsjL6-CYcBIM8HbkirhGqEeDBXgENRbh7k6GTnmhTlnJjdV0Ak&_nc_ht=scontent.frgn4-1.fna&oh=1e08768e8f3b2b7d1acfff9399f139f1&oe=5DBB44D8",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻လည္ပင္းက်ီးေပါင္းေခါင္းအံုး - ၁၆၀၀၀ က်ပ္ (အေရာင္- အျဖဴေရာင္)\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65895880_313933209510344_4057367897004048384_n.jpg?_nc_cat=100&_nc_oc=AQlKMeMotByxH_qiVhpTyWMyUtpAr-RnucrCVpWnsH45mZk6Y7_elzlUhtqQ6W9I3sU&_nc_ht=scontent.frgn4-1.fna&oh=f9c23b17e3472ef95fe86d5c5483fdff&oe=5DE87ED0",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        👉🏻ခါးက်ီးေပါင္းေခါင္းအံုး- ၁၆၀၀၀ က်ပ္ (အေရာင္- ပန္းေရာင္၊ခဲေရာင္္၊ နက္ျပာေရာင္)\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65943693_313933256177006_1860532476317794304_n.jpg?_nc_cat=103&_nc_oc=AQmo9bUIKom1d4u6rAheyRCvz2jauayMwXtHtIq6vHjkbPRDAD0JFWPuL5xinyJGJGg&_nc_ht=scontent.frgn4-1.fna&oh=3d2666c53eb4cb7997705f5bb96daf63&oe=5DA9B375",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👍🏻ေအာက္မွာပံုေလးေတြတစ္ပံုခ်င္းေထာက္ၾကည့္ေပးပါေနာ္။\n                        အျဖဴေရာင္ေလးေတြက က်ီးပေါင္းေခါင္းအံုးပါ။\n                        နက္ျပာေရာင္ေလးက ခါးခုေခါင္းအံုးပါေနာ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66181694_313933276177004_7565847142607093760_n.jpg?_nc_cat=108&_nc_oc=AQkVJnsqADjflVws9fQW5AK_fW4kIQQaosmNe_yA2pRH_jxrfC5ynjrsDp6vzPflSLw&_nc_ht=scontent.frgn4-1.fna&oh=05042ef161ac2d948678429f6cde2f6e&oe=5DEC201A",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👍🏻Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။\n\n                        👍🏻ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၂၅၀၀ အတြင္းက်သင့္မည္ျဖစ္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65863417_313933312843667_126755784963915776_n.jpg?_nc_cat=106&_nc_oc=AQl74bLtloDaJrYKoOZRVrXXxVhcT1pEqQr1U3p5dsJzh9uY8NDHLXmjN07HBy4XJTY&_nc_ht=scontent.frgn4-1.fna&oh=47cd5cf819b54bb4e59c6d21ae2ca13f&oe=5DAEA431",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👍🏻နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါသည္။\n                        ဆက္သြယ္မွာယူလုိပါက\n                        ဖုန္း-📞 09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါသည္။\n\n                        Aladdin မွ ပစၥည္းမ်ားအစံုအလင္ ကိုၾကည့္ရႈလိုပါက messenger တြင္ Hi ဟုပို႔ၿပီးၾကည့္ရႈႏိုင္ပါတယ္ရွင့္။\n                    "
+                  )
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page12.vue?vue&type=template&id=ecf891ca&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page12.vue?vue&type=template&id=ecf891ca& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: "card-img-top img-responsive",
+                attrs: {
+                  src:
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66617967_313871352849863_6994897778237243392_n.jpg?_nc_cat=101&_nc_oc=AQnR_DTnAscaXVQ0GXwbR55O3yWiRbelJZHGldcgXpg0PKVYw27i9GwxTgVarLPHyw8&_nc_ht=scontent.frgn4-1.fna&oh=1afaa44d3ac277dfef97bd709868ea2c&oe=5DAE5B5F",
+                  alt: "အေမႊးနံ႔လႊတ္စက္"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [_vm._v(" အေမႊးနံ႔လႊတ္စက္")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "\n                        \n                        🌷🌷🌷Lily ပန္းခင္းေလးထဲ မွာထုိင္ျပီး ရံုးအလုပ္ေတြလုပ္မလား။\n\n                        🌊🌊🌊Ocean ထဲမွာပင္လယ္ရနံ႔ေတြနဲ့ အိပ္ရာ၀င္မလား။\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66058866_313871359516529_5785715573602123776_n.jpg?_nc_cat=106&_nc_oc=AQm44JoLbzZKzFfbKBIH6LV5EfvZGurHI7mu7By8AYIvn7zzP9cmabonivRGm6y4l7o&_nc_ht=scontent.frgn4-1.fna&oh=c0643199351fb0d937c37c5dfab1b037&oe=5DBF6307",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        💐💐💐Lavender ခင္းၾကီးထဲမွာ Lavender ရနံ႔ေလးေတြနဲ့ ကားေမာင္းမလား။\n\n                        🌸🌸🌸မိုးေအးေအး ဆိုဖာေလးေပၚမွာ sakura ပန္းရနံ့ေလးေတြနဲ့ စိတ္ကူးယဥ္ၾကည့္မလား။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66437525_313871406183191_2728193213880860672_o.jpg?_nc_cat=106&_nc_oc=AQkzYKaZ8yZE_a_ggn8cr9joz7qZXk68qecX--qYF2aWL2dMWzQRJiDmbsHupUSoPBw&_nc_ht=scontent.frgn4-1.fna&oh=1c9f6d99249efa7061449b71d832dd1b&oe=5DA02399",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ဒီ သယ္ေဆာင္ရလြယ္တဲ့ အေမႊးနံ႔ထုတ္စက္ေလး နဲ့ အေမႊးန႔ံ ဆီေလးထည့္ျပီးတစ္ေန့တာလံုးကိုလန္းဆန္းေမႊးၾကိဳင္ေစမွာပါ။\n\n                        ✨✨✨မီးေရာင္စံုေလးေတြ လင္းေနလို႔ အခန္းတြြင္းအလွဆင္ လုိ့လည္းရ၊ အခန္းတြင္း ေမႊးရနံ႔ေလးလည္းသင္းၾကိဳင္ေစေတာ့အိပ္ခန္း၊ရံုးခန္း၊ ဆုိင္းတြင္းအလွဆင္လုိ့ရပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66190020_313871432849855_7325874735525396480_n.jpg?_nc_cat=108&_nc_oc=AQmjDtWgXxwF5vqZzOyNuN4vElA0XdshUBQ5mxzq2N87pgilFqW1EBbzwzmxvlre-RM&_nc_ht=scontent.frgn4-1.fna&oh=f81c0e2c0e869f49c5075e4e9fbfc2a2&oe=5DB8C03C",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        🎁🎁🎁သူငယ္ခ်င္း၊ခ်စ္သူခင္သူေတြကိုလည္း လက္ေဆာင္ေပးလုိ့ မ်က္နွာပန္းလွပါတယ္။\n\n                        အသံုးျပဳပံု\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66394156_313871462849852_2975283047491960832_n.jpg?_nc_cat=107&_nc_oc=AQkB8ZJlArCFRg_B8k_1nZWW-vFxPEZTwNlGT__2wGzFigP1TbSOv4V9uZUjOZWrM1I&_nc_ht=scontent.frgn4-1.fna&oh=e41a0d9bb55a4015cc8f38b1de7a2e3e&oe=5DC039EE",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        ✅အေမႊးနံ႔လႊတ္စက္ ဗူး သို့မဟုတ္ အိုးေလးထဲကို ေရ ေလးပံု သံုးပံုခန့္ျဖည့္ပါ။\n\n                        ✅ ကိုယ္နွစ္သက္ရာအေမႊးနံ႔ဆီကို ၃/ ၄ စက္ကစျပီး မိမိလုိလ်ွင္လုိခ်င္သေလာက္ မ်ားမ်ားထည့္ျပီး ေရနဲ့သမေအာင္ေမႊပါ။\n\n                        ✅plug ေပါက္တပ္လုိက္တာနဲ့ အေမႊးနံ႔ေရာ၊ မီးေရာင္စံုေလးေတြေရာထြက္လာမွာပါ။\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66284319_313871499516515_7499073148617228288_n.jpg?_nc_cat=110&_nc_oc=AQkn4i_zZvT529jgUeBN4oil2DfmfYfk4wQDW0Bo0Nz26GlP6fWPMNFvKGCkWhZdgiU&_nc_ht=scontent.frgn4-1.fna&oh=f0955b6c7a0989c249397d60a6b2e397&oe=5DC000B3",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        ✅Usb ေခါင္းကို Power bank နဲ့လည္းခ်ိတ္ဆက္အသံုးျပဳလုိ့ရသလုိ ကားေပၚမွာလည္း usb ေခါင္းကို အားသြင္းတဲ့ ေနရာမွာတပ္ျပီး အသံုးျပဳနုိင္ပါတယ္။\n\n                        အေမႊးနံ႔လႊတ္စက္အိုးေလးဆုိရင္ေတာ့ အခ်ိန္ ၃ နာရီ၊ ၆ နာရီ ကေန ၁၂ နာရီထိ timer ေလးေပးထားျပီးဖြင့္ထားလုိ့ရပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65944817_313871506183181_6997883592256782336_n.jpg?_nc_cat=106&_nc_oc=AQm25tC37hooz5rPgjU2FakAosscpKNAaRdip2UFLbDxJjS7WxxOi-eFYtFUIH2ngbI&_nc_ht=scontent.frgn4-1.fna&oh=ab77ee501a1c5adb76f4d9ff522b33b9&oe=5DA70CF5",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        အေမႊးနံံ့အိုး- 39000 က်ပ္ (သစ္သားေရာင္၊ အနက္ေရာင္)\n                        အေမႊးနံံ႔မီးလံုး- 19000 က်ပ္\n                        အေမႊးနံ႔ဗူး - 15000 က်ပ္ ( အျပာေရာင္)\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65867387_313871559516509_285752996065705984_n.jpg?_nc_cat=101&_nc_oc=AQl3kb-6YVnKrC9lw3a4FLa2cVWjHQwGU-JrveWHngsZK2POsUj00oCyhuSc8f4CWTE&_nc_ht=scontent.frgn4-1.fna&oh=f3f484fb7b8ce653300ba6008b978900&oe=5DBCFAD5",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        အေမႊးနံ႔ဆီမ်ား\n\n                        🌷Lily - 10ml – 2000 က်ပ္\n                        🌊Ocean – 10ml- 2000 က်ပ္\n                        💐Lavender – 10ml- 2000 က်ပ္\n                        🌸Sakura- 10ml- 2000 က်ပ္\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66075820_313871579516507_7258544371472007168_n.jpg?_nc_cat=109&_nc_oc=AQkrjNeYBw7jlQjNiMp7wE21KPjOHoXiFhtaEOf07PrSijogKpSZu_Nt3nUw3PYO5jw&_nc_ht=scontent.frgn4-1.fna&oh=ebbf79a99f40cdd28de40aaf861675d9&oe=5DEBF966",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        အနံ႔ေလးေတြကလည္း အကုန္လံုး သင္းသင္းေလးေတြပဲ သေခ်ာေရြးထားျပီးေရာင္းေပးတာမို့ အကုန္လံုးအနံ႔မၾကိဳက္မွာစိုးရိမ္စရာမရိွပါဘူးရွင့္။\n\n                        ☀️ေအာက္မွာလည္းပံုေလးေတြၾကည့္လုိ့ရပါတယ္ေနာ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66249266_313871629516502_8226494541016858624_n.jpg?_nc_cat=109&_nc_oc=AQnMLW0UbDzCn_zaFiyJCfU9dI5jdF0wdvokHH7siBUQgdsXxY_2EuyRynMurl7yseU&_nc_ht=scontent.frgn4-1.fna&oh=bd8769f13dafbf2794ff7b9b8102f34f&oe=5DA3E60E",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☀️Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။ ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၃၀၀၀ အတြင္းက်သင့္ပါမယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66168903_313871656183166_1100417595292516352_n.jpg?_nc_cat=107&_nc_oc=AQl8QvWBuGMVwo8RwYISHydLV_WaAU5-K1U_rDMrTh0ooU9gKHg53GUaAMXAD0927JM&_nc_ht=scontent.frgn4-1.fna&oh=24922545e478c5560be4d667b718cbb7&oe=5DA330EC",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☀️နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါသည္။\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/65856615_313871692849829_2216796650561601536_n.jpg?_nc_cat=100&_nc_oc=AQlXQ-TzZM9qjKrMUvBL_JSDJiQl5u5q9RtkflrroC2pAlrrfVtXnVKfa8y_o_BIHC8&_nc_ht=scontent.frgn4-1.fna&oh=da451f76b559d571371c10716f9f0423&oe=5DBB86CD",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        ☀️ဆက္သြယ္မွာယူလုိပါက\n                        ဖုန္း- 📞09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66166683_313871682849830_1508181399532732416_n.jpg?_nc_cat=107&_nc_oc=AQnedcPCPBO3MVMdXAB-YoJxq0tUlBNTnj_t3QTzgabEjNmZBSQ4PbppYIJTqHj7Vrc&_nc_ht=scontent.frgn4-1.fna&oh=c322f32a96bda0af76b7a369a7579e0b&oe=5DAA99C0",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☀️Aladdin online shopping မွပစၥည္းမ်ားအစံုအလင္ကုိ ၾကည့္ရွဳလုိပါက \n                        Messenger တြင္ Hi ဟုပို့ျပီး ၾကည့္ရွဳနုိင္ပါသည္။\n                        ေကာင္းေသာေန့ေလးျဖစ္ပါေစရွင့္။☀️☀️\n                    "
+                  )
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page13.vue?vue&type=template&id=ecdc62c8&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page13.vue?vue&type=template&id=ecdc62c8& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: "card-img-top img-responsive",
+                attrs: { src: "", alt: "" }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [_vm._v(" ေရသန့္ပံုးေမာ္တာ")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" })
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page2.vue?vue&type=template&id=047ceea8&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page2.vue?vue&type=template&id=047ceea8& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: " card-img-top img-responsive pt-1 pb-1",
+                attrs: {
+                  src:
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66712248_320719382165060_7479449494581411840_n.jpg?_nc_cat=107&_nc_oc=AQkexSlq2M41-Phx_IqbkK8i4ApeDqQXxBqa-sTrXmqo95lpB7PMZefBYt25bsrCpPw&_nc_ht=scontent.frgn4-1.fna&oh=84814458e98f3c0183b219e3c5f14d39&oe=5DB4B57A",
+                  alt: "soap"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [
+                  _vm._v(" Automatic ဆပ္ျပာ ညွစ္ ( automatic soap dispenser)")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "\n\n                        👋လက္အရိပ္ျပတာနဲ့ ဆပ္ျပာရည္ က်လာ တဲ့ ဆပ္ျပာညွစ္စက္ ေလးကို အိမ္္တုိင္းမွာေရာ၊ ရံုးတို္င္း၊ ေဆးရံု၊ ေဆးခန္းတိုင္းမွာ အဆင့္ျမင့္ျမင့္ တပ္ဆင္အသံုးျပဳနုိင္ပါျပီ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67180262_320719408831724_2519562480238198784_n.jpg?_nc_cat=108&_nc_oc=AQnHyOKYe3TKlUDU1QsISb0uD-_p8YeyOP8TuY1udxYfjArEuVCAdDBITY75jEzyAJM&_nc_ht=scontent.frgn4-1.fna&oh=96c03c6a70c57f04eeba3d09e2f775c4&oe=5DB92F8C",
+                      alt: "soap"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅Fully automatic, touch free ပါ။\n\n                        ✅ဆပ္ျပာဗူးကို ဖိရာတဲ့အခါ လက္မေဆးခင္ ညစ္ပတ္ေနတဲ့လက္နဲ့ဖိရေတာ့ ဆပ္ျပာဗူးကခလုတ္ က ေပက်ံျပီးက်န္ခဲ့ပါတယ္။ ဆပ္ျပာဗူးနဲ႔ လက္နဲ႔လံုးဝထိေတြ႕စရာမလိုဘဲ ဆပ္ျပာေရက်လာရင္အဆင္ေျပဆံုးျဖစ္မွာပါ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67410604_320719605498371_2257633989885952000_n.jpg?_nc_cat=101&_nc_oc=AQmKA_8ScC9KzgAgNq8Mr7fM3NPh3IIMEtGl-o2rzdIljLsKbnc1hFUoJkglqSaVoTU&_nc_ht=scontent.frgn4-1.fna&oh=1bdc81003ca264ea8a02051a3f4c747a&oe=5DB40A32",
+                      alt: "soap"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅ဒီ automatic soap dispenser ေလးက လက္အရိပ္ေလးျပတာ နဲ့ ဆပ္ျပာရည္ထြက္လာမဲ့ အဆင့္ျမင့္ျမင့္ ဆပ္ျပာညွစ္စက္ေလးပါ။\n\n                        ✅sensor က နႈတ္သီးေအာက္မွာပါလို႔ လက္ဘယ္အကြာအေဝး ကပဲခံခံ ဆပ္ျပာထြက္ပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67153949_320719625498369_8529128807255244800_n.jpg?_nc_cat=106&_nc_oc=AQkk-SywTvzbFEecCMLT3VgSU3gtvORcz3tcwj9QrNpL9WNOo3BSfGfkr9z3sWywAa4&_nc_ht=scontent.frgn4-1.fna&oh=cbfe7277dcefcf78ffc67155c9aee9b1&oe=5DAD6A88",
+                      alt: "soap"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅ဓာတ္ခဲကေတာ့ AA ဓာတ္ခဲထည့္ျပီး အသံုးျပဳလုိ့ရျပီး ဓာတ္အားမစားတဲ့အတြက္ ဓာတ္ခဲတစ္ခါထည့္ထားရင္ ၂ လ ေလာက္က လွည့္ၾကည့္စရာမလုိပါဘူး။🔋🔋🔋\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67342706_320719645498367_6748826448875749376_n.jpg?_nc_cat=108&_nc_oc=AQmQAN9em3D2unuCA-Cuawd828mjOvMd4-UCC6n4IpnI2uz4hhY6ojFzErPbgqUpfr8&_nc_ht=scontent.frgn4-1.fna&oh=7b776c68d138ce53b457acc9f0eacea4&oe=5DB38941",
+                      alt: "soap"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅ၾကိဳးေတြ plug ေတြမလုိတဲ့အျပင္ basin ေဘးမွာတင္ထားလုိ့လည္းရ၊ ေနရာလည္းအလြယ္တကူေရႊ႕လုိ့ရပါတယ္။ နံရံကပ္လည္းမဟုတ္လုိ့နံရံေတြေဖာက္ထြင္းစရာလည္းမလုိပါဘူးေနာ္။\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66906328_320719728831692_4209944183537926144_n.jpg?_nc_cat=101&_nc_oc=AQmPXS9gCTxdRi9o5yNdgWX5EQzpbp1Fc9nR9MWi-6kS1I9otzY6tDp9UxMCn9TTXr4&_nc_ht=scontent.frgn4-1.fna&oh=3f7cd6fd7c65527a119604a7de4fc065&oe=5DAAF26E",
+                      alt: "soap"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        ✅ဆပ္ျပာအပ်စ္အၾကဲ အမ်ိဳးမ်ိဳးကို ထည့္ျပီးအသံုးျပဳလုိ့ရပါတယ္။\n\n                        👉🏻ေစ်းႏႈန္း- ၁၆၀၀၀ က်ပ္\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66801288_320719758831689_2929113794032435200_n.jpg?_nc_cat=108&_nc_oc=AQn8EzH1Nln4swaDtVzG4pmiqS2j356gXR07DlfO3-tUzyk8m0CB42haLJOKzpeAPsQ&_nc_ht=scontent.frgn4-1.fna&oh=ecff3f8bac9ee3ca16fab2da689433ec&oe=5DB22BD4",
+                      alt: "soap"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67121226_320719782165020_6234691341394116608_n.jpg?_nc_cat=109&_nc_oc=AQl-r27-N5yWVzOVl__1u9t4lTkdVpFPpHNfQTWETP9vGhrIQfdyY0ob43MiD7XJ_Cs&_nc_ht=scontent.frgn4-1.fna&oh=4622b776273f7f07352680f8d3229560&oe=5DC036A8",
+                      alt: "soap"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၂၅၀၀ အတြင္းက်သင့္ပါမယ္။ ရန္ကုန္ျမိဳ႔တြင္း ေရာက္မွေငြရွင္းစနစ္ပါရွင့္။\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67337852_320719825498349_9197607833716129792_n.jpg?_nc_cat=107&_nc_oc=AQmMajFHm2vnMZfz2fWR6MG8CpgbR6aGcHBriAWqveZrhG6XAjzoMovjiUhRP9CnGt4&_nc_ht=scontent.frgn4-1.fna&oh=0a3023983ead0fea2e1ddfc79a982914&oe=5DA2900B",
+                      alt: "soap"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        👉🏻နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါတယ္။ \n                        နယ္ကေတာ့ေငြၾကိဳလႊဲေပးရပါတယ္ရွင့္။\n\n                        ☀️ဆက္သြယ္မွာယူလုိပါက \n                        ဖုန္း- 📞09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါတယ္။\n\n                        ☀️Messenger တြင္ Hi ဟု ပို႔ၿပီး Aladdin မွပစၥည္း အစံုအလင္ကိုဝင္ေရာက္ၾကည့္ရွဳႏိုင္ပါၿပီ။\n\n                        ☀️☀️☀️ေကာင္းေသာေန႔ေလးျဖစ္ပါေစရွင့္။\n                    "
+                  )
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page3.vue?vue&type=template&id=048b0629&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page3.vue?vue&type=template&id=048b0629& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: "card-img-top img-responsive",
+                attrs: {
+                  src:
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66866539_320316088872056_3154295141200560128_n.jpg?_nc_cat=110&_nc_oc=AQl7tpx9CPkkYkwW90mf2kRn2S78heh9wPVxREgck5-8HO4hjotbukmFUqUCQ-XWWC8&_nc_ht=scontent.frgn4-1.fna&oh=af17ea4b4561a67bbf187d823483ea86&oe=5DA5F853",
+                  alt: "brush"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [_vm._v(" Automatic သြားတုိက္တံ")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "\n                        \n\n                        🧚‍♀️သြားတုိက္ရာတြင္ ပိုမိုထိေရာက္ျပီး ေကာင္းမြန္စြာတုိက္နုိင္ေသာ automatic toothbrush ေလးပါ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66722996_320316105538721_8548205449961275392_n.jpg?_nc_cat=106&_nc_oc=AQk713rJlEBxMdFofhyKccVsWvjZU3yM6f6RBwHgmHHqgKfCs9KEIOuYfg-guyblEL4&_nc_ht=scontent.frgn4-1.fna&oh=d40a907b0300172d72b4665d3b7d047e&oe=5DE9DA19",
+                      alt: "toothbrush"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        🧚‍♀️ခလုတ္တစ္ခ်က္နိွပ္လုိက္သည္နွင့္ သြားတုိက္တံ brush ေမႊးေလးမ်ားသည္ vibration effect နဲ့ တုန္ခါျပီးသြားၾကိဳသြားၾကားထိ သန့္စင္ေပးပါသည္။\n\n                        🧚‍♀️ေရွ႔တုိးေနာက္ဆုတ္ၾကိမ္ဖန္မ်ားစြာျပဳလုပ္စရာမလိုေသာေၾကာင့္ သြားေၾကြမ်ားကို မထိခုိက္ေစဘဲ သြားနွင့္ အလိုက္သင့္ တုိက္ေပးရံုျဖင့္ ပင္ သြားမ်ားကိုစင္ၾကယ္ေစပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67403849_320316165538715_714892925552558080_n.jpg?_nc_cat=105&_nc_oc=AQkcHvxCXalnaSNDNxfDaFEb6TJoKbrhXkHYro6-QqKLrzKWF1e5LTZf6dfo_6V93Qc&_nc_ht=scontent.frgn4-1.fna&oh=4c4badd4648fcbbf932e0f5b17b9cd57&oe=5DB54BD4",
+                      alt: "toothbrush"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        🧚‍♀️အားတစ္ခါသြင္းျပီးလ်ွင္ 3 ပတ္ ခန့္ဆက္တုိက္အသံုးျပဳနုိင္ပါသည္။\n\n                        💟💟💟💟သြားတုိက္ brush ၄ စံုပါ၀င္ျခင္းေၾကာင့္ ေရရွည္အၾကာၾကီး သံုးစြဲနုိင္ျပီး brush extra မ်ားကိုလည္းထပ္မံ၀ယ္ယူနုိင္ပါသည္။\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67157472_320316182205380_8841999247575351296_n.jpg?_nc_cat=105&_nc_oc=AQkvtq88FQxHmsV5Z0uTIPjlotSpyxZlm0CIP8iOpD5x2-WlifKxbwRhoXx4r1qwJTA&_nc_ht=scontent.frgn4-1.fna&oh=b2d4e54673af3e7e11c41b973611034b&oe=5DEB9885",
+                      alt: "toothbrush"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        နွစ္ေပါင္းမ်ားစြာ brush လဲလွယ္ေပးရံုျဖင့္ ၾကာရွည္အသံုးျပဳနိင္ေသာသြားတုိက္တံ တစ္မ်ိဳးျဖစ္ပါသည္။\n                        ✅Clean\n                        ✅Polish\n                        ✅White\n                        ✅Gumcare\n                        ✅Sensitive function ၅ မ်ိဳးပါ၀င္ျပီး မိမိ လုိသလို ခ်ိန္ဆ အသံုးျပဳနုိင္ပါသည္။ ပံုမွန္ သြားတုိက္ျခင္းအတြက္ Clean function တြင္ခ်ိန္ထားျပီးအသံုးျပဳနုိင္ပါသည္။\n\n                        👉🏻5V-USB Charge\n                        👉🏻Voltage- 3.7 V\n                        👉🏻Power- 0.5 W\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67276627_320316202205378_5809782010528399360_n.jpg?_nc_cat=111&_nc_oc=AQkv2QL6a-qBxsbpXlQMHi4nwGPHMkWz_o7KnkSEg4UyjkP9AU_2cs2QpQv_GF-uF7A&_nc_ht=scontent.frgn4-1.fna&oh=15dbf293802fcc4dc7359a66a68c36b0&oe=5DB73D80",
+                      alt: "toothbrush"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✨Rechargeable battery ျဖစ္ၿပီး တစ္ခါအားသြင္းျပီးလ်ွင္ ေန့စဥ္ ပံုမွန္ ၂ ၾကိမ္သြားတုိက္ရံုျဖင့္ဆုိလ်ွင္ ၃ ပတ္ ခန့္အားျပန္သြင္းရန္မလိုဘဲ တိုက္နုိင္ပါသည္။\n\n                        ✨ခရီးရွည္ထြက္ ရသည့္အခါမ်ိဳးတြင္ အားသြင္းၾကိဳးတကူးတကသယ္သြားစရာမလိုဘဲ အားအျပည့္သြင္းျပီးလွ်င္ ၃ ပတ္ေက်ာ္ခရီးထြက္နုိင္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67087248_320316222205376_8837997394617434112_n.jpg?_nc_cat=103&_nc_oc=AQlLGqiqfXyAfER8V35kuXVRvXrq8KvJWcbsTkbaAsXKCUme5Rc_1dVCsYXS8HfUpBw&_nc_ht=scontent.frgn4-1.fna&oh=8c974012b7befb56f6421614dbd8a92e&oe=5DEB3F0C",
+                      alt: "toothbrush"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        🌿မိသားစုမ်ားအတြက္လိုအပ္မည့္ သန့္သန့္ရွင္းရွင္း သြားတုိက္တံေလးမ်ားခ်ိတ္ထားနုိင္မည့္ သြားတုိက္တံခ်ိတ္စင္ေလးမ်ားလည္းေရာင္းခ်ေပးေနပါျပီ။\n\n                        🌿သြားတုိက္ေဆးညွစ္သည့္ toothpaste dispenser၊ သြားတုိက္တံခ်ိတ္လုိ့ရေသာေနရာ ၈ ခုနွင့္ ေရခြက္ေလး ၄ ခြက္လည္းအပါအျပီးျဖစ္ပါသည္။\n\n                        🌿ကပ္အားေကာင္းသည့္ ကပ္ခြာရွည္ၾကီး လည္းပါ၀င္ေသာေၾကာင့္ အုတ္နံရံ၊ ေၾကြျပားနံရံတုိ့ကိုေဖာက္စရာမလိုဘဲ ပါ၀င္ေသာကပ္ခြာျဖင့္တစ္ခါတည္းကပ္၍ အသံုးျပဳနုိင္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66692886_320316258872039_6754814754272837632_n.jpg?_nc_cat=104&_nc_oc=AQnL0L2AhRB2C7UJC7pN4NBq2YPauBAqbLzD9rDwvzdZrpc7Se-kyi8Lv2yAvyU-pTI&_nc_ht=scontent.frgn4-1.fna&oh=8cfb0320d2385f0644de20cf7d3d70f2&oe=5DEADDEC",
+                      alt: "toothbrush"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        🎈Automatic သြားတုိက္တံ - ၁၇၀၀၀ က်ပ္\n\n                        အေရာင္ - ပန္းေရာင္ ၊ အစိမ္းေရာင္\n\n                        🎈သြားတုိက္စင္ - ၁၄၀၀၀ က်ပ္\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66773590_320316288872036_8400984356285317120_o.jpg?_nc_cat=111&_nc_oc=AQncTDcKBFw4ZZoHlC9l1a8y9EwaSSZayLq3z--gz9XsFINZvsgYh4lqj5QGYDiUigQ&_nc_ht=scontent.frgn4-1.fna&oh=e6a8f3c11ff48766ebc441313949a61f&oe=5DBA48FA",
+                      alt: "toothbrush"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☀️Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။ ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၂၅၀၀ အတြင္းက်သင့္ပါမယ္ရွင့္။ေရာက္မွ ရွင္းေပးလုိ့ရပါတယ္ရွင့္။\n\n                        ☀️နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါတယ္ရွင့္။ေငြၾကိဳလႊဲေပးရပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66597817_320316322205366_6447958767110717440_n.jpg?_nc_cat=101&_nc_oc=AQk3geO2_t2jTup5NA8cZuRPztSNk49rf8Q5G6TNa0EpRsoT03D_zWMm-6nJQwMhcNQ&_nc_ht=scontent.frgn4-1.fna&oh=ef2e1772da72b53f172665ecb710537b&oe=5DAD5E04",
+                      alt: "toothbrush"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☀️ဆက္သြယ္မွာယူလုိပါက\n                        ဖုန္း- 09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါတယ္။\n\n                        ☀️Aladdin မွ ပစၥည္းအစံုအလင္ကို ၾကည့္ရွဳလုိပါက messenger တြင္ Hi ဟုပို့ျပီးၾကည့္ရွဳနိုင္ပါတယ္။\n\n                        ေကာင္းေသာေန့ေလးျဖစ္ပါေစရွင့္။☀️☀️☀️\n                    "
+                  )
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page4.vue?vue&type=template&id=04991daa&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page4.vue?vue&type=template&id=04991daa& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: "card-img-top img-responsive",
+                attrs: {
+                  src:
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67389082_320312082205790_5158167916184600576_n.jpg?_nc_cat=102&_nc_oc=AQk3qHo9aAQCa31ty_a31IAKATrjxb9-WxyN85qNPQQ1CY-gj1BgHDC5nCF41Msn3mg&_nc_ht=scontent.frgn4-1.fna&oh=5151cc4f693dfa57d41421f56b283f1d&oe=5DB0CCF3",
+                  alt: "ရႊီရႊီ ေသာ့ခ်ိတ္(key finder)"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [_vm._v(" ရႊီရႊီ ေသာ့ခ်ိတ္(key finder)")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "                            \n\n                        ☘️ဥာဏ္ေကာင္းတဲ့လူေတြဟာ သတိပိုေမ့တတ္ၾကတယ္တဲ့။\n\n                        ☘️ပစၥည္းေတြခဏခဏ ေပ်ာက္တတ္တာ အျပစ္တစ္ခုမဟုတ္ပါဘူး။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66800123_320312112205787_4085902603156717568_n.jpg?_nc_cat=103&_nc_oc=AQl57HkQuJH2Q2f2tsTUNhXA-Fv1wVq9kN6-rRfKYmS7iwdgIdkXLLR6esxi2maaHS0&_nc_ht=scontent.frgn4-1.fna&oh=55f390873eac6e1cf08193a44d93e34a&oe=5DAB2F19",
+                      alt: "key finder"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☘️ပိုက္ဆံအိတ္၊ ကားေသာ့၊ အိမ္ေသာ့ စတဲ့အေရးၾကီးတာေတြမွ မၾကာခဏ ေရြးေပ်ာက္တတ္တာ သဘာ၀ပါ။\n\n                        ☘️ဒီျပသနာကိုေျပလည္ေစဖို့ ေပ်ာက္သြားတာနဲ့ ဖုန္းထဲက ေန ေနရာလဲၾကည့္လုိ့ရ၊ ခလုတ္နိွပ္ျပီး alert လုပ္ လုိက္တာနဲ႔ ရီႊႊရီႊ ဆုိျပီး အသံထျမည္ ေစတဲ့ေသာ့ခ်ိတ္ေလးပါ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66800135_320312138872451_4789430611452362752_n.jpg?_nc_cat=109&_nc_oc=AQmTflHPUHpnerW9ND0i1_ckIzf5cOhs5IHGM3hkZlYWb3k4lICuJx7wdZ7kczh2tpI&_nc_ht=scontent.frgn4-1.fna&oh=8870f646a3173ffcc3f5f2baa06faa2d&oe=5DB2A1A6",
+                      alt: "key finder"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ❗️❗️❗️သူခိုးလည္းဖမ္းေပးတဲ့ေသာ့ခ်ိတ္ေလးေပါ့။ \n                        Anti-lost function ‘On’ ထားလုိက္တာနဲ့ ကိုယ့္ဆီက ေန ခါးပိုက္ႏိႈက္က ယူျပီး ၁ ေပေလာက္ေ၀းသြားတာနဲ႔ ကိုယ့္ဖုန္းထဲက alarm က ပီေပၚပီေပၚနဲ့ ျမည္လာျပီး သူခိုးဖမ္းေပးမွာေနာ္။\n\n                        ✅ကား parking ထဲ မွာ ကားရွာရခက္ေနလည္း ကားေပၚမွာထားခဲ့ရံု နဲ႔ ဖုန္းကေန car ေပၚမွာတင္ထားခဲ့ရံုနဲ႔ car ေနရာ ကို အလြယ္တကူၾကည့္လို႔ရပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67051614_320312195539112_2178585619314245632_n.jpg?_nc_cat=107&_nc_oc=AQn7FaNJydcfc4iICTDV7_tX4AEGL3ZlRjFxkr3gYGukIulKgorKyZjvNCWXJVmfO3w&_nc_ht=scontent.frgn4-1.fna&oh=118a07c890eea08b39003250c97a427b&oe=5DA0D1BC",
+                      alt: "key finder"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅Android ဖုန္းနဲ့ေရာ IOS ဖုန္းနဲ႔ေရာ မွာ Bluetooth နဲ့ခ်ိတ္ဆက္အသံုးျပဳလုိ့ရပါတယ္။\n\n                        1. Application name- iTracing ကို download လုပ္ပါ။\n\n                        2. Bluetooth ‘on’ ၿပီး iTag ေသာ့ခ်ိတ္ေလးနဲ့ connect လုပ္လုိက္ပါ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67047585_320311965539135_5547568682240049152_n.jpg?_nc_cat=111&_nc_oc=AQnRuPJ32vomPDnB5GzD8D20JN7ls4lOm-XBsq2LJW_OEalxxz4dz_L1dMnLydyABMY&_nc_ht=scontent.frgn4-1.fna&oh=b2ce99b4b53abfb1e9a3884b6d6d3f33&oe=5DBFA065",
+                      alt: "key finder"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        3. bluetooth မိတဲ့ 75 ေပ ပတ္လည္အတြင္းမွာ ေသာ့ခ်ိတ္ေလးဘယ္နားရွိေနလဲဆိုတာ location ကိုေကာင္းေကာင္းညႊန္ျပေပးနုိင္ပါတယ္။\n\n                        4. ေနာက္ဆံုး bluetooth ျပင္ပေရာက္သြားလုိ့မမိေတာ့ရင္လည္း ေနာက္ဆံုးေပ်ာက္သြားခဲ့တဲ့history ကိုျပန္ၾကည့္လုိ့ရပါတယ္။\n\n                        5. Battery လည္းနာရီထဲထည့္တဲ့ဓာတ္ခဲ ပဲမို့ အလြယ္တကူ၀ယ္ယူလုိ့ရတဲ့အျပင္ ၆ လ အနည္းဆံုးခံပါတယ္။\n\n                        ေစ်းႏႈန္း - ၇၅၀၀ က်ပ္\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67088085_320311988872466_4667176858452754432_n.jpg?_nc_cat=105&_nc_oc=AQkxoCwl7b3RyZAXF1qM3iFt4uGiVUjZsyg6cjhw6gKsIp1fynn6lYvU77AySkTCT04&_nc_ht=scontent.frgn4-1.fna&oh=4c26d3c1e69674f11896ea47248721ce&oe=5DA14099",
+                      alt: "key finder"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။\n\n                        ✅ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၂၅၀၀ အတြင္းက်သင့္ပါမယ္။ ရန္ကုန္ျမိဳ႔တြင္း ေရာက္မွေငြရွင္းစနစ္ပါရွင့္။\n\n                        ✅နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါတယ္။ \n                        နယ္ကေတာ့ေငြၾကိဳလႊဲေပးရပါတယ္ရွင့္။\n\n                        ✅ဆက္သြယ္မွာယူလုိပါက \n                        ဖုန္း- 📞09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါတယ္။\n\n                        ✅Messenger တြင္ Hi ဟု ပို႔ၿပီး Aladdin မွပစၥည္း အစံုအလင္ကိုဝင္ေရာက္ၾကည့္ရွဳႏိုင္ပါၿပီ။\n                    "
+                  )
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page5.vue?vue&type=template&id=04a7352b&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page5.vue?vue&type=template&id=04a7352b& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: "card-img-top img-responsive",
+                attrs: {
+                  src:
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66687347_320187158884949_9211708284363341824_n.jpg?_nc_cat=108&_nc_oc=AQmCdXCHWYUz5lmir10XycHvWsjWuoKNQaUAJoXt8Qh2tONeQzG_gGT5sLNAIO9nGqM&_nc_ht=scontent.frgn4-1.fna&oh=347a2df13fe9e6ac8ff019860a51cc90&oe=5DA2561C",
+                  alt: " Disposable cup dispenser (ခြက္ကိုင္)"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [_vm._v("  Disposable cup dispenser (ခြက္ကိုင္)")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "\n\n                        တစ္ခါသံုးခြက္ေလးေတြကို သန့္သန့္ရွင္းရွင္းအသံုးျပဳလို့ရေစတဲ့ ေရသန္႔စက္ေလးေတြေဘးမွာခ်ိတ္ထားလို႔ရတဲ့ cup dispenser ခြက္ကိုင္ဗူးေလးပါ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66666288_320187182218280_4602447659737808896_n.jpg?_nc_cat=110&_nc_oc=AQldt76p7LMnEJbmvSto21h7NPqZH4W0OFuvbadRiognDSU03OgvXJmmTw5gbJQo6Dw&_nc_ht=scontent.frgn4-1.fna&oh=2c3f7187ce085ac388ae7ec499bd16a3&oe=5DBEE785",
+                      alt: "cup"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        Watercooler သုိ့မဟုတ္နံရံမွာကပ္ထားဖုိ့ ကပ္ခြာလည္းပါသလုိ့ မူလီစုပ္ဖို့ မူလီေလးေတြလည္းအပါအျပီးပါ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66707308_320187205551611_7332859357371039744_o.jpg?_nc_cat=103&_nc_oc=AQkSXVXzLdbGAC8EU2YrjUNDWzH85R-FtgHVCyiXnauLsOgojdWtwy9okJnzLrSHS9E&_nc_ht=scontent.frgn4-1.fna&oh=069c2309742f2b2fd1d6d344db83102e&oe=5DA117FE",
+                      alt: "cup"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        မူလီမ႐ိုက္ဘဲ ကပ္ခြာ နဲ႔ပဲကပ္လည္းရတယ္ေနာ္။\n\n                        အသံုးျပဳပံု\n\n                        ☘️ဒီ cupholderေလးကို အေပၚကဖြင့္ျပီး disposable cup အထပ္လုိက္ကို (ဘယ္ size ျဖစ္ျဖစ္ ) ထည့္ထားလုိ့ရပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67064788_320187218884943_3719794819137011712_n.jpg?_nc_cat=100&_nc_oc=AQnoIYRSJNEYS24Qz-1sdlxf5QAhaWKz_t-FTCMMuEDN17qpjU454k3P2LmtTv6mQv8&_nc_ht=scontent.frgn4-1.fna&oh=09f6530e0091505617cdf606784519a8&oe=5DBDC945",
+                      alt: "cup"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☘️ ေအာက္ကခြက္ ကိုဆြဲယူလုိက္ တာနဲ့ေနာက္တစ္ခြက္ကအလိုလုိက်လာမွာပါ။\n\n                        ☘️ခြက္ရဲ့ေအာက္ေျခပဲအျပင္မွာထြက္ေနတာမို့ ဖုန္ေတြ၊ေလထဲကပိုးမႊားေတြနဲ့ မထိေတြ႔ေတာ့သန့္သန့္ရွင္းရွင္းေသာက္လုိ့ရပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66701083_320187268884938_7124578882606333952_n.jpg?_nc_cat=108&_nc_oc=AQnTyyboj5Q7PaE2LwwaG04Po7mKUPvXKtpSQkf99IMOCrB6q1IZnOJRRzmix5WNPm0&_nc_ht=scontent.frgn4-1.fna&oh=9e3893e54ab874bd7dbbd22ee00118e6&oe=5DA04B40",
+                      alt: "cup"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☘️ခြက္ေတြကိုလက္နဲ့ကုိင္ျပီးတစ္ခြက္ခ်င္းျဖဳတ္ျပီးယူစရာမလိုေတာ့တစ္ေယာက္နဲ့တစ္ေယာက္လည္း ပိုးေတြမကူးေတာ့ပါဘူး။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66817551_320187255551606_7373203862083076096_n.jpg?_nc_cat=102&_nc_oc=AQncXAZJCIOcS-IHipUi1q6-jfyjhRqf7ico20bNhIGal8JOQ83I33p7rYR_oZtqRLQ&_nc_ht=scontent.frgn4-1.fna&oh=0cb1a7806ae6a524b04fc1daa6cb8abe&oe=5DB0DFFE",
+                      alt: "cup"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☘️ခြက္အေဟာင္းေတြလည္းျပန္ထည့္လို႔မရေတာ့ အရင္ကလို ေသာက္ၿပီးသားခြက္မွန္းမသိ၊ ခြက္အသစ္မွန္းမသိ ေရာေထြးေနတဲ့ျပသနာလည္းမရွိေတာ့ပါဘူး။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66609315_320187318884933_6953076633704071168_n.jpg?_nc_cat=110&_nc_oc=AQkOSNcSRVL4dOeTbUbwTg3kJlz1sTLeENXRGKOdORUOiplIxfTZCk_EusXiTNV2wbg&_nc_ht=scontent.frgn4-1.fna&oh=3e4c586123067d41c4f5eae4ae27a410&oe=5DAEFCCE",
+                      alt: "cup"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ❇️❇️❇️ရံုးေတြ၊ ဆုိင္ေတြ၊ သင္တန္းေတြ၊ ေက်ာင္းေတြ စတဲ့ လူအမ်ားအတြက္ watercooler သို့မဟုတ္ ေရသန့္ဗံုးေတြခ်ေပးထားရတဲ့ေနရာေတြအတြက္အထူးသင့္ေလ်ာ္ပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67419985_320187308884934_1877597472306495488_n.jpg?_nc_cat=101&_nc_oc=AQndMeHXmkZHEyCZIimF7rPI1MZja2mT9YxITNaWBQ5FBUyvc8xUadccS8GTY24NvT4&_nc_ht=scontent.frgn4-1.fna&oh=5842a7b5f9c26b7f19aecf0e1ce0a6b9&oe=5DBFE90A",
+                      alt: "cup"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻ေစ်းႏႈန္း - ၁၂၀၀၀ က်ပ္\n\n                        👉🏻အေရာင္- အျဖဴေရာင္\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67087242_320187362218262_7449007006905532416_n.jpg?_nc_cat=102&_nc_oc=AQn-PEqJNOOfcKWLozAwP1BSejRxSkqigIv-AJush8OhA3iw2-uWbnv6p85DCcI2Xbs&_nc_ht=scontent.frgn4-1.fna&oh=d03591694d4a9cdc80b94d19ca9a4b14&oe=5DA629C0",
+                      alt: "cup"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။ ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၂၅၀၀ အတြင္းက်သင့္မည္ျဖစ္ပါသည္။\n\n                        👉🏻နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67241338_320187365551595_505325025750941696_o.jpg?_nc_cat=104&_nc_oc=AQn7nOIQMldxQXN1-gVzbEbcw0-xftqdnHsAF8CcjccMFUZNZW1g-rR8b3Ot3S-PFUY&_nc_ht=scontent.frgn4-1.fna&oh=784e1d44ab7dada88763aa6439cf7b3b&oe=5DAF3C5F",
+                      alt: "cup"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻ဆက္သြယ္မွာယူလုိပါက\n                        ဖုန္း-📞 09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66673795_320187428884922_5666826497982201856_n.jpg?_nc_cat=104&_nc_oc=AQlTGZP_i7bl71mSqVObeq6GXnIZHmLlx-EPpr5CJJkB1sAyfVl1oyrbfpVS6zRvNFg&_nc_ht=scontent.frgn4-1.fna&oh=9054537fee0ecd2f78e48ce244e0b89e&oe=5DB8A8A3",
+                      alt: "cup"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        🌸Aladdin online shopping မွပစၥည္းမ်ားအစံုအလင္ကုိ ၾကည့္ရွဳလုိပါက \n                        Messenger တြင္ Hi ဟုပို့ျပီး ၾကည့္ရွဳနုိင္ပါသည္။\n\n                        ေကာင္းေသာေန့ေလးျဖစ္ပါေစရွင့္။☀️☀️☀️\n                    "
+                  )
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page6.vue?vue&type=template&id=04b54cac&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page6.vue?vue&type=template&id=04b54cac& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: "card-img-top img-responsive",
+                attrs: {
+                  src:
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66867225_319732578930407_6399690369860108288_n.jpg?_nc_cat=105&_nc_oc=AQl7YIzkMfe8Ne-LEJEJ6q7xznZEAQrXW0ulFvYDXHrQlDAGzCVP7PD2vhjJSXeZVh4&_nc_ht=scontent.frgn4-1.fna&oh=29291fbeecfcbd0fe0d1cb0075c56425&oe=5DEC1585",
+                  alt: "2 in 1 တုတ္ေကာက္ထိုင္ခံု"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [_vm._v(" 2 in 1 တုတ္ေကာက္ထိုင္ခံု")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "\n                        ဒူးနာ၊ခါးနာရွွိသူမ်ားအတြက္ တုတ္ေကာက္ကဲ့သုိ့လည္းအသံုးျပဳနုိင္ေသာ၊ မတ္တပ္ရပ္တန္းစီရေသာကိစၥမ်ား၊လမ္းမ်ားမ်ားေလ်ွာက္ရေသာခရီးမ်ားတြင္ လမ္းတြင္ ခံုအျမင့္ရွာျပီးထုိင္ရန္မလိုဘဲ မိမိ တုတ္ေကာက္ကေလးကိုဖြင့္ကာထုိင္ခုံလည္းျပဳလုပ္နုိင္ေသာ 2 in 1 တုတ္ေကာက္ထုိင္ခံုေလးျဖစ္ပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66771823_319732605597071_6781811153463934976_n.jpg?_nc_cat=107&_nc_oc=AQkVzigJAc7oimxO1s6P3YZYwZUfipcFgJQK1JteIf9kqfkQZ9AWNLvWQR5-mPCEBCM&_nc_ht=scontent.frgn4-1.fna&oh=ccb3194d8f71105c55a3a75f36d87ed4&oe=5DBA7F82",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        တုတ္ေကာက္ထုိင္ခံု၏ဖြဲ႔စည္းပံု\n\n                        ❇️ပံုမွန္ခ်ိန္တြင္ တုတ္ေကာက္ကဲ့သုိ့ ခံုကို သိမ္းထားျပီးအသံုးျပဳနုိင္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66771823_319732605597071_6781811153463934976_n.jpg?_nc_cat=107&_nc_oc=AQkVzigJAc7oimxO1s6P3YZYwZUfipcFgJQK1JteIf9kqfkQZ9AWNLvWQR5-mPCEBCM&_nc_ht=scontent.frgn4-1.fna&oh=ccb3194d8f71105c55a3a75f36d87ed4&oe=5DBA7F82",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ❇️မိမိထုိင္လိုေသာအခါတြင္ ထုိင္ခံုကို ဖြင့္ခ်လုိက္ရံုျဖင့္ သံုးေခ်ာင္းေထာက္ထုိင္ခံုျဖစ္သြားျပီး stable ျဖစ္စြာထုိင္နုိင္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66619929_319732635597068_7333540406040199168_n.jpg?_nc_cat=108&_nc_oc=AQntMIujlLVuzb4R-mu07lsinoncNu1eUOdSwcxTTjFRWsN6OW25bd1i1TJCcs6ZT3I&_nc_ht=scontent.frgn4-1.fna&oh=cfe1f67a46236cbb03440363a9b79ff8&oe=5DAE53C4",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ❇️Body weight မ်ားေသာလူမ်ားတြင္ဒူးနာျခင္းသည္အဓိကျဖစ္တတ္ေသာေၾကာင့္ တုတ္ေကာက္ထုိင္ခံု သည္ ၀ေသာ၊ body weight မ်ားေသာလူမ်ားအတြက္ သီးသန့္ထုတ္လုပ္ထားျခင္းျဖစ္သျဖင့္ weight ကိုမနုိင္ျခင္းမ်ိဳးမရိွဘဲ မည္သည့္ကုိယ္အေလးခ်ိန္မဆို emergency ထုိင္ခံုအေနျဖင့္အသံုးျပဳနုိင္ပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67273861_319732658930399_347606555262189568_n.jpg?_nc_cat=108&_nc_oc=AQk7UpJ-RbecEPx2hGYIhJAD0uSOyKUUrTQVmNqMvS4qFIzvSZC80hIweQcKWxCM3XY&_nc_ht=scontent.frgn4-1.fna&oh=bc19028d830d2b033e9f64aa63413fc6&oe=5DB1E358",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ❇️အေလးခ်ိန္ကလည္းေပါ့ပါးျပီးပံုမွန္ တုတ္ေကာက္ အေလးခ်ိ္န္ပဲျဖစ္ျပီး steel နဲ့ျပဳလုပ္ထားတာေၾကာင့္ၾကာလာရင္သံေခ်းတက္တာမ်ိဳးလည္းမရိွနုိင္္ပါ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66998685_319732685597063_5903218805009547264_n.jpg?_nc_cat=106&_nc_oc=AQkhXfNwMVjonkSqjUK2fTM4rnz7Nd4m0vRiofMVi0q-qHcfwBSUPBUkp4SpK3UJ99w&_nc_ht=scontent.frgn4-1.fna&oh=fc439e43a90660ebde4b8ad3f52ac6b0&oe=5DB49A2A",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ❇️အျမင့္ - 83 cm \n                        ထုိင္ခံုဖြင့္လုိက္လ်ွင္ အျမင့္- 70 cm\n                        ထုိင္ခံုအျမင့္ - 50 cm\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66815678_319732692263729_6628061481864790016_n.jpg?_nc_cat=101&_nc_oc=AQkJDmFyUcVVPSXL9MiP8rICpHsrqsaNwYfLh9aVxtTe8K6GwCw-G9W-b1JUfB6YOBA&_nc_ht=scontent.frgn4-1.fna&oh=4153e6201be659a661fa8bb4ec2a8c88&oe=5DA302C5",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ❇️ကိုယ္အေလးခ်ိန္ 90 kg (ေပါင္ ၂၀၀) ထိ ခံႏိုင္ပါသည္။\n\n                        ❇️တုတ္ေကာက္ အေလးခ်ိန္ - 0.8 kg (ပံုမွန္တုတ္ေကာက္အေလးခ်ိန္သာရွိၿပီးေပါ့ပါးသယ္ေဆာင္ရလြယ္ပါသည္)\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66827974_319732728930392_4070600072767733760_n.jpg?_nc_cat=106&_nc_oc=AQkj-whz9Fh2Wr1_4QMdOeHJFZmonhQFANMWRWYrrXw-Tjxz19bAdX-3a_ijBGGYo1o&_nc_ht=scontent.frgn4-1.fna&oh=718037f931c12319dc684ff705e6d112&oe=5DBC3E48",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻ေအာက္မွာပံုေလးေတြၾကည့္ၾကည့္ပါေနာ္။\n\n                        👉🏻ေစ်းႏႈန္း - ၂၆၀၀၀ က်ပ္\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66819283_319732738930391_3385939529385902080_n.jpg?_nc_cat=107&_nc_oc=AQlrdmyM7OFHIV7NgqBgXn6MZ5HnqEBrFyBw6lYrbfukl1Wmr__wfUPqVubSZKxrWCA&_nc_ht=scontent.frgn4-1.fna&oh=161d3667bbd4e7a96370f6f1510539fd&oe=5DEE189B",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။ ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၃၀၀၀ အတြင္းက်သင့္ပါမည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66509735_319732802263718_550888663051927552_n.jpg?_nc_cat=104&_nc_oc=AQm71EL9Iqa6kI4FoWybB89QI8M1bLOve9w42Z9SF2AtyYZoR02WFcYWC8EPsjD1AAI&_nc_ht=scontent.frgn4-1.fna&oh=4b56158ba09918136ee8f5bab8da4c8f&oe=5DB23F35",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါသည္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67205869_319732778930387_10473754492665856_n.jpg?_nc_cat=104&_nc_oc=AQmfd8_-3YJCB43-mRmrdBhSjTZRnnRk8idZM_6F0E-tmXiB_-Hbf6eKBpH7CJZlFGU&_nc_ht=scontent.frgn4-1.fna&oh=3942e6b78ca6e61751f73b2075bd0152&oe=5DB42DB4",
+                      alt: ""
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻ဆက္သြယ္မွာယူလုိပါက\n                        ဖုန္း- 09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါုုသည္။\n\n                        👉🏻Aladdin online shopping မွပစၥည္းမ်ားအစံုအလင္ကုိ ၾကည့္ရွဳလုိပါက \n                        Messenger တြင္ Hi ဟုပို့ျပီး ၾကည့္ရွဳနုိင္ပါသည္။\n                    "
+                  )
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page7.vue?vue&type=template&id=04c3642d&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page7.vue?vue&type=template&id=04c3642d& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: "card-img-top img-responsive",
+                attrs: {
+                  src:
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66618316_319646868938978_8090963111370031104_n.jpg?_nc_cat=101&_nc_oc=AQn0-IKozaNVhiyc5IHiOAc8dgt442CZryvfayxBdw_R_Zi0FXd4SJMBjNs-EMaomBs&_nc_ht=scontent.frgn4-1.fna&oh=25c7f91540a7fe1ea0a36b38d5239333&oe=5DA64AD9",
+                  alt: "Unicorn"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [_vm._v(" Unicorn Lamp")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "\n                        🦄🦄🦄\n                        Unicorn ကမ႓ာေလးမွ ႀကိဳဆိုပါတယ္ရွင့္။\n\n                        Unicorn ခ်စ္သူ ေလးေတြ အတြက္ unicorn မီးအိမ္ေလးေတြလာပါၿပီေနာ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66872909_319646885605643_2294767598522335232_n.jpg?_nc_cat=108&_nc_oc=AQn70kxiPFu7QrG1lQw4DG4m2606apKPhS1fdtaSKzQxkpWUPx33Ivs9daD5_7EjB4Y&_nc_ht=scontent.frgn4-1.fna&oh=aa4026c41217080bb3ae8ac96b496004&oe=5DB639CE",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        💁‍♀️အရမ္းခ်စ္စရာေကာင္းတဲ့ unicorn အ႐ုပ္ေလးေတြသာမက ပဲ hello kitty နဲ႔ ဆင္ပ်ံေလး Dumbo မီးအိမ္ေလးေတြလည္းရွိတယ္ေနာ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67265111_319646925605639_3415342935623860224_n.jpg?_nc_cat=105&_nc_oc=AQljBnTcDZvURvwu_lPVw7WBJ1YcP4u_Y7Yf9P4MvZIbDS-Gxm72ItJyxaY0I3oPgBs&_nc_ht=scontent.frgn4-1.fna&oh=345b37cbaff33e441ff757868e498581&oe=5DAC39A6",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        💁‍♀️ညအိပ္ရာဝင္ ပံုျပင္ေလးေတြထဲက unicorn ေလးေတြ hello kitty ေလးေတြ နဲ႔ dumbo ေလးေတြ ဟာ ဒဏၭာရီ ပံုျပင္ေလးေတြနဲ႔ႀကီးျပင္းခဲ့သူေတြအတြက္ေတာ့ ထူးျခားတဲ့ အဓိပၸါယ္ေတြ အမ်ားႀကီးရွိေနပါတယ္။\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66843900_319646945605637_3512497827458580480_n.jpg?_nc_cat=104&_nc_oc=AQnADm2taAizQmPfkqYDhsx2_jHhz1uh5ZIem4aNUF3C_refVi0R99m89BMX9zGiqsk&_nc_ht=scontent.frgn4-1.fna&oh=3f94ed5fb56521000136c074b2310c27&oe=5DA50E28",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        🌙ဒီ မီးအိမ္ေလးေတြ နဲ႔ညဘက္ အိပ္ရာဝင္ရမယ္ဆိုရင္ အိမ္မက္လွလွေလးေတြ မက္မွာေနာ္။ 💫💫💫\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66579157_319646985605633_4982878042998177792_n.jpg?_nc_cat=106&_nc_oc=AQm2u-l7i-VGqyUD2pes9V5A_RsDh7oXMr9fj6gQrdE154cOnNKX4NJk_gXrfyNcSF0&_nc_ht=scontent.frgn4-1.fna&oh=f1b712abb75dc94cd299252b4f622e8b&oe=5DEBCE69",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        💌ခ်စ္ရတဲ့ သူေလးက unicorn ခ်စ္သူေလးဆိုရင္ေတာ့ ဒီ လက္ေဆာင္ေလးက အမွတ္ ၁၀၀ အျပည့္ ရေစမဲ့ လက္ေဆာင္ေလးေနာ္။\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66827791_319647008938964_8696960748905037824_n.jpg?_nc_cat=109&_nc_oc=AQlLMwApPmSjWTT6blXUNyJVBRxSKxx4CvFaRPH7ZSx2eFvyNlZRTwZtU9-4WH04EXo&_nc_ht=scontent.frgn4-1.fna&oh=9e97819fd48dc1f390d2524f86d615fd&oe=5DB5B843",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        ☘️ေအာက္မွ မီးဖြင့္တဲ့ခလုတ္ေလးပါတယ္ေနာ္။\n\n                        ေစ်းႏႈန္း- ၁၂၅၀၀ က်ပ္\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66532147_319647032272295_5948466543170945024_n.jpg?_nc_cat=103&_nc_oc=AQlpdTXMwra_g1_Cg2TueKiarD-x-6YyWyMfzT_JddV5a9lpX4WGMorpofUQxJ7D85M&_nc_ht=scontent.frgn4-1.fna&oh=fef6d0288fed07cc59e893057422c438&oe=5DB876E7",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☀️Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။ ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၃၀၀၀ အတြင္းက်သင့္ပါမယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/64886568_319647052272293_2622600102878904320_n.jpg?_nc_cat=111&_nc_oc=AQl-z--5MQEePi5Wzf8zbx7tX_yIll_Dd4WdOkN2v39OW_Ol_bcZxq3M3UBuisDWBKA&_nc_ht=scontent.frgn4-1.fna&oh=a4d3167d96fc0c41bec3579411e49799&oe=5DAAAE6A",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☀️နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါသည္။\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66515162_319647078938957_8365202382446919680_n.jpg?_nc_cat=111&_nc_oc=AQkA4fiCuSWxUpM2d5cactfR_AworNHs7qXsZdqzHoCKs0CGWnOL5CWSZNMMVl39CFc&_nc_ht=scontent.frgn4-1.fna&oh=fa9ea1887ce28e32863a95dec796c738&oe=5DAAB2F0",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        ☀️ဆက္သြယ္မွာယူလုိပါက\n                        ဖုန္း- 📞09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66604098_319647105605621_2895194075063910400_n.jpg?_nc_cat=101&_nc_oc=AQkYPYs-ZvesV4DG9KJV6c55oj7IwJJY7SdRm7hlGsokFH08ZQJFrgPKG4bAGN1lhP0&_nc_ht=scontent.frgn4-1.fna&oh=02fbabf6b2c2164228f0854f77289b34&oe=5DB0C216",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☀️Aladdin online shopping မွပစၥည္းမ်ားအစံုအလင္ကုိ ၾကည့္ရွဳလုိပါက \n                        Messenger တြင္ Hi ဟုပို့ျပီး ၾကည့္ရွဳနုိင္ပါသည္။\n\n                        ေကာင္းေသာေန့ေလးျဖစ္ပါေစရွင့္။☀️☀️☀️\n                    "
+                  )
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page8.vue?vue&type=template&id=04d17bae&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page8.vue?vue&type=template&id=04d17bae& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: "card-img-top img-responsive",
+                attrs: {
+                  src:
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/64693345_319041592332839_2644195550630510592_n.jpg?_nc_cat=111&_nc_oc=AQkYdjqXUtgzfLxJCHec2axGsFr6e6xqMSuI26VADMeLoA-ekCn1W8Po600490u5Adc&_nc_ht=scontent.frgn4-1.fna&oh=76178892da92ef8cd11bcd2483a3d315&oe=5DB7C73C",
+                  alt: "Automatic ဖြင့္/ပိတ္ေခါက္ထီး☔️☔️☔️"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [_vm._v(" Automatic ဖြင့္/ပိတ္ေခါက္ထီး☔️☔️☔️")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "                            \n\n                        ⛈မိုးေလးဖြဲတဲ့ မိုးရာသီ ေရာက္လာျပီေနာ္။\n\n                        🐻ခလုတ္တစ္ခ်က္နိွပ္လုိက္တာနဲ့ ရႊတ္ခနဲ ၁ စကၠန့္ အတြင္း ပြင့္သြားျပီး ခလုတ္တစ္ခ်က္ထပ္နိွပ္လုိက္ရင္ ရႊတ္ခနဲ ျပန္ပိတ္သြားတဲ့ စတုိင္က်တဲ့ထီးေလးနဲ့ဆို ေဘးကလူေတြ ပါးစပ္အေဟာင္းသားနဲ့ေငးၾကည့္ေနမွာေနာ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66708947_319041625666169_7435203093685338112_n.jpg?_nc_cat=104&_nc_oc=AQlL21LXuI54418iMY3POvRX787et2_e6u--fteULpt7RsRCy8MaMj3SQs4Eag6GLTg&_nc_ht=scontent.frgn4-1.fna&oh=bd5b95c5b6373874a4f51017c8db86f9&oe=5DAFEC98",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        🐻ဒီဇုိင္းက ေျဗာင္ကိုမွ ေၾကာင္ျခစ္ ဒီဇုိင္းနဲ့ ၀က္၀ံရုပ္ဒီဇုိင္းေလး ေတြနဲ့မို့လုိ့ အရမ္းခ်စ္စရာေကာင္းတဲ့အျပင္ quality ကလည္းေကာင္းမွေကာင္း မို့ ေလဒဏ္မိုးဒဏ္ေလာက္ကေတာ့အေပ်ာ့ပဲေနာ္။\n\n                        🐻ကုိင္းမေတာင့္ မွာမပူနဲ့၊ automatic ပြင့္ တဲ့နည္းပညာနဲ့လုပ္ထားလုိ့ ရုိးရိုးထီးေတြထက္ေတာ့ ကိုင္းေတာင့္တာအာမခံပါတယ္ရွင့္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66778912_319041648999500_7392758483109543936_n.jpg?_nc_cat=111&_nc_oc=AQmprVdE6Ug9e9jUThq2K7q8a867tDv0n1whukWqSknmyP6wV51LddvGoF1M-D9CD64&_nc_ht=scontent.frgn4-1.fna&oh=53262da09d9d4ac927e7b3f87e120acd&oe=5DECFA81",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☘️Aladdin ရဲ့အမာခံ ခ်စ္ ပရိတ္သတ္ေတြလည္း ေျဗာင္ ဒီဇုိင္းအသစ္ကေလးေတြလည္းထပ္ေရာက္ေတာ့ ထပ္ျပီးအားေပးၾကဦးေနာ္။\n\n                        ရိုးရိုးထီးေတြနဲ့မတူတဲ့အားသာခ်က္မ်ား\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66622320_319041682332830_5828128607578357760_n.jpg?_nc_cat=107&_nc_oc=AQkmq7B4EQmnfEwl3Tykr0-lTCJKmVAG9SDZOacaUsmowm-MZCZAxcjaw4YeSqkaW18&_nc_ht=scontent.frgn4-1.fna&oh=522adbaef85de6a7d8ce0cd9dd4aaba6&oe=5DB793C4",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅ရိုးရိုးထီးေတြက အရင္းထိ ဆြဲပိတ္ရရင္ ကားထဲ၀င္တဲ့အခါ၊ bus ကားေပၚတက္တဲ့အခါ မိုးသည္းရင္ တစ္ကုိယ္လံုး စိုကုန္တာမ်ိဳးျဖစ္တဲ့ ျပသနာမ်ိဳးကို ဒီ automatic ထီးေလးက ေျဖရွင္းေပးပါတယ္။\n                        တစ္ကိုယ္လံုးကားေပၚေရာက္ျပီးမွ ခလုတ္တစ္ခ်က္နိွပ္လုိက္ရံုပါပဲ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/64874165_319041702332828_6684347195782594560_n.jpg?_nc_cat=108&_nc_oc=AQnsk6tkYoTvN2HmBJSL8forx_96BQcVmZh7TyckgnkKXsiq8x4IidqVtXfNYmVb9B4&_nc_ht=scontent.frgn4-1.fna&oh=785fe396e62ff019fae35784f285ec74&oe=5DEC7DD5",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅ရိုးရိုးထီးေတြက ၾကာရင္ သံေခ်းတက္ျပီး ပိတ္ရတာၾကပ္လာတာမ်ိဳးေတြရိွတတ္ပါတယ္။\n                        ဒီ automatic ဖြင့္/ ပိတ္ထီးေလးက ပိတ္ရ၊ ဖြင့္ရ လြယ္ကူေအာင္ခလုတ္ေလးနဲ့လုပ္ေပးထားေတာ့ ၾကပ္တာ၊ အားသံုးရတာေတြလည္းမရိွေတာ့ပါဘူး။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/64861156_319041735666158_663823694228881408_n.jpg?_nc_cat=109&_nc_oc=AQlG645uLAmpnbYK7XJrKjvVInTuprjvoorBYI5vNpGs-FES-03kfojA4PfHjpAeZ-k&_nc_ht=scontent.frgn4-1.fna&oh=f69a62483a85f7dd30dd7569ef648559&oe=5DB28802",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅ေမေမတုိ့လည္း သားသားမီးမီး တုိ့ ထီးဖြင့္၊ ပိတ္ရင္း လက္ညပ္မွာ စိတ္ပူစရာမလုိေတာ့လူးေနာ္။ ခလုတ္တစ္ခ်က္နိွပ္လုိက္ရံုပါပဲ။ 🐻🐻🐻၀က္၀ံရုပ္ေလးေတြနဲ့ဆိုေတာ့ သားသားမီးမီးတုိ့လည္းအရမ္းၾကိဳက္ၾကမွာေနာ္။\n\n                        ✅လူၾကီး ေတြကိုင္ဖို့ ဒီဇုိင္းလွလွ ေၾကာင္ျခစ္ ေျဗာင္ေလးေတြလည္း ရိွပါတယ္ရွင့္။\n\n                        💌ကိုကိုမမတို့လည္းခ်စ္သူခင္သူေတြကိုလက္ေဆာင္ေပးရင္ အရမ္းၾကိဳက္နွစ္သက္ၾကမွာအေသခ်ာပါပဲ။ ထီးေလးဖြင့္ေဆာင္းတုိင္းတစ္မိုးေအာက္က တစ္ေယာက္ကို အျမဲသတိရေနမွာေနာ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67235275_319041762332822_2941888860721774592_n.jpg?_nc_cat=100&_nc_oc=AQlnMXhrjEl6kWL8EVuTt9KS78AHCVjxZDXDVLRfsJBBSkVgL5hdJ0AiD7lQSVbckso&_nc_ht=scontent.frgn4-1.fna&oh=a9a40de55dc2700d6df77f0e4389eec9&oe=5DB08925",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👩‍👩‍👧‍👧သူငယ္ခ်င္းေတြ ထီးကိုအရင္းထိ လက္နဲ့ဆြဲပိတ္ေနရတဲ့အခ်ိန္ ကိုယ္က ခလုတ္ေလးတစ္ခ်က္ပဲနိွပ္ျပီး ပိတ္ျပလုိက္ေနာ္။\n\n                        👉🏻Comment မွာထီးအသံုးျပဳပံု video ေလး ျပထားပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66696871_319041792332819_8493349126929383424_n.jpg?_nc_cat=111&_nc_oc=AQmj3KvpdO1mmymUTNpLmfMiDkk2fmG6nSGX9X55gZLe2aFco96Op9_HJyuCllq_Ik4&_nc_ht=scontent.frgn4-1.fna&oh=8e9bb3378848191e66bd6c6d4ddc67fe&oe=5DB60587",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        👉🏻အာက္ကပံုေတြမွာအေရာင္နဲ႔ ဒီဇိုင္းေလးေတြေရြးလို့ရပါတယ္ရွင့္။\n                        ☘️ေစ်းႏႈန္း- ၁၂၀၀၀ က်ပ္\n\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66772053_319041828999482_1533407662312521728_n.jpg?_nc_cat=111&_nc_oc=AQkspdxlG0XC0Vli7y_E5sGMo4DyGarsL2g3S_NvMGimsLuyOopfGyf9nKooLc64n0g&_nc_ht=scontent.frgn4-1.fna&oh=9e1abf25f91dbfc088adf649520e34ac&oe=5DA5CE8D",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        ☔️၀က္၀ံထီးအေရာင္- ပန္းႏုေရာင္၊ အျပာႏုေရာင္၊ အ၀ါေရာင္၊ နက္ျပာေရာင္ \n                        ☔️ေျဗာင္ထီး(ေၾကာင္ျခစ္)အေရာင္- အျပာ၊ ခဲေရာင္\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66754882_319041852332813_6789921696691257344_n.jpg?_nc_cat=106&_nc_oc=AQm68v6lQfoVNa6HJkRLrK93mH3A55zSAQDwlFkKVHBmsUPcUz0sEpn_LE7LoSNU0f0&_nc_ht=scontent.frgn4-1.fna&oh=422faa1d20c33dc4ea02fb839a04b657&oe=5DA3FFE6",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ❇️အေရာင္ေလးေတြမ်ားေတာ့ မွားမွာစိုးလုိ့ကိုယ္ၾကိဳက္တဲ့ ဒီဇိုင္းနဲ့အေရာင္ေလးကိုတစ္ခ်က္ေသခ်ာေျပာေပးေနာ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66678708_319041878999477_296916350507417600_n.jpg?_nc_cat=111&_nc_oc=AQnSwp1MFvD0gSmyphEXvpfpzMQxhVokmxk0PqydDdJXtBq8GVsCqhPeLEo_jSlaEFc&_nc_ht=scontent.frgn4-1.fna&oh=5496124cd5571f7fed4aea9d3501c23c&oe=5DA81C57",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ❇️Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။ ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၂၅၀၀ အတြင္းက်သင့္ပါမယ္ေနာ္။\n                        ❇️နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါတယ္။ \n                        ဆက္သြယ္မွာယူလုိပါက\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66589855_319041898999475_1262297545493708800_n.jpg?_nc_cat=102&_nc_oc=AQmzhS_LieVbtsZ-hggBdSGH-LtkAMfDcbng5eluZJydN95D4KnbvO_sOvML_qhNxDo&_nc_ht=scontent.frgn4-1.fna&oh=ec294f6f0c151db5d45d5dcb5dc4e8f5&oe=5DA998C4",
+                      alt: "Unicon lamp"
+                    }
+                  }),
+                  _vm._v(
+                    "\n                        ဖုန္း- 📞09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါသည္။\n\n                        ❇️Aladdin online shopping မွပစၥည္းမ်ားအစံုအလင္ကုိ ၾကည့္ရွဳလုိပါက \n                        Messenger တြင္ Hi ဟုပို့ျပီး ၾကည့္ရွဳနုိင္ပါတယ္။\n                        ေကာင္းေသာေန့ေလးျဖစ္ပါေစရွင့္။\n                    "
+                  )
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page9.vue?vue&type=template&id=04df932f&":
+/*!********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Page9.vue?vue&type=template&id=04df932f& ***!
+  \********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "container pt-3 pb-3" }, [
+      _c("div", { staticClass: "row justify-content-center" }, [
+        _c("div", { staticClass: "col-md-8 pb-2" }, [
+          _c(
+            "div",
+            { staticClass: "card shadow", staticStyle: { width: "18rem" } },
+            [
+              _c("img", {
+                staticClass: "card-img-top img-responsive",
+                attrs: {
+                  src:
+                    "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66744036_318030482433950_3686365160231927808_n.jpg?_nc_cat=106&_nc_oc=AQn9e9v8p37w16KFTlxirOZ8_J8Z8uwfGcB97zTtoCF7uHrrF_8k-aBjcIues6OIDN0&_nc_ht=scontent.frgn4-1.fna&oh=e9539cbf94508e45581e3ffc8c53eef3&oe=5DB2897A",
+                  alt: "စက္ရုပ္ဖုန္စုပ္စက္ (3 in 1)"
+                }
+              }),
+              _vm._v(" "),
+              _c("div", { staticClass: "card-body" }, [
+                _c("b", [_vm._v(" စက္ရုပ္ဖုန္စုပ္စက္ (3 in 1)")]),
+                _vm._v(" "),
+                _c("p", { staticClass: "card-text" }, [
+                  _vm._v(
+                    "\n                        \n                        အခ်ိန္တုိင္း၊စကၠန့္တုိင္းက တန္ဖိုးရိွပါတယ္။ အိမ္ေထာင္ရွင္ေမေမ တစ္ေယာက္အေနနဲ့မိမိ အိမ္ေလးဖုန္၊အမိႈက္ေတြကင္းစင္ေအာင္ထိန္းသိမ္းရမွာျဖစ္ေပမဲ့ ေမေမတို့မွာလည္းကိုယ္ပိုင္ အခ်ိန္ဆိုတာရိွပါတယ္။ အနားယူမယ္။ စာဖတ္မယ္။ ကိုယ္၀ါသနာပါတာလုပ္မယ္။ အလုပ္သြားမယ္။ တံျမက္စည္းလွည္းျပီး အခ်ိန္ကုန္ေနမွာမဟုတ္ပါဘူး။ ျငီးေငြ႔စရာေကာင္းတဲ့ နိစၥ ဒူ၀ အိမ္သန့္ရွင္းေရးေတြကို စြန့္ခြာဖုိ့အခ်ိန္ေရာက္လာပါျပီ။ 🎶🎶🎶\n\n                        ေမေမတုိ့ကိုယ္စားအိမ္သန့္္ရွင္းေရးလုပ္ဖို့ ဒီ robot ေလး ကို တာ၀န္ေတြလႊဲအပ္လုိက္ပါ။ တစ္အိမ္လံုးဖုန္တစ္စက္မွ်မက်န္ေအာင္ေလ်ွာက္သြားျပီးစုပ္ယူေပးသြားမွာပါ။ ဖုန္တင္ဘယ္ဟုတ္မလဲ ။ အိမ္မွာေမြးထားတဲ့ ပူစီ၊ ပါပီေလးေတြရဲ့အေမႊးေတြေရာ၊ ဆံပင္ေမႊးေတြေရာရိွသမွ်အေမႊးမွန္သမွ်အကုန္ လံုးသိမ္းဆည္းေပးသြားမွာျဖစ္လုိ့ ေမေမ ကိုယ္တုိင္တံျမက္စည္းလွည္းတာထက္ေတာင္ သန့္ျပန့္ေနမွာပါေနာ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66783779_318030502433948_4963956603230355456_n.jpg?_nc_cat=103&_nc_oc=AQlHCpx2OLEGbI2L9GmEBb0cCQ-q9Fg2ekgwHJpB4h223pBIOHJygVpKGgA7qsJnhPU&_nc_ht=scontent.frgn4-1.fna&oh=b5eea12e2cba6be938090ec9e3f1ae75&oe=5DB3C43A",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ဒီ robot ေလးက intelligent လည္းျဖစ္လို့ အခန္းနံရံေတြ၊ အခန္းေထာင့္ေတြေရာက္ရင္သူ႔ဘာသာေကြ႔၀ိုက္သြားမွာပါ။ အခန္းက်ယ္ရင္က်ယ္သေလာက္၊ ၾကားထဲက အတားအဆီးေလးေတြဖယ္ထားေပးျပီး လႊတ္ထားလုိက္ပါ။ တစ္အိမ္လံုးသန့္ရွင္းေျပာင္လက္သြားမွာအမွန္္ပါပဲရွင့္။\n\n                        ☘️အသံုးျပဳပံု\n\n                        Rechargable battery နဲ့ပါ။ အားတစ္ခါသြင္းျပီး ၂နာရီ ေလာက္ဆက္တုိက္မရပ္မနားအလုပ္လုပ္ေပးပါတယ္ေနာ္။\n                        တစ္ခါသန့္ရွင္းေရးလုပ္ျပီးတုိင္းအမိႈက္ပံုးထဲက အမိႈက္ေတြကို စြန့္ပစ္ေပးရံုပါပဲ။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66787240_318030565767275_8300383771102806016_n.jpg?_nc_cat=100&_nc_oc=AQlLqWojNksReb_QRncMENYj9QTnGjVNFcPegCk_mV3cVFppvsHgDb0I3udleNgYHGI&_nc_ht=scontent.frgn4-1.fna&oh=1b6d4f719593f2855bb524c5ca218cd5&oe=5DB26A8C",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        စက္ရုပ္ဖုန္စုပ္စက္ရဲ့အားသာခ်က္မ်ား( အဓိက function ၃ ခုလုပ္ေပးပါတယ္)\n\n                        ✅ေရွ႔မွာတံျမက္စည္းလွည္းေပးတဲ့အေမႊးေလးနွစ္ဖက္ပါလို့ ပတ္ပတ္လည္က ဖုန္၊ အမိႈက္မ်ားအားလံုး ကို လွမ္းဆြဲျပီးသိမ္းယူေပးပါတယ္။( sweeping effect)\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66717273_318030549100610_2239700285222027264_n.jpg?_nc_cat=108&_nc_oc=AQnTN_owmnQ22if3JchbUj9nwKFFJqZcojCM53Z0lwW4yCNxz6LFlwm6ngYWyN9vJSs&_nc_ht=scontent.frgn4-1.fna&oh=30a6bde0d582dd479e228d098d1762c2&oe=5DBF60AD",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅ စက္ရဲ့ေအာက္ေျခမွာ ဖုန္စုပ္တဲ့အေပါက္ ပါရိွလို့ ဖုန္၊ အေမႊးအမ်ွင္နဲ့ အမိႈက္မ်ားကို vacuum effect နဲ့စုပ္ယူေပးပါတယ္။ (vaccum effect)\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67194477_318030602433938_4589886005678440448_n.jpg?_nc_cat=110&_nc_oc=AQk9z-UMMjhwveuW8fiUwAbVxLKbGGiAJyQ8ktbYuemiUg6BaqHIyTe2_bVFjaPM598&_nc_ht=scontent.frgn4-1.fna&oh=62dcf052552793c6d5acac5c7771eb94&oe=5DA5EB11",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ✅ စက္ရဲ႕ ေအာက္ေျခမွာ ေလ်ွာ္လို့ရတဲ့ၾကမ္းတုိက္၀တ္ေလးကပ္ျပီးလည္းၾကမ္းသုတ္တဲ့အေနနဲ့အသံုးျပဳနုိင္လို့ ေမေမတုိ့ရဲ့အိမ္ခန္းေလးလည္းအရမ္းကိုသန့္ျပန့္သြားမွာပါေနာ္။(ၾကမ္းတိုက္ဝတ္ေလးလည္းပါၿပီးသားေနာ္)(Mopping effect)\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66404527_318030609100604_4851325432399659008_n.jpg?_nc_cat=101&_nc_oc=AQl1PKNARmGiWEMMSC2AGF2fvLYyhUTLq27NtXloRqiy3G0j5UAEOge3D6heTNGsAPA&_nc_ht=scontent.frgn4-1.fna&oh=28642b92188ca5ee2d705cb600d7ac3e&oe=5DBDC7A8",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☘️ေစ်းႏႈန္း -၅၉၀၀၀ က်ပ္\n\n                        အေရာင္- အျဖဴေရာင္, အမဲေရာင္ ၂ ေရာင္ရွိပါတယ္ရွင့္။\n\n                        ☘️ေအာက္မွာ ပံုေလးေတြၾကည့္လို႔ရပါတယ္ရွင့္။\n\n                        ☘️comment မွာ အသံုးျပဳပံု video ေလးၾကည့္လို႔ရပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66404409_318030675767264_3717307126834528256_n.jpg?_nc_cat=109&_nc_oc=AQmC6mSsZflVQoVX9tOPlWIRj9kFtN0a4OEN-OmpRp-5jZDFXO0tn4lu7SFVK2bibyo&_nc_ht=scontent.frgn4-1.fna&oh=71e8ff7835667c88d38efa2ed1717204&oe=5DE8734C",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☘️Instock လည္းရိွလို့ မွာယူျပီးတာနဲ့ ၂ ရက္အတြင္းအိမ္အေရာက္ပို့ေဆာင္ေပးပါတယ္ရွင့္။\n\n                        ☘️ရန္ကုန္ျမိဳ့တြင္းျမိဳ႔နယ္အလုိက္ ပို့ခ ၂၀၀၀ မွ ၃၀၀၀ အတြင္းက်သင့္ပါမယ္ရွင့္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/67298664_318030729100592_8844376172671270912_n.jpg?_nc_cat=100&_nc_oc=AQkltRsmYE3QkVfAzZla7euLONkrrCkFM-moR3UA_7KMYXpQWBmxoxFnQdS9c9mb9xs&_nc_ht=scontent.frgn4-1.fna&oh=557e3241978dec6b494c62934d9835e0&oe=5DA06C1E",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☘️နယ္ျမိဳ႔မ်ားမွမွာယူလုိပါက ကားဂိတ္အထိပို့ေပးပါတယ္ရွင့္။\n                        ဆက္သြယ္မွာယူလုိပါက\n                        ဖုန္း-📞 09-68 678 1222 နွင့္ျဖစ္ေစ\n                        Messenger မွ ျဖစ္ေစ ဆက္သြယ္မွာယူနုိင္ပါတယ္။\n                    "
+                  ),
+                  _c("img", {
+                    staticClass: " card-img-top img-responsive pt-1 pb-1",
+                    attrs: {
+                      src:
+                        "https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66490660_318030779100587_768352654068809728_n.jpg?_nc_cat=108&_nc_oc=AQmrAGJFe7SqpfnhXnmPR2FVPNloheJ3WNzj-difWXlF-FRZ38rrsPcuWieLRdfBL7U&_nc_ht=scontent.frgn4-1.fna&oh=98d12723063dfbe1c0a613ea7a12ab32&oe=5DB4FF0A",
+                      alt: "စက္ရုပ္ဖုန္စုပ္စက္"
+                    }
+                  }),
+                  _vm._v(
+                    "\n\n                        ☘️Messenger တြင္ Hi ဟု ပို႔ၿပီး Aladdin မွပစၥည္း အစံုအလင္ကိုဝင္ေရာက္ၾကည့္ရွဳႏိုင္ပါၿပီ။\n                    "
+                  )
+                ])
+              ])
+            ]
+          )
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -52437,6 +56098,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_ExampleComponent__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/ExampleComponent */ "./resources/js/components/ExampleComponent.vue");
 /* harmony import */ var _components_Layouts_IndexLayoutComponent__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/Layouts/IndexLayoutComponent */ "./resources/js/components/Layouts/IndexLayoutComponent.vue");
 /* harmony import */ var _components_DetailComponent__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./components/DetailComponent */ "./resources/js/components/DetailComponent.vue");
+/* harmony import */ var _components_Page1__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./components/Page1 */ "./resources/js/components/Page1.vue");
+/* harmony import */ var _components_Page2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Page2 */ "./resources/js/components/Page2.vue");
+/* harmony import */ var _components_Page3__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/Page3 */ "./resources/js/components/Page3.vue");
+/* harmony import */ var _components_Page4__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/Page4 */ "./resources/js/components/Page4.vue");
+/* harmony import */ var _components_Page5__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/Page5 */ "./resources/js/components/Page5.vue");
+/* harmony import */ var _components_Page6__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/Page6 */ "./resources/js/components/Page6.vue");
+/* harmony import */ var _components_Page7__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./components/Page7 */ "./resources/js/components/Page7.vue");
+/* harmony import */ var _components_Page8__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./components/Page8 */ "./resources/js/components/Page8.vue");
+/* harmony import */ var _components_Page9__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./components/Page9 */ "./resources/js/components/Page9.vue");
+/* harmony import */ var _components_Page10__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./components/Page10 */ "./resources/js/components/Page10.vue");
+/* harmony import */ var _components_Page11__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./components/Page11 */ "./resources/js/components/Page11.vue");
+/* harmony import */ var _components_Page12__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./components/Page12 */ "./resources/js/components/Page12.vue");
+/* harmony import */ var _components_Page13__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./components/Page13 */ "./resources/js/components/Page13.vue");
 /**
  * First we will load all of this project's JavaScript dependencies which
  * includes Vue and other libraries. It is a great starting point when
@@ -52445,6 +56119,19 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
 
 window.Vue = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.common.js");
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -52470,6 +56157,58 @@ var router = new vue_router__WEBPACK_IMPORTED_MODULE_0__["default"]({
         path: '/detail',
         name: 'detail',
         component: _components_DetailComponent__WEBPACK_IMPORTED_MODULE_5__["default"]
+      }, {
+        path: '/page1',
+        name: 'page1',
+        component: _components_Page1__WEBPACK_IMPORTED_MODULE_6__["default"]
+      }, {
+        path: '/page2',
+        name: 'page2',
+        component: _components_Page2__WEBPACK_IMPORTED_MODULE_7__["default"]
+      }, {
+        path: '/page3',
+        name: 'page3',
+        component: _components_Page3__WEBPACK_IMPORTED_MODULE_8__["default"]
+      }, {
+        path: '/page4',
+        name: 'page4',
+        component: _components_Page4__WEBPACK_IMPORTED_MODULE_9__["default"]
+      }, {
+        path: '/page5',
+        name: 'page5',
+        component: _components_Page5__WEBPACK_IMPORTED_MODULE_10__["default"]
+      }, {
+        path: '/page6',
+        name: 'page6',
+        component: _components_Page6__WEBPACK_IMPORTED_MODULE_11__["default"]
+      }, {
+        path: '/page7',
+        name: 'page7',
+        component: _components_Page7__WEBPACK_IMPORTED_MODULE_12__["default"]
+      }, {
+        path: '/page8',
+        name: 'page8',
+        component: _components_Page8__WEBPACK_IMPORTED_MODULE_13__["default"]
+      }, {
+        path: '/page9',
+        name: 'page9',
+        component: _components_Page9__WEBPACK_IMPORTED_MODULE_14__["default"]
+      }, {
+        path: '/page10',
+        name: 'page10',
+        component: _components_Page10__WEBPACK_IMPORTED_MODULE_15__["default"]
+      }, {
+        path: '/page11',
+        name: 'page11',
+        component: _components_Page11__WEBPACK_IMPORTED_MODULE_16__["default"]
+      }, {
+        path: '/page12',
+        name: 'page12',
+        component: _components_Page12__WEBPACK_IMPORTED_MODULE_17__["default"]
+      }, {
+        path: '/page13',
+        name: 'page13',
+        component: _components_Page13__WEBPACK_IMPORTED_MODULE_18__["default"]
       }]
     }]
   }]
@@ -52937,6 +56676,903 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavigationComponent_vue_vue_type_template_id_18bbf008___WEBPACK_IMPORTED_MODULE_0__["render"]; });
 
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_NavigationComponent_vue_vue_type_template_id_18bbf008___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page1.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Page1.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page1_vue_vue_type_template_id_046ed727___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page1.vue?vue&type=template&id=046ed727& */ "./resources/js/components/Page1.vue?vue&type=template&id=046ed727&");
+/* harmony import */ var _Page1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page1.vue?vue&type=script&lang=js& */ "./resources/js/components/Page1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page1_vue_vue_type_template_id_046ed727___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page1_vue_vue_type_template_id_046ed727___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page1.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page1.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Page1.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page1.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page1.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page1_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page1.vue?vue&type=template&id=046ed727&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Page1.vue?vue&type=template&id=046ed727& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page1_vue_vue_type_template_id_046ed727___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page1.vue?vue&type=template&id=046ed727& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page1.vue?vue&type=template&id=046ed727&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page1_vue_vue_type_template_id_046ed727___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page1_vue_vue_type_template_id_046ed727___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page10.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/Page10.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page10_vue_vue_type_template_id_ed30efce___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page10.vue?vue&type=template&id=ed30efce& */ "./resources/js/components/Page10.vue?vue&type=template&id=ed30efce&");
+/* harmony import */ var _Page10_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page10.vue?vue&type=script&lang=js& */ "./resources/js/components/Page10.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page10_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page10_vue_vue_type_template_id_ed30efce___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page10_vue_vue_type_template_id_ed30efce___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page10.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page10.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Page10.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page10_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page10.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page10.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page10_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page10.vue?vue&type=template&id=ed30efce&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Page10.vue?vue&type=template&id=ed30efce& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page10_vue_vue_type_template_id_ed30efce___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page10.vue?vue&type=template&id=ed30efce& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page10.vue?vue&type=template&id=ed30efce&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page10_vue_vue_type_template_id_ed30efce___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page10_vue_vue_type_template_id_ed30efce___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page11.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/Page11.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page11_vue_vue_type_template_id_ed14c0cc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page11.vue?vue&type=template&id=ed14c0cc& */ "./resources/js/components/Page11.vue?vue&type=template&id=ed14c0cc&");
+/* harmony import */ var _Page11_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page11.vue?vue&type=script&lang=js& */ "./resources/js/components/Page11.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page11_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page11_vue_vue_type_template_id_ed14c0cc___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page11_vue_vue_type_template_id_ed14c0cc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page11.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page11.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Page11.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page11_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page11.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page11.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page11_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page11.vue?vue&type=template&id=ed14c0cc&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Page11.vue?vue&type=template&id=ed14c0cc& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page11_vue_vue_type_template_id_ed14c0cc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page11.vue?vue&type=template&id=ed14c0cc& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page11.vue?vue&type=template&id=ed14c0cc&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page11_vue_vue_type_template_id_ed14c0cc___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page11_vue_vue_type_template_id_ed14c0cc___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page12.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/Page12.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page12_vue_vue_type_template_id_ecf891ca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page12.vue?vue&type=template&id=ecf891ca& */ "./resources/js/components/Page12.vue?vue&type=template&id=ecf891ca&");
+/* harmony import */ var _Page12_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page12.vue?vue&type=script&lang=js& */ "./resources/js/components/Page12.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page12_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page12_vue_vue_type_template_id_ecf891ca___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page12_vue_vue_type_template_id_ecf891ca___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page12.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page12.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Page12.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page12_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page12.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page12.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page12_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page12.vue?vue&type=template&id=ecf891ca&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Page12.vue?vue&type=template&id=ecf891ca& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page12_vue_vue_type_template_id_ecf891ca___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page12.vue?vue&type=template&id=ecf891ca& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page12.vue?vue&type=template&id=ecf891ca&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page12_vue_vue_type_template_id_ecf891ca___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page12_vue_vue_type_template_id_ecf891ca___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page13.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/Page13.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page13_vue_vue_type_template_id_ecdc62c8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page13.vue?vue&type=template&id=ecdc62c8& */ "./resources/js/components/Page13.vue?vue&type=template&id=ecdc62c8&");
+/* harmony import */ var _Page13_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page13.vue?vue&type=script&lang=js& */ "./resources/js/components/Page13.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page13_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page13_vue_vue_type_template_id_ecdc62c8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page13_vue_vue_type_template_id_ecdc62c8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page13.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page13.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Page13.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page13_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page13.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page13.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page13_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page13.vue?vue&type=template&id=ecdc62c8&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Page13.vue?vue&type=template&id=ecdc62c8& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page13_vue_vue_type_template_id_ecdc62c8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page13.vue?vue&type=template&id=ecdc62c8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page13.vue?vue&type=template&id=ecdc62c8&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page13_vue_vue_type_template_id_ecdc62c8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page13_vue_vue_type_template_id_ecdc62c8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page2.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Page2.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page2_vue_vue_type_template_id_047ceea8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page2.vue?vue&type=template&id=047ceea8& */ "./resources/js/components/Page2.vue?vue&type=template&id=047ceea8&");
+/* harmony import */ var _Page2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page2.vue?vue&type=script&lang=js& */ "./resources/js/components/Page2.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page2_vue_vue_type_template_id_047ceea8___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page2_vue_vue_type_template_id_047ceea8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page2.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page2.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Page2.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page2.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page2.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page2_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page2.vue?vue&type=template&id=047ceea8&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Page2.vue?vue&type=template&id=047ceea8& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page2_vue_vue_type_template_id_047ceea8___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page2.vue?vue&type=template&id=047ceea8& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page2.vue?vue&type=template&id=047ceea8&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page2_vue_vue_type_template_id_047ceea8___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page2_vue_vue_type_template_id_047ceea8___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page3.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Page3.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page3_vue_vue_type_template_id_048b0629___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page3.vue?vue&type=template&id=048b0629& */ "./resources/js/components/Page3.vue?vue&type=template&id=048b0629&");
+/* harmony import */ var _Page3_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page3.vue?vue&type=script&lang=js& */ "./resources/js/components/Page3.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page3_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page3_vue_vue_type_template_id_048b0629___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page3_vue_vue_type_template_id_048b0629___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page3.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page3.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Page3.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page3_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page3.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page3.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page3_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page3.vue?vue&type=template&id=048b0629&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Page3.vue?vue&type=template&id=048b0629& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page3_vue_vue_type_template_id_048b0629___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page3.vue?vue&type=template&id=048b0629& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page3.vue?vue&type=template&id=048b0629&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page3_vue_vue_type_template_id_048b0629___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page3_vue_vue_type_template_id_048b0629___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page4.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Page4.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page4_vue_vue_type_template_id_04991daa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page4.vue?vue&type=template&id=04991daa& */ "./resources/js/components/Page4.vue?vue&type=template&id=04991daa&");
+/* harmony import */ var _Page4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page4.vue?vue&type=script&lang=js& */ "./resources/js/components/Page4.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page4_vue_vue_type_template_id_04991daa___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page4_vue_vue_type_template_id_04991daa___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page4.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page4.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Page4.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page4.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page4.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page4_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page4.vue?vue&type=template&id=04991daa&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Page4.vue?vue&type=template&id=04991daa& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page4_vue_vue_type_template_id_04991daa___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page4.vue?vue&type=template&id=04991daa& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page4.vue?vue&type=template&id=04991daa&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page4_vue_vue_type_template_id_04991daa___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page4_vue_vue_type_template_id_04991daa___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page5.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Page5.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page5_vue_vue_type_template_id_04a7352b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page5.vue?vue&type=template&id=04a7352b& */ "./resources/js/components/Page5.vue?vue&type=template&id=04a7352b&");
+/* harmony import */ var _Page5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page5.vue?vue&type=script&lang=js& */ "./resources/js/components/Page5.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page5_vue_vue_type_template_id_04a7352b___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page5_vue_vue_type_template_id_04a7352b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page5.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page5.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Page5.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page5.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page5.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page5_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page5.vue?vue&type=template&id=04a7352b&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Page5.vue?vue&type=template&id=04a7352b& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page5_vue_vue_type_template_id_04a7352b___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page5.vue?vue&type=template&id=04a7352b& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page5.vue?vue&type=template&id=04a7352b&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page5_vue_vue_type_template_id_04a7352b___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page5_vue_vue_type_template_id_04a7352b___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page6.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Page6.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page6_vue_vue_type_template_id_04b54cac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page6.vue?vue&type=template&id=04b54cac& */ "./resources/js/components/Page6.vue?vue&type=template&id=04b54cac&");
+/* harmony import */ var _Page6_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page6.vue?vue&type=script&lang=js& */ "./resources/js/components/Page6.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page6_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page6_vue_vue_type_template_id_04b54cac___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page6_vue_vue_type_template_id_04b54cac___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page6.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page6.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Page6.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page6_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page6.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page6.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page6_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page6.vue?vue&type=template&id=04b54cac&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Page6.vue?vue&type=template&id=04b54cac& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page6_vue_vue_type_template_id_04b54cac___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page6.vue?vue&type=template&id=04b54cac& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page6.vue?vue&type=template&id=04b54cac&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page6_vue_vue_type_template_id_04b54cac___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page6_vue_vue_type_template_id_04b54cac___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page7.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Page7.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page7_vue_vue_type_template_id_04c3642d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page7.vue?vue&type=template&id=04c3642d& */ "./resources/js/components/Page7.vue?vue&type=template&id=04c3642d&");
+/* harmony import */ var _Page7_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page7.vue?vue&type=script&lang=js& */ "./resources/js/components/Page7.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page7_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page7_vue_vue_type_template_id_04c3642d___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page7_vue_vue_type_template_id_04c3642d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page7.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page7.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Page7.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page7_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page7.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page7.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page7_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page7.vue?vue&type=template&id=04c3642d&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Page7.vue?vue&type=template&id=04c3642d& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page7_vue_vue_type_template_id_04c3642d___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page7.vue?vue&type=template&id=04c3642d& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page7.vue?vue&type=template&id=04c3642d&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page7_vue_vue_type_template_id_04c3642d___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page7_vue_vue_type_template_id_04c3642d___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page8.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Page8.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page8_vue_vue_type_template_id_04d17bae___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page8.vue?vue&type=template&id=04d17bae& */ "./resources/js/components/Page8.vue?vue&type=template&id=04d17bae&");
+/* harmony import */ var _Page8_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page8.vue?vue&type=script&lang=js& */ "./resources/js/components/Page8.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page8_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page8_vue_vue_type_template_id_04d17bae___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page8_vue_vue_type_template_id_04d17bae___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page8.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page8.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Page8.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page8_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page8.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page8.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page8_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page8.vue?vue&type=template&id=04d17bae&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Page8.vue?vue&type=template&id=04d17bae& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page8_vue_vue_type_template_id_04d17bae___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page8.vue?vue&type=template&id=04d17bae& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page8.vue?vue&type=template&id=04d17bae&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page8_vue_vue_type_template_id_04d17bae___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page8_vue_vue_type_template_id_04d17bae___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
+
+/***/ }),
+
+/***/ "./resources/js/components/Page9.vue":
+/*!*******************************************!*\
+  !*** ./resources/js/components/Page9.vue ***!
+  \*******************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Page9_vue_vue_type_template_id_04df932f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Page9.vue?vue&type=template&id=04df932f& */ "./resources/js/components/Page9.vue?vue&type=template&id=04df932f&");
+/* harmony import */ var _Page9_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Page9.vue?vue&type=script&lang=js& */ "./resources/js/components/Page9.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Page9_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Page9_vue_vue_type_template_id_04df932f___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Page9_vue_vue_type_template_id_04df932f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Page9.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Page9.vue?vue&type=script&lang=js&":
+/*!********************************************************************!*\
+  !*** ./resources/js/components/Page9.vue?vue&type=script&lang=js& ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page9_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Page9.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page9.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Page9_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Page9.vue?vue&type=template&id=04df932f&":
+/*!**************************************************************************!*\
+  !*** ./resources/js/components/Page9.vue?vue&type=template&id=04df932f& ***!
+  \**************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page9_vue_vue_type_template_id_04df932f___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Page9.vue?vue&type=template&id=04df932f& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Page9.vue?vue&type=template&id=04df932f&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page9_vue_vue_type_template_id_04df932f___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Page9_vue_vue_type_template_id_04df932f___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
 
 
 

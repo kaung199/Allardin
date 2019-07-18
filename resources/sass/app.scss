@@ -32,7 +32,16 @@ a:hover {
 .card {
     margin: 0 auto;
 }
-
+.contentmax {
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // max-width: 75ch;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;  
+     overflow: hidden;
+}
 
 
 
