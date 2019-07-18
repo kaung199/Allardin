@@ -178,9 +178,10 @@ class OrderController extends Controller
 
     public function orderprepare()
     {
-      $order = Order::orderBy('orders.id', 'desc')->where('deliverystatus', 1)
+      $order = Order::where('deliverystatus', 1)
               ->join('users', 'users.id', '=', 'orders.user_id')
               ->join('townships', 'townships.id', '=', 'users.township_id')
+              ->latest()
               ->select('orders.id as order_id',
                 'orders.totalquantity',
                 'orders.totalprice',
@@ -201,9 +202,10 @@ class OrderController extends Controller
 
     public function delivery()
     {
-      $order = Order::orderBy('orders.id', 'desc')->where('deliverystatus', 2)
+      $order = Order::where('deliverystatus', 2)
               ->join('users', 'users.id', '=', 'orders.user_id')
               ->join('townships', 'townships.id', '=', 'users.township_id')
+              ->latest()
               ->select('orders.id as order_id',
                 'orders.totalquantity',
                 'orders.totalprice',
@@ -223,9 +225,10 @@ class OrderController extends Controller
 
     public function payment()
     {
-      $order = Order::orderBy('orders.id', 'desc')->where('deliverystatus', 3)
+      $order = Order::where('deliverystatus', 3)
               ->join('users', 'users.id', '=', 'orders.user_id')
               ->join('townships', 'townships.id', '=', 'users.township_id')
+              ->latest()
               ->select('orders.id as order_id',
                 'orders.totalquantity',
                 'orders.totalprice',
@@ -245,9 +248,10 @@ class OrderController extends Controller
 
     public function complete()
     {
-      $order = Order::orderBy('orders.id', 'desc')->where('deliverystatus', 4)
+      $order = Order::where('deliverystatus', 4)
                 ->join('users', 'users.id', '=', 'orders.user_id')
                 ->join('townships', 'townships.id', '=', 'users.township_id')
+                ->latest()
                 ->select('orders.id as order_id',
                   'orders.totalquantity',
                   'orders.totalprice',
