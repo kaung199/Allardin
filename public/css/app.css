@@ -10761,6 +10761,12 @@ a:hover {
 
   .dropdown-menu a {
     text-align: center;
+    font-size: 15px !important;
+    padding-top: 5px !important;
+  }
+
+  .dropdown-menu a:hover {
+    background: #7a8c90 !important;
   }
 }
 

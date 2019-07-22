@@ -67590,7 +67590,11 @@ var render = function() {
               "b-navbar-nav",
               { staticClass: "marginleft" },
               [
-                _c("b-nav-item", [_vm._v("Home")]),
+                _c(
+                  "b-nav-item",
+                  [_c("router-link", { attrs: { to: "/" } }, [_vm._v("Home")])],
+                  1
+                ),
                 _vm._v(" "),
                 _c(
                   "b-nav-item-dropdown",
@@ -67599,8 +67603,8 @@ var render = function() {
                     _c(
                       "b-dropdown-item",
                       [
-                        _c("router-link", { attrs: { to: "/" } }, [
-                          _vm._v("Aladdin Online Shop")
+                        _c("router-link", { attrs: { to: "detail" } }, [
+                          _vm._v("Category1")
                         ])
                       ],
                       1
@@ -67609,8 +67613,8 @@ var render = function() {
                     _c(
                       "b-dropdown-item",
                       [
-                        _c("router-link", { attrs: { to: "/" } }, [
-                          _vm._v("Aladdin Online Shop")
+                        _c("router-link", { attrs: { to: "page1" } }, [
+                          _vm._v("Category2")
                         ])
                       ],
                       1
@@ -67619,8 +67623,8 @@ var render = function() {
                     _c(
                       "b-dropdown-item",
                       [
-                        _c("router-link", { attrs: { to: "/" } }, [
-                          _vm._v("Aladdin Online Shop")
+                        _c("router-link", { attrs: { to: "page2" } }, [
+                          _vm._v("Category3")
                         ])
                       ],
                       1
@@ -67629,8 +67633,8 @@ var render = function() {
                     _c(
                       "b-dropdown-item",
                       [
-                        _c("router-link", { attrs: { to: "/" } }, [
-                          _vm._v("Aladdin Online Shop")
+                        _c("router-link", { attrs: { to: "page3" } }, [
+                          _vm._v("Category4")
                         ])
                       ],
                       1
