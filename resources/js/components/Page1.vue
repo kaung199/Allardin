@@ -1,5 +1,5 @@
 <template>
-    <div class="container pt-3 pb-3">
+    <div class="container paddingtop  pb-3">
         <div class="row justify-content-center">
             <div class="col-md-8 pb-2">
                 <div class="card shadow" style="width: 18rem;">

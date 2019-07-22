@@ -55,7 +55,7 @@ a:hover {
 
 
 .marginleft {
-    margin-left: 915px;
+    margin-left: 859px;
 }
 .navbar-brand {
    padding-left: 10px;
@@ -79,7 +79,9 @@ a:hover {
 .paddingtop {
     padding-top: 79px;
 }
-
+.dropdown-menu a:hover {
+    background: #7a8c90 !important!important;
+}
 @media (max-width: 1440px) { 
     .card img{
         height: 300px !important;
