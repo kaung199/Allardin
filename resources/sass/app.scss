@@ -60,8 +60,25 @@ a:hover {
 .navbar-brand {
    padding-left: 10px;
 }
-
-
+// .dropdown-menu .nav-item{
+    
+//     padding: 0;
+//     a {
+//         border: none;
+//         padding-right: 0.5rem !important;
+//         padding-left: 0.5rem !important;
+//     }
+// }
+.nav-item {
+    padding: 5px;
+    >a {
+        border: 1px solid #ddd;
+        padding: 1px;
+    }
+}
+.paddingtop {
+    padding-top: 79px;
+}
 
 @media (max-width: 1440px) { 
     .card img{
@@ -70,7 +87,7 @@ a:hover {
  }
 @media (max-width: 1024px) {  
     .marginleft {
-        margin-left: 603px;
+        margin-left: 560px;
     }
 }
 @media (max-width: 768px) { 
@@ -87,14 +104,16 @@ a:hover {
         flex-direction: row !important;
     }
     .nav-item {
-        padding-left: 5px;
-        a {
-            padding-bottom: 4px !important;
+        padding-left: 3px;
+        >a {
+            padding-bottom: 2px !important;
+            padding-right: 10px !important;
+            padding-left: 10px !important;
         }
     }
     .marginleft {
-        margin-left: 564px;
-        margin-top: -46px !important;
+        margin-left: 514px;
+        margin-top: -38px !important;
     }
     .dropdown-menu a {
         text-align: center;
@@ -105,18 +124,21 @@ a:hover {
         width: 20rem !important;
     }
     .marginleft {
-        margin-left: 273px;
-        margin-top: -44px !important;
+        margin-left: 206px;
+        margin-top: -38px !important;
     }
     .navbar-brand {
         padding-left: 0px;
     }
     .navagation a {
         font-size: 16px;
-        padding: 10px 0px 10px 0px;
+        padding: 0px;
     }
-    .nav-item a {
-        font-size: 14px;
+    .nav-item {
+        padding-left: 0;
+        a {
+            font-size: 14px;
+        }
     }
 }
 
@@ -125,8 +147,20 @@ a:hover {
         width: 20rem !important;
     }
     .marginleft {
-        margin-left: 221px;
-        margin-top: -43px !important;
+        margin-left: 102px;
+        margin-top: -7px !important;
+    }
+    .nav-item > a {
+        padding-bottom: 1px !important;
+    }
+    .navbar-dark {
+        padding-top: 0 !important;
+    }
+    .navbar-brand {
+        text-align: center;
+        margin: 0 auto;
+        margin-right: 92px !important;
+        padding-top: 0 !important;
     }
 }
 
@@ -135,7 +169,10 @@ a:hover {
         width: 17rem !important;
     }
     .marginleft {
-        margin-left: 178px;
-        margin-top: -43px !important;
+        margin-left: 66px;
+        margin-top: -7px !important;
+    }
+    .navbar-brand {
+        margin-right: 70px !important;
     }
 }
