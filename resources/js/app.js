@@ -8,7 +8,10 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 import VueRouter from 'vue-router'
+import BootstrapVue from 'bootstrap-vue'
 
+import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap-vue/dist/bootstrap-vue.css'
 import App from './AppComponent'
 import Home from './components/HomeComponent'
 import Example from './components/ExampleComponent'
@@ -31,6 +34,7 @@ import Page13 from './components/Page13'
 
 
 Vue.use(VueRouter)
+Vue.use(BootstrapVue)
 
 const router = new VueRouter({
     mode: 'history',

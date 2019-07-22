@@ -5,8 +5,8 @@
                  <router-link to="detail">
                     <div class="card shadow" style="width: 18rem;" >
                     <img src="https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66874549_320731328830532_4490416998349537280_n.jpg?_nc_cat=104&_nc_oc=AQlMJDEYVjFSc61lhdRI_SeWh94oi3IM95Uj1lHLLb1SDBOxqmFPvzPDS2x6u26Gsjc&_nc_ht=scontent.frgn4-1.fna&oh=779d9381a91c0e9046ce8a6fd387b07a&oe=5DB5767F" class="card-img-top img-responsive" alt="...">
-                        <div class="card-body">
-                            <b class="pb-1">ေရသန့္ပံုးေမာ္တာ(Electric pump)💦💦💦</b>
+                        <div class="card-body ">
+                            <b class="pb-1">ေရသန့္ပံုးေမာ္တာ(Electric pump)💦</b>
                             <p class="card-text contentmax">
                                 💦ခလုတ္တစ္ခ်က္နိွပ္လုိက္တာနဲ့ ေသာက္ေရသန့္ပံုးထဲက ေရကို အဆင္ေျပေျပေသာက္လုိ့ရေစမဲ့ ေရသန့္ပံုးေမာ္တာ Electric pump ေလးပါ။
 
@@ -16,7 +16,7 @@
                     </div>
                  </router-link>
             </div>
-             <div class="col-md-4 pb-2">
+            <div class="col-md-4 pb-2">
                 <router-link to="page1">
                     <div class="card shadow" style="width: 18rem;" >
                         <img src="https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66755940_320729095497422_3331061001373089792_n.jpg?_nc_cat=102&_nc_oc=AQmBJCyliwQvmlwKESKtzU_N1i4NddjckHunGNsoJRqEyTYH5313KSdkiQRwtcnOoJo&_nc_ht=scontent.frgn4-1.fna&oh=92c52665fbfa4a3c974d4c41e98e87fd&oe=5DA742A8" class="card-img-top img-responsive" alt="brush">
@@ -37,7 +37,7 @@
                     <div class="card shadow" style="width: 18rem;" >
                         <img src="https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66712248_320719382165060_7479449494581411840_n.jpg?_nc_cat=107&_nc_oc=AQkexSlq2M41-Phx_IqbkK8i4ApeDqQXxBqa-sTrXmqo95lpB7PMZefBYt25bsrCpPw&_nc_ht=scontent.frgn4-1.fna&oh=84814458e98f3c0183b219e3c5f14d39&oe=5DB4B57A" class="card-img-top img-responsive" alt="brush">
                         <div class="card-body">
-                            <b class="pb-1">Automatic ဆပ္ျပာ ညွစ္ ( automatic soap dispenser)</b>
+                            <b class="pb-1">Automatic soap dispenser</b>
                             <p class="card-text contentmax">                         
                                 
 
@@ -199,10 +199,22 @@
                     </div>
                  </router-link>
             </div>
+            
+            <!-- <div>
+                <div v-for="htmltag in htmltags">
+                    <div class="row justify-content-center">
+                         <div  v-html="htmltag"></div>
+                            <br/>
+                    </div>  
+
+                   
+                </div>
+            </div> -->
+            
         </div>
     </div>
+    
 </template>
-
 <script>
     export default {
         mounted() {

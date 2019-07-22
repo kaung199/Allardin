@@ -10648,27 +10648,39 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-a {
-  color: black;
+.card {
+  color: black !important;
 }
 
 a:hover {
-  text-decoration: none;
-  color: black;
+  text-decoration: none !important;
   font-style: italic;
+}
+
+.nav-item a {
+  color: #ffffff !important;
+}
+
+.dropdown-menu {
+  background: #17a2b8 !important;
+  padding-right: 15px;
 }
 
 .navagation {
   background: #29487d;
-  margin: 0 auto;
 }
 
 .navagation a {
   font-family: "DM Serif Text", serif;
   color: #ffffff;
   text-decoration: none;
-  padding: 10px 0 10px 10px;
+  padding: 10px 10px 10px 10px;
   font-size: 18px;
+}
+
+.navagation a:hover {
+  color: #ffffff;
+  background: none !important;
 }
 
 .card {
@@ -10682,9 +10694,58 @@ a:hover {
   overflow: hidden;
 }
 
+.marginleft {
+  margin-left: 915px;
+}
+
+.navbar-brand {
+  padding-left: 10px;
+}
+
+@media (max-width: 1440px) {
+  .card img {
+    height: 300px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .marginleft {
+    margin-left: 603px;
+  }
+}
+
 @media (max-width: 768px) {
   .card {
     width: 13rem !important;
+  }
+
+  .card img {
+    height: auto;
+  }
+
+  .navbar-expand-lg .navbar-nav .dropdown-menu {
+    position: absolute;
+  }
+
+  .navbar-nav {
+    flex-direction: row !important;
+  }
+
+  .nav-item {
+    padding-left: 5px;
+  }
+
+  .nav-item a {
+    padding-bottom: 4px !important;
+  }
+
+  .marginleft {
+    margin-left: 564px;
+    margin-top: -46px !important;
+  }
+
+  .dropdown-menu a {
+    text-align: center;
   }
 }
 
@@ -10692,17 +10753,45 @@ a:hover {
   .card {
     width: 20rem !important;
   }
+
+  .marginleft {
+    margin-left: 273px;
+    margin-top: -44px !important;
+  }
+
+  .navbar-brand {
+    padding-left: 0px;
+  }
+
+  .navagation a {
+    font-size: 16px;
+    padding: 10px 0px 10px 0px;
+  }
+
+  .nav-item a {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 375px) {
   .card {
     width: 20rem !important;
   }
+
+  .marginleft {
+    margin-left: 221px;
+    margin-top: -43px !important;
+  }
 }
 
 @media (max-width: 320px) {
   .card {
     width: 17rem !important;
+  }
+
+  .marginleft {
+    margin-left: 178px;
+    margin-top: -43px !important;
   }
 }
 
