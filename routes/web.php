@@ -1,5 +1,8 @@
 <?php
+if (version_compare(PHP_VERSION, '7.2.0', '>=')) {
 
+    error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
+}
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,6 +18,25 @@
 //     return view('welcome');
 // });
 
-Route::get('/{any}', function () {
-    return view('home');
-})->where('any', '.*');
+
+
+// Route::get('/vueui/{any}', function () {
+//     return view('home');
+// })->where('any', '.*');
+
+
+Route::get('home', 'HomeController@index');
+
+Auth::routes();
+
+
+Route::group(['middleware' => ['auth', 'superadmin']], function ()
+	{
+        Route::get('/admin', function () {
+            return redirect()->route('products.index');
+        });
+        
+        Route::resource('products', 'ProductController');
+        Route::resource('townships', 'TownshipController');
+        Route::resource('customers', 'CustomerController');
+    });

@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password', 'address', 'phone', 'township_id'
+        'name', 'email', 'password', 'address', 'phone', 'township_id', 'role_id'
     ];
 
     /**
@@ -50,5 +50,10 @@ class User extends Authenticatable
     public function township()
     {
         return $this->belongsTo('App\Township');
+    }
+
+    public function role()
+    {
+        return $this->belongsTo('App\Role');
     }
 }

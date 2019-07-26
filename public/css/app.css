@@ -10644,33 +10644,33 @@ a.text-dark:focus {
   }
 }
 
-body {
+.vueui body {
   font-family: "Roboto", sans-serif;
 }
 
-.card {
+.vueui .card {
   color: black !important;
 }
 
-a:hover {
+.vueui a:hover {
   text-decoration: none !important;
   font-style: italic;
 }
 
-.nav-item a {
+.vueui .nav-item a {
   color: #ffffff !important;
 }
 
-.dropdown-menu {
+.vueui .dropdown-menu {
   background: #17a2b8 !important;
   padding-right: 15px;
 }
 
-.navagation {
+.vueui .navagation {
   background: #29487d;
 }
 
-.navagation a {
+.vueui .navagation a {
   font-family: "DM Serif Text", serif;
   color: #ffffff;
   text-decoration: none;
@@ -10678,149 +10678,149 @@ a:hover {
   font-size: 18px;
 }
 
-.navagation a:hover {
+.vueui .navagation a:hover {
   color: #ffffff;
   background: none !important;
 }
 
-.card {
+.vueui .card {
   margin: 0 auto;
 }
 
-.contentmax {
+.vueui .contentmax {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
   overflow: hidden;
 }
 
-.marginleft {
+.vueui .marginleft {
   margin-left: 859px;
 }
 
-.navbar-brand {
+.vueui .navbar-brand {
   padding-left: 10px;
 }
 
-.nav-item {
+.vueui .nav-item {
   padding: 5px;
 }
 
-.nav-item > a {
+.vueui .nav-item > a {
   border: 1px solid #ddd;
   padding: 1px;
 }
 
-.paddingtop {
+.vueui .paddingtop {
   padding-top: 79px;
 }
 
-.dropdown-menu a:hover {
+.vueui .dropdown-menu a:hover {
   background: #7a8c90 !important !important;
 }
 
 @media (max-width: 1440px) {
-  .card img {
+  .vueui .card img {
     height: 300px !important;
   }
 }
 
 @media (max-width: 1024px) {
-  .marginleft {
+  .vueui .marginleft {
     margin-left: 560px;
   }
 }
 
 @media (max-width: 768px) {
-  .card {
+  .vueui .card {
     width: 13rem !important;
   }
 
-  .card img {
+  .vueui .card img {
     height: auto;
   }
 
-  .navbar-expand-lg .navbar-nav .dropdown-menu {
+  .vueui .navbar-expand-lg .navbar-nav .dropdown-menu {
     position: absolute;
   }
 
-  .navbar-nav {
+  .vueui .navbar-nav {
     flex-direction: row !important;
   }
 
-  .nav-item {
+  .vueui .nav-item {
     padding-left: 3px;
   }
 
-  .nav-item > a {
+  .vueui .nav-item > a {
     padding-bottom: 2px !important;
     padding-right: 10px !important;
     padding-left: 10px !important;
   }
 
-  .marginleft {
+  .vueui .marginleft {
     margin-left: 514px;
     margin-top: -38px !important;
   }
 
-  .dropdown-menu a {
+  .vueui .dropdown-menu a {
     text-align: center;
     font-size: 15px !important;
     padding-top: 5px !important;
   }
 
-  .dropdown-menu a:hover {
+  .vueui .dropdown-menu a:hover {
     background: #7a8c90 !important;
   }
 }
 
 @media (max-width: 576px) {
-  .card {
+  .vueui .card {
     width: 20rem !important;
   }
 
-  .marginleft {
+  .vueui .marginleft {
     margin-left: 206px;
     margin-top: -38px !important;
   }
 
-  .navbar-brand {
+  .vueui .navbar-brand {
     padding-left: 0px;
   }
 
-  .navagation a {
+  .vueui .navagation a {
     font-size: 16px;
     padding: 0px;
   }
 
-  .nav-item {
+  .vueui .nav-item {
     padding-left: 0;
   }
 
-  .nav-item a {
+  .vueui .nav-item a {
     font-size: 14px;
   }
 }
 
 @media (max-width: 375px) {
-  .card {
+  .vueui .card {
     width: 20rem !important;
   }
 
-  .marginleft {
+  .vueui .marginleft {
     margin-left: 102px;
     margin-top: -7px !important;
   }
 
-  .nav-item > a {
+  .vueui .nav-item > a {
     padding-bottom: 1px !important;
   }
 
-  .navbar-dark {
+  .vueui .navbar-dark {
     padding-top: 0 !important;
   }
 
-  .navbar-brand {
+  .vueui .navbar-brand {
     text-align: center;
     margin: 0 auto;
     margin-right: 92px !important;
@@ -10829,16 +10829,16 @@ a:hover {
 }
 
 @media (max-width: 320px) {
-  .card {
+  .vueui .card {
     width: 17rem !important;
   }
 
-  .marginleft {
+  .vueui .marginleft {
     margin-left: 66px;
     margin-top: -7px !important;
   }
 
-  .navbar-brand {
+  .vueui .navbar-brand {
     margin-right: 70px !important;
   }
 }
