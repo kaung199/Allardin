@@ -56,18 +56,34 @@
                 </span>
             @endif
         </div>
+        <label for="photos">Photos</label>
         <div class="form-group input-group">
-            {{ Form::label(null,'Photo') }}
-            <br>
+            
             <!-- {{ Form::file('images[]', null, [
                 'class' => ($errors->has('images')? 'form-control is-invalid': 'form-control'),
                 'multiple'
                 ]) }} -->
-            <input type="file" name="photos[]" class="form-control @error('photos') is-invalid @enderror" multiple>
+            <input type="file" id="photos" name="photos[]" class="form-control @error('photos') is-invalid @enderror" multiple>
             @if($errors->has('photos'))
                 <span class="invalid-feedback" role="alert">
                     <strong>
                         {{ $errors->first('photos') }}
+                    </strong>
+                </span>
+            @endif
+        </div>
+        <div class="form-group">
+            {{ Form::label(null,'Description') }}
+            {{ Form::textarea('description', null, [
+                'class' => ($errors->has('description')? 'form-control is-invalid': 'form-control'),
+                'placeholder' => 'Product description',
+                'rows' => 4
+                ]) }}
+
+            @if($errors->has('description'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>
+                        {{ $errors->first('description') }}
                     </strong>
                 </span>
             @endif

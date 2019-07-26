@@ -58,21 +58,33 @@
                 </span>
             @endif
         </div>
-        <div class="form-group">
-            {{ Form::label(null,'Photo') }}
-            {{ Form::file('photo', null, [
-                'class' => ($errors->has('photo')? 'form-control is-invalid': 'form-control') 
-                ]) }}
-
-            @if($errors->has('photo'))
+        <label for="photos">Photos</label>
+        <div class="form-group input-group">
+            <input type="file" id="photos" name="photos[]" class="form-control @error('photos') is-invalid @enderror" multiple>
+            @if($errors->has('photos'))
                 <span class="invalid-feedback" role="alert">
                     <strong>
-                        {{ $errors->first('photo') }}
+                        {{ $errors->first('photos') }}
                     </strong>
                 </span>
             @endif
         </div>
-		
+        <div class="form-group">
+            {{ Form::label(null,'Description') }}
+            {{ Form::textarea('description', null, [
+                'class' => ($errors->has('description')? 'form-control is-invalid': 'form-control'),
+                'placeholder' => 'Product description',
+                'rows' => 4
+                ]) }}
+
+            @if($errors->has('description'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>
+                        {{ $errors->first('description') }}
+                    </strong>
+                </span>
+            @endif
+        </div>
         <button class="btn btn-primary">Update</button>
 
 	{{ Form:: close() }}

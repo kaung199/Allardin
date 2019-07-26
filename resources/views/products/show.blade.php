@@ -45,5 +45,9 @@
         
     </tbody>
     </table>
-
+    <hr>
+    <h4>Description</h4>
+    <p>
+        {{ $product->description}}
+    </p>
 @endsection

@@ -18,6 +18,9 @@ if (version_compare(PHP_VERSION, '7.2.0', '>=')) {
 //     return view('welcome');
 // });
 
+Route::get('/login2', function () {
+    return view('auth/login2');
+});
 
 
 // Route::get('/vueui/{any}', function () {

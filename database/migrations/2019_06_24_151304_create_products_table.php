@@ -20,6 +20,7 @@ class CreateProductsTable extends Migration
             $table->unsignedInteger('price');
             $table->string('count_method')->nullable();
             $table->string('photo')->nullable();
+            $table->text('description');
             $table->timestamps();
         });
     }
