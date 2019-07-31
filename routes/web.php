@@ -43,3 +43,14 @@ Route::group(['middleware' => ['auth', 'superadmin']], function ()
         Route::resource('townships', 'TownshipController');
         Route::resource('customers', 'CustomerController');
     });
+
+    Route::group(['middleware' => ['auth', 'admin']], function ()
+	{
+        Route::get('/admin', function () {
+            return redirect()->route('products.index');
+        });
+        
+        Route::resource('products', 'ProductController');
+        Route::resource('townships', 'TownshipController');
+        Route::resource('customers', 'CustomerController');
+    });
