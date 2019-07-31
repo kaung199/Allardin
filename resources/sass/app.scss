@@ -12,14 +12,18 @@
         font-family: 'Roboto', sans-serif;
     }
     .messenger img {
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
         background: none;
         position: fixed;
         z-index: 999;
         border-radius: 100%;
         right: 10px;
         bottom: 50px;
+    }
+    .messenger img:hover {
+        width: 60px;
+        height: 60px;
     }
     .card  {
         color : black !important;

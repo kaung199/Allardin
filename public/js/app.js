@@ -67013,7 +67013,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -67143,7 +67144,7 @@ var render = function() {
         "div",
         { staticClass: "col-md-4 pb-2" },
         [
-          _c("router-link", { attrs: { to: "page1" } }, [
+          _c("router-link", { attrs: { to: "vueui/page1" } }, [
             _c(
               "div",
               { staticClass: "card shadow", staticStyle: { width: "18rem" } },
@@ -67581,7 +67582,8 @@ var staticRenderFns = [
         "a",
         {
           attrs: {
-            href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+            href:
+              "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
             target: "_blank"
           }
         },
@@ -67734,7 +67736,7 @@ var render = function() {
                     _c(
                       "b-dropdown-item",
                       [
-                        _c("router-link", { attrs: { to: "vueui/detail" } }, [
+                        _c("router-link", { attrs: { to: "detail" } }, [
                           _vm._v("Category1")
                         ])
                       ],
@@ -67744,7 +67746,7 @@ var render = function() {
                     _c(
                       "b-dropdown-item",
                       [
-                        _c("router-link", { attrs: { to: "vueui/page1" } }, [
+                        _c("router-link", { attrs: { to: "page1" } }, [
                           _vm._v("Category2")
                         ])
                       ],
@@ -67754,7 +67756,7 @@ var render = function() {
                     _c(
                       "b-dropdown-item",
                       [
-                        _c("router-link", { attrs: { to: "vueui/page2" } }, [
+                        _c("router-link", { attrs: { to: "page2" } }, [
                           _vm._v("Category3")
                         ])
                       ],
@@ -67764,7 +67766,7 @@ var render = function() {
                     _c(
                       "b-dropdown-item",
                       [
-                        _c("router-link", { attrs: { to: "vueui/page3" } }, [
+                        _c("router-link", { attrs: { to: "page3" } }, [
                           _vm._v("Category4")
                         ])
                       ],
@@ -67958,7 +67960,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -68129,7 +68132,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -68344,7 +68348,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -68559,7 +68564,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -68634,7 +68640,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -68807,7 +68814,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -68978,7 +68986,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -69116,7 +69125,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -69309,7 +69319,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -69502,7 +69513,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -69684,7 +69696,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -69888,7 +69901,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },
@@ -70059,7 +70073,8 @@ var staticRenderFns = [
           "a",
           {
             attrs: {
-              href: "https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998",
+              href:
+                "https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg",
               target: "_blank"
             }
           },

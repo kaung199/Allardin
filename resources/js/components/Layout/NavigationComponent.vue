@@ -11,10 +11,10 @@
                 <b-navbar-nav class="marginleft">
                         <b-nav-item><router-link to="/vueui/home">Home</router-link></b-nav-item>
                         <b-nav-item-dropdown text="Categories" right>
-                            <b-dropdown-item><router-link to="vueui/detail">Category1</router-link></b-dropdown-item>
-                            <b-dropdown-item><router-link to="vueui/page1">Category2</router-link></b-dropdown-item>
-                            <b-dropdown-item><router-link to="vueui/page2">Category3</router-link></b-dropdown-item>
-                            <b-dropdown-item><router-link to="vueui/page3">Category4</router-link></b-dropdown-item>
+                            <b-dropdown-item><router-link to="detail">Category1</router-link></b-dropdown-item>
+                            <b-dropdown-item><router-link to="page1">Category2</router-link></b-dropdown-item>
+                            <b-dropdown-item><router-link to="page2">Category3</router-link></b-dropdown-item>
+                            <b-dropdown-item><router-link to="page3">Category4</router-link></b-dropdown-item>
                         </b-nav-item-dropdown>
                 </b-navbar-nav>
             </b-navbar>

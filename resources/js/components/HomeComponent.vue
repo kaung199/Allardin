@@ -17,7 +17,7 @@
                  </router-link>
             </div>
             <div class="col-md-4 pb-2">
-                <router-link to="page1">
+                <router-link to="vueui/page1">
                     <div class="card shadow" style="width: 18rem;" >
                         <img src="https://scontent.frgn4-1.fna.fbcdn.net/v/t1.0-9/66755940_320729095497422_3331061001373089792_n.jpg?_nc_cat=102&_nc_oc=AQmBJCyliwQvmlwKESKtzU_N1i4NddjckHunGNsoJRqEyTYH5313KSdkiQRwtcnOoJo&_nc_ht=scontent.frgn4-1.fna&oh=92c52665fbfa4a3c974d4c41e98e87fd&oe=5DA742A8" class="card-img-top img-responsive" alt="brush">
                         <div class="card-body">
@@ -211,7 +211,7 @@
                 </div>
             </div> -->
             <div class="messenger">
-                <a href="https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998" target="_blank">
+                <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg" target="_blank">
                     <img src="https://www.clipartmax.com/png/middle/101-1018691_50-facebook-icons-vector-free-download-facebook-messenger-logo-icon.png" class="img-responsive" style="width:50px height:50px" alt="">
                 </a>
             </div>
