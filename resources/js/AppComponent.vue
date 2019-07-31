@@ -1,5 +1,5 @@
 <template>
-    <main>
+    <main class="vueui">
         <router-view></router-view>
     </main>
 </template>

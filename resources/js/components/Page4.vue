@@ -59,6 +59,11 @@
                 </div>
             </div>
         </div>
+        <div class="messenger">
+            <a href="https://m.me/FamilyDoctorSpecialistClinic?ref=w2948998" target="_blank">
+                <img src="https://www.clipartmax.com/png/middle/101-1018691_50-facebook-icons-vector-free-download-facebook-messenger-logo-icon.png" class="img-responsive" style="width:50px height:50px" alt="">
+            </a>
+        </div>
     </div>
 </template>
 

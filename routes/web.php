@@ -18,8 +18,8 @@ if (version_compare(PHP_VERSION, '7.2.0', '>=')) {
 //     return view('welcome');
 // });
 
-Route::get('/login2', function () {
-    return view('auth/login2');
+Route::get('/firstlayout', function () {
+    return view('layouts/firstlayout');
 });
 
 
@@ -48,3 +48,8 @@ Route::group(['middleware' => ['auth', 'superadmin']], function ()
 	{
        
     });
+
+
+    Route::get('/{vue_capture?}', function () {
+        return view('home');
+      })->where('vue_capture', '[\/\w\.-]*');
