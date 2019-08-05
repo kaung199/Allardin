@@ -64,6 +64,11 @@ class TownshipController extends Controller
      * @param  int $id
      * @return \Illuminate\Http\Response
      */
+    public function show(Township $township)
+    {
+        return view('townships.show', compact('township'));
+    }
+    
     public function destroy(Township $township)
     {
         $township->delete();

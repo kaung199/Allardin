@@ -48,6 +48,31 @@ Route::group(['middleware' => ['auth', 'superadmin']], function ()
 	{
        
     });
+    Route::get('/', 'ProductController@userindex');
+
+    Route::post('/search', 'ProductController@search')->name('search');
+
+    Route::get('/cartadd/{id}', 'CartController@cartadd')->name('cartadd');
+    Route::get('/cartview', 'CartController@cartview');
+    Route::patch('/update-cart', 'CartController@update');
+    Route::patch('/update-cart-sub', 'CartController@updatesub');
+    
+    // cartremove
+    Route::get('/cart/remove/all', 'CartController@alldelete')->name('cart.alldelete');
+    Route::delete('cart/remove-from-cart', 'CartController@remove')->name('cart.remove-from-cart');
+
+    //admin order 
+    Route::get('checkoutform', 'OrderController@checkoutform')->name('checkoutform');
+    Route::post('checkout', 'OrderController@checkout')->name('checkout');
+    Route::get('order', 'OrderController@order')->name('order');
+    Route::get('orderdetail/{id}', 'OrderController@orderdetail')->name('orderdetail');
+    Route::delete('deleteorder/{id}', 'OrderController@destroy')->name('orders.destroy');
+    Route::get('deliverystatus/{id}', 'OrderController@deliverystatus')->name('deliverystatus');
+
+    Route::get('orderprepare', 'OrderController@orderprepare')->name('orderprepare');
+    Route::get('delivery', 'OrderController@delivery')->name('delivery');
+    Route::get('payment', 'OrderController@payment')->name('payment');
+    Route::get('complete', 'OrderController@complete')->name('complete');
 
 
     Route::get('/{vue_capture?}', function () {

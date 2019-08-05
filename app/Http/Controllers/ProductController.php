@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\Pstore;
 use Illuminate\Support\Facades\Storage;
+use Spatie\Searchable\Search;
 use App\Product;
+use App\Township;
 use App\ProductsPhoto;
 
 class ProductController extends Controller
@@ -16,6 +18,12 @@ class ProductController extends Controller
         return view('products.index',compact('products'));
     }
 
+    public function userindex()
+    {
+        $products = Product::latest()->get();
+        return view('products.userindex',compact('products'));
+    }
+
     public function create()
     {
         return view('products.create');
@@ -24,14 +32,17 @@ class ProductController extends Controller
     public function store(Pstore $request)
     {         
         $product = Product::create($request->all());
-        foreach ($request->photos as $photo) {
-            $filename = $photo->getClientOriginalName();
-            Storage::disk('public')->put($filename, file_get_contents($photo));
-            ProductsPhoto::create([
-                'product_id' => $product->id,
-                'filename' => $filename
-            ]);
+        if($request->photos) {
+            foreach ($request->photos as $photo) {
+                $filename = $photo->getClientOriginalName();
+                Storage::disk('public')->put($filename, file_get_contents($photo));
+                ProductsPhoto::create([
+                    'product_id' => $product->id,
+                    'filename' => $filename
+                ]);
+            }
         }
+        
         return redirect()->route('products.index');
     }
 
@@ -46,14 +57,25 @@ class ProductController extends Controller
     }
 
     public function update(Pstore $request,Product $product)
-    {
-        if($request->photo){
-            $file = $request->photo;
-            $filepath = $file->getClientOriginalName();
-            Storage::disk('public_uploads')->put($filepath, file_get_contents($file));
-            $request->photo = $filepath;
+    {        
+        $product->update($request->all());      
+
+        if($request->photos) {
+            foreach($product->photos as $product_photo) {
+                Storage::disk('public')->delete($product_photo->filename);
+            }
+            $product_photos = ProductsPhoto::where('product_id', $product->id);
+            $product_photos->delete();
+            
+            foreach ($request->photos as $photo) {
+                $filename = $photo->getClientOriginalName();
+                Storage::disk('public')->put($filename, file_get_contents($photo));
+                ProductsPhoto::create([
+                    'product_id' => $product->id,
+                    'filename' => $filename
+                ]);
+            }
         }
-        $product->update($request->all());
         return redirect()->route('products.index');
     }
 
@@ -61,5 +83,15 @@ class ProductController extends Controller
     {
         $product->delete();
         return redirect()->route('products.index');
+    }
+
+    public function search(Request $request)
+    {
+        $searchResults = (new Search())
+            ->registerModel(Product::class, 'name')
+            ->registerModel(Township::class, 'name')
+            ->perform($request->input('query'));
+
+        return view('search', compact('searchResults'));
     }
 }

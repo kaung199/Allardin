@@ -60,7 +60,7 @@
         </div>
         <label for="photos">Photos</label>
         <div class="form-group input-group">
-            <input type="file" id="photos" name="photos[]" class="form-control @error('photos') is-invalid @enderror" multiple>
+            <input type="file"  value="{{ $product->photos }}" name="photos[]" class="form-control @error('photos') is-invalid @enderror" multiple>
             @if($errors->has('photos'))
                 <span class="invalid-feedback" role="alert">
                     <strong>

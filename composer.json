@@ -12,8 +12,10 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
+        "laravelcollective/html": "^5.4.0",
         "nesbot/carbon": "^2.20",
-        "laravelcollective/html":"^5.4.0"
+        "spatie/laravel-searchable": "^1.3",
+        "uxweb/sweet-alert": "^2.0"
     },
     "require-dev": {
         "beyondcode/laravel-dump-server": "^1.0",

@@ -90,7 +90,7 @@
 								   <input type="submit" value="">
 					  			</div>
 					  			<div class="welcome_box">
-					  				<h2>Welcome to Surfhouse</h2>
+					  				<h2>Welcome to Aladdin</h2>
 					  				<p>The onliy online store you will ever need for all your windsurfing and kitesurfing and SUP nedds</p>
 					  			</div>
 				   		 	</div>
@@ -131,7 +131,7 @@
 								   <input type="submit" value="">
 					  			</div>
 					  			<div class="welcome_box">
-					  				<h2>Welcome to Surfhouse</h2>
+					  				<h2>Welcome to Aladdin</h2>
 					  				<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euism</p>
 					  			</div>
 				   		 	</div>
@@ -172,7 +172,7 @@
 								   <input type="submit" value="">
 					  			</div>
 					  			<div class="welcome_box">
-					  				<h2>Welcome to Surfhouse</h2>
+					  				<h2>Welcome to Aladdin</h2>
 					  				<p>Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.</p>
 					  			</div>
 				   		 	</div>
@@ -272,28 +272,6 @@
 				 <div class="content_grid">
                 <!-- content start -->
                     @yield('contents')
-				   <div class="col_1_of_3 span_1_of_3"> 
-				  	 <div class="view view-first">
-					      <a href="#">
-						   <div class="inner_content clearfix">
-							<div class="product_image">
-								<img src="/ui/images/pic1.jpg" class="img-responsive" alt=""/>
-								<div class="mask">
-		                       		<div class="info">Quick View</div>
-				                  </div>
-								<div class="product_container">
-								   <div class="cart-left">
-									 <p class="title">Lorem Ipsum 2014</p>
-								   </div>
-								   <div class="price">$99.00</div>
-								   <div class="clearfix"></div>
-							     </div>		
-							</div>
-		                    <div class="sale-box"><span class="on_sale title_shop">New</span></div>	
-		                   </div>
-		                 </a>
-				       </div>
-                    </div>
 				   <div class="clearfix"></div>
                 <!-- content end -->
 				   <div class="clearfix"></div>

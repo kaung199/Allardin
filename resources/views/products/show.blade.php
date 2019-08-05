@@ -4,7 +4,7 @@
     Products 
 @endsection
 @section('breadcrumbs')
-    <li class="breadcrumb-item active">Products</li>
+    <li class="breadcrumb-item active"><a href="{{ route('products.index') }}">Products</a></li>
     <li class="breadcrumb-item active">Detail</li>
 @endsection
 @section('contents') 
