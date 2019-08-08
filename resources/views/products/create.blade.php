@@ -4,7 +4,7 @@
     Products Create
 @endsection
 @section('breadcrumbs')
-    <li class="breadcrumb-item active">Products</li>
+    <li class="breadcrumb-item active"><a href="{{ url('products') }}">Products</a></li>
     <li class="breadcrumb-item active">Create</li>
 @endsection
 @section('contents') 
@@ -15,7 +15,7 @@
             {{ Form::label(null,'Name') }}
             {{ Form::text('name', null, [
                 'class' => ($errors->has('name')? 'form-control is-invalid': 'form-control'),
-                'placeholder' => 'Township Name'
+                'placeholder' => 'Product Name'
                 ]) }}
 
             @if($errors->has('name'))

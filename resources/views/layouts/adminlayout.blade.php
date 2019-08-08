@@ -30,7 +30,7 @@
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
 
-    <a class="navbar-brand mr-1" href="index.html">Aladdin Dashboard</a>
+    <a class="navbar-brand mr-1" href="{{ route('dashboard') }}">Aladdin Dashboard</a>
 
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
@@ -129,7 +129,7 @@
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
       <li class="nav-item active">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('dashboard') }}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </a>
@@ -144,23 +144,26 @@
         <i class="fas fa-city"></i>
           <span>Townships</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
-          <i class="fas fa-fw fa-chart-area"></i>
-          <span>Charts</span></a>
-      </li>
+
       <li class="nav-item">
         <a class="nav-link" href="{{ route('order') }}">
         <i class="fab fa-accessible-icon"></i>
           <span>Orders</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">
+
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-file-pdf"></i>
-          <span>Reports</span></a>
+          <span>Reports</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <a class="dropdown-item" href="{{ route('daily') }}">Today Orders</a>
+          <a class="dropdown-item" href="{{ route('monthly') }}">Monthly Order</a>
+          <a class="dropdown-item" href="{{ route('yearly') }}">Yearly Order</a>
+        </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" href="{{ route('customers') }}">
         <i class="fas fa-users"></i>
           <span>Customers</span></a>
       </li>

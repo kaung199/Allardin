@@ -4,13 +4,33 @@
     Orders
 @endsection
 @section('breadcrumbs')
-    <li class="breadcrumb-item active">Order</li>
+    <li class="breadcrumb-item active"> <a href="{{ url('order') }}">Order</a></li>
+    <li class="breadcrumb-item active">Detail</li>
 @endsection
 @section('contents')
-
-<h3>
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h3>
         {{ $orderdetails[0]->user->name }}'s Order Detail
-</h3>
+      </h3>
+    </div>
+    <div class="col-md-6">
+      <div class="float-right">
+        @if($previous)
+        <a href="{{ URL::to( 'orderdetail/' . $previous ) }}" class="btn btn-outline-light text-dark text-decoration-none"><i class="fas fa-backward"></i> Previous</a>
+        @endif
+        @if($next)
+        <a href="{{ URL::to( 'orderdetail/' . $next ) }}" class="btn btn-outline-light text-dark text-decoration-none">Next <i class="fas fa-forward"></i></a>
+        @endif
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
+
+
+
 <table class="table table-bordered">
   <thead>
     <tr>
@@ -27,12 +47,25 @@
   <tbody>
         @foreach($orderdetails as $orderdetail) 
             <tr>
-                <th scope="row">{{ $orderdetail->order->id }}</th>
+                <th scope="row">{{ $orderdetail->order->order_id }}</th>
                 <td>{{ $orderdetail->name }}</td>
                 <td>{{ $orderdetail->quantity }}</td>
                 <td class="text-right">{{ $orderdetail->price }}</td>
                 <td>{{ $orderdetail->created_at }}</td>
-                <td>{{ $orderdetail->order->deliverystatus }}</td>
+                <td>
+                  @if($orderdetail->order->deliverystatus == 1)
+                  <a href="{{ route('deliverystatus', $orderdetail->order->id) }}" class="btn btn-outline-primary">Order Prepare</a>
+                  @endif
+                  @if($orderdetail->order->deliverystatus == 2)
+                  <a href="{{ route('deliverystatus', $orderdetail->order->id) }}" class="btn btn-outline-secondary">Delivery</a>
+                  @endif
+                  @if($orderdetail->order->deliverystatus == 3)
+                  <a href="{{ route('deliverystatus', $orderdetail->order->id) }}" class="btn btn-outline-info">Payment</a>
+                  @endif
+                  @if($orderdetail->order->deliverystatus == 4)
+                  <a href="{{ route('deliverystatus', $orderdetail->order->id) }}" class="btn btn-outline-success">Complete</a>
+                  @endif
+                </td>
                 <td class="text-right">{{ $orderdetail->totalprice }}</td>
 
             </tr>
@@ -67,4 +100,33 @@
     </tr>
   </tbody>
 </table>
+<br>
+<h4>Delivery</h4>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>{{ $orderdetail->user->township->deliveryman }}</td>
+      <td>{{ $orderdetail->user->township->phone }}</td>
+    </tr>
+  </tbody>
+</table>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    @if(session('deliverystatus'))
+        <script>
+            Swal.fire({
+                title: 'Delivery Status Updated Successfuly',
+                animation: false,
+                customClass: {
+                    popup: 'animated tada'
+                }
+            })
+        </script>
+    
+    @endif
 @endsection

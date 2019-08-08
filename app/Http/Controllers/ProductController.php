@@ -7,6 +7,8 @@ use App\Http\Requests\Pstore;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Searchable\Search;
 use App\Product;
+use App\User;
+use App\Order;
 use App\Township;
 use App\ProductsPhoto;
 
@@ -14,7 +16,7 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = Product::latest()->get();
+        $products = Product::latest()->paginate(15);
         return view('products.index',compact('products'));
     }
 
@@ -88,8 +90,10 @@ class ProductController extends Controller
     public function search(Request $request)
     {
         $searchResults = (new Search())
-            ->registerModel(Product::class, 'name')
-            ->registerModel(Township::class, 'name')
+            ->registerModel(Product::class, ['name','price'])
+            ->registerModel(Township::class, ['name','phone', 'deliveryman'])
+            ->registerModel(Order::class, ['order_id', 'orderdate'])
+            ->registerModel(User::class, ['name', 'phone'])
             ->perform($request->input('query'));
 
         return view('search', compact('searchResults'));

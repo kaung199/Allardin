@@ -1,45 +1,26 @@
 @extends('layouts.adminlayout')
 
 @section('title')
-    Orders
+    Orders Yearly
 @endsection
 @section('breadcrumbs')
-    <li class="breadcrumb-item active"><a href="{{ route('order') }}">Order</a></li>
-    <li class="breadcrumb-item active">Payment</li>
+    <li class="breadcrumb-item active"> <a href="{{ url('order') }}">Order</a></li>
+    <li class="breadcrumb-item active">YearlyOrder</li>
 @endsection
 @section('contents') 
-<div class="container">
-    <div class="row">
-            <div class="col-md-6">
-                <div class="dropdown">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Filter with Delivery Status
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="{{ route('orderprepare') }}">Order Prepare</a>
-                    <a class="dropdown-item" href="{{ route('delivery') }}">Delivery</a>
-                    <a class="dropdown-item" href="{{ route('payment') }}">Payment</a>
-                    <a class="dropdown-item" href="{{ route('complete') }}">Complete</a>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="folat-right" style="float: right;">
-                <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchbydate') }}" method="POST">
-                    @csrf
-                    <div class="input-group">
-                    <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="search" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="submit" value="search">
-                        <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>   
-</div>    
+<h3>Yearly Orders</h3>
+<hr>
+<div class="dropdown">
+  <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filter with Delivery Status
+  </button>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="{{ route('orderpreparey') }}">Order Prepare</a>
+    <a class="dropdown-item" href="{{ route('deliveryy') }}">Delivery</a>
+    <a class="dropdown-item" href="{{ route('paymenty') }}">Payment</a>
+    <a class="dropdown-item" href="{{ route('completey') }}">Complete</a>
+  </div>
+</div>
 <br>
 <table class="table table-striped">
   <thead>

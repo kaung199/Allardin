@@ -3,7 +3,10 @@
 @section('title')
     Townships edit
 @endsection
-
+@section('breadcrumbs')
+    <li class="breadcrumb-item active"><a href="{{ url('townships') }}">Townships</a></li>
+    <li class="breadcrumb-item active">Edit</li>
+@endsection
 @section('contents') 
     <h3>Townships Create</h3>
     <hr>
@@ -52,6 +55,21 @@
                 <span class="invalid-feedback" role="alert">
                     <strong>
                         {{ $errors->first('deliveryman') }}
+                    </strong>
+                </span>
+            @endif
+        </div>
+        <div class="form-group">
+            {{ Form::label(null,'Phone') }}
+            {{ Form::tel('phone', null, [
+                'class' => ($errors->has('phone')? 'form-control is-invalid': 'form-control'),
+                'placeholder' => 'Delivery Phone No' 
+                ]) }}
+
+            @if($errors->has('phone'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>
+                        {{ $errors->first('phone') }}
                     </strong>
                 </span>
             @endif

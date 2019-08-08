@@ -27,6 +27,7 @@ class Tstore extends FormRequest
             'name' => 'required|max:50',
             'deliveryprice' => 'required|max:100',
             'deliveryman' => 'required|max:50',
+            'phone' => 'required',
         ];
     }
 }

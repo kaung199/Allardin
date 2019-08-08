@@ -18,6 +18,7 @@ class CreateTownshipsTable extends Migration
             $table->string('name');
             $table->unsignedInteger('deliveryprice');
             $table->string('deliveryman');
+            $table->string('phone');
             $table->timestamps();
         });
     }

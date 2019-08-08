@@ -67,12 +67,12 @@
                     {{ Form::close() }}
                 </td>
             </tr>
-            @endforeach
-            
+            @endforeach            
         </tbody>
         </table>
     </div>
-
+    <div class="text-center">{{ $products->links() }}</div>
+    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
     @if(session('success'))
         <script>

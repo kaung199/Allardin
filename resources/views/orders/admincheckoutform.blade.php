@@ -28,7 +28,7 @@
         </div>
         <div class="form-group">
             {{ Form::label(null,'Phone') }}
-            {{ Form::number('phone', null, [
+            {{ Form::tel('phone', null, [
                 'class' => ($errors->has('phone')? 'form-control is-invalid': 'form-control'),
                 'placeholder' => 'Enter Quanties'
                 ]) }}

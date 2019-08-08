@@ -9,7 +9,7 @@ use Spatie\Searchable\SearchResult;
 class Township extends Model  implements Searchable
 {
     protected $table = 'townships';
-    protected $fillable = ['name', 'deliveryprice', 'deliveryman']; 
+    protected $fillable = ['name', 'deliveryprice','phone', 'deliveryman']; 
 
     public function user()
     {

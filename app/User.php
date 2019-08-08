@@ -5,8 +5,11 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Model;
+use Spatie\Searchable\Searchable;
+use Spatie\Searchable\SearchResult;
 
-class User extends Authenticatable
+class User extends Authenticatable implements Searchable
 {
     use Notifiable;
 
@@ -55,5 +58,16 @@ class User extends Authenticatable
     public function role()
     {
         return $this->belongsTo('App\Role');
+    }
+
+    public function getSearchResult(): SearchResult
+    {
+        $url = route('customerdetail', $this->id);
+
+        return new SearchResult(
+            $this,
+            $this->name,
+            $url
+         );
     }
 }
