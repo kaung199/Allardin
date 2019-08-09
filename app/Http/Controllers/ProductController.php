@@ -91,7 +91,7 @@ class ProductController extends Controller
     {
         $searchResults = (new Search())
             ->registerModel(Product::class, ['name','price'])
-            ->registerModel(Township::class, ['name','phone', 'deliveryman'])
+            ->registerModel(Township::class, ['name'])
             ->registerModel(Order::class, ['order_id', 'orderdate'])
             ->registerModel(User::class, ['name', 'phone'])
             ->perform($request->input('query'));
