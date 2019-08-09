@@ -15,8 +15,6 @@
             <tr>
             <th scope="col">Name</th>
             <th scope="col">Delivery Price</th>
-            <th scope="col">Delivery Man</th>
-            <th scope="col">Delivery Phone</th>
             <th scope="col">Action</th>
             </tr>
         </thead>
@@ -25,8 +23,6 @@
             <tr>
                 <td>{{  $township->name}}</td>
                 <td>{{ $township->deliveryprice }}</td>
-                <td>{{ $township->deliveryman }}</td>
-                <td>{{ $township->phone }}</td>
                 <td>
                     
                     {{ Form::model($township, [ 

@@ -106,13 +106,11 @@
   <thead>
     <tr>
       <th scope="col">Name</th>
-      <th scope="col">Phone</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td>{{ $orderdetail->user->township->deliveryman }}</td>
-      <td>{{ $orderdetail->user->township->phone }}</td>
+      <td>Comming Soon</td>
     </tr>
   </tbody>
 </table>

@@ -34,6 +34,7 @@ class Pstore extends FormRequest
             'name' => 'required|max:50',
             'quantity' => 'required|max:100',
             'price' => 'required|max:100',
+            'description' => 'required',
             'photo' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ];
         $photos = count($this->input['photos']);
