@@ -18,8 +18,8 @@ if (version_compare(PHP_VERSION, '7.2.0', '>=')) {
 //     return view('welcome');
 // });
 
-Route::get('/firstlayout', function () {
-    return view('layouts/firstlayout');
+Route::get('/orderlayout', function () {
+    return view('layouts/orderprepare');
 });
 
 
@@ -39,6 +39,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
             return redirect()->route('dashboard');
         });
         
+        Route::resource('deliveries', 'DeliveryController');
         Route::resource('products', 'ProductController');
         Route::resource('townships', 'TownshipController');
         Route::resource('customers', 'CustomerController');
@@ -62,12 +63,17 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::delete('cart/remove-from-cart', 'CartController@remove')->name('cart.remove-from-cart');
 
         //admin order 
+        Route::delete('orderdelivery/{id}', 'OrderController@orderdelivery')->name('orders.orderdelivery');
+
+
         Route::get('checkoutform', 'OrderController@checkoutform')->name('checkoutform');
         Route::post('checkout', 'OrderController@checkout')->name('checkout');
         Route::get('order', 'OrderController@order')->name('order');
         Route::get('orderdetail/{id}', 'OrderController@orderdetail')->name('orderdetail');
         Route::delete('deleteorder/{id}', 'OrderController@destroy')->name('orders.destroy');
         Route::get('deliverystatus/{id}', 'OrderController@deliverystatus')->name('deliverystatus');
+        Route::post('orderdelivery/{id}', 'OrderController@orderdelivery')->name('orderdelivery');
+        Route::post('orderdeliverysearch/{id}', 'OrderController@orderdeliverysearch')->name('orderdeliverysearch');
         Route::get('deliverystatussearch/{id}', 'OrderController@deliverystatussearch')->name('deliverystatussearch');
 
         //all order
@@ -107,12 +113,26 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
    
     
     Route::group(['middleware' => ['delivery']], function ()
-	{
-       Route::get('/wellcome', function () {
-            return view('welcome');
-        });
+	{       
+        Route::get('orderd', 'AccountController@orderd')->name('orderd');
+        Route::post('searchd', 'AccountController@searchp')->name('searchd');
+        Route::get('deliveryd', 'AccountController@delivery')->name('deliveryd'); 
+        Route::get('deliverystatusd/{id}', 'AccountController@deliverystatus')->name('deliverystatusd');
+        Route::get('deliverystatusdd/{id}', 'AccountController@deliverystatusd')->name('deliverystatusdd');
+        Route::get('orderdetaild/{id}', 'AccountController@orderdetail')->name('orderdetaild');
+
     });
     
+    Route::group(['middleware' => ['order']], function ()
+	{
+        Route::get('orderp', 'AccountController@order')->name('orderp');
+        Route::post('searchp', 'AccountController@searchp')->name('searchp');
+        Route::post('orderdeliveryp/{id}', 'AccountController@orderdelivery')->name('orderdeliveryp');
+        Route::post('orderdeliverypp/{id}', 'AccountController@orderdeliveryp')->name('orderdeliverypp');
+        Route::get('orderpreparep', 'AccountController@orderprepare')->name('orderpreparep');
+        Route::get('orderdetailp/{id}', 'AccountController@orderdetail')->name('orderdetailp');
+
+    });
 
 
     Route::get('/{vue_capture?}', function () {

@@ -85,13 +85,15 @@ class OrderController extends Controller
     public function order()
     {
         $orders = Order::latest()->get();
-        return view('orders.index', compact('orders'));
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        return view('orders.index', compact('orders', 'deliveries'));
     }
 
    
 
     public function orderdetail($id)
     {
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         $orderdetails = Order_detail::where(order_id, $id)->get();
 
         // get previous user id
@@ -100,7 +102,7 @@ class OrderController extends Controller
         // get next user id
         $next = Order_detail::where('order_id', '>', $id)->min('order_id');
 
-        return view('orders.orderdetail', compact('orderdetails','previous','next'));
+        return view('orders.orderdetail', compact('orderdetails','previous','next', 'deliveries'));
     }
 
     public function destroy($id)
@@ -143,11 +145,37 @@ class OrderController extends Controller
         }
         if($deliverystatus->deliverystatus == 4) {
             $deliverystatus->update([
-                'deliverystatus' => 1
+                'deliverystatus' => 1,
+                'delivery_id' => null
             ]); 
             return redirect()->back()->with('deliverystatus', 'Status Change successful');
         }        
     }
+
+    public function orderdelivery(Request $request, $id)
+    {
+        $deliverystatus = Order::find($id);
+        if($deliverystatus->deliverystatus == 1) {
+            $deliverystatus->update([
+                'deliverystatus' => 2,
+                'delivery_id' => $request->delivery_id
+            ]);
+            return redirect()->back()->with('deliverystatus', 'Status Change successful');
+        }
+    }
+
+    public function orderdeliverysearch(Request $request, $id)
+    {
+        $deliverystatus = Order::find($id);
+        if($deliverystatus->deliverystatus == 1) {
+            $deliverystatus->update([
+                'deliverystatus' => 2,
+                'delivery_id' => $request->delivery_id
+            ]);
+            return redirect()->route('order')->with('deliverystatus', 'Status Change successful');
+        }
+    }
+
     public function deliverystatussearch($id)
     {
         
@@ -182,7 +210,8 @@ class OrderController extends Controller
     public function orderprepare()
     {
         $orders = Order::where(deliverystatus, 1)->get();
-        return view('orders.orderprepare', compact('orders'));
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        return view('orders.orderprepare', compact('orders', 'deliveries'));
     }
     public function delivery()
     {
@@ -208,7 +237,8 @@ class OrderController extends Controller
             [deliverystatus, 1],
             ['orderdate', $today]
             ])->get();
-        return view('orders.daily.orderprepare', compact('orders', 'today'));
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        return view('orders.daily.orderprepare', compact('orders', 'today', 'deliveries'));
     }
     public function deliveryd()
     {
@@ -247,7 +277,8 @@ class OrderController extends Controller
             [deliverystatus, 1],
             ['monthly', $thismonth]
             ])->get();
-        return view('orders.daily.orderprepare', compact('orders', 'thismonth'));
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        return view('orders.daily.orderprepare', compact('orders', 'thismonth', 'deliveries'));
     }
     public function deliverym()
     {
@@ -285,7 +316,8 @@ class OrderController extends Controller
             [deliverystatus, 1],
             ['yearly', $thisyear]
             ])->get();
-        return view('orders.daily.orderprepare', compact('orders', 'thisyear'));
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        return view('orders.daily.orderprepare', compact('orders', 'thisyear', 'deliveries'));
     }
     public function deliveryy()
     {
@@ -320,15 +352,16 @@ class OrderController extends Controller
     {
       $today = Carbon::now()->toDateString();
       $orders = Order::where('orderdate', $today)->get();
-
-      return view('orders.daily', compact('orders'));    
+      $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+      return view('orders.daily', compact('orders', 'deliveries'));    
     }
 
     public function monthlyorder() 
     {
       $thismonth = Carbon::now()->format('Y-m');
       $orders = Order::where('monthly', $thismonth)->get();
-      return view('orders.monthly', compact('orders'));    
+      $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+      return view('orders.monthly', compact('orders', 'deliveries'));    
 
     }
 
@@ -336,7 +369,8 @@ class OrderController extends Controller
     {
       $thisyear = Carbon::now()->format('Y');
       $orders = Order::where('yearly', $thisyear)->get();
-      return view('orders.yearly', compact('orders'));    
+      $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+      return view('orders.yearly', compact('orders', 'deliveries'));    
     }
 
 
@@ -344,9 +378,10 @@ class OrderController extends Controller
     {
         $from = $request->from;
         $to = $request->to;
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         // $orders = Order::whereBetween('orderdate', 'LIKE', '%' . $order_search . '%')->get();
         $orders = Order::whereBetween('orderdate', [$from, $to])->get();
-        return view('orders.searchbydate', \compact('orders'));  
+        return view('orders.searchbydate', \compact('orders', 'deliveries'));  
     }
     
 }

@@ -58,18 +58,18 @@
         </div>
         
         <div class="form-group">
-			{{ Form::label(null,'Townships') }}
-			{{ Form::select('township_id', $townships, 'null', [
-				'class' => 
-				($errors->has('township_id')? 'form-control is-invalid': 'form-control'), 
-			]) }}
-			@if($errors->has('township_id'))
-				<span class="invalid-feedback" role="alert">
-					<strong>
-						{{ $errors->first('township_id') }}
-					</strong>
-				</span>
-			@endif
+            {{ Form::label(null,'Townships') }}
+            {{ Form::select('township_id', $townships, 'null', [
+                'class' => 
+                ($errors->has('township_id')? 'form-control is-invalid': 'form-control'), 
+            ]) }}
+            @if($errors->has('township_id'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>
+                        {{ $errors->first('township_id') }}
+                    </strong>
+                </span>
+            @endif
 		</div>
 
 		

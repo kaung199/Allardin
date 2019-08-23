@@ -10644,6 +10644,10 @@ a.text-dark:focus {
   }
 }
 
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .vueui body {
   font-family: "Roboto", sans-serif;
 }
@@ -10856,6 +10860,27 @@ a.text-dark:focus {
 
   .vueui .navbar-brand {
     margin-right: 70px !important;
+  }
+}
+
+.orderprepare .table-bordered th,
+.orderprepare .table-bordered td {
+  padding: 10px;
+}
+
+@media (max-width: 768px) {
+  .orderprepare .card {
+    margin: 0 auto;
+  }
+
+  .orderprepare .col-md-4 {
+    max-width: 60% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .orderprepare .col-md-4 {
+    max-width: 100% !important;
   }
 }
 

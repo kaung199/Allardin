@@ -9,11 +9,16 @@ use Spatie\Searchable\SearchResult;
 class Order extends Model implements Searchable
 {
     protected $table = 'orders';
-    protected $fillable = ['order_id', 'totalquantity', 'totalprice','orderdate','monthly','yearly', 'deliverystatus', 'user_id'];
+    protected $fillable = ['order_id','delivery_id', 'totalquantity', 'totalprice','orderdate','monthly','yearly', 'deliverystatus', 'user_id'];
 
     public function user()
     {
     	return $this->belongsTo('App\User');
+    }
+
+    public function delivery()
+    {
+    	return $this->belongsTo('App\Delivery');
     }
 
     public function orderdetails()

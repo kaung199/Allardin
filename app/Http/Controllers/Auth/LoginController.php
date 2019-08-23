@@ -43,4 +43,30 @@ class LoginController extends Controller
         Auth::logout();
         return redirect('/login');
     }
+
+    public function redirectTo(){
+        
+        // User role
+        $role = Auth::user()->role_id; 
+        
+        // Check user role
+        switch ($role) {
+            case 1:
+                    return '/admin';
+                break;
+            case 2:
+                    return '/admin';
+                break; 
+            case 3:
+                    return '/deliveryd';
+                break;
+            case 4:
+                    return '/orderpreparep';
+                break;
+            default:
+                    return '/'; 
+                break;
+        }
+    }
+
 }

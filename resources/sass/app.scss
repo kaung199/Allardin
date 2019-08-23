@@ -7,6 +7,9 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+body {
+    font-family: 'Roboto', sans-serif;
+}
 .vueui {
     body {
         font-family: 'Roboto', sans-serif;
@@ -196,6 +199,25 @@
         }
         .navbar-brand {
             margin-right: 70px !important;
+        }
+    }
+}
+
+.orderprepare {
+    .table-bordered th, .table-bordered td {
+        padding: 10px;
+    }
+    @media (max-width: 768px) { 
+        .card {
+            margin: 0 auto;
+        }
+        .col-md-4 {
+            max-width: 60% !important;
+        }
+    }
+    @media (max-width: 576px) {
+        .col-md-4 {
+            max-width: 100% !important;
         }
     }
 }

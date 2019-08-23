@@ -21,5 +21,8 @@ class RoleTableSeeder extends Seeder
         Role::create([
             'name' => 'Delivery'
         ]);
+        Role::create([
+            'name' => 'Order'
+        ]);
     }
 }

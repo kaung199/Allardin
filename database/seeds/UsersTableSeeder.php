@@ -41,5 +41,14 @@ class UsersTableSeeder extends Seeder
             'role_id' => 3
         ]);
 
+        User::create([
+            'name' => 'Order',
+            'phone' => '09789',
+            'address' => 'order',
+            'email' => 'order@gmail.com',
+            'password' => Hash::make('password'),
+            'role_id' => 4
+        ]);
+
     }
 }
