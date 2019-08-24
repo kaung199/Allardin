@@ -19,35 +19,8 @@ class UsersTableSeeder extends Seeder
             'phone' => '09789',
             'address' => 'admin',
             'email' => 'superadmin@gmail.com',
-            'password' => Hash::make('password'),
+            'password' => Hash::make('familydocadmin'),
             'role_id' => 1
-        ]);
-
-        User::create([
-            'name' => 'Admin',
-            'phone' => '09789',
-            'address' => 'admin',
-            'email' => 'admin@gmail.com',
-            'password' => Hash::make('password'),
-            'role_id' => 2
-        ]);
-
-        User::create([
-            'name' => 'Delivery',
-            'phone' => '09789',
-            'address' => 'delivery',
-            'email' => 'delivery@gmail.com',
-            'password' => Hash::make('password'),
-            'role_id' => 3
-        ]);
-
-        User::create([
-            'name' => 'Order',
-            'phone' => '09789',
-            'address' => 'order',
-            'email' => 'order@gmail.com',
-            'password' => Hash::make('password'),
-            'role_id' => 4
         ]);
 
     }
