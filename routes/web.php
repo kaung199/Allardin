@@ -52,6 +52,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
 
         Route::post('/search', 'ProductController@search')->name('search');
         Route::post('/searchbydate', 'OrderController@search')->name('searchbydate');
+        Route::post('/searchbydatedelivery', 'OrderController@searchdelivery')->name('searchbydatedelivery');
 
         Route::get('/cartadd/{id}', 'CartController@cartadd')->name('cartadd');
         Route::get('/cartview', 'CartController@cartview');
@@ -70,6 +71,8 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::post('checkout', 'OrderController@checkout')->name('checkout');
         Route::get('order', 'OrderController@order')->name('order');
         Route::get('orderdetail/{id}', 'OrderController@orderdetail')->name('orderdetail');
+        Route::get('orderdetailsimple/{id}', 'OrderController@orderdetailsimple')->name('orderdetailsimple');
+        Route::get('deliveryorderdetail/{id}', 'OrderController@deliveryorderdetail')->name('deliveryorderdetail');
         Route::delete('deleteorder/{id}', 'OrderController@destroy')->name('orders.destroy');
         Route::get('deliverystatus/{id}', 'OrderController@deliverystatus')->name('deliverystatus');
         Route::post('orderdelivery/{id}', 'OrderController@orderdelivery')->name('orderdelivery');
@@ -79,6 +82,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         //all order
         Route::get('orderprepare', 'OrderController@orderprepare')->name('orderprepare');
         Route::get('delivery', 'OrderController@delivery')->name('delivery');
+        Route::get('deliverydetail/{id}', 'OrderController@deliverydetail')->name('deliverydetail');
         Route::get('payment', 'OrderController@payment')->name('payment');
         Route::get('complete', 'OrderController@complete')->name('complete');
         
@@ -116,7 +120,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
 	{       
         Route::get('orderd', 'AccountController@orderd')->name('orderd');
         Route::post('searchd', 'AccountController@searchp')->name('searchd');
-        Route::get('deliveryd', 'AccountController@delivery')->name('deliveryd'); 
+        Route::get('deliverydd', 'AccountController@delivery')->name('deliverydd'); 
         Route::get('deliverystatusd/{id}', 'AccountController@deliverystatus')->name('deliverystatusd');
         Route::get('deliverystatusdd/{id}', 'AccountController@deliverystatusd')->name('deliverystatusdd');
         Route::get('orderdetaild/{id}', 'AccountController@orderdetail')->name('orderdetaild');
@@ -131,6 +135,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::post('orderdeliverypp/{id}', 'AccountController@orderdeliveryp')->name('orderdeliverypp');
         Route::get('orderpreparep', 'AccountController@orderprepare')->name('orderpreparep');
         Route::get('orderdetailp/{id}', 'AccountController@orderdetail')->name('orderdetailp');
+        Route::get('orderdetailpo/{id}', 'AccountController@orderdetailo')->name('orderdetailpo');
 
     });
 

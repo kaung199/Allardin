@@ -1,14 +1,13 @@
 @extends('layouts.adminlayout')
 
 @section('title')
-    Delivery Create
+    Account Create
 @endsection
 @section('breadcrumbs')
-    <li class="breadcrumb-item active"><a href="{{ url('townships')}}">Delivery</a></li>
-    <li class="breadcrumb-item active">Create</li>
+    <li class="breadcrumb-item active">Account Create</li>
 @endsection
 @section('contents') 
-    <h3>Delivery Create</h3>
+    <h3>Account Create</h3>
     <hr>
     {{ Form::open([ 'route'=>'deliveries.store', 'method' => 'POST' ]) }}
         <div class="form-group">
@@ -26,6 +25,19 @@
                 </span>
             @endif
         </div>
+        <div class="form-group">
+            {{ Form::label(null,'Choose Role') }}
+            <select name="role" class="form-control @error('role') is-invalid @enderror">
+                <option value="">Choose Role</option>
+                <option value="Admin">Admin</option>
+                <option value="Order">Order</option>
+                <option value="Delivery">Delivery</option>
+            </select>
+            @error('role')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+        </div>
+
         <div class="form-group">
             {{ Form::label(null,'Email') }}
             {{ Form::email('email',  old('email'), [

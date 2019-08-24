@@ -75,7 +75,7 @@
                                 </div>
                             </div>
                             </div>
-                        <a href="{{ route('orderdetailp', $order->id) }}" class="btn btn-primary">Detail</a>
+                        <a href="{{ route('orderdetailpo', $order->id) }}" class="btn btn-primary">Detail</a>
 
                     </div>
                     

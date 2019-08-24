@@ -32,14 +32,34 @@ class AccountController extends Controller
         $delivery = User::find($d_id);
         return view('orderprepare.orderdetail', compact('orderdetails','delivery','deliveries'));
     }
-
+    public function orderdetailo($id)
+    {
+        $orderdetails = Order_detail::where(order_id, $id)->get();
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        // get previous user id
+        $previous = Order::where([
+            ['orders.id', '<', $id],
+            ['deliverystatus', 1]
+            ])->max('orders.id');
+        // get next user id
+        $next = Order::where([
+            ['orders.id', '>', $id],
+            ['deliverystatus', 1]
+            ])->max('orders.id');
+        $d_id = $orderdetails[0]->order->delivery_id;
+        $delivery = User::find($d_id);
+        return view('orderprepare.orderdetail', compact('orderdetails','deliveries','delivery', 'previous', 'next'));
+    }
     public function deliverystatus($id)
     {
         
         $deliverystatus = Order::find($id);
         if($deliverystatus->deliverystatus == 1) {
             $deliverystatus->update([
-                'deliverystatus' => 2
+                'deliverystatus' => 2,
+                'orderdate' =>  date('Y-m-d'),
+                'monthly' =>  date('Y-m'),
+                'yearly' =>  date('Y'),
             ]);
             return redirect()->back()->with('deliverystatus', 'Status Change successful');
         }
@@ -69,7 +89,10 @@ class AccountController extends Controller
         $deliverystatus = Order::find($id);
         if($deliverystatus->deliverystatus == 1) {
             $deliverystatus->update([
-                'deliverystatus' => 2
+                'deliverystatus' => 2,
+                'orderdate' =>  date('Y-m-d'),
+                'monthly' =>  date('Y-m'),
+                'yearly' =>  date('Y'),
             ]);
             return redirect('orderd')->with('deliverystatus', 'Status Change successful');
         }
@@ -99,6 +122,9 @@ class AccountController extends Controller
         if($deliverystatus->deliverystatus == 1) {
             $deliverystatus->update([
                 'deliverystatus' => 2,
+                'orderdate' =>  date('Y-m-d'),
+                'monthly' =>  date('Y-m'),
+                'yearly' =>  date('Y'),
                 'delivery_id' => $request->delivery_id
             ]);
             return redirect()->back()->with('deliverystatus', 'Status Change successful');
@@ -111,6 +137,9 @@ class AccountController extends Controller
         if($deliverystatus->deliverystatus == 1) {
             $deliverystatus->update([
                 'deliverystatus' => 2,
+                'orderdate' =>  date('Y-m-d'),
+                'monthly' =>  date('Y-m'),
+                'yearly' =>  date('Y'),
                 'delivery_id' => $request->delivery_id
             ]);
             return redirect('orderp')->with('deliverystatus', 'Status Change successful');

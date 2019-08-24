@@ -53,6 +53,7 @@
         <td>{{ $order->totalquantity }}</td>
         <td class="text-right">{{ $order->totalprice + $order->user->township->deliveryprice }}</td>
         <td>{{ $order->created_at }}</td>
+        @if(Auth::user()->role_id == 1)
         <td  data-th="">
             @if($order->deliverystatus == 1)
                 <!-- Button trigger modal -->
@@ -110,6 +111,22 @@
             <a href="{{ route('deliverystatussearch', $order->id) }}" class="btn btn-outline-success">Complete</a>
             @endif
         </td>
+        @else
+         <td  data-th="">
+                @if($order->deliverystatus == 1)
+                <a href="#" class="btn btn-outline-primary">Order Prepare</a>
+                @endif
+                @if($order->deliverystatus == 2)
+                <a href="#" class="btn btn-outline-secondary">Delivery</a>
+                @endif
+                @if($order->deliverystatus == 3)
+                <a href="#" class="btn btn-outline-info">Payment</a>
+                @endif
+                @if($order->deliverystatus == 4)
+                <a href="#" class="btn btn-outline-success">Complete</a>
+                @endif
+            </td>
+        @endif
         <td>
             {{ Form::model($order, [ 
                 'route'=> ['orders.destroy', $order->id], 

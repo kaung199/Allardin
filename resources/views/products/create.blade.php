@@ -43,7 +43,7 @@
         </div>
         <div class="form-group">
             {{ Form::label(null,'Price') }}
-            {{ Form::text('price', null, [
+            {{ Form::number('price', null, [
                 'class' => ($errors->has('price')? 'form-control is-invalid': 'form-control'),
                 'placeholder' => 'Enter price' 
                 ]) }}

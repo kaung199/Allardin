@@ -95,16 +95,45 @@ class OrderController extends Controller
     {
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         $orderdetails = Order_detail::where(order_id, $id)->get();
+        $d_id = $orderdetails[0]->order->delivery_id;
+        $delivery = User::find($d_id);
 
         // get previous user id
         $previous = Order_detail::where('order_id', '<', $id)->max('order_id');
 
         // get next user id
         $next = Order_detail::where('order_id', '>', $id)->min('order_id');
+        
+        // get previous user id
+        // $previous = Order::where([
+        //     ['orders.id', '<', $id],
+        //     ['deliverystatus', 3]
+        //     ])->max('orders.id');
 
-        return view('orders.orderdetail', compact('orderdetails','previous','next', 'deliveries'));
+        // // get next user id
+        // $next = Order::where([
+        //     ['orders.id', '>', $id],
+        //     ['deliverystatus', 3]
+        //     ])->max('orders.id');
+
+        return view('orders.orderdetail', compact('orderdetails','previous','next','delivery', 'deliveries'));
     }
-
+    public function orderdetailsimple($id)
+    {
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        $orderdetails = Order_detail::where(order_id, $id)->get();
+        $d_id = $orderdetails[0]->order->delivery_id;
+        $delivery = User::find($d_id);
+        return view('orders.orderdetail', compact('orderdetails','delivery', 'deliveries'));
+    }
+    public function deliveryorderdetail($id)
+    {
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        $orderdetails = Order_detail::where(order_id, $id)->get();
+        $d_id = $orderdetails[0]->order->delivery_id;
+        $delivery = User::find($d_id);
+        return view('delivery.deliveryorderdetail', compact('orderdetails','delivery', 'deliveries'));
+    }
     public function destroy($id)
     {
         if(Auth::user()->id == 1) {
@@ -119,37 +148,42 @@ class OrderController extends Controller
             $order->delete();
             return redirect()->back();
         }
-        return redirect()->back()->with('permission', 'Permission Deny');
+        return redirect()->route('order')->with('permission', 'Permission Deny');
     }
     public function deliverystatus($id)
     {
-        
-        $deliverystatus = Order::find($id);
-        if($deliverystatus->deliverystatus == 1) {
-            $deliverystatus->update([
-                'deliverystatus' => 2
-            ]);
-            return redirect()->back()->with('deliverystatus', 'Status Change successful');
+        if(Auth::user()->role_id != 2) {
+            $deliverystatus = Order::find($id);
+            if($deliverystatus->deliverystatus == 1) {
+                $deliverystatus->update([
+                    'deliverystatus' => 2,
+                    'orderdate' =>  date('Y-m-d'),
+                    'monthly' =>  date('Y-m'),
+                    'yearly' =>  date('Y'),
+                ]);
+                return redirect()->back()->with('deliverystatus', 'Status Change successful');
+            }
+            if($deliverystatus->deliverystatus == 2) {
+                $deliverystatus->update([
+                    'deliverystatus' => 3
+                ]);  
+                return redirect()->back()->with('deliverystatus', 'Status Change successful');
+            }
+            if($deliverystatus->deliverystatus == 3) {
+                $deliverystatus->update([
+                    'deliverystatus' => 4
+                ]); 
+                return redirect()->back()->with('deliverystatus', 'Status Change successful');
+            }
+            if($deliverystatus->deliverystatus == 4) {
+                $deliverystatus->update([
+                    'deliverystatus' => 1,
+                    'delivery_id' => null
+                ]); 
+                return redirect()->back()->with('deliverystatus', 'Status Change successful');
+            }
         }
-        if($deliverystatus->deliverystatus == 2) {
-            $deliverystatus->update([
-                'deliverystatus' => 3
-            ]);  
-            return redirect()->back()->with('deliverystatus', 'Status Change successful');
-        }
-        if($deliverystatus->deliverystatus == 3) {
-            $deliverystatus->update([
-                'deliverystatus' => 4
-            ]); 
-            return redirect()->back()->with('deliverystatus', 'Status Change successful');
-        }
-        if($deliverystatus->deliverystatus == 4) {
-            $deliverystatus->update([
-                'deliverystatus' => 1,
-                'delivery_id' => null
-            ]); 
-            return redirect()->back()->with('deliverystatus', 'Status Change successful');
-        }        
+                
     }
 
     public function orderdelivery(Request $request, $id)
@@ -158,7 +192,10 @@ class OrderController extends Controller
         if($deliverystatus->deliverystatus == 1) {
             $deliverystatus->update([
                 'deliverystatus' => 2,
-                'delivery_id' => $request->delivery_id
+                'delivery_id' => $request->delivery_id,
+                'orderdate' =>  date('Y-m-d'),
+                'monthly' =>  date('Y-m'),
+                'yearly' =>  date('Y'),
             ]);
             return redirect()->back()->with('deliverystatus', 'Status Change successful');
         }
@@ -170,6 +207,9 @@ class OrderController extends Controller
         if($deliverystatus->deliverystatus == 1) {
             $deliverystatus->update([
                 'deliverystatus' => 2,
+                'orderdate' =>  date('Y-m-d'),
+                'monthly' =>  date('Y-m'),
+                'yearly' =>  date('Y'),
                 'delivery_id' => $request->delivery_id
             ]);
             return redirect()->route('order')->with('deliverystatus', 'Status Change successful');
@@ -182,7 +222,10 @@ class OrderController extends Controller
         $deliverystatus = Order::find($id);
         if($deliverystatus->deliverystatus == 1) {
             $deliverystatus->update([
-                'deliverystatus' => 2
+                'deliverystatus' => 2,
+                'orderdate' =>  date('Y-m-d'),
+                'monthly' =>  date('Y-m'),
+                'yearly' =>  date('Y'),
             ]);
             return redirect()->route('order')->with('deliverystatus', 'Status Change successful');
         }
@@ -382,6 +425,26 @@ class OrderController extends Controller
         // $orders = Order::whereBetween('orderdate', 'LIKE', '%' . $order_search . '%')->get();
         $orders = Order::whereBetween('orderdate', [$from, $to])->get();
         return view('orders.searchbydate', \compact('orders', 'deliveries'));  
+    }
+
+    public function searchdelivery(Request $request) 
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $id = $request->delivery_id;
+        $delivery = User::find($id);
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                ->where('delivery_id', $id)
+                ->get();
+        return view('delivery.searchbydate', \compact('orders', 'delivery'));  
+    }
+
+    public function deliverydetail($id)
+    {
+        $delivery = User::find($id);
+        $orders = Order::where('delivery_id', $id)->get();
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        return view('delivery.orders', compact('orders', 'deliveries', 'delivery')); 
     }
     
 }

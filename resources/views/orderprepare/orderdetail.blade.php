@@ -2,6 +2,23 @@
 
 
 @section('contents')
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+    </div>
+    <div class="col-md-6">
+      <div class="float-right">
+        @if($previous)
+        <a href="{{ URL::to( 'orderdetailpo/' . $previous ) }}" class="btn btn-outline-secondary text-dark text-decoration-none"><i class="fas fa-backward"></i> Previous</a>
+        @endif
+        @if($next)
+        <a href="{{ URL::to( 'orderdetailpo/' . $next ) }}" class="btn btn-outline-secondary text-dark text-decoration-none">Next <i class="fas fa-forward"></i></a>
+        @endif
+      </div>
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</div>
 <div class="card">
   <div class="card-header">
       <h4>{{ $orderdetails[0]->user->name }}'s Order Detail</h4>

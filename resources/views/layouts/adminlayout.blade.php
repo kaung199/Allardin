@@ -31,9 +31,12 @@
 <body id="page-top">
 
   <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
-
+    @if(Auth::user()->role_id == 1)
     <a class="navbar-brand mr-1" href="{{ route('dashboard') }}">Aladdin Dashboard</a>
-
+    @endif
+    @if(Auth::user()->role_id == 2)
+    <a class="navbar-brand mr-1" href="#">Aladdin Dashboard</a>
+    @endif
     <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
       <i class="fas fa-bars"></i>
     </button>
@@ -130,12 +133,14 @@
 
     <!-- Sidebar -->
     <ul class="sidebar navbar-nav">
+    @if(Auth::user()->role_id == 1)
       <li class="nav-item active">
         <a class="nav-link" href="{{ route('dashboard') }}">
           <i class="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </a>
       </li>
+    @endif
       <li class="nav-item">
         <a class="nav-link" href="{{ url('products') }}">
         <i class="fas fa-umbrella"></i>
@@ -152,7 +157,7 @@
         <i class="fab fa-accessible-icon"></i>
           <span>Orders</span></a>
       </li>
-
+      @if(Auth::user()->role_id == 1)
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <i class="fas fa-file-pdf"></i>
@@ -164,11 +169,24 @@
           <a class="dropdown-item" href="{{ route('yearly') }}">Yearly Order</a>
         </div>
       </li>
+      @endif
       <li class="nav-item">
         <a class="nav-link" href="{{ route('customers') }}">
         <i class="fas fa-users"></i>
           <span>Customers</span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ url('deliveries') }}">
+        <i class="fas fa-car"></i>
+          <span>Delivery</span></a>
+      </li>
+      @if(Auth::user()->role_id == 1)
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('deliveries.create') }}">
+        <i class="fas fa-user-plus"></i>
+          <span>Accounts Create</span></a>
+      </li>
+      @endif
       <li class="nav-item">
         <a class="nav-link" href="#">
         <i class="fas fa-id-card"></i>

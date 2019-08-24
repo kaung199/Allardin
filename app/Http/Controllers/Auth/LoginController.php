@@ -58,7 +58,7 @@ class LoginController extends Controller
                     return '/admin';
                 break; 
             case 3:
-                    return '/deliveryd';
+                    return '/deliverydd';
                 break;
             case 4:
                     return '/orderpreparep';

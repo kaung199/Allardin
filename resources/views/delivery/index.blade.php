@@ -30,8 +30,10 @@
                         'method' => 'DELETE',
                         'onsubmit' => "return confirm('Are you sure you want to DELETE?');"
                     ]) }}
+                    <a href="{{ route('deliverydetail', $delivery->id) }}" class="btn btn-info">Detail</a>
+                    @if(Auth::user()->role_id == 1)
                     <button class="btn btn-danger">Delete</button>
-                        
+                    @endif
                     {{ Form::close() }}
                 </td>
             </tr>

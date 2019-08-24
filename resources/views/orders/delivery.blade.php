@@ -24,19 +24,6 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="folat-right" style="float: right;">
-                <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchbydate') }}" method="POST">
-                    @csrf
-                    <div class="input-group">
-                    <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="search" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="submit" value="search">
-                        <i class="fas fa-search"></i>
-                        </button>
-                    </div>
-                    </div>
-                </form>
-            </div>
         </div>
     </div>  
 </div>    
@@ -61,20 +48,37 @@
         <td>{{ $order->totalquantity }}</td>
         <td class="text-right">{{ $order->totalprice + $order->user->township->deliveryprice }}</td>
         <td>{{ $order->created_at }}</td>
+        @if(Auth::user()->role_id == 1)
+            <td  data-th="">
+                @if($order->deliverystatus == 1)
+                <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-primary">Order Prepare</a>
+                @endif
+                @if($order->deliverystatus == 2)
+                <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-secondary">Delivery</a>
+                @endif
+                @if($order->deliverystatus == 3)
+                <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-info">Payment</a>
+                @endif
+                @if($order->deliverystatus == 4)
+                <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-success">Complete</a>
+                @endif
+            </td>
+        @else
         <td  data-th="">
-            @if($order->deliverystatus == 1)
-            <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-primary">Order Prepare</a>
-            @endif
-            @if($order->deliverystatus == 2)
-            <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-secondary">Delivery</a>
-            @endif
-            @if($order->deliverystatus == 3)
-            <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-info">Payment</a>
-            @endif
-            @if($order->deliverystatus == 4)
-            <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-success">Complete</a>
-            @endif
-        </td>
+                @if($order->deliverystatus == 1)
+                <a href="#" class="btn btn-outline-primary">Order Prepare</a>
+                @endif
+                @if($order->deliverystatus == 2)
+                <a href="#" class="btn btn-outline-secondary">Delivery</a>
+                @endif
+                @if($order->deliverystatus == 3)
+                <a href="#" class="btn btn-outline-info">Payment</a>
+                @endif
+                @if($order->deliverystatus == 4)
+                <a href="#" class="btn btn-outline-success">Complete</a>
+                @endif
+            </td>
+        @endif
         <td>
             {{ Form::model($order, [ 
                 'route'=> ['orders.destroy', $order->id], 

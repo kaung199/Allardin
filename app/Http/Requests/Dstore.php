@@ -26,6 +26,7 @@ class Dstore extends FormRequest
         return [
             'name' => 'required|max:50',
             'phone' => 'required',
+            'role' => 'required',
             'address' => 'required',
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
