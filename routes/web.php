@@ -116,7 +116,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
 
    
     
-    Route::group(['middleware' => ['delivery']], function ()
+    Route::group(['middleware' => ['auth', 'delivery']], function ()
 	{       
         Route::get('orderd', 'AccountController@orderd')->name('orderd');
         Route::post('searchd', 'AccountController@searchp')->name('searchd');
@@ -127,7 +127,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
 
     });
     
-    Route::group(['middleware' => ['order']], function ()
+    Route::group(['middleware' => ['auth', 'order']], function ()
 	{
         Route::get('orderp', 'AccountController@order')->name('orderp');
         Route::post('searchp', 'AccountController@searchp')->name('searchp');

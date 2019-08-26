@@ -64,7 +64,7 @@ class LoginController extends Controller
                     return '/orderpreparep';
                 break;
             default:
-                    return '/'; 
+                    return '/login'; 
                 break;
         }
     }

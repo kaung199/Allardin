@@ -18,6 +18,7 @@
             <th scope="col">Name</th>
             <th scope="col">Quantity</th>
             <th scope="col">Price</th>
+            <th scope="col">Add Order</th>
             <th scope="col">Action</th>
             </tr>
         </thead>
@@ -31,15 +32,24 @@
                 <td>{{  $product->name}}</td>
                 <td>{{ $product->quantity }}</td>
                 <td>{{ $product->price }}</td>
+                <td> <a href="{{ route('cartadd', $product->id) }}" class="btn btn-primary addtocart"><i class="fas fa-cart-plus"></i>Add Order</a></td>
+
                 <td>
-                    
                     {{ Form::model($product, [ 
                         'route'=> ['products.destroy', $product->id], 
                         'method' => 'DELETE',
                         'onsubmit' => "return confirm('Are you sure you want to DELETE?');"
                     ]) }}
-                        <a class="btn btn-primary" href="{{ route('products.edit', $product->id) }}">Edit</a>
-                        <button class="btn btn-danger">Delete</button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Action
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="{{ route('products.edit', $product->id) }}">Edit</a>
+                            <button class="dropdown-item">Delete</button>
+                        </div>
+                    </div>
+                        
                     {{ Form::close() }}
                 </td>
             </tr>

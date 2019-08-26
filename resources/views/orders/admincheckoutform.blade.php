@@ -73,7 +73,7 @@
 		</div>
 
 		
-        <button class="btn btn-primary">Order</button>
+        <button class="btn btn-primary" OnClick="return confirm('Are You Sure to Order');">Order</button>
 
 	{{ Form:: close() }}
 
