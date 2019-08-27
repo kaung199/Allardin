@@ -53,9 +53,10 @@ class ProductController extends Controller
         return view('products.show',\compact('product'));
     }
 
-    public function edit(Product $product)
+    public function edit($id, $page)
     {
-        return view('products.edit', compact('product'));
+        $product = Product::find($id);
+        return view('products.edit', compact('product', 'page'));
     }
 
     public function update(Pstore $request,Product $product)
@@ -78,7 +79,8 @@ class ProductController extends Controller
                 ]);
             }
         }
-        return redirect()->route('products.index');
+        $page = $request->page_on;
+        return redirect('products?page='. $page);
     }
 
     public function destroy(Product $product)

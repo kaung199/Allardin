@@ -59,7 +59,8 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="{{ route('products.show', $product->id) }}">Detail</a>
-                            <a class="dropdown-item" href="{{ route('products.edit', $product->id) }}">Edit</a>
+                            <?php $page = $products->currentPage(); ?>
+                            <a class="dropdown-item" href="{{ route('editproduct', ['id' => $product->id,'page' => $page ]) }}" >Edit</a>
                             <button class="dropdown-item">Delete</button>
                         </div>
                     </div>

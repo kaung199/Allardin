@@ -43,6 +43,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::resource('products', 'ProductController');
         Route::resource('townships', 'TownshipController');
         Route::resource('customers', 'CustomerController');
+        Route::get('editproduct/{id}/{page}', 'ProductController@edit')->name('editproduct');
 
         Route::get('/', 'ProductController@userindex');
 

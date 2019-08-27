@@ -45,7 +45,7 @@
         </div>
         <div class="form-group">
             {{ Form::label(null,'Price') }}
-            {{ Form::text('price', null, [
+            {{ Form::number('price', null, [
                 'class' => ($errors->has('price')? 'form-control is-invalid': 'form-control'),
                 'placeholder' => 'Enter price' 
                 ]) }}
@@ -85,6 +85,7 @@
                 </span>
             @endif
         </div>
+        <input type="hidden" name="page_on" value="{{ $page }}">
         <button class="btn btn-primary">Update</button>
 
 	{{ Form:: close() }}

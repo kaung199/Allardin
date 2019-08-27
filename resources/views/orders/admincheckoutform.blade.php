@@ -30,7 +30,7 @@
             {{ Form::label(null,'Phone') }}
             {{ Form::tel('phone', null, [
                 'class' => ($errors->has('phone')? 'form-control is-invalid': 'form-control'),
-                'placeholder' => 'Enter Quanties'
+                'placeholder' => 'Enter Phone No'
                 ]) }}
 
             @if($errors->has('phone'))
