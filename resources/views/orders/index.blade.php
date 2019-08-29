@@ -70,14 +70,13 @@
         @if(Auth::user()->role_id == 1)
             <td  data-th="">
                 @if($order->deliverystatus == 1)
-                <!-- <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-primary">Order Prepare</a> -->
                     <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal">
+                    <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal{{ $order->id }}">
                     Order Prepare
                     </button>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="exampleModal{{ $order->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog" role="document">
                         <div class="modal-content">
                         <div class="modal-header">
@@ -108,13 +107,13 @@
                             </div>
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                <!-- <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-primary">Order Prepare</a> -->
                                 <button class="btn btn-success">Next</button>
                             </div>
                         {{ Form::close() }}
                         </div>
                     </div>
                     </div>
+
                 @endif
                 @if($order->deliverystatus == 2)
                 <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-secondary">Delivery</a>

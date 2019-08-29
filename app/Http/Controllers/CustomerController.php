@@ -18,7 +18,8 @@ class CustomerController extends Controller
     public function customerdetail($id)
     {
         $orders = Order::where('user_id', $id)->get();
-        return view('customers.customerdetail',compact('orders'));
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        return view('customers.customerdetail',compact('orders', 'deliveries'));
     }
 
     public function dashboard()

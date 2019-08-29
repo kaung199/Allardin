@@ -84,7 +84,7 @@ class OrderController extends Controller
 
     public function order()
     {
-        $orders = Order::latest()->get();
+        $orders = Order::orderBy('id', 'desc')->get();
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         return view('orders.index', compact('orders', 'deliveries'));
     }
@@ -188,6 +188,7 @@ class OrderController extends Controller
 
     public function orderdelivery(Request $request, $id)
     {
+        
         $deliverystatus = Order::find($id);
         if($deliverystatus->deliverystatus == 1) {
             $deliverystatus->update([
