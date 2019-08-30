@@ -46,6 +46,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::get('editproduct/{id}/{page}', 'ProductController@edit')->name('editproduct');
 
         Route::get('/', 'ProductController@userindex');
+        Route::get('/editdetail/{id}', 'ProductController@editdetail')->name('editdetail');
 
         //customer
         Route::get('/customers', 'CustomerController@index')->name('customers');

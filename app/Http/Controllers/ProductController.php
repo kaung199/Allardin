@@ -58,6 +58,11 @@ class ProductController extends Controller
         $product = Product::find($id);
         return view('products.edit', compact('product', 'page'));
     }
+    public function editdetail($id)
+    {
+        $product = Product::find($id);
+        return view('products.edit', compact('product'));
+    }
 
     public function update(Pstore $request,Product $product)
     {        

@@ -45,7 +45,7 @@
                             Action
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="{{ route('products.edit', $product->id) }}">Edit</a>
+                            <a class="dropdown-item" href="{{ route('editdetail', $product->id) }}">Edit</a>
                             <button class="dropdown-item">Delete</button>
                         </div>
                     </div>
