@@ -11,6 +11,8 @@ use App\Order_detail;
 use App\Order;
 use Auth;
 use App\Product;
+use App\Totalsaleproduct;
+use App\Totalsaledetail;
 use Carbon\Carbon;
 
 class OrderController extends Controller
@@ -26,6 +28,8 @@ class OrderController extends Controller
         $cart = session()->get('cart');
         $total = 0;
         $totalquantity = 0;
+        $totalsaleproduct = 0;
+        $totalsaleprice = 0;
 
        $customer =  User::create($request->all());
 
@@ -44,6 +48,43 @@ class OrderController extends Controller
             $product->update([
                 'quantity' => $grandqty,
             ]);
+            $totalsale_pid = Totalsaleproduct::where('product_id', $product->id)->get();
+
+            if($totalsale_pid[0] == null) {
+                $totalsale = Totalsaleproduct::create([
+                    'product_id' => $product->id,
+                    'totalqty' => $details['quantity'],
+                    'totalprice' =>  $details['price'] * $details['quantity'],
+                    'deliveryprice' =>  $customer->township->deliveryprice,
+        
+                ]);
+                Totalsaledetail::create([
+                    'user_id' => $customer->id,
+                    'totalqty' => $details['quantity'],
+                    'totalprice' =>   $details['price'] * $details['quantity'],
+                    'date' =>  date('Y-m-d'),
+                    'tsp_id' => $totalsale->id,
+    
+                ]);
+            } else {
+                $totalsale_pid[0]->update([
+                    'totalqty' => $totalsale_pid[0]->totalqty + $details['quantity'],
+                    'totalprice' => $totalsale_pid[0]->totalprice + $details['price'] * $details['quantity'],
+                    'deliveryprice' => $totalsale_pid[0]->deliveryprice +  $customer->township->deliveryprice,
+        
+                ]);
+
+                Totalsaledetail::create([
+                    'user_id' => $customer->id,
+                    'totalqty' => $details['quantity'],
+                    'totalprice' =>   $details['price'] * $details['quantity'],
+                    'date' =>  date('Y-m-d'),
+                    'tsp_id' => $totalsale_pid[0]->id,
+    
+                ]);
+
+            }
+            
 
         }
 
@@ -62,6 +103,8 @@ class OrderController extends Controller
     
             ]);
 
+            
+
         foreach(session('cart') as $cart => $details) {
         
             Order_detail::create([
@@ -74,6 +117,8 @@ class OrderController extends Controller
                 'order_id' => $order->id,
 
             ]);
+
+            
 
             
         }   
@@ -446,6 +491,27 @@ class OrderController extends Controller
         $orders = Order::where('delivery_id', $id)->get();
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         return view('delivery.orders', compact('orders', 'deliveries', 'delivery')); 
+    }
+
+    public function totalsale() {
+        $totalsales = Totalsaleproduct::latest()->paginate(15);
+        return view('orders.totalsale', compact('totalsales'));
+    }
+
+    public function totalsaledetail($id) {
+        $totalsales = Totalsaledetail::where('tsp_id', $id)->paginate(15);
+        $product = Totalsaleproduct::find($id);
+        return view('orders.totalsaledetail', compact('totalsales', 'product'));
+    }
+
+    public function searchtotal(Request $request) 
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $id = $request->p_id;
+        $product = Totalsaleproduct::find($id);
+        $totalsales = Totalsaledetail::whereBetween('date', [$from, $to])->where('tsp_id', $id)->paginate(15);
+        return view('orders.searchtotal', \compact('totalsales', 'product'));  
     }
     
 }

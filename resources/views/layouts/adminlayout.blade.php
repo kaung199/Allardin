@@ -143,24 +143,24 @@
     @endif
       <li class="nav-item">
         <a class="nav-link" href="{{ url('products') }}">
-        <i class="fas fa-umbrella"></i>
+        <i class="fas fa-umbrella text-primary"></i>
           <span>Products</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url('townships') }}">
-        <i class="fas fa-city"></i>
+        <i class="fas fa-city text-warning"></i>
           <span>Townships</span></a>
       </li>
 
       <li class="nav-item">
         <a class="nav-link" href="{{ route('order') }}">
-        <i class="fab fa-accessible-icon"></i>
+        <i class="fab fa-accessible-icon text-success"></i>
           <span>Orders</span></a>
       </li>
       @if(Auth::user()->role_id == 1)
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        <i class="fas fa-file-pdf"></i>
+        <i class="fas fa-file-pdf text-info"></i>
           <span>Reports</span>
         </a>
         <div class="dropdown-menu" aria-labelledby="pagesDropdown">
@@ -172,24 +172,31 @@
       @endif
       <li class="nav-item">
         <a class="nav-link" href="{{ route('customers') }}">
-        <i class="fas fa-users"></i>
+        <i class="fas fa-users text-warning"></i>
           <span>Customers</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{{ url('deliveries') }}">
-        <i class="fas fa-car"></i>
+        <i class="fas fa-car text-danger"></i>
           <span>Delivery</span></a>
       </li>
       @if(Auth::user()->role_id == 1)
       <li class="nav-item">
         <a class="nav-link" href="{{ route('deliveries.create') }}">
-        <i class="fas fa-user-plus"></i>
+        <i class="fas fa-user-plus text-info"></i>
           <span>Accounts Create</span></a>
+      </li>
+      @endif
+      @if(Auth::user()->role_id == 1)
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('totalsale') }}">
+        <i class="fas fa-search-dollar text-success"></i>
+          <span>Total Sale</span></a>
       </li>
       @endif
       <li class="nav-item">
         <a class="nav-link" href="#">
-        <i class="fas fa-id-card"></i>
+        <i class="fas fa-id-card text-primary"></i>
           <span>Profile</span></a>
       </li>
     </ul>

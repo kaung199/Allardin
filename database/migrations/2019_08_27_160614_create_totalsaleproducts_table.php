@@ -18,7 +18,7 @@ class CreateTotalsaleproductsTable extends Migration
             $table->unsignedInteger('product_id');
             $table->integer('totalqty');
             $table->integer('totalprice');
-            $table->string('date');
+            $table->integer('deliveryprice');
             $table->timestamps();
         });
     }

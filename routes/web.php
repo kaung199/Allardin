@@ -54,6 +54,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
 
         Route::post('/search', 'ProductController@search')->name('search');
         Route::post('/searchbydate', 'OrderController@search')->name('searchbydate');
+        Route::post('/searchtotal', 'OrderController@searchtotal')->name('searchtotal');
         Route::post('/searchbydatedelivery', 'OrderController@searchdelivery')->name('searchbydatedelivery');
 
         Route::get('/cartadd/{id}', 'CartController@cartadd')->name('cartadd');
@@ -82,6 +83,8 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::get('deliverystatussearch/{id}', 'OrderController@deliverystatussearch')->name('deliverystatussearch');
 
         //all order
+        Route::get('totalsaledetail/{id}', 'OrderController@totalsaledetail')->name('totalsaledetail');
+        Route::get('totalsale', 'OrderController@totalsale')->name('totalsale');
         Route::get('orderprepare', 'OrderController@orderprepare')->name('orderprepare');
         Route::get('delivery', 'OrderController@delivery')->name('delivery');
         Route::get('deliverydetail/{id}', 'OrderController@deliverydetail')->name('deliverydetail');
