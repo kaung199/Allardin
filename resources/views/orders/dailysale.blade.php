@@ -8,6 +8,7 @@
     <li class="breadcrumb-item active">DailyOrder</li>
 @endsection
 @section('contents') 
+<?php $grandtotal = 0;  ?>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -39,6 +40,7 @@
         <tr>
         <th scope="col">Product</th>
         <th scope="col">Deli_Status</th>
+        <th scope="col">Date</th>
         <th scope="col" class="text-right">Unit Price</th>
         <th scope="col" class="text-right">Qty</th>
         <th scope="col" class="text-right">Deli_Price</th>
@@ -65,14 +67,23 @@
                     <p class="text-success">Complete</p>
                 @endif
             </td>
+            <td>{{ $order->orderdate }}</td>
             <td class="text-right">{{ $od->price }}</td>
             <td class="text-right">{{ $od->quantity }}</td>
             <td class="text-right">{{ $od->user->township->deliveryprice }}</td>
             <td class="text-right">{{ $od->quantity * $od->price + $od->user->township->deliveryprice }}</td>
             <td class="text-center"><a href="{{ route('orderdetail', $order->id) }}" class="btn btn-primary">Detail</a></td>
             </tr>
+            <?php $grandtotal += $od->quantity * $od->price + $od->user->township->deliveryprice; ?>
             @endforeach
         @endforeach
+           
     <tbody>
+</table>
+<table class="table table-bordered">
+    <tr>
+        <th colspan="6" class="text-center border">Grand Total</th>
+        <th colspan="1"class="text-center border"> {{ $grandtotal }} Ks</th>
+    </tr>
 </table>
 @endsection
