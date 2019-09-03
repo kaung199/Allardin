@@ -48,42 +48,7 @@ class OrderController extends Controller
             $product->update([
                 'quantity' => $grandqty,
             ]);
-            $totalsale_pid = Totalsaleproduct::where('product_id', $product->id)->get();
-
-            if($totalsale_pid[0] == null) {
-                $totalsale = Totalsaleproduct::create([
-                    'product_id' => $product->id,
-                    'totalqty' => $details['quantity'],
-                    'totalprice' =>  $details['price'] * $details['quantity'],
-                    'deliveryprice' =>  $customer->township->deliveryprice,
-        
-                ]);
-                Totalsaledetail::create([
-                    'user_id' => $customer->id,
-                    'totalqty' => $details['quantity'],
-                    'totalprice' =>   $details['price'] * $details['quantity'],
-                    'date' =>  date('Y-m-d'),
-                    'tsp_id' => $totalsale->id,
-    
-                ]);
-            } else {
-                $totalsale_pid[0]->update([
-                    'totalqty' => $totalsale_pid[0]->totalqty + $details['quantity'],
-                    'totalprice' => $totalsale_pid[0]->totalprice + $details['price'] * $details['quantity'],
-                    'deliveryprice' => $totalsale_pid[0]->deliveryprice +  $customer->township->deliveryprice,
-        
-                ]);
-
-                Totalsaledetail::create([
-                    'user_id' => $customer->id,
-                    'totalqty' => $details['quantity'],
-                    'totalprice' =>   $details['price'] * $details['quantity'],
-                    'date' =>  date('Y-m-d'),
-                    'tsp_id' => $totalsale_pid[0]->id,
-    
-                ]);
-
-            }
+            
             
 
         }
@@ -129,7 +94,7 @@ class OrderController extends Controller
 
     public function order()
     {
-        $orders = Order::orderBy('id', 'desc')->get();
+        $orders = Order::orderBy('id', 'desc')->paginate(15);
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         return view('orders.index', compact('orders', 'deliveries'));
     }
@@ -218,13 +183,56 @@ class OrderController extends Controller
                 $deliverystatus->update([
                     'deliverystatus' => 4
                 ]); 
+                 //start
+                 foreach($deliverystatus->orderdetails as $ord) {
+                    $totalsale_pid = Totalsaleproduct::where('product_id', $ord->product_id)->get();
+                    // dd($totalsale_pid);
+
+                    if($totalsale_pid[0] == null) {
+                        $totalsale = Totalsaleproduct::create([
+                            'product_id' => $ord->product_id,
+                            'totalqty' => $ord->quantity,
+                            'totalprice' =>  $ord->price * $ord->quantity,
+                            'deliveryprice' =>  $ord->user->township->deliveryprice,
+                
+                        ]);
+                        Totalsaledetail::create([
+                            'user_id' => $ord->user->id,
+                            'totalqty' => $ord->quantity,
+                            'totalprice' =>   $ord->price * $ord->quantity,
+                            'date' =>  date('Y-m-d'),
+                            'tsp_id' => $totalsale->id,
+            
+                        ]);
+                    } else {
+                        $totalsale_pid[0]->update([
+                            'totalqty' => $totalsale_pid[0]->totalqty + $ord->quantity,
+                            'totalprice' => $totalsale_pid[0]->totalprice + $ord->price * $ord->quantity,
+                            'deliveryprice' => $totalsale_pid[0]->deliveryprice +  $ord->user->deliveryprice,
+                
+                        ]);
+        
+                        Totalsaledetail::create([
+                            'user_id' => $ord->user->id,
+                            'totalqty' => $ord->quantity,
+                            'totalprice' =>   $ord->price * $ord->quantity + $ord->user->deliveryprice,
+                            'date' =>  date('Y-m-d'),
+                            'tsp_id' => $totalsale_pid[0]->id,
+            
+                        ]);
+                   
+    
+                    }
+                }   
+                //end
                 return redirect()->back()->with('deliverystatus', 'Status Change successful');
             }
             if($deliverystatus->deliverystatus == 4) {
                 $deliverystatus->update([
                     'deliverystatus' => 1,
                     'delivery_id' => null
-                ]); 
+                ]);                
+
                 return redirect()->back()->with('deliverystatus', 'Status Change successful');
             }
         }
@@ -437,12 +445,20 @@ class OrderController extends Controller
     }
 
 
+    // public function dailyorder() 
+    // {
+    //   $today = Carbon::now()->toDateString();
+    //   $orders = Order::where('orderdate', $today)->get();
+    //   $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+    //   return view('orders.dailysale', compact('orders', 'deliveries'));    
+    // }
     public function dailyorder() 
     {
       $today = Carbon::now()->toDateString();
       $orders = Order::where('orderdate', $today)->get();
+    //   dd($orders[0]->created_at->format('Y-m-d'));
       $deliveries = User::where('role_id', 3)->pluck('name', 'id');
-      return view('orders.daily', compact('orders', 'deliveries'));    
+      return view('orders.dailysale', compact('orders', 'deliveries'));    
     }
 
     public function monthlyorder() 
@@ -468,9 +484,15 @@ class OrderController extends Controller
         $from = $request->from;
         $to = $request->to;
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
-        // $orders = Order::whereBetween('orderdate', 'LIKE', '%' . $order_search . '%')->get();
         $orders = Order::whereBetween('orderdate', [$from, $to])->get();
         return view('orders.searchbydate', \compact('orders', 'deliveries'));  
+    }
+    public function searchdaily(Request $request) 
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $orders = Order::whereBetween('orderdate', [$from, $to])->get();
+        return view('orders.dailysale', \compact('orders'));  
     }
 
     public function searchdelivery(Request $request) 

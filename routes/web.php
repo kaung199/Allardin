@@ -54,6 +54,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
 
         Route::post('/search', 'ProductController@search')->name('search');
         Route::post('/searchbydate', 'OrderController@search')->name('searchbydate');
+        Route::post('/searchbydatedaily', 'OrderController@searchdaily')->name('searchbydatedaily');
         Route::post('/searchtotal', 'OrderController@searchtotal')->name('searchtotal');
         Route::post('/searchbydatedelivery', 'OrderController@searchdelivery')->name('searchbydatedelivery');
 
