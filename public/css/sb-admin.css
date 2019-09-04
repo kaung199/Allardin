@@ -10,6 +10,42 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ .cusmt {
+  margin-top: -109px;
+ }
+ .tr_hide {
+  visibility: hidden;
+ }
+  @media print {
+      body * {
+          visibility: hidden;
+      }
+      .print * {
+          visibility: visible;
+      }
+      .print {
+          top: 0;
+          left: 0;
+          position: absolute;
+      }
+      .printpdt {
+          left: 0;
+      }
+      .hide, .spanshow {
+        display: none;
+      }
+      .tr_hide {
+        visibility: visible;
+      }
+      .tr_show {
+        display: none;
+      }
+      .cusmt {
+        margin-top: 0;
+       }
+
+  }
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
