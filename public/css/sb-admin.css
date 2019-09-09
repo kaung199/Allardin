@@ -29,11 +29,13 @@
       .table td {
         padding: 0.3rem !important;
       }
+      .deliverycss {
+        display: none !important;
+      }
       .printposition {
           top: 0;
           left: 0;
           position: absolute;
-          font-size: 10px;
       }
       .print12hide {
         display: block;
@@ -50,6 +52,9 @@
           margin-top: 10px;
           margin-bottom: 10px;
       }
+      /* .print , .print1, .print2 {
+        max-height: 50%;
+      } */
       
       .printpdt {
           left: 0;

@@ -180,24 +180,26 @@
           </tr>
         </tbody>
       </table>
-      @if($orderdetail->order->delivery_id != null)
-      
-      <h4>Delivery</h4>
-      <table class="table table-bordered ">
-        <thead>
-          <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Phone</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>{{ $delivery->name }}</td>
-            <td>{{ $delivery->phone }}</td>
-          </tr>
-        </tbody>
-      </table>
-      @endif
+      <div class="deliverycss">
+        @if($orderdetail->order->delivery_id != null)
+        
+        <h4>Delivery</h4>
+        <table class="table table-bordered ">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Phone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>{{ $delivery->name }}</td>
+              <td>{{ $delivery->phone }}</td>
+            </tr>
+          </tbody>
+        </table>
+        @endif
+      </div>
     </div>
     
   </div>
@@ -374,24 +376,26 @@
             </tr>
           </tbody>
         </table>
-        @if($orderdetail->order->delivery_id != null)
-      
-        <h4>Delivery</h4>
-        <table class="table table-bordered ">
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Phone</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{{ $delivery->name }}</td>
-              <td>{{ $delivery->phone }}</td>
-            </tr>
-          </tbody>
-        </table>
-        @endif
+        <div class="deliverycss">
+          @if($orderdetail->order->delivery_id != null)
+        
+          <h4>Delivery</h4>
+          <table class="table table-bordered ">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ $delivery->name }}</td>
+                <td>{{ $delivery->phone }}</td>
+              </tr>
+            </tbody>
+          </table>
+          @endif
+        </div>
       </div>
       
     </div>
@@ -569,24 +573,26 @@
             </tr>
           </tbody>
         </table>
-        @if($orderdetail->order->delivery_id != null)
-        
-        <h4>Delivery</h4>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">Name</th>
-              <th scope="col">Phone</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>{{ $delivery->name }}</td>
-              <td>{{ $delivery->phone }}</td>
-            </tr>
-          </tbody>
-        </table>
-        @endif
+        <div class="deliverycss">
+          @if($orderdetail->order->delivery_id != null)
+          
+          <h4>Delivery</h4>
+          <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>{{ $delivery->name }}</td>
+                <td>{{ $delivery->phone }}</td>
+              </tr>
+            </tbody>
+          </table>
+          @endif
+        </div>
       </div>
       
     </div>
