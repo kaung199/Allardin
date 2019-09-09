@@ -11,6 +11,9 @@
 <div class="printposition">
   <div class="print">
     <div class="container">
+      <div class="text-center aladdinh2">
+        <h2>Aladdin Online Shop</h2>
+      </div>
       <div class="row">
         <div class="col-md-6">
           <h3>
@@ -207,6 +210,9 @@
     <div class="print1">
       <div class="hr"></div>
       <div class="container">
+      <div class="text-center aladdinh2">
+        <h2>Aladdin Online Shop</h2>
+      </div>
         <div class="row">
           <div class="col-md-6">
             <h3>
@@ -403,6 +409,9 @@
     <div class="print2">
       <div class="hr"></div>
       <div class="container">
+      <div class="text-center aladdinh2">
+        <h2>Aladdin Online Shop</h2>
+      </div>
         <div class="row">
           <div class="col-md-6">
             <h3>
