@@ -16,18 +16,41 @@
  .tr_hide {
   visibility: hidden;
  }
+
+ .print12hide {
+   display: none;
+ }
+
   @media print {
       body * {
           visibility: hidden;
       }
-      .print * {
-          visibility: visible;
+      .table th,
+      .table td {
+        padding: 0.3rem !important;
       }
-      .print {
+      .printposition {
           top: 0;
           left: 0;
           position: absolute;
+          font-size: 10px;
       }
+      .print12hide {
+        display: block;
+      }
+
+      .print *, .print1 *, .print2 * {
+          visibility: visible;
+         
+      }
+      .hr {
+          width: 100%;
+          border-top: solid 1px rgb(12, 1, 1); 
+          border-style: dotted;
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+      
       .printpdt {
           left: 0;
       }
