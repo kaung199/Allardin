@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Totalsaleproduct extends Model
 {
     protected $table = 'totalsaleproducts';
-    protected $fillable = ['product_id', 'totalqty','deliveryprice', 'totalprice'];
+    protected $fillable = ['product_id', 'totalqty','deliveryprice', 'totalprice', 'date'];
 
 
     public function totalsaledtails()

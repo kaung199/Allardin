@@ -191,7 +191,7 @@
       <li class="nav-item">
         <a class="nav-link" href="{{ route('totalsale') }}">
         <i class="fas fa-search-dollar text-success"></i>
-          <span>Total Sale</span></a>
+          <span>Daily Total Sale</span></a>
       </li>
       @endif
       <li class="nav-item">

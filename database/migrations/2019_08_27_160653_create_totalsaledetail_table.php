@@ -16,6 +16,7 @@ class CreateTotalsaledetailTable extends Migration
         Schema::create('totalsaledetail', function (Blueprint $table) {
             $table->Increments('id');
             $table->unsignedInteger('user_id');
+            $table->unsignedInteger('order_id');
             $table->integer('totalqty');
             $table->Integer('totalprice');
             $table->string('date');

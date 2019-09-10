@@ -40,6 +40,7 @@
         <thead>
             <tr>
             <th scope="col">Customers</th>
+            <th scope="col">Deli_status</th>
             <th scope="col">Date</th>
             <th scope="col" class="text-right">Total Quantity</th>
             <th scope="col" class="text-right">Total Price</th>
@@ -50,6 +51,20 @@
             @foreach($totalsales as $totalsale) 
             <tr>
                 <td>{{  $totalsale->user->name}}</td>
+                <td>
+                    @if($totalsale->order->deliverystatus == 1)
+                        <div class="text-primary">Orderprepare</div>
+                    @endif
+                    @if($totalsale->order->deliverystatus == 2)
+                    <div class="text-secondary">Delivery</div>
+                    @endif
+                    @if($totalsale->order->deliverystatus == 3)
+                        <div class="text-info">Payment</div>
+                    @endif
+                    @if($totalsale->order->deliverystatus == 4)
+                        <div class="text-success">Complete</div>
+                    @endif
+                </td>
                 <td>{{ $totalsale->created_at }}</td>  
                 <td class="text-right">{{ $totalsale->totalqty }}</td>
                 <td class="text-right">{{ $totalsale->totalprice }}</td>  

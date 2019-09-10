@@ -48,6 +48,8 @@ class OrderController extends Controller
             $product->update([
                 'quantity' => $grandqty,
             ]);
+
+            
             
             
 
@@ -67,7 +69,7 @@ class OrderController extends Controller
                 'user_id' => $customer->id,
     
             ]);
-
+                
             
 
         foreach(session('cart') as $cart => $details) {
@@ -82,6 +84,52 @@ class OrderController extends Controller
                 'order_id' => $order->id,
 
             ]);
+
+            //start
+            $totalsale_pid = Totalsaleproduct::where('product_id', $details['id'])->get();
+
+            if($totalsale_pid[0]->date != date('Y-m-d')) {
+                $totalsale = Totalsaleproduct::create([
+                    'product_id' => $details['id'],
+                    'totalqty' => $details['quantity'],
+                    'totalprice' =>  $details['price'] * $details['quantity'] + $order->user->township->deliveryprice,
+                    'date' => date('Y-m-d'),
+                    'deliveryprice' =>  $order->user->township->deliveryprice,
+        
+                ]);
+
+                Totalsaledetail::create([
+                    'user_id' => $order->user->id,
+                    'totalqty' => $details['quantity'],
+                    'totalprice' => $details['price'] * $details['quantity'] + $order->user->deliveryprice,
+                    'date' =>  date('Y-m-d'),
+                    'tsp_id' => $totalsale->id,
+                    'order_id' => $order->id,
+    
+                ]);
+
+            } else {
+                $totalsale_pid[0]->update([
+                    'totalqty' => $totalsale_pid[0]->totalqty + $details['quantity'],
+                    'totalprice' => $totalsale_pid[0]->totalprice + $details['price'] * $details['quantity'] + $order->user->township->deliveryprice,
+                    'deliveryprice' => $totalsale_pid[0]->deliveryprice +  $order->user->township->deliveryprice,
+        
+                ]);  
+                
+                Totalsaledetail::create([
+                    'user_id' => $order->user->id,
+                    'totalqty' => $details['quantity'],
+                    'totalprice' => $details['price'] * $details['quantity'] + $order->user->deliveryprice,
+                    'date' =>  date('Y-m-d'),
+                    'tsp_id' => $totalsale_pid[0]->id,
+                    'order_id' => $order->id,
+    
+                ]);
+           
+
+            }
+           
+        //end
 
             
 
@@ -146,6 +194,19 @@ class OrderController extends Controller
     }
     public function destroy($id)
     {
+        $totalsaledetais = Totalsaledetail::where(order_id, $id)->get();
+        foreach($totalsaledetais as $totalsaledetail) {
+            $totalsaleproduct = Totalsaleproduct::find($totalsaledetail->tsp_id);
+            $totalsaleproduct->update([
+                'totalqty' => $totalsaleproduct->totalqty - $totalsaledetail->totalqty,
+                'totalprice' => $totalsaleproduct->totalprice - $totalsaledetail->totalprice - $totalsaledetail->user->township->deliveryprice,
+                'deliveryprice' => $totalsaleproduct->deliveryprice - $totalsaledetail->user->township->deliveryprice,
+            ]);
+            if($totalsaleproduct->totalqty == 0) {
+                $totalsaleproduct->delete();
+            }
+            $totalsaledetail->delete();
+        }
         if(Auth::user()->id == 1) {
             $order = Order::find($id);
             foreach($order->orderdetails as $orderproduct) {
@@ -183,48 +244,6 @@ class OrderController extends Controller
                 $deliverystatus->update([
                     'deliverystatus' => 4
                 ]); 
-                 //start
-                 foreach($deliverystatus->orderdetails as $ord) {
-                    $totalsale_pid = Totalsaleproduct::where('product_id', $ord->product_id)->get();
-                    // dd($totalsale_pid);
-
-                    if($totalsale_pid[0] == null) {
-                        $totalsale = Totalsaleproduct::create([
-                            'product_id' => $ord->product_id,
-                            'totalqty' => $ord->quantity,
-                            'totalprice' =>  $ord->price * $ord->quantity,
-                            'deliveryprice' =>  $ord->user->township->deliveryprice,
-                
-                        ]);
-                        Totalsaledetail::create([
-                            'user_id' => $ord->user->id,
-                            'totalqty' => $ord->quantity,
-                            'totalprice' =>   $ord->price * $ord->quantity,
-                            'date' =>  date('Y-m-d'),
-                            'tsp_id' => $totalsale->id,
-            
-                        ]);
-                    } else {
-                        $totalsale_pid[0]->update([
-                            'totalqty' => $totalsale_pid[0]->totalqty + $ord->quantity,
-                            'totalprice' => $totalsale_pid[0]->totalprice + $ord->price * $ord->quantity,
-                            'deliveryprice' => $totalsale_pid[0]->deliveryprice +  $ord->user->deliveryprice,
-                
-                        ]);
-        
-                        Totalsaledetail::create([
-                            'user_id' => $ord->user->id,
-                            'totalqty' => $ord->quantity,
-                            'totalprice' =>   $ord->price * $ord->quantity + $ord->user->deliveryprice,
-                            'date' =>  date('Y-m-d'),
-                            'tsp_id' => $totalsale_pid[0]->id,
-            
-                        ]);
-                   
-    
-                    }
-                }   
-                //end
                 return redirect()->back()->with('deliverystatus', 'Status Change successful');
             }
             if($deliverystatus->deliverystatus == 4) {
@@ -445,20 +464,13 @@ class OrderController extends Controller
     }
 
 
-    // public function dailyorder() 
-    // {
-    //   $today = Carbon::now()->toDateString();
-    //   $orders = Order::where('orderdate', $today)->get();
-    //   $deliveries = User::where('role_id', 3)->pluck('name', 'id');
-    //   return view('orders.dailysale', compact('orders', 'deliveries'));    
-    // }
+   
     public function dailyorder() 
     {
       $today = Carbon::now()->toDateString();
       $orders = Order::where('orderdate', $today)->get();
-    //   dd($orders[0]->created_at->format('Y-m-d'));
       $deliveries = User::where('role_id', 3)->pluck('name', 'id');
-      return view('orders.dailysale', compact('orders', 'deliveries'));    
+      return view('orders.daily', compact('orders', 'deliveries'));    
     }
 
     public function monthlyorder() 
@@ -491,8 +503,8 @@ class OrderController extends Controller
     {
         $from = $request->from;
         $to = $request->to;
-        $orders = Order::whereBetween('orderdate', [$from, $to])->get();
-        return view('orders.dailysale', \compact('orders'));  
+        $totalsales = Totalsaleproduct::whereBetween('date', [$from, $to])->get();
+        return view('orders.totalsale', \compact('totalsales'));  
     }
 
     public function searchdelivery(Request $request) 
@@ -516,7 +528,8 @@ class OrderController extends Controller
     }
 
     public function totalsale() {
-        $totalsales = Totalsaleproduct::latest()->paginate(15);
+        $today = Carbon::now()->toDateString();
+        $totalsales = Totalsaleproduct::where('date', $today)->get();
         return view('orders.totalsale', compact('totalsales'));
     }
 
