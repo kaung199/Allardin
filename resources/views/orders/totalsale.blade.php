@@ -64,13 +64,14 @@
             @endforeach            
         </tbody>
         </table>
-    </div>
+    
     <table class="table table-bordered">
         <tr>
             <th colspan="6" class="text-center border">Grand Total</th>
             <th colspan="1"class="text-center border"> {{ $grandtotal }} Ks</th>
         </tr>
     </table>
+    </div>
  
 
 @endsection

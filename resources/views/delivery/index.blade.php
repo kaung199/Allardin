@@ -7,7 +7,7 @@
     <li class="breadcrumb-item active">Deliveries</li>
 @endsection
 @section('contents') 
-    <div class="table-responsive">
+    <div class="table-responsive-sm">
         <h3>Deliveries</h3>
         <a href="{{ route('deliveries.create') }}" class="btn btn-primary float-right mtc">Add Delivery</a>
         <table class="table table-border" width="100%" cellspacing="0">

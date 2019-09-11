@@ -8,7 +8,7 @@
     <li class="breadcrumb-item active">Detail</li>
 @endsection
 @section('contents')
-<div class="printposition">
+<div class="printposition table-responsive">
   <div class="print">
     <div class="container">
       <div class="text-center aladdinh2">

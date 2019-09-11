@@ -215,7 +215,9 @@
         </ol>
 
         <div class="shadow pt-3 pl-3 pb-5 pr-3">
+          <div class="table-responsive-sm">
             @yield('contents')
+          </div>
         </div>
 
       </div>

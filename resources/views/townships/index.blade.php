@@ -7,7 +7,7 @@
     <li class="breadcrumb-item active">Townships</li>
 @endsection
 @section('contents') 
-    <div class="table-responsive">
+    <div class="table-responsive-sm">
         <h3>Townships</h3>
         <a href="{{ route('townships.create') }}" class="btn btn-primary mtc float-right">Add Township</a>
         <table class="table">

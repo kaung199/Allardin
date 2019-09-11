@@ -137,34 +137,36 @@
 
              </strong>
         </h6>
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                <th scope="col">Products</th>
-                <th scope="col" class="text-right">Quantity</th>
-                <th scope="col" class="text-right">Price</th>
-                <th scope="col" class="text-right">Total Price</th>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach($order->orderdetails as $orderdetail)
+        <div class="table-responsive-sm">
+            <table class="table table-bordered">
+                <thead>
                     <tr>
-                        <td>{{ $orderdetail->name }}</td>
-                        <td class="text-right">{{ $orderdetail->quantity }}</td>
-                        <td class="text-right">{{ $orderdetail->price }}</td>
-                        <td class="text-right">{{ $orderdetail->totalprice }}</td>
+                    <th scope="col">Products</th>
+                    <th scope="col" class="text-right">Quantity</th>
+                    <th scope="col" class="text-right">Price</th>
+                    <th scope="col" class="text-right">Total Price</th>
                     </tr>
-                @endforeach
-                <tr>
-                    <th colspan="3" class="text-center">Delivery Price</th>
-                    <th class="text-right">{{ $orderdetail->user->township->deliveryprice }}</th>
-                </tr>
-                <tr>
-                    <th colspan="3" class="text-center">Total</th>
-                    <th class="text-right"> {{ $order->totalprice + $orderdetail->user->township->deliveryprice }}</th>
-                </tr>
-            </tbody>
-        </table>
+                </thead>
+                <tbody>
+                    @foreach($order->orderdetails as $orderdetail)
+                        <tr>
+                            <td>{{ $orderdetail->name }}</td>
+                            <td class="text-right">{{ $orderdetail->quantity }}</td>
+                            <td class="text-right">{{ $orderdetail->price }}</td>
+                            <td class="text-right">{{ $orderdetail->totalprice }}</td>
+                        </tr>
+                    @endforeach
+                    <tr>
+                        <th colspan="3" class="text-center">Delivery Price</th>
+                        <th class="text-right">{{ $orderdetail->user->township->deliveryprice }}</th>
+                    </tr>
+                    <tr>
+                        <th colspan="3" class="text-center">Total</th>
+                        <th class="text-right"> {{ $order->totalprice + $orderdetail->user->township->deliveryprice }}</th>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
 @endforeach
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
