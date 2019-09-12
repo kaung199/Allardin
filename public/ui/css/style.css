@@ -681,12 +681,13 @@ p.title a:hover{
 }
 .product_container {
 	padding: 1em;
-	padding-bottom: 2em;
+	padding-bottom: 2.5em;
 }
 .price{
 	float: right;
 	font-weight: bold;
 	font-size: 0.95em;
+	max-width: 60px;
 }
 span.reducedfrom {
 	text-decoration: line-through;
@@ -726,6 +727,7 @@ h3.m_2 {
 .view img {
    display: block;
    position: relative;
+   height: 260px;
 }
 .view h2 {
    text-transform: uppercase;
