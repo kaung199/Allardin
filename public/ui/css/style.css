@@ -721,8 +721,8 @@ h3.m_2 {
 .view .mask,.view .content {
    position: absolute;
    overflow: hidden;
-   top:10em;
-   left:5.8em;
+   top:8.8em;
+   left:5.7em;
 }
 .view img {
    display: block;
@@ -1941,6 +1941,45 @@ ul.size li {
 }
 }
 @media (max-width:800px){
+.logoaladdin {
+	text-align: center;
+}
+.view {
+	height: 300px;
+}
+.footer {
+    padding: 2em 0;
+}
+.view .mask {
+    display: none;
+}
+h3.m_1 {
+    margin-top: 1em;
+}
+.pdl {
+    padding-left: 18px !important;
+}
+.cart-left {
+    float: left;
+    text-align: center;
+	width: 100%;
+	padding-bottom: 8px;
+}
+.price {
+	max-width: none !important;
+	float: none !important;
+}
+.product_container {
+	padding-bottom: 3.5em;
+	height: 95px;
+}
+.menubar .cart {
+    float: none !important;
+    text-align: center;
+}
+.view img {
+    height: 180px;
+}
 .banner_right h1 {
 	font-size: 2em;
 }
@@ -2017,6 +2056,33 @@ i.pin {
 }
 }
 @media (max-width:640px){
+p.title {
+	max-width: none !important;
+}
+.footer, .footer_buttom {
+	font-size: 15px !important;
+}
+.logoaladdin img {
+	width: 100px !important;
+	height: 90px !important;
+}
+.header-search-form form input[type="text"] {
+    height: 40px !important;
+}
+.header-search-form form input[type="submit"] {
+	height: 40px !important;
+	padding: 0px 29px !important;
+}
+.menubar .cart {
+    padding-top: 14px !important;
+    font-size: 37px !important;
+}
+.span_1_of_3 {
+    width: 47.3%;
+}
+.searchbar {
+    padding-top: 5px !important;
+}
 .banner_right {
 	width: 55%;
 	padding-right: 4em;
@@ -2134,6 +2200,28 @@ p.cart_desc {
 }
 }
 @media (max-width:480px){
+
+.pdl {
+	text-align: center !important;
+}
+.view img {
+    height: 167px !important;
+}
+.header-search-form form input[type="text"] {
+    height: 35px !important;
+}
+.header-search-form form input[type="submit"] {
+	height: 35px !important;
+	padding: 0px 20px !important;
+}
+.menubar .cart {
+    padding-top: 12px !important;
+    font-size: 33px !important;
+}
+.logoaladdin img {
+    width: 92px !important;
+    height: 75px !important;
+}
 .wmuSliderPrev {
 	left: 23em;
 }
@@ -2235,7 +2323,7 @@ h3.m_1 {
 	font-size:1em;
 }
 .span_1_of_3 {
-	width: 70.6%;
+	width: 95.6%;
 }
 .view .mask, .view .content {
 	top: 8em;
