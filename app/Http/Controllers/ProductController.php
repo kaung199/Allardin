@@ -22,7 +22,7 @@ class ProductController extends Controller
 
     public function userindex()
     {
-        $products = Product::latest()->get();
+        $products = Product::orderByRaw("RAND()")->get();
         return view('products.userindex',compact('products'));
     }
 

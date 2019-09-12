@@ -27,7 +27,7 @@ Route::get('/orderlayout', function () {
 //     return view('home');
 // })->where('any', '.*');
 
-
+Route::get('/', 'ProductController@userindex');
 Route::get('home', 'HomeController@index');
 
 Auth::routes();
@@ -45,7 +45,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::resource('customers', 'CustomerController');
         Route::get('editproduct/{id}/{page}', 'ProductController@edit')->name('editproduct');
 
-        Route::get('/', 'ProductController@userindex');
+        
         Route::get('/editdetail/{id}', 'ProductController@editdetail')->name('editdetail');
 
         //customer
