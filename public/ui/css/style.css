@@ -1039,7 +1039,7 @@ ul.breadcrumbs li{
 	color:#999;
 }
 ul.breadcrumbs li.women{
-	background:#faef03;
+	background: #eeeeee;
 	padding:3px;
 }
 ul.previous{
@@ -1156,7 +1156,7 @@ ul.category_nav li a:hover {
 	margin-top: 3em;
 }
 .span_1_of_a1 {
-	width: 36.2%;
+	width: 41.2%;
 }
 .labout {
 	display: block;
@@ -1177,7 +1177,7 @@ ul.category_nav li a:hover {
 	float: left;
 }
 .span_2_of_a1 {
-	width:60.1%;
+	width:55%;
 	font-family: 'Roboto', sans-serif;
 }
 .span_2_of_a1 h1{
@@ -1234,6 +1234,7 @@ span.actual {
 h2.quick{
 	color:#555;
 	font-size:0.85em;
+	padding-top: 50px;
 	text-transform:uppercase;
 }
 p.quick_desc{

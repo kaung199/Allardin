@@ -25,6 +25,11 @@ class ProductController extends Controller
         $products = Product::orderByRaw("RAND()")->get();
         return view('products.userindex',compact('products'));
     }
+    public function userdetail($id) 
+    {
+        $product = Product::find($id);
+        return view('products.usershow', compact('product'));
+    }
 
     public function create()
     {

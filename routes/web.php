@@ -28,6 +28,7 @@ Route::get('/orderlayout', function () {
 // })->where('any', '.*');
 
 Route::get('/', 'ProductController@userindex');
+Route::get('/detail/{id}', 'ProductController@userdetail');
 Route::get('home', 'HomeController@index');
 
 Auth::routes();

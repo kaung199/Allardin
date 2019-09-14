@@ -9,7 +9,7 @@
     @foreach($products as $product)
         <div class="col_1_of_3 span_1_of_3"> 
             <div class="view view-first">
-                <a href="#">
+                <a href="{{ url('detail', $product->id) }}">
                 <div class="inner_content clearfix">
                     <div class="product_image">
                         @if($product->photos[0][filename]) 

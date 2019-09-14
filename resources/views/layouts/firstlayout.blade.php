@@ -16,7 +16,11 @@
 <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 <script src="/ui/js/jquery.magnific-popup.js" type="text/javascript"></script>
 <link href="/ui/css/magnific-popup.css" rel="stylesheet" type="text/css">
-
+<!----details-product-slider--->
+<!-- Include the Etalage files -->
+<link rel="stylesheet" href="/ui/css/etalage.css">
+<script src="/ui/js/jquery.etalage.min.js"></script>
+<script src="js/easyResponsiveTabs.js" type="text/javascript"></script>
 		<script>
 			$(document).ready(function() {
 				$('.popup-with-zoom-anim').magnificPopup({
@@ -29,8 +33,33 @@
 					midClick: true,
 					removalDelay: 300,
 					mainClass: 'my-mfp-zoom-in'
+				});
 			});
-		});
+		
+			jQuery(document).ready(function($){
+				
+				$('#etalage').etalage({
+					thumb_image_width: 350,
+					thumb_image_height: 370,
+					
+					show_hint: true,
+					click_callback: function(image_anchor, instance_id){
+						alert('Callback example:\nYou clicked on an image with the anchor: "'+image_anchor+'"\n(in Etalage instance: "'+instance_id+'")');
+					}
+				});
+				// This is for the dropdown list example:
+				$('.dropdownlist').change(function(){
+					etalage_show( $(this).find('option:selected').attr('class') );
+				});
+
+			});
+			$(document).ready(function () {
+				$('#horizontalTab').easyResponsiveTabs({
+					type: 'default', //Types: default, vertical, accordion           
+					width: 'auto', //auto or any width like 600px
+					fit: true   // 100% fit in a container
+				});
+			});
 		</script>
 </head>
 <style>
