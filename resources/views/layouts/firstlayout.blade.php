@@ -41,6 +41,9 @@
 				$('#etalage').etalage({
 					thumb_image_width: 350,
 					thumb_image_height: 370,
+					smallthumb_select_on_hover: false,
+
+					
 					
 					show_hint: true,
 					click_callback: function(image_anchor, instance_id){

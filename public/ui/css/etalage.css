@@ -10,7 +10,7 @@
 	border: 1px solid #eee;
 }
 #etalage .etalage_thumb_image{ 
-	width: 390px !important;
+	width: 390px;
 }
 
 /* Small thumbnails: */
@@ -82,3 +82,4 @@ li.etalage_small_thumbs {
 .etalage{ direction:ltr }
 div.etalage_description{ position:absolute; bottom:0; left:0; z-index:999 }
 div.etalage_description.rtl{ direction:rtl; text-align:right }
+

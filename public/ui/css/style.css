@@ -13,6 +13,9 @@ html, body{
    font-size: 100%;
    background:#f8f8f8; 
 }
+#etalage .etalage_thumb_image{ 
+	width: 390px !important;
+}
 body a{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -1942,6 +1945,19 @@ ul.size li {
 }
 }
 @media (max-width:800px){
+.etalage_zoom_area, .etalage_icon {
+	display: none !important;
+}
+.labout.span_1_of_a1 {
+	width: 40%;
+	margin: 0;
+}
+#etalage .etalage_thumb_image {
+    width: 340px !important;
+}
+.etalage_magnifier div {
+	width: 217px !important;
+}
 .logoaladdin {
 	text-align: center;
 }

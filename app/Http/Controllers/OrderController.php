@@ -109,24 +109,28 @@ class OrderController extends Controller
                 ]);
 
             } else {
-                if($totalsale_pid[0]->date == date('Y-m-d')) {                
-
-                    $totalsale_pid[0]->update([
-                        'totalqty' => $totalsale_pid[0]->totalqty + $details['quantity'],
-                        'totalprice' => $totalsale_pid[0]->totalprice + $details['price'] * $details['quantity'] + $order->user->township->deliveryprice,
-                        'deliveryprice' => $totalsale_pid[0]->deliveryprice +  $order->user->township->deliveryprice,
+                if($totalsale_pid[0]->date == date('Y-m-d')) {    
+                    foreach($totalsale_pid as $tsp)  {
+                        $tsp->update([
+                            'totalqty' => $totalsale_pid[0]->totalqty + $details['quantity'],
+                            'totalprice' => $totalsale_pid[0]->totalprice + $details['price'] * $details['quantity'] + $order->user->township->deliveryprice,
+                            'deliveryprice' => $totalsale_pid[0]->deliveryprice +  $order->user->township->deliveryprice,
+                
+                        ]);  
+                        
+                        Totalsaledetail::create([
+                            'user_id' => $order->user->id,
+                            'totalqty' => $details['quantity'],
+                            'totalprice' => $details['price'] * $details['quantity'] + $order->user->deliveryprice,
+                            'date' =>  date('Y-m-d'),
+                            'tsp_id' => $tsp->id,
+                            'order_id' => $order->id,
             
-                    ]);  
+                        ]);
+                    }           
+
                     
-                    Totalsaledetail::create([
-                        'user_id' => $order->user->id,
-                        'totalqty' => $details['quantity'],
-                        'totalprice' => $details['price'] * $details['quantity'] + $order->user->deliveryprice,
-                        'date' =>  date('Y-m-d'),
-                        'tsp_id' => $totalsale_pid[0]->id,
-                        'order_id' => $order->id,
-        
-                    ]);
+
                 } else {
 
                     $totalsalee = Totalsaleproduct::create([

@@ -66,6 +66,10 @@ class CartController extends Controller
             $cart = session()->get('cart');
 
             if($product->quantity <= $cart[$request->id]["quantity"]) {
+
+                $cart[$request->id]["quantity"] = $product->quantity; 
+                session()->put('cart', $cart);
+                
                 session()->flash('outofstock', 'Product Out Of Stock'); 
             } else {
                 $cart[$request->id]["quantity"] = $request->quantity;
