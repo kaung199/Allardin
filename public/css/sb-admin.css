@@ -76,6 +76,9 @@
       .cusmt {
         margin-top: 0;
        }
+      .cusmt table td{
+        font-size: 25px;
+       }
 
   }
 

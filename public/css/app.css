@@ -10884,23 +10884,3 @@ body {
   }
 }
 
-@media print {
-  .printing body * {
-    visibility: hidden;
-  }
-
-  .printing .print * {
-    visibility: visible;
-  }
-
-  .printing .print {
-    top: 0;
-    left: 0;
-    position: absolute;
-  }
-
-  .printing .printpdt {
-    left: 0;
-  }
-}
-
