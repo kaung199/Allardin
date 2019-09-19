@@ -16,6 +16,13 @@ html, body{
 #etalage .etalage_thumb_image{ 
 	width: 390px !important;
 }
+img.etalage_small_thumb {
+	width: 100px !important;
+}
+li.etalage_small_thumbs {
+	width: 350px !important;
+}
+
 body a{
 	transition:0.5s all;
 	-webkit-transition:0.5s all;
@@ -1958,6 +1965,7 @@ ul.size li {
 .etalage_magnifier div {
 	width: 217px !important;
 }
+
 .logoaladdin {
 	text-align: center;
 }
@@ -2075,6 +2083,27 @@ i.pin {
 @media (max-width:640px){
 p.title {
 	max-width: none !important;
+}
+#etalage {
+    height: 472px !important;
+}
+.product-qty span {
+    margin-top: -1.5em !important;
+}
+.btn_form form input[type="submit"] {
+	margin-top: 1.5em !important;
+}
+p.quick_desc {
+    text-align: justify;
+}
+.singel_right {
+    margin-top: -1em;
+}
+#etalage .etalage_thumb_image {
+    width: 360px !important;
+}
+#etalage, .cont1.span_2_of_a1 {
+    padding-left: 17px;
 }
 .footer, .footer_buttom {
 	font-size: 15px !important;
@@ -2217,7 +2246,12 @@ p.cart_desc {
 }
 }
 @media (max-width:480px){
-
+#etalage .etalage_thumb_image {
+	width: 353px !important;
+}
+#etalage, .cont1.span_2_of_a1 {
+	padding-left: 0px;
+}
 .pdl {
 	text-align: center !important;
 }
@@ -2313,6 +2347,26 @@ i.pin {
 }
 }
 @media (max-width:320px){
+#etalage .etalage_thumb_image {
+	width: 292px !important;
+	height: 300px !important;
+}
+li.etalage_small_thumbs {
+    top: 305px !important;
+}
+img.etalage_small_thumb {
+    width: 81px !important;
+    height: 89px !important;
+}
+#etalage {
+    height: 372px !important;
+}
+li.etalage_small_thumbs {
+    width: 300px !important;
+}
+#etalage {
+    width: 290px !important;
+}
 .logo img{
 	width:55%;
 }
