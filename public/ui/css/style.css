@@ -2085,7 +2085,7 @@ p.title {
 	max-width: none !important;
 }
 #etalage {
-    height: 472px !important;
+    margin-bottom: 14px !important;
 }
 .product-qty span {
     margin-top: -1.5em !important;
@@ -2359,7 +2359,8 @@ img.etalage_small_thumb {
     height: 89px !important;
 }
 #etalage {
-    height: 372px !important;
+	height: 372px !important;
+	margin-bottom: 40px !important;
 }
 li.etalage_small_thumbs {
     width: 300px !important;
