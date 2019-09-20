@@ -19,7 +19,26 @@ class ProductController extends Controller
         $products = Product::latest()->paginate(15);
         return view('products.index',compact('products'));
     }
+    public function adminindex()
+    {
+        $products = Product::latest()->paginate(15);
+        return view('products.adminindex',compact('products'));
+    }
+    public function searchproducts(Request $request)
+    {
+       $search =$request->search;
+       $products = Product::where('name', 'LIKE', '%' . $search . '%')->get();
+       $count = count($products);
+       return view('products.search', compact('products','count'));       
 
+    }
+
+    public function productdetail($id)
+    {
+       $product = Product::find($id);
+       return view('products.detail', compact('product'));       
+    }
+    
     public function userindex()
     {
         $products = Product::orderByRaw("RAND()")->get();

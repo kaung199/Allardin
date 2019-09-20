@@ -222,3 +222,20 @@ body {
     }
 }
 
+.cart {
+    font-size: 20px;
+    color: #ffffff;
+    padding: 10px;
+    cursor: pointer;
+}   
+.cart a {
+    text-align: center;
+}
+.cartqty {
+    position: absolute;
+    margin-left: 1rem;
+    top: 1.1rem;
+    font-weight: 400;
+    font-size: 0.5rem;
+}
+

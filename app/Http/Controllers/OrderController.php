@@ -526,6 +526,14 @@ class OrderController extends Controller
         $orders = Order::whereBetween('orderdate', [$from, $to])->get();
         return view('orders.searchbydate', \compact('orders', 'deliveries'));  
     }
+    public function searchxls(Request $request) 
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        $orders = Order::whereBetween('orderdate', [$from, $to])->get();
+        return view('orders.exportxls', \compact('orders', 'deliveries'));  
+    }
     public function searchdaily(Request $request) 
     {
         $from = $request->from;

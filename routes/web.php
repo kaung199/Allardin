@@ -46,7 +46,9 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::resource('customers', 'CustomerController');
         Route::get('editproduct/{id}/{page}', 'ProductController@edit')->name('editproduct');
 
-        
+        Route::get('adminindex', 'ProductController@adminindex')->name('adminindex');
+        Route::post('searchproducts', 'ProductController@searchproducts')->name('searchproducts');
+        Route::get('/productdetail/{id}', 'ProductController@productdetail')->name('productdetail');
         Route::get('/editdetail/{id}', 'ProductController@editdetail')->name('editdetail');
 
         //customer
@@ -55,6 +57,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
 
         Route::post('/search', 'ProductController@search')->name('search');
         Route::post('/searchbydate', 'OrderController@search')->name('searchbydate');
+        Route::post('/searchxls', 'OrderController@searchxls')->name('searchxls');
         Route::post('/searchbydatedaily', 'OrderController@searchdaily')->name('searchbydatedaily');
         Route::post('/searchtotal', 'OrderController@searchtotal')->name('searchtotal');
         Route::post('/searchbydatedelivery', 'OrderController@searchdelivery')->name('searchbydatedelivery');
