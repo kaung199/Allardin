@@ -14,7 +14,7 @@
                 @if($product->photos[0][filename])
                     <img src="{{ asset('storage/' . $product->photos[0]->filename) }}" class="card-img-top" alt="...">
                 @else
-                <img src="{{ asset('/ui/images/350400.jpg') }}" class="img-responsive" alt=""/>
+                <img src="{{ asset('/ui/images/350400.jpg') }}" class="card-img-top" alt=""/>
                 @endif
                 </a>
                 <div class="card-body">
