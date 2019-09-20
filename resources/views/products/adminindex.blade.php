@@ -11,7 +11,11 @@
         <div class="col-md-4 pb-3">
             <div class="card" style="width: 18rem;">
                 <a href="{{ route('productdetail', $product->id) }}">
+                @if($product->photos[0][filename])
                     <img src="{{ asset('storage/' . $product->photos[0]->filename) }}" class="card-img-top" alt="...">
+                @else
+                <img src="{{ asset('/ui/images/350400.jpg') }}" class="img-responsive" alt=""/>
+                @endif
                 </a>
                 <div class="card-body">
                     <h5 class="card-title">{{ $product->name }}</h5>
