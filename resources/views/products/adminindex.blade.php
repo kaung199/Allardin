@@ -4,7 +4,7 @@
 @if($count)
     <h3><span class="badge badge-success">{{$count}}</span> Product Found</h3>
 @else
-    <h3>Products</h3>
+    <h3 class="padl">Products</h3>
 @endif
 <div class="row">
     @foreach($products as $product)
@@ -27,57 +27,55 @@
         </div>
     @endforeach
 </div>
-<div class="text-center">{{ $products->links() }}</div>
+<div class="text-center table-responsive">{{ $products->links() }}</div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
-
-    @if(session('deliverystatus'))
-        <script>
+<script>
+    @if(session('deliverystatus'))        
             Swal.fire({
                 title: 'Delivery Status Updated Successfuly',
                 animation: false,
                 customClass: {
                     popup: 'animated tada'
                 }
-            })
-        </script>
-    
+            })    
     @endif
-
-    @if(session('permission'))
-        <script>
-            Swal.fire({
-                title: 'Permission Access Deny !!Ask Admin!!',
-                animation: false,
-                customClass: {
-                    popup: 'animated tada'
-                }
-            })
-        </script>
-    
-    @endif
-
-    @if(session('success'))
-        <script>
+    @if(session('success'))        
             Swal.fire({
                 title: 'Product Added To Cart Successfuly',
                 animation: false,
                 customClass: {
                     popup: 'animated tada'
                 }
-            })
-        </script>
-    
+            })      
+    @endif
+
+    @if(session('permission'))
+            Swal.fire({
+                title: 'Permission Access Deny !!Ask Admin!!',
+                animation: false,
+                customClass: {
+                    popup: 'animated tada'
+                }
+            })   
+    @endif
+
+    @if(session('success'))
+            Swal.fire({
+                title: 'Product Added To Cart Successfuly',
+                animation: false,
+                customClass: {
+                    popup: 'animated tada'
+                }
+            })    
     @endif
 
     @if(session('outofstock'))
-        <script>
             Swal.fire({
             type: 'error',
             title: 'Oops...',
             text: 'Product Out Of Stock!',
-            })
-        </script>
-    
+            })    
     @endif
+</script>
 
 @endsection

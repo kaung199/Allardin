@@ -46,9 +46,14 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::resource('customers', 'CustomerController');
         Route::get('editproduct/{id}/{page}', 'ProductController@edit')->name('editproduct');
 
+        Route::get('/admincartview', 'CartController@admincartview');
         Route::get('adminindex', 'ProductController@adminindex')->name('adminindex');
         Route::post('searchproducts', 'ProductController@searchproducts')->name('searchproducts');
         Route::get('/productdetail/{id}', 'ProductController@productdetail')->name('productdetail');
+        Route::get('admincheckoutform', 'OrderController@admincheckoutform')->name('admincheckoutform');
+        Route::get('adminorders', 'AccountController@adminorders')->name('adminorders');
+        Route::get('adminorderdetail/{id}', 'AccountController@adminorderdetail')->name('adminorderdetail');
+
         Route::get('/editdetail/{id}', 'ProductController@editdetail')->name('editdetail');
 
         //customer

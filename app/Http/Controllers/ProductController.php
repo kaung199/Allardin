@@ -9,6 +9,7 @@ use Spatie\Searchable\Search;
 use App\Product;
 use App\User;
 use App\Order;
+use Auth;
 use App\Township;
 use App\ProductsPhoto;
 
@@ -79,8 +80,13 @@ class ProductController extends Controller
 
     public function edit($id, $page)
     {
-        $product = Product::find($id);
-        return view('products.edit', compact('product', 'page'));
+        if(Auth::user()->role_id == 1) {
+            $product = Product::find($id);
+            return view('products.edit', compact('product', 'page'));
+        } else {
+            return redirect()->back()->with('permission', 'Permission Deny');
+        }
+        
     }
     public function editdetail($id)
     {
@@ -114,8 +120,13 @@ class ProductController extends Controller
 
     public function destroy(Product $product)
     {
-        $product->delete();
-        return redirect()->route('products.index');
+        if(Auth::user()->role_id == 1) {
+            $product->delete();
+            return redirect()->route('products.index');
+        } else {
+            return redirect()->back()->with('permission', 'Permission Deny');
+        }
+        
     }
 
     public function search(Request $request)

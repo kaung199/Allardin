@@ -75,30 +75,32 @@
     <div class="text-center">{{ $products->links() }}</div>
     
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
-    @if(session('success'))
-        <script>
-            Swal.fire({
-                title: 'Product Added To Cart Successfuly',
-                animation: false,
-                customClass: {
-                    popup: 'animated tada'
-                }
-            })
-        </script>
-    
-    @endif
+    <script>
+        @if(session('success'))        
+                Swal.fire({
+                    title: 'Product Added To Cart Successfuly',
+                    animation: false,
+                    customClass: {
+                        popup: 'animated tada'
+                    }
+                })      
+        @endif
 
-    @if(session('outofstock'))
-        <script>
-            Swal.fire({
-            type: 'error',
-            title: 'Oops...',
-            text: 'Product Out Of Stock!',
-            })
-        </script>
+        @if(session('outofstock'))
+                Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Product Out Of Stock!',
+                })    
+        @endif
+        @if(session('permission'))
+                Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Permission Denined !!!Ask Admin!!!',
+                })    
+        @endif
     
-    @endif
-    
-
+    </script>
 
 @endsection

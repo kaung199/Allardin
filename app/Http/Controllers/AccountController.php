@@ -17,6 +17,11 @@ class AccountController extends Controller
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         return view('orderprepare.orders', compact('orders', 'deliveries'));
     }
+    public function adminorders()
+    {
+        $orders = Order::latest()->paginate(40);
+        return view('orders.adminorders', compact('orders'));
+    }
     public function orderd()
     {
         $d_id = Auth::user()->id;
@@ -31,6 +36,13 @@ class AccountController extends Controller
         $d_id = $orderdetails[0]->order->delivery_id;
         $delivery = User::find($d_id);
         return view('orderprepare.orderdetail', compact('orderdetails','delivery','deliveries'));
+    }
+    public function adminorderdetail($id)
+    {
+        $orderdetails = Order_detail::where(order_id, $id)->get();
+        $d_id = $orderdetails[0]->order->delivery_id;
+        $delivery = User::find($d_id);
+        return view('orders.adminorderdetail', compact('orderdetails','delivery'));
     }
     public function orderdetailo($id)
     {

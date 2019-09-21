@@ -16,60 +16,64 @@
     <title>OrderPrepare</title>
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="{{ route('adminindex') }}">AladdinOnlineShop</a>
-  <div class="cart">
-      <?php $qtotal = 0; ?>
-    @if(session('cart'))
+  <div class="adminindex">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="{{ route('adminindex') }}">AladdinOnlineShop</a>
+      <a href="{{ url('admincartview')}}">
+        <div class="cartt">
+            <?php $qtotal = 0; ?>
+          @if(session('cart'))
 
-        @foreach(session('cart') as $id => $details)				                        	
-            <?php 
-            $qtotal += $details['quantity'];
-            ?>            
-        @endforeach
-        <span class="badge badge-danger cartqty">{{ $qtotal }}</span>
-    @endif
-  <i class="fas fa-cart-arrow-down"></i>
-  </div>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+              @foreach(session('cart') as $id => $details)				                        	
+                  <?php 
+                  $qtotal += $details['quantity'];
+                  ?>            
+              @endforeach
+              <span class="badge badge-danger cartqty">{{ $qtotal }}</span>
+          @endif
+        <i class="fas fa-cart-arrow-down"></i>
+        </div>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="{{ route('adminindex') }}">Home <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Orders</a>
-        </li>
-      <li class="nav-item">
-          <a class="nav-link" href="{{ route('logout') }}"
-              onclick="event.preventDefault();
-                            document.getElementById('logout-form').submit();">
-              {{ __('Logout') }}
-          </a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ route('adminindex') }}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('adminorders') }}">Orders</a>
+            </li>
+          <li class="nav-item">
+              <a class="nav-link" href="{{ route('logout') }}"
+                  onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                  {{ __('Logout') }}
+              </a>
 
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-              @csrf
-          </form>
-      </li>     
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+              </form>
+          </li>     
+          
+        </ul>
+        <form class="form-inline my-2 my-lg-0" action="{{ route('searchproducts') }}" method="POST">
+        @csrf
+          <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
+        <div class="container pt-3 pb-3">
+            @yield('contents')
+        </div>
       
-    </ul>
-    <form class="form-inline my-2 my-lg-0" action="{{ route('searchproducts') }}" method="POST">
-    @csrf
-      <input class="form-control mr-sm-2" type="text" name="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
-    <div class="container pt-3 pb-3 orderprepare">
-        @yield('contents')
+      
+    <div class="bg-dark">
+        <p class="text-center pt-3 pb-3 text-muted">Copyright © Medifuture co.,ltd 2019</p>
     </div>
-  
-  
-<div class="bg-dark">
-    <p class="text-center pt-3 pb-3 text-muted">Copyright © Medifuture co.,ltd 2019</p>
-</div>
+  </div>
 </body>
 </html>

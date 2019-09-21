@@ -22,6 +22,11 @@ class OrderController extends Controller
         $townships = Township::pluck('name', 'id')->all();
         return view('orders.admincheckoutform', \compact('townships'));
     }
+    public function admincheckoutform() 
+    {
+        $townships = Township::pluck('name', 'id')->all();
+        return view('orders.admincheckoutform2', \compact('townships'));
+    }
 
     public function checkout(Ostore $request) 
     {
@@ -164,7 +169,11 @@ class OrderController extends Controller
         }   
         session()->forget('cart'); 
 
-        return redirect()->route('order')->with('ordersuccess', 'Order Success!'); 
+        if(Auth::user()->role_id == 2) {
+        return redirect()->route('adminorders')->with('ordersuccess', 'Order Success!'); 
+        } else {                
+            return redirect()->route('order')->with('ordersuccess', 'Order Success!'); 
+        }
     }
 
     public function order()

@@ -56,6 +56,10 @@ class CartController extends Controller
     {
         return view('cartview');
     }
+    public function admincartview(Request $request)
+    {
+        return view('admincartview');
+    }
 
     public function update(Request $request)
     {

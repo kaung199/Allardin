@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -24,6 +25,27 @@ class HomeController extends Controller
     public function index()
     {
        
-        return redirect()->route('products.index');
+        // User role
+        $role = Auth::user()->role_id; 
+        
+        // Check user role
+        switch ($role) {
+            case 1:
+                    return redirect('/admin');
+
+                break;
+            case 2:
+                    return redirect('/adminindex');
+                break; 
+            case 3:
+                    return redirect('/deliverydd');
+                break;
+            case 4:
+                    return redirect('/orderpreparep');
+                break;
+            default:
+                    return '/login'; 
+                break;
+        }
     }
 }
