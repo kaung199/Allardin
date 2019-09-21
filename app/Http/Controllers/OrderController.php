@@ -54,10 +54,6 @@ class OrderController extends Controller
                 'quantity' => $grandqty,
             ]);
 
-            
-            
-            
-
         }
 
             $today = date("Ymd");
@@ -66,7 +62,8 @@ class OrderController extends Controller
             $order = Order::create([
                 'order_id' => $unique,
                 'totalquantity' => $totalquantity,
-                'totalprice' =>  $total,
+                'totalprice' =>  $total - $request->discount,
+                'discount' =>  $request->discount,
                 'orderdate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
@@ -161,9 +158,7 @@ class OrderController extends Controller
 
             }
            
-        //end
-
-            
+        //end    
 
             
         }   
@@ -182,8 +177,6 @@ class OrderController extends Controller
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         return view('orders.index', compact('orders', 'deliveries'));
     }
-
-   
 
     public function orderdetail($id)
     {

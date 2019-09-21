@@ -20,6 +20,7 @@ class CreateOrdersTable extends Migration
             $table->unsignedInteger('totalquantity');
             $table->unsignedInteger('totalprice');
             $table->string('deliverystatus');
+            $table->unsignedInteger('discount')->nullable(); 
             $table->date('orderdate');
             $table->string('monthly');
             $table->year('yearly');

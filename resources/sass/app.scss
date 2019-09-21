@@ -242,6 +242,87 @@ body {
     .table-bordered th, .table-bordered td {
         padding: 10px;
     }
+    .cusmt {
+        margin-top: -109px;
+    }
+    .tr_hide {
+        visibility: hidden;
+    }
+    
+    .print12hide , .aladdinh2 {
+        display: none;
+    }
+    .displaynone {
+        display: none;
+    }
+    @media print {
+        body * {
+            visibility: hidden;
+            font-size: 18px;
+        }
+        .card , .footerhide{
+            display: none;
+        }
+        .displaynone {
+            display: block;
+        }
+        
+        .table th,
+        .table td {
+            padding: 0.3rem !important;
+        }
+        .deliverycss {
+            display: none !important;
+        }
+        .printposition {
+            top: 0;
+            left: 0;
+            position: absolute;
+        }
+        .print12hide, .aladdinh2 {
+            display: block;
+            
+        }
+    
+        .print *, .print1 *, .print2 * {
+            visibility: visible;
+            
+        }
+        .print1, .print2 {
+            padding-top: 20px;
+        }
+        .hr {
+            width: 100%;
+            border-top: solid 1px rgb(12, 1, 1); 
+            border-style: dotted;
+            margin-bottom: 20px;
+            
+        }
+        /* .print , .print1, .print2 {
+            max-height: 50%;
+        } */
+        
+        .printpdt {
+            left: 0;
+        }
+        .hide, .spanshow {
+            display: none;
+        }
+        .tr_hide {
+            visibility: visible;
+        }
+        .tr_show {
+            display: none;
+        }
+        .cusmt {
+            margin-top: 0;
+            }
+        .cusmt table td{
+            font-size: 25px;
+            }
+    
+    }
+      
     @media (max-width: 768px) { 
         .card {
             margin: 0 auto;

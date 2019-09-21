@@ -146,6 +146,12 @@
                   <th colspan="6" class="text-center">Delivery Price</th>
                   <td class="text-right">{{ $orderdetail->user->township->deliveryprice }}</td>
               </tr>
+              @if($orderdetail->order->discount != null)
+                <tr class="tr_show">
+                    <th colspan="6" class="text-center text-danger">Discount Price</th>
+                    <td class="text-right text-danger">-{{ $orderdetail->order->discount }}</td>
+                </tr>
+              @endif
               <tr class="tr_show">
                   <th colspan="6" class="text-center">Grand Total</th>
                   <th class="text-right">{{ $orderdetail->order->totalprice + $orderdetail->user->township->deliveryprice }}</th>
@@ -156,6 +162,12 @@
                   <th colspan="5" class="text-center">Delivery Price</th>
                   <td class="text-right">{{ $orderdetail->user->township->deliveryprice }}</td>
               </tr>
+              @if($orderdetail->order->discount != null)
+                <tr class="tr_hide">
+                    <th colspan="5" class="text-center text-danger">Discount Price</th>
+                    <td class="text-right text-danger">-{{ $orderdetail->order->discount }}</td>
+                </tr>
+              @endif
               <tr class="tr_hide">
                   <th colspan="5" class="text-center">Grand Total</th>
                   <th class="text-right">{{ $orderdetail->order->totalprice + $orderdetail->user->township->deliveryprice }}</th>
@@ -345,6 +357,7 @@
                     <th colspan="6" class="text-center">Delivery Price</th>
                     <td class="text-right">{{ $orderdetail->user->township->deliveryprice }}</td>
                 </tr>
+                        
                 <tr class="tr_show">
                     <th colspan="6" class="text-center">Grand Total</th>
                     <th class="text-right">{{ $orderdetail->order->totalprice + $orderdetail->user->township->deliveryprice }}</th>
@@ -355,6 +368,12 @@
                     <th colspan="5" class="text-center">Delivery Price</th>
                     <td class="text-right">{{ $orderdetail->user->township->deliveryprice }}</td>
                 </tr>
+                @if($orderdetail->order->discount != null)
+                  <tr class="tr_hide">
+                      <th colspan="5" class="text-center text-danger">Discount Price</th>
+                      <td class="text-right text-danger">-{{ $orderdetail->order->discount }}</td>
+                  </tr>
+                @endif
                 <tr class="tr_hide">
                     <th colspan="5" class="text-center">Grand Total</th>
                     <th class="text-right">{{ $orderdetail->order->totalprice + $orderdetail->user->township->deliveryprice }}</th>
@@ -554,6 +573,12 @@
                     <th colspan="5" class="text-center">Delivery Price</th>
                     <td class="text-right">{{ $orderdetail->user->township->deliveryprice }}</td>
                 </tr>
+                @if($orderdetail->order->discount != null)
+                  <tr class="tr_hide">
+                      <th colspan="5" class="text-center text-danger">Discount Price</th>
+                      <td class="text-right text-danger">-{{ $orderdetail->order->discount }}</td>
+                  </tr>
+                @endif
                 <tr class="tr_hide">
                     <th colspan="5" class="text-center">Grand Total</th>
                     <th class="text-right">{{ $orderdetail->order->totalprice + $orderdetail->user->township->deliveryprice }}</th>
@@ -606,7 +631,8 @@
       
     </div>
   </div>
-  </div>
+</div>
+
 <button class="btn btn-success" onclick="window.print()">Print</button>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
     @if(session('deliverystatus'))

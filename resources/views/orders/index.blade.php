@@ -181,6 +181,12 @@
                         <th colspan="3" class="text-center">Delivery Price</th>
                         <th class="text-right">{{ $orderdetail->user->township->deliveryprice }}</th>
                     </tr>
+                    @if($order->discount != null)
+                    <tr>
+                        <th colspan="3" class="text-center text-danger">Discount Price</th>
+                        <th class="text-right text-danger">-{{ $order->discount }}</th>
+                    </tr>
+                    @endif
                     <tr>
                         <th colspan="3" class="text-center">Total</th>
                         <th class="text-right"> {{ $order->totalprice + $orderdetail->user->township->deliveryprice }}</th>

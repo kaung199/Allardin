@@ -71,7 +71,7 @@
         </div>
       
       
-    <div class="bg-dark">
+    <div class="bg-dark footerhide">
         <p class="text-center pt-3 pb-3 text-muted">Copyright © Medifuture co.,ltd 2019</p>
     </div>
   </div>

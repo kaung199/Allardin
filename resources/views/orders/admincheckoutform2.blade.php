@@ -70,7 +70,22 @@
                     </strong>
                 </span>
             @endif
-		</div>
+        </div>
+        <div class="form-group">
+            {{ Form::label(null,'Discount') }}
+            {{ Form::number('discount', null, [
+                'class' => ($errors->has('discount')? 'form-control is-invalid': 'form-control'),
+                'placeholder' => 'Have discount?' 
+                ]) }}
+
+            @if($errors->has('discount'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>
+                        {{ $errors->first('discount') }}
+                    </strong>
+                </span>
+            @endif
+        </div>
 
 		
         <button class="btn btn-primary" OnClick="return confirm('Are You Sure to Order');">Order</button>

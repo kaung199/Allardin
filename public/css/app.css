@@ -10908,6 +10908,108 @@ body {
   padding: 10px;
 }
 
+.adminindex .cusmt {
+  margin-top: -109px;
+}
+
+.adminindex .tr_hide {
+  visibility: hidden;
+}
+
+.adminindex .print12hide,
+.adminindex .aladdinh2 {
+  display: none;
+}
+
+.adminindex .displaynone {
+  display: none;
+}
+
+@media print {
+  .adminindex {
+    /* .print , .print1, .print2 {
+        max-height: 50%;
+    } */
+  }
+
+  .adminindex body * {
+    visibility: hidden;
+    font-size: 18px;
+  }
+
+  .adminindex .card,
+  .adminindex .footerhide {
+    display: none;
+  }
+
+  .adminindex .displaynone {
+    display: block;
+  }
+
+  .adminindex .table th,
+  .adminindex .table td {
+    padding: 0.3rem !important;
+  }
+
+  .adminindex .deliverycss {
+    display: none !important;
+  }
+
+  .adminindex .printposition {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .adminindex .print12hide,
+  .adminindex .aladdinh2 {
+    display: block;
+  }
+
+  .adminindex .print *,
+  .adminindex .print1 *,
+  .adminindex .print2 * {
+    visibility: visible;
+  }
+
+  .adminindex .print1,
+  .adminindex .print2 {
+    padding-top: 20px;
+  }
+
+  .adminindex .hr {
+    width: 100%;
+    border-top: solid 1px #0c0101;
+    border-style: dotted;
+    margin-bottom: 20px;
+  }
+
+  .adminindex .printpdt {
+    left: 0;
+  }
+
+  .adminindex .hide,
+  .adminindex .spanshow {
+    display: none;
+  }
+
+  .adminindex .tr_hide {
+    visibility: visible;
+  }
+
+  .adminindex .tr_show {
+    display: none;
+  }
+
+  .adminindex .cusmt {
+    margin-top: 0;
+  }
+
+  .adminindex .cusmt table td {
+    font-size: 25px;
+  }
+}
+
 @media (max-width: 768px) {
   .adminindex .card {
     margin: 0 auto;
