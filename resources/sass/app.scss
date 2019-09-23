@@ -7,15 +7,16 @@
 
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
+@font-face {
+    font-family: 'Zawgyi-One';
+    src: url('../fonts/Zawgyi-One_V3.1.ttf');
+  }
 body {
-    font-family: 'Roboto', sans-serif;
-}
-table {
-    font-family: 'Padauk', sans-serif !important;
+    font-family: 'Zawgyi-One','Zawgyi1','Zawgyi-One-Embedded', 'zawgyi-one';
 }
 .vueui {
     body {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Zawgyi-One','Zawgyi1','Zawgyi-One-Embedded', 'zawgyi-one';
     }
     .messenger img {
         width: 55px;

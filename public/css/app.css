@@ -10644,16 +10644,17 @@ a.text-dark:focus {
   }
 }
 
-body {
-  font-family: "Roboto", sans-serif;
+@font-face {
+  font-family: "Zawgyi-One";
+  src: url(/fonts/Zawgyi-One_V3.1.ttf?e588d3576ff93d88eb17326c3ef3c9d9);
 }
 
-table {
-  font-family: "Padauk", sans-serif !important;
+body {
+  font-family: "Zawgyi-One", "Zawgyi1", "Zawgyi-One-Embedded", "zawgyi-one";
 }
 
 .vueui body {
-  font-family: "Roboto", sans-serif;
+  font-family: "Zawgyi-One", "Zawgyi1", "Zawgyi-One-Embedded", "zawgyi-one";
 }
 
 .vueui .messenger img {
