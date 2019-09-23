@@ -4,12 +4,20 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 */
+
+
 h4, h5, h6,
-h1, h2, h3 {margin-top: 0;}
+h1, h2, h3 {
+	margin-top: 0;
+	font-family: 'Padauk', sans-serif !important;
+}
 ul, ol {margin: 0;}
-p {margin: 0;}
+p {
+	margin: 0;
+	font-family: 'Padauk', sans-serif !important;
+}
 html, body{
-   font-family: 'Raleway', sans-serif;
+   font-family: 'Padauk', sans-serif;
    font-size: 100%;
    background:#f8f8f8; 
 }

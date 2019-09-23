@@ -13,6 +13,7 @@
 <link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
 <script src="/ui/js/jquery.easydropdown.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Padauk&display=swap" rel="stylesheet">
 <link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
 <script src="/ui/js/jquery.magnific-popup.js" type="text/javascript"></script>
 <link href="/ui/css/magnific-popup.css" rel="stylesheet" type="text/css">

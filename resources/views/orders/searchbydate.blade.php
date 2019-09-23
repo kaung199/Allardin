@@ -35,7 +35,6 @@
 <br>
 @foreach($orders as $order)
     <div class="shadow-lg p-3 mb-5 bg-white rounded">
-        <h6><strong>Customer = {{ $order->user->name }}</strong></h6>
         <h6><strong>Order_id = {{ $order->order_id }}</strong></h6>
         <h6><strong>Date = {{ $order->created_at }}</strong></h6>
         <h6><strong>
@@ -168,6 +167,24 @@
                     <th colspan="3" class="text-center">Total</th>
                     <th class="text-right"> {{ $order->totalprice + $orderdetail->user->township->deliveryprice }}</th>
                 </tr>
+            </tbody>
+        </table>
+        <h4>Customer Information</h4>
+        <table class="table table-bordered table-dark ">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Address</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ $orderdetail->user->name }}</td>
+                <td>{{ $orderdetail->user->phone }}</td>
+                <td>{{ $orderdetail->user->address }}</td>
+            
+            </tr>
             </tbody>
         </table>
     </div>

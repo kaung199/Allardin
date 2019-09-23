@@ -8,11 +8,14 @@
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Padauk', sans-serif;
+}
+table {
+    font-family: 'Padauk', sans-serif !important;
 }
 .vueui {
     body {
-        font-family: 'Roboto', sans-serif;
+        font-family: 'Padauk', sans-serif;
     }
     .messenger img {
         width: 55px;

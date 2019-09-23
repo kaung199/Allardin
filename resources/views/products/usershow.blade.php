@@ -25,12 +25,19 @@
         <div class="labout span_1_of_a1">
     <!-- start product_slider -->
             <ul id="etalage">
+            @if($product->photos[0][filename]) 
                 @foreach($product->photos as $photo)
                     <li>
                         <img class="etalage_thumb_image" src="{{ asset('storage/' . $photo[filename] ) }}" class="img-responsive" />
                         <img class="etalage_source_image" src="{{ asset('storage/' . $photo[filename] ) }}" class="img-responsive" />
                     </li>
                 @endforeach
+            @else 
+                <li>
+                    <img class="etalage_thumb_image" src="{{ asset('/ui/images/350400.jpg') }}" class="img-responsive" />
+                    <img class="etalage_source_image" src="{{ asset('/ui/images/350400.jpg') }}" class="img-responsive" />
+                </li>
+            @endif
             </ul>
         <!-- end product_slider -->
     </div>

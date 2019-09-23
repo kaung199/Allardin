@@ -48,10 +48,8 @@
 </div>    
 <br>
 
-
 @foreach($orders as $order)
     <div class="shadow-lg p-3 mb-5 bg-white rounded">
-        <h6><strong>Customer = {{ $order->user->name }}</strong></h6>
         <h6><strong>Order_id = {{ $order->order_id }}</strong></h6>
         <h6><strong>Date = {{ $order->created_at }}</strong></h6>
         <h6><strong>
@@ -194,6 +192,24 @@
                 </tbody>
             </table>
         </div>
+        <h4>Customer Information</h4>
+        <table class="table table-bordered table-dark ">
+            <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Address</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>{{ $order->user->name }}</td>
+                <td>{{ $order->user->phone }}</td>
+                <td>{{ $order->user->address }}</td>
+            
+            </tr>
+            </tbody>
+        </table>
     </div>
 @endforeach
 <div class="text-center">{{ $orders->links() }}</div>
