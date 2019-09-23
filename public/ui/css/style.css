@@ -8,10 +8,13 @@ h4, h5, h6,
 h1, h2, h3 {margin-top: 0;}
 ul, ol {margin: 0;}
 p {margin: 0;}
-html, body, h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
-   font-family: 'Zawgyi-One','Zawgyi1','Zawgyi-One-Embedded', 'zawgyi-one', sans-serif;
+html, body {
+   font-family: 'Zawgyi-One','Zawgyi1','Zawgyi-One-Embedded', 'zawgyi-one';
    font-size: 100%;
    background:#f8f8f8; 
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+	font-family: 'Zawgyi-One','Zawgyi1','Zawgyi-One-Embedded', 'zawgyi-one'
 }
 .menubar {
 	width: 100%;
@@ -702,7 +705,7 @@ ul.article_links li a{
 	-moz-transition: all 0.4s ease;
 	-o-transition: all 0.4s ease;
 	transition: all 0.4s ease;
-	font-family: 'Zawgyi-One', sans-serif;
+	font-family: 'Zawgyi-One','Zawgyi1','Zawgyi-One-Embedded', 'zawgyi-one';
 }
 .col_1_of_3 img {
 	margin: 0 auto;
@@ -1269,7 +1272,7 @@ ul.category_nav li a:hover {
 }
 .span_2_of_a1 {
 	width:55%;
-	font-family: 'Zawgyi-One', sans-serif;
+	font-family: 'Zawgyi-One','Zawgyi1','Zawgyi-One-Embedded', 'zawgyi-one';
 }
 .span_2_of_a1 h1{
 	color:#333;
