@@ -12,7 +12,6 @@ html {
 }
 p, li, h1,h2,h3,h4,h5 {
   font-family: 'Zawgyi-One','Zawgyi1','Zawgyi-One-Embedded', 'zawgyi-one';
-  src: url('../fonts/Zawgyi-One_V3.1.ttf');
 }
 body {
   margin: 0;
@@ -2379,6 +2378,7 @@ input[type="button"].btn-block {
 }
 @font-face {
   font-family: 'Glyphicons Halflings';
+  src: url('../fonts/Zawgyi-One_V3.1.ttf');
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
