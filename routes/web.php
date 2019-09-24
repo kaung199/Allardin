@@ -60,9 +60,9 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::get('/customers', 'CustomerController@index')->name('customers');
         Route::get('/customerdetail/{id}', 'CustomerController@customerdetail')->name('customerdetail');
 
-        Route::post('/search', 'ProductController@search')->name('search');
-        Route::post('/searchbydate', 'OrderController@search')->name('searchbydate');
-        Route::post('/searchxls', 'OrderController@searchxls')->name('searchxls');
+        Route::get('/search', 'ProductController@search')->name('search');
+        Route::get('/searchbydate', 'OrderController@search')->name('searchbydate');
+        Route::get('/searchxls', 'OrderController@searchxls')->name('searchxls');
         Route::post('/searchbydatedaily', 'OrderController@searchdaily')->name('searchbydatedaily');
         Route::post('/searchtotal', 'OrderController@searchtotal')->name('searchtotal');
         Route::post('/searchbydatedelivery', 'OrderController@searchdelivery')->name('searchbydatedelivery');

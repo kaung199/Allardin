@@ -130,6 +130,9 @@ class AccountController extends Controller
 
     public function orderdelivery(Request $request, $id)
     {
+        if($request->delivery_id == null) {
+            return redirect()->back();
+        }
         $deliverystatus = Order::find($id);
         if($deliverystatus->deliverystatus == 1) {
             $deliverystatus->update([
@@ -145,6 +148,9 @@ class AccountController extends Controller
 
     public function orderdeliveryp(Request $request, $id)
     {
+        if($request->delivery_id == null) {
+            return redirect()->back();
+        }
         $deliverystatus = Order::find($id);
         if($deliverystatus->deliverystatus == 1) {
             $deliverystatus->update([

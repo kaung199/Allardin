@@ -286,10 +286,47 @@ class OrderController extends Controller
         }
                 
     }
+    public function deliverystatusxls($id)
+    {
+        if(Auth::user()->role_id != 2) {
+            $deliverystatus = Order::find($id);
+            if($deliverystatus->deliverystatus == 1) {
+                $deliverystatus->update([
+                    'deliverystatus' => 2,
+                    'orderdate' =>  date('Y-m-d'),
+                    'monthly' =>  date('Y-m'),
+                    'yearly' =>  date('Y'),
+                ]);
+                return redirect()->back()->with('deliverystatus', 'Status Change successful');
+            }
+            if($deliverystatus->deliverystatus == 2) {
+                $deliverystatus->update([
+                    'deliverystatus' => 3
+                ]);  
+                return redirect()->back()->with('deliverystatus', 'Status Change successful');
+            }
+            if($deliverystatus->deliverystatus == 3) {
+                $deliverystatus->update([
+                    'deliverystatus' => 4
+                ]); 
+                return redirect()->back()->with('deliverystatus', 'Status Change successful');
+            }
+            if($deliverystatus->deliverystatus == 4) {
+                $deliverystatus->update([
+                    'deliverystatus' => 1,
+                    'delivery_id' => null
+                ]);                
 
+                return redirect()->back()->with('deliverystatus', 'Status Change successful');
+            }
+        }
+                
+    }
     public function orderdelivery(Request $request, $id)
     {
-        
+        if($request->delivery_id == null) {
+            return redirect()->back();
+        }
         $deliverystatus = Order::find($id);
         if($deliverystatus->deliverystatus == 1) {
             $deliverystatus->update([
@@ -305,6 +342,9 @@ class OrderController extends Controller
 
     public function orderdeliverysearch(Request $request, $id)
     {
+        if($request->delivery_id == null) {
+            return redirect()->back();
+        }
         $deliverystatus = Order::find($id);
         if($deliverystatus->deliverystatus == 1) {
             $deliverystatus->update([
@@ -497,9 +537,16 @@ class OrderController extends Controller
     public function dailyorder() 
     {
       $today = Carbon::now()->toDateString();
-      $orders = Order::where('orderdate', $today)->get();
+      $orderso = Order::where('orderdate', $today)
+                    ->where('deliverystatus', 1)->get();
+      $ordersd = Order::where('orderdate', $today)
+                    ->where('deliverystatus', 2)->get();
+      $ordersp = Order::where('orderdate', $today)
+                    ->where('deliverystatus', 3)->get();
+      $ordersc = Order::where('orderdate', $today)
+                    ->where('deliverystatus', 4)->get();
       $deliveries = User::where('role_id', 3)->pluck('name', 'id');
-      return view('orders.daily', compact('orders', 'deliveries'));    
+      return view('orders.daily', compact('orderso','ordersd','ordersp','ordersc', 'deliveries'));    
     }
 
     public function monthlyorder() 
@@ -528,13 +575,26 @@ class OrderController extends Controller
         $orders = Order::whereBetween('orderdate', [$from, $to])->get();
         return view('orders.searchbydate', \compact('orders', 'deliveries'));  
     }
+
     public function searchxls(Request $request) 
-    {
+    {       
         $from = $request->from;
         $to = $request->to;
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
-        $orders = Order::whereBetween('orderdate', [$from, $to])->get();
-        return view('orders.exportxls', \compact('orders', 'deliveries'));  
+        $orderso = Order::whereBetween('orderdate', [$from, $to])
+                        ->where('deliverystatus', 1)
+                        ->get();
+        $ordersd = Order::whereBetween('orderdate', [$from, $to])
+                        ->where('deliverystatus', 2)
+                        ->get();
+        $ordersp = Order::whereBetween('orderdate', [$from, $to])
+                        ->where('deliverystatus', 3)
+                        ->get();
+        $ordersc = Order::whereBetween('orderdate', [$from, $to])
+                        ->where('deliverystatus', 4)
+                        ->get();
+        return view('orders.exportxls', compact('orderso','ordersd','ordersp','ordersc', 'deliveries')); 
+
     }
     public function searchdaily(Request $request) 
     {

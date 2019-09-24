@@ -37,7 +37,7 @@
       <i class="fas fa-bars"></i>
     </button>
     <!-- Navbar Search -->
-    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('search') }}" method="POST">
+    <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('search') }}" method="GET">
       @csrf
       <div class="input-group">
         <input type="text" name="query" class="form-control" placeholder="Search for..." aria-label="Search" aria-describedby="basic-addon2">
@@ -259,22 +259,22 @@
 
   <!-- Bootstrap core JavaScript-->
   <script src="{{ asset('/vendor/jquery/jquery.min.js') }}"></script>
-  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="{{ asset('/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
 
   <!-- Core plugin JavaScript-->
-  <script src="/vendor/jquery-easing/jquery.easing.min.js"></script>
+  <script src="{{ asset('/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
 
   <!-- Page level plugin JavaScript-->
-  <script src="/vendor/chart.js/Chart.min.js"></script>
-  <script src="/vendor/datatables/jquery.dataTables.js"></script>
-  <script src="/vendor/datatables/dataTables.bootstrap4.js"></script>
+  <!-- <script src="{{ asset('/vendor/chart.js/Chart.min.js') }}"></script> -->
+  <script src="{{ asset('/vendor/datatables/jquery.dataTables.js') }}"></script>
+  <script src="{{ asset('/vendor/datatables/dataTables.bootstrap4.js') }}"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="/tjs/sb-admin.min.js"></script>
+  <script src="{{ asset('/tjs/sb-admin.min.js') }}"></script>
 
   <!-- Demo scripts for this page-->
-  <script src="/tjs/demo/datatables-demo.js"></script>
-  <script src="/tjs/demo/chart-area-demo.js"></script>
+  <script src="{{ asset('/tjs/demo/datatables-demo.js') }}"></script>
+  <!-- <script src="/tjs/demo/chart-area-demo.js"></script> -->
 
 </body>
 

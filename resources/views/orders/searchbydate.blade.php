@@ -14,7 +14,7 @@
         </div>
         <div class="col-md-6">
             <div class="folat-right" style="float: right;">
-                <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchbydate') }}" method="POST">
+                <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchbydate') }}" method="GET">
                     @csrf
                     <div class="input-group">
                         <label for="from">From</label>
@@ -85,7 +85,7 @@
                                 ]) }}
                             @else
                             {{ Form::model($order, [ 
-                                    'route'=> ['orderdeliverysearch', $order->id], 
+                                    'route'=> ['orderdelivery', $order->id], 
                                     'method' => 'POST',
                                 ]) }}
                             @endif
@@ -116,13 +116,13 @@
                         </div>
                     @endif
                     @if($order->deliverystatus == 2)
-                    <a href="{{ route('deliverystatussearch', $order->id) }}" class="btn btn-outline-secondary">Delivery</a>
+                    <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-secondary">Delivery</a>
                     @endif
                     @if($order->deliverystatus == 3)
-                    <a href="{{ route('deliverystatussearch', $order->id) }}" class="btn btn-outline-info">Payment</a>
+                    <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-info">Payment</a>
                     @endif
                     @if($order->deliverystatus == 4)
-                    <a href="{{ route('deliverystatussearch', $order->id) }}" class="btn btn-outline-success">Complete</a>
+                    <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-success">Complete</a>
                     @endif
                 @else
                         @if($order->deliverystatus == 1)
@@ -191,29 +191,25 @@
 @endforeach
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-
+<script>
     @if(session('deliverystatus'))
-        <script>
+        
             Swal.fire({
                 title: 'Delivery Status Updated Successfuly',
                 animation: false,
                 customClass: {
                     popup: 'animated tada'
                 }
-            })
-        </script>
-    
+            })    
     @endif
     @if(session('permission'))
-        <script>
             Swal.fire({
                 title: 'Permission Access Deny !!Ask Admin!!',
                 animation: false,
                 customClass: {
                     popup: 'animated tada'
                 }
-            })
-        </script>
-    
+            })    
     @endif
+</script>
 @endsection
