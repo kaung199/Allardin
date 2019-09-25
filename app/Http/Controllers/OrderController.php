@@ -65,6 +65,8 @@ class OrderController extends Controller
                 'totalprice' =>  $total - $request->discount,
                 'discount' =>  $request->discount,
                 'orderdate' =>  date('Y-m-d'),
+                'deliverydate' =>  $request->deliverydate,
+                'remark' =>  $request->remark,
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
                 'deliverystatus' => 1,
@@ -258,6 +260,7 @@ class OrderController extends Controller
                 $deliverystatus->update([
                     'deliverystatus' => 2,
                     'orderdate' =>  date('Y-m-d'),
+                    'deliverydate' =>  date('Y-m-d'),
                     'monthly' =>  date('Y-m'),
                     'yearly' =>  date('Y'),
                 ]);
@@ -294,6 +297,7 @@ class OrderController extends Controller
                 $deliverystatus->update([
                     'deliverystatus' => 2,
                     'orderdate' =>  date('Y-m-d'),
+                    'deliverydate' =>  date('Y-m-d'),
                     'monthly' =>  date('Y-m'),
                     'yearly' =>  date('Y'),
                 ]);
@@ -333,6 +337,7 @@ class OrderController extends Controller
                 'deliverystatus' => 2,
                 'delivery_id' => $request->delivery_id,
                 'orderdate' =>  date('Y-m-d'),
+                'deliverydate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
             ]);
@@ -350,6 +355,7 @@ class OrderController extends Controller
             $deliverystatus->update([
                 'deliverystatus' => 2,
                 'orderdate' =>  date('Y-m-d'),
+                'deliverydate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
                 'delivery_id' => $request->delivery_id
@@ -366,6 +372,7 @@ class OrderController extends Controller
             $deliverystatus->update([
                 'deliverystatus' => 2,
                 'orderdate' =>  date('Y-m-d'),
+                'deliverydate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
             ]);
@@ -420,7 +427,7 @@ class OrderController extends Controller
         $today = Carbon::now()->toDateString();
         $orders = Order::where([ 
             [deliverystatus, 1],
-            ['orderdate', $today]
+            ['deliverydate', $today]
             ])->get();
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         return view('orders.daily.orderprepare', compact('orders', 'today', 'deliveries'));
@@ -430,7 +437,7 @@ class OrderController extends Controller
         $today = Carbon::now()->toDateString();
         $orders = Order::where([ 
             [deliverystatus, 2],
-            ['orderdate', $today]
+            ['deliverydate', $today]
             ])->get();
         return view('orders.daily.delivery', compact('orders', 'today'));  
     }
@@ -439,7 +446,7 @@ class OrderController extends Controller
         $today = Carbon::now()->toDateString();
         $orders = Order::where([ 
             [deliverystatus, 3],
-            ['orderdate', $today]
+            ['deliverydate', $today]
             ])->get();
         return view('orders.daily.payment', compact('orders', 'today'));
     }
@@ -448,7 +455,7 @@ class OrderController extends Controller
         $today = Carbon::now()->toDateString();
         $orders = Order::where([ 
             [deliverystatus, 4],
-            ['orderdate', $today]
+            ['deliverydate', $today]
             ])->get();
         return view('orders.daily.complete', compact('orders', 'today'));
     }
@@ -537,13 +544,13 @@ class OrderController extends Controller
     public function dailyorder() 
     {
       $today = Carbon::now()->toDateString();
-      $orderso = Order::where('orderdate', $today)
+      $orderso = Order::where('deliverydate', $today)
                     ->where('deliverystatus', 1)->get();
-      $ordersd = Order::where('orderdate', $today)
+      $ordersd = Order::where('deliverydate', $today)
                     ->where('deliverystatus', 2)->get();
-      $ordersp = Order::where('orderdate', $today)
+      $ordersp = Order::where('deliverydate', $today)
                     ->where('deliverystatus', 3)->get();
-      $ordersc = Order::where('orderdate', $today)
+      $ordersc = Order::where('deliverydate', $today)
                     ->where('deliverystatus', 4)->get();
       $deliveries = User::where('role_id', 3)->pluck('name', 'id');
       return view('orders.daily', compact('orderso','ordersd','ordersp','ordersc', 'deliveries'));    
@@ -581,16 +588,16 @@ class OrderController extends Controller
         $from = $request->from;
         $to = $request->to;
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
-        $orderso = Order::whereBetween('orderdate', [$from, $to])
+        $orderso = Order::whereBetween('deliverydate', [$from, $to])
                         ->where('deliverystatus', 1)
                         ->get();
-        $ordersd = Order::whereBetween('orderdate', [$from, $to])
+        $ordersd = Order::whereBetween('deliverydate', [$from, $to])
                         ->where('deliverystatus', 2)
                         ->get();
-        $ordersp = Order::whereBetween('orderdate', [$from, $to])
+        $ordersp = Order::whereBetween('deliverydate', [$from, $to])
                         ->where('deliverystatus', 3)
                         ->get();
-        $ordersc = Order::whereBetween('orderdate', [$from, $to])
+        $ordersc = Order::whereBetween('deliverydate', [$from, $to])
                         ->where('deliverystatus', 4)
                         ->get();
         return view('orders.exportxls', compact('orderso','ordersd','ordersp','ordersc', 'deliveries')); 

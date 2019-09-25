@@ -70,6 +70,7 @@ class AccountController extends Controller
             $deliverystatus->update([
                 'deliverystatus' => 2,
                 'orderdate' =>  date('Y-m-d'),
+                'deliverydate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
             ]);
@@ -103,6 +104,7 @@ class AccountController extends Controller
             $deliverystatus->update([
                 'deliverystatus' => 2,
                 'orderdate' =>  date('Y-m-d'),
+                'deliverydate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
             ]);
@@ -138,6 +140,7 @@ class AccountController extends Controller
             $deliverystatus->update([
                 'deliverystatus' => 2,
                 'orderdate' =>  date('Y-m-d'),
+                'deliverydate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
                 'delivery_id' => $request->delivery_id
@@ -156,6 +159,7 @@ class AccountController extends Controller
             $deliverystatus->update([
                 'deliverystatus' => 2,
                 'orderdate' =>  date('Y-m-d'),
+                'deliverydate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
                 'delivery_id' => $request->delivery_id

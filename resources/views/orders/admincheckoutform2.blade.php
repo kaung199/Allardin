@@ -86,6 +86,15 @@
                 </span>
             @endif
         </div>
+        <div class="form-group">
+            {{ Form::label(null,'DeliveryDate') }}
+            <input type="date" name="deliverydate" data-date-inline-picker="true" style="box-shadow: none;"  class="form-control" aria-label="Search" aria-describedby="basic-addon2">
+            
+        </div>
+        <div class="form-group">
+            {{ Form::label(null,'Remark') }}
+            {{ Form::textarea('remark', null, ['placeholder' => 'Have Remark?', 'class' => 'form-control', 'rows' => '3']) }}
+        </div>
 
 		
         <button class="btn btn-primary" OnClick="return confirm('Are You Sure to Order');">Order</button>

@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-6">
             <div class="folat-right" style="float: right;">
-                <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchxls') }}" method="POST">
+                <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchxls') }}" method="GET">
                     @csrf
                     <div class="input-group">
                     <label for="from">From</label>

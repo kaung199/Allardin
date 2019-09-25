@@ -22,6 +22,8 @@ class CreateOrdersTable extends Migration
             $table->string('deliverystatus');
             $table->unsignedInteger('discount')->nullable(); 
             $table->date('orderdate');
+            $table->date('deliverydate')->nullable();
+            $table->string('remark')->nullable();
             $table->string('monthly');
             $table->year('yearly');
             $table->timestamps();
