@@ -544,13 +544,13 @@ class OrderController extends Controller
     public function dailyorder() 
     {
       $today = Carbon::now()->toDateString();
-      $orderso = Order::where('deliverydate', $today)
+      $orderso = Order::where('orderdate', $today)
                     ->where('deliverystatus', 1)->get();
-      $ordersd = Order::where('deliverydate', $today)
+      $ordersd = Order::where('orderdate', $today)
                     ->where('deliverystatus', 2)->get();
-      $ordersp = Order::where('deliverydate', $today)
+      $ordersp = Order::where('orderdate', $today)
                     ->where('deliverystatus', 3)->get();
-      $ordersc = Order::where('deliverydate', $today)
+      $ordersc = Order::where('orderdate', $today)
                     ->where('deliverystatus', 4)->get();
       $deliveries = User::where('role_id', 3)->pluck('name', 'id');
       return view('orders.daily', compact('orderso','ordersd','ordersp','ordersc', 'deliveries'));    
@@ -588,16 +588,16 @@ class OrderController extends Controller
         $from = $request->from;
         $to = $request->to;
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
-        $orderso = Order::whereBetween('deliverydate', [$from, $to])
+        $orderso = Order::whereBetween('orderdate', [$from, $to])
                         ->where('deliverystatus', 1)
                         ->get();
-        $ordersd = Order::whereBetween('deliverydate', [$from, $to])
+        $ordersd = Order::whereBetween('orderdate', [$from, $to])
                         ->where('deliverystatus', 2)
                         ->get();
-        $ordersp = Order::whereBetween('deliverydate', [$from, $to])
+        $ordersp = Order::whereBetween('orderdate', [$from, $to])
                         ->where('deliverystatus', 3)
                         ->get();
-        $ordersc = Order::whereBetween('deliverydate', [$from, $to])
+        $ordersc = Order::whereBetween('orderdate', [$from, $to])
                         ->where('deliverystatus', 4)
                         ->get();
         return view('orders.exportxls', compact('orderso','ordersd','ordersp','ordersc', 'deliveries')); 

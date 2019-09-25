@@ -7,14 +7,6 @@
     <li class="breadcrumb-item active">Products</li>
 @endsection
 @section('contents') 
-<script>
-    Swal.fire({
-    title: 'Error!',
-    text: 'Do you want to continue',
-    type: 'error',
-    confirmButtonText: 'Cool'
-    })
-</script>
     <div class="table-responsive">
         <h3>Products</h3>
         <a href="{{ route('products.create') }}" class="btn btn-primary float-right mtc">Add Product</a>
@@ -41,12 +33,6 @@
                 <td>{{ $product->quantity }}</td>
                 <td>{{ $product->price }}</td>
                 <td> <a href="{{ route('cartadd', $product->id) }}" class="btn btn-primary addtocart"><i class="fas fa-cart-plus"></i>Add Order</a></td>
-                <!-- <td data-th="">
-                    <button type="button" id="sub" class="sub update-cart" data-id="{{ $id }}">-</button>
-                    <input type="number" class="quantity text-center" name="quantity" id="1" value="{{ $details['quantity']}}" min="0"/>
-                    <button type="button" id="add" class="add update-cart" data-id="{{ $id }}">+</button>
-                </td> -->
-
                 <td>
                     {{ Form::model($product, [ 
                         'route'=> ['products.destroy', $product->id], 

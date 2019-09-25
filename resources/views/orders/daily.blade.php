@@ -25,11 +25,6 @@
         </div>
         <div class="col-md-6">
             <div class="folat-right" style="float: right;">
-            <!-- <form action="{{ route('searchxls') }}" method="get">
-                @csrf
-                <input type="search" name="search">
-                <button>Search</button>
-            </form> -->
                 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchxls') }}" method="GET">
                     @csrf
                     <div class="input-group">
@@ -50,7 +45,7 @@
 </div>
 <br>
 @if($orderso[0] != null)
-<div class="table-responsive-sm shadow p-3">
+<div class="table-responsive-md shadow p-3 scrolldo">
     <h3>OrderPrepare</h3>
     <table class="table table-primary">
         <thead>
@@ -60,6 +55,8 @@
             <th scope="col">Total Qty</th>
             <th scope="col" class="text-right">Total Price</th>
             <th scope="col">Order Date</th>
+            <th scope="col">Delivery Date</th>
+            <th scope="col">Remark</th>
             <th scope="col">Delivery Status</th>
             <th scope="col">Action</th>
             </tr>
@@ -72,6 +69,8 @@
                     <td>{{ $ordero->totalquantity }}</td>
                     <td class="text-right">{{ $ordero->totalprice + $ordero->user->township->deliveryprice }}</td>
                     <td>{{ $ordero->created_at }}</td>
+                    <td>{{ $ordero->deliverydate }}</td>
+                    <td class="remark">{{ $ordero->remark }}</td>
                     <td  data-th="">
                         @if($ordero->deliverystatus == 1)
                             <!-- Button trigger modal -->
@@ -153,7 +152,7 @@
 <br>
 @endif
 @if($ordersd[0] != null)
-<div class="table-responsive-sm shadow p-3">
+<div class="table-responsive-sm shadow p-3 scrolldo">
     <h3>Delivery</h3>
     <table class="table table-active">
         <thead>
@@ -163,6 +162,8 @@
             <th scope="col">Total Qty</th>
             <th scope="col" class="text-right">Total Price</th>
             <th scope="col">Order Date</th>
+            <th scope="col">Delivery Date</th>
+            <th scope="col">Remark</th>
             <th scope="col">Delivery Status</th>
             <th scope="col">Action</th>
             </tr>
@@ -175,6 +176,8 @@
                 <td>{{ $orderd->totalquantity }}</td>
                 <td class="text-right">{{ $orderd->totalprice + $orderd->user->township->deliveryprice }}</td>
                 <td>{{ $orderd->created_at }}</td>
+                <td>{{ $orderd->deliverydate }}</td>
+                <td class="remark">{{ $orderd->remark }}</td>
                 <td  data-th="">
                     @if($orderd->deliverystatus == 1)
                         <!-- Button trigger modal -->
@@ -257,7 +260,7 @@
 <br>
 @endif
 @if($ordersp[0] != null)
-<div class="table-responsive-sm shadow p-3">
+<div class="table-responsive-sm shadow p-3 scrolldo">
     <h3>Payment</h3>
     <table class="table table-danger">
         <thead>
@@ -267,6 +270,8 @@
             <th scope="col">Total Qty</th>
             <th scope="col" class="text-right">Total Price</th>
             <th scope="col">Order Date</th>
+            <th scope="col">Delivery Date</th>
+            <th scope="col">Remark</th>
             <th scope="col">Delivery Status</th>
             <th scope="col">Action</th>
             </tr>
@@ -279,6 +284,8 @@
                 <td>{{ $orderp->totalquantity }}</td>
                 <td class="text-right">{{ $orderp->totalprice + $orderp->user->township->deliveryprice }}</td>
                 <td>{{ $orderp->created_at }}</td>
+                <td>{{ $orderp->deliverydate }}</td>
+                <td class="remark">{{ $orderp->remark }}</td>
                 <td  data-th="">
                     @if($orderp->deliverystatus == 1)
                         <!-- Button trigger modal -->
@@ -361,7 +368,7 @@
 <br>
 @endif
 @if($ordersc[0] != null)
-<div class="table-responsive-sm shadow p-3">
+<div class="table-responsive-sm shadow p-3 scrolldo">
     <h3>Complete</h3>
     <table class="table table-success">
         <thead>
@@ -371,6 +378,8 @@
             <th scope="col">Total Qty</th>
             <th scope="col" class="text-right">Total Price</th>
             <th scope="col">Order Date</th>
+            <th scope="col">Delivery Date</th>
+            <th scope="col">Remark</th>
             <th scope="col">Delivery Status</th>
             <th scope="col">Action</th>
             </tr>
@@ -383,6 +392,8 @@
                 <td>{{ $orderc->totalquantity }}</td>
                 <td class="text-right">{{ $orderc->totalprice + $orderc->user->township->deliveryprice }}</td>
                 <td>{{ $orderc->created_at }}</td>
+                <td>{{ $orderc->deliverydate }}</td>
+                <td class="remark">{{ $orderc->remark }}</td>
                 <td  data-th="">
                     @if($orderc->deliverystatus == 1)
                         <!-- Button trigger modal -->
