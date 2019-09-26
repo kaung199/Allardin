@@ -5,7 +5,7 @@
 @endsection
 @section('breadcrumbs')
     <li class="breadcrumb-item active"> <a href="{{ url('order') }}">Order</a></li>
-    <li class="breadcrumb-item active">DailyOrder</li>
+    <li class="breadcrumb-item active">Today</li>
 @endsection
 @section('contents') 
 <div class="container">

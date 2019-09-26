@@ -5,7 +5,12 @@
 @endsection
 @section('breadcrumbs')
     <li class="breadcrumb-item active"><a href="{{ route('order') }}">Order</a></li>
-    <li class="breadcrumb-item active">Payment</li>
+    <li class="breadcrumb-item active">
+        Complete
+        @if($from && $to)
+        ( {{ $from . '/' .  $to }} )
+        @endif
+    </li>
 @endsection
 @section('contents') 
 <div class="container">
@@ -16,14 +21,37 @@
                     Filter with Delivery Status
                 </button>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                    @if($from && $to)
+                    <a class="dropdown-item" href="{{ route('orderpreparef',[$from, $to]) }}">Order Prepare</a>
+                    <a class="dropdown-item" href="{{ route('deliveryf', [$from, $to]) }}">Delivery</a>
+                    <a class="dropdown-item" href="{{ route('paymentf', [$from, $to]) }}">Payment</a>
+                    <a class="dropdown-item" href="{{ route('completef', [$from, $to]) }}">Complete</a>
+                    @else
                     <a class="dropdown-item" href="{{ route('orderprepare') }}">Order Prepare</a>
                     <a class="dropdown-item" href="{{ route('delivery') }}">Delivery</a>
                     <a class="dropdown-item" href="{{ route('payment') }}">Payment</a>
                     <a class="dropdown-item" href="{{ route('complete') }}">Complete</a>
+                    @endif
                 </div>
             </div>
         </div>
         <div class="col-md-6">
+            <div class="folat-right" style="float: right;">
+                <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchallc') }}" method="GET">
+                    @csrf
+                    <div class="input-group">
+                    <label for="from">From</label>
+                    <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="from" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
+                    <label for="to">To</label>
+                    <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="to" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit" value="search">
+                        <i class="fas fa-search"></i>
+                        </button>
+                    </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>   
 </div>    

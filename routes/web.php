@@ -62,6 +62,14 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
 
         Route::get('/search', 'ProductController@search')->name('search');
         Route::get('/searchbydate', 'OrderController@search')->name('searchbydate');
+        Route::get('/searchallo', 'OrderController@searcho')->name('searchallo');
+        Route::get('/searchalld', 'OrderController@searchd')->name('searchalld');
+        Route::get('/searchallp', 'OrderController@searchp')->name('searchallp');
+        Route::get('/searchallc', 'OrderController@searchc')->name('searchallc');
+        Route::get('/searchbydateo', 'OrderController@searchbydateo')->name('searchbydateo');
+        Route::get('/searchbydated', 'OrderController@searchbydated')->name('searchbydated');
+        Route::get('/searchbydatep', 'OrderController@searchbydatep')->name('searchbydatep');
+        Route::get('/searchbydatec', 'OrderController@searchbydatec')->name('searchbydatec');
         Route::get('/searchxls', 'OrderController@searchxls')->name('searchxls');
         Route::post('/searchbydatedaily', 'OrderController@searchdaily')->name('searchbydatedaily');
         Route::post('/searchtotal', 'OrderController@searchtotal')->name('searchtotal');
@@ -94,18 +102,29 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
 
         //all order
         Route::get('totalsaledetail/{id}', 'OrderController@totalsaledetail')->name('totalsaledetail');
+        Route::get('deliverydetail/{id}', 'OrderController@deliverydetail')->name('deliverydetail');
         Route::get('totalsale', 'OrderController@totalsale')->name('totalsale');
+
         Route::get('orderprepare', 'OrderController@orderprepare')->name('orderprepare');
         Route::get('delivery', 'OrderController@delivery')->name('delivery');
-        Route::get('deliverydetail/{id}', 'OrderController@deliverydetail')->name('deliverydetail');
         Route::get('payment', 'OrderController@payment')->name('payment');
         Route::get('complete', 'OrderController@complete')->name('complete');
+        //filter dstatus by date
+        Route::get('orderpreparef/{from}/{to}', 'OrderController@orderpreparef')->name('orderpreparef');
+        Route::get('deliveryf/{from}/{to}', 'OrderController@deliveryf')->name('deliveryf');
+        Route::get('paymentf/{from}/{to}', 'OrderController@paymentf')->name('paymentf');
+        Route::get('completef/{from}/{to}', 'OrderController@completef')->name('completef');
         
         //daily order
         Route::get('orderprepared', 'OrderController@orderprepared')->name('orderprepared');
         Route::get('deliveryd', 'OrderController@deliveryd')->name('deliveryd');
         Route::get('paymentd', 'OrderController@paymentd')->name('paymentd');
         Route::get('completed', 'OrderController@completed')->name('completed');
+        //daily order filterbydate
+        Route::get('orderpreparedf/{from}/{to}', 'OrderController@orderpreparedf')->name('orderpreparedf');
+        Route::get('deliverydf/{from}/{to}', 'OrderController@deliverydf')->name('deliverydf');
+        Route::get('paymentdf/{from}/{to}', 'OrderController@paymentdf')->name('paymentdf');
+        Route::get('completedf/{from}/{to}', 'OrderController@completedf')->name('completedf');
         
         //monthly order
         Route::get('orderpreparem', 'OrderController@orderpreparem')->name('orderpreparem');

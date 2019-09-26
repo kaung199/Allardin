@@ -5,12 +5,27 @@
 @endsection
 @section('breadcrumbs')
     <li class="breadcrumb-item active"><a href="{{ route('order') }}">Orders</a></li>
-    <li class="breadcrumb-item active">OrdersbyDate</li>
+    <li class="breadcrumb-item active">
+        @if($from && $to)
+        ( {{ $from . '/' .  $to }} )
+        @endif
+    </li>
 @endsection
 @section('contents') 
 <div class="container">
     <div class="row">
         <div class="col-md-6">
+        <div class="dropdown">
+            <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Filter with Delivery Status
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                <a class="dropdown-item" href="{{ route('orderpreparef', [$from, $to]) }}">Order Prepare</a>
+                <a class="dropdown-item" href="{{ route('deliveryf', [$from, $to]) }}">Delivery</a>
+                <a class="dropdown-item" href="{{ route('paymentf', [$from, $to]) }}">Payment</a>
+                <a class="dropdown-item" href="{{ route('completef', [$from, $to]) }}">Complete</a>
+            </div>
+        </div>
         </div>
         <div class="col-md-6">
             <div class="folat-right" style="float: right;">
@@ -207,6 +222,7 @@
         </table>
     </div>
 @endforeach
+
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 <script>

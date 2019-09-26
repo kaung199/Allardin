@@ -420,6 +420,32 @@ class OrderController extends Controller
         $orders = Order::where(deliverystatus, 4)->get();
         return view('orders.complete', compact('orders'));
     }
+    // all orderf
+    public function orderpreparef($from, $to)
+    {
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where(deliverystatus, 1)->get();
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        return view('orders.orderprepare', compact('orders', 'deliveries', 'from', 'to'));
+    }
+    public function deliveryf($from, $to)
+    {
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where(deliverystatus, 2)->get();
+        return view('orders.delivery', compact('orders', 'from', 'to'));  
+    }
+    public function paymentf($from, $to)
+    {
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                    ->where(deliverystatus, 3)->get();
+        return view('orders.payment', compact('orders', 'from', 'to'));
+    }
+    public function completef($from, $to)
+    {
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where(deliverystatus, 4)->get();
+        return view('orders.complete', compact('orders', 'from', 'to'));
+    }
 
     //daily order
     public function orderprepared()
@@ -427,7 +453,7 @@ class OrderController extends Controller
         $today = Carbon::now()->toDateString();
         $orders = Order::where([ 
             [deliverystatus, 1],
-            ['deliverydate', $today]
+            ['orderdate', $today]
             ])->get();
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         return view('orders.daily.orderprepare', compact('orders', 'today', 'deliveries'));
@@ -437,7 +463,7 @@ class OrderController extends Controller
         $today = Carbon::now()->toDateString();
         $orders = Order::where([ 
             [deliverystatus, 2],
-            ['deliverydate', $today]
+            ['orderdate', $today]
             ])->get();
         return view('orders.daily.delivery', compact('orders', 'today'));  
     }
@@ -446,7 +472,7 @@ class OrderController extends Controller
         $today = Carbon::now()->toDateString();
         $orders = Order::where([ 
             [deliverystatus, 3],
-            ['deliverydate', $today]
+            ['orderdate', $today]
             ])->get();
         return view('orders.daily.payment', compact('orders', 'today'));
     }
@@ -455,9 +481,39 @@ class OrderController extends Controller
         $today = Carbon::now()->toDateString();
         $orders = Order::where([ 
             [deliverystatus, 4],
-            ['deliverydate', $today]
+            ['orderdate', $today]
             ])->get();
         return view('orders.daily.complete', compact('orders', 'today'));
+    }
+    //daily order filterbydate
+    public function orderpreparedf($from, $to)
+    {
+        $today = Carbon::now()->toDateString();
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where(deliverystatus, 1)->get();
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        return view('orders.daily.orderprepare', compact('orders', 'today', 'deliveries', 'from', 'to'));
+    }
+    public function deliverydf($from, $to)
+    {
+        $today = Carbon::now()->toDateString();
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where(deliverystatus, 2)->get();
+        return view('orders.daily.delivery', compact('orders', 'today', 'from', 'to'));  
+    }
+    public function paymentdf($from, $to)
+    {
+        $today = Carbon::now()->toDateString();
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where(deliverystatus, 3)->get();
+        return view('orders.daily.payment', compact('orders', 'today', 'from', 'to'));
+    }
+    public function completedf($from, $to)
+    {
+        $today = Carbon::now()->toDateString();
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where(deliverystatus, 4)->get();
+        return view('orders.daily.complete', compact('orders', 'today', 'from', 'to'));
     }
 
 
@@ -580,7 +636,77 @@ class OrderController extends Controller
         $to = $request->to;
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         $orders = Order::whereBetween('orderdate', [$from, $to])->get();
-        return view('orders.searchbydate', \compact('orders', 'deliveries'));  
+        return view('orders.searchbydate', \compact('orders', 'deliveries', 'from', 'to'));  
+    }
+    public function searcho(Request $request) 
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                            ->where('deliverystatus', 1)->get();
+        return view('orders.orderprepare', \compact('orders', 'deliveries', 'from', 'to'));  
+    }
+    public function searchd(Request $request) 
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where('deliverystatus', 2)->get();
+        return view('orders.delivery', \compact('orders', 'from', 'to'));  
+    }
+    public function searchp(Request $request) 
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where('deliverystatus', 3)->get();
+        return view('orders.payment', \compact('orders', 'from', 'to'));  
+    }
+    public function searchc(Request $request) 
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where('deliverystatus', 4)->get();
+        return view('orders.complete', \compact('orders', 'from', 'to'));  
+    }
+    public function searchbydateo(Request $request) 
+    {
+        $today = Carbon::now()->toDateString();
+        $from = $request->from;
+        $to = $request->to;
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where('deliverystatus', 1)->get();
+        return view('orders.daily.orderprepare', \compact('orders','today', 'deliveries', 'from', 'to'));  
+    }
+    public function searchbydated(Request $request) 
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $today = Carbon::now()->toDateString();
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where('deliverystatus', 2)->get();
+        return view('orders.daily.delivery', \compact('orders', 'today', 'from', 'to'));  
+    }
+    public function searchbydatep(Request $request) 
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $today = Carbon::now()->toDateString();
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where('deliverystatus', 3)->get();
+        return view('orders.daily.payment', \compact('orders', 'today', 'from', 'to'));  
+    }
+    public function searchbydatec(Request $request) 
+    {
+        $from = $request->from;
+        $to = $request->to;
+        $today = Carbon::now()->toDateString();
+        $orders = Order::whereBetween('orderdate', [$from, $to])
+                        ->where('deliverystatus', 4)->get();
+        return view('orders.daily.complete', \compact('orders', 'today', 'from', 'to'));  
     }
 
     public function searchxls(Request $request) 
@@ -600,7 +726,7 @@ class OrderController extends Controller
         $ordersc = Order::whereBetween('orderdate', [$from, $to])
                         ->where('deliverystatus', 4)
                         ->get();
-        return view('orders.exportxls', compact('orderso','ordersd','ordersp','ordersc', 'deliveries')); 
+        return view('orders.exportxls', compact('orderso','ordersd','ordersp','ordersc', 'deliveries', 'from', 'to')); 
 
     }
     public function searchdaily(Request $request) 
