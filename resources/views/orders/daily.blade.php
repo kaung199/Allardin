@@ -4,33 +4,42 @@
     Orders Daily
 @endsection
 @section('breadcrumbs')
+    @if($ddfrom && $ddto)
+    <li class="breadcrumb-item active"> <a href="{{ url('daily') }}">Daily</a></li>
+    <li class="breadcrumb-item active">Dliverydate ({{ $ddfrom . '/' . $ddto }})</li>
+    @else
     <li class="breadcrumb-item active"> <a href="{{ url('order') }}">Order</a></li>
     <li class="breadcrumb-item active">Today</li>
+    @endif
 @endsection
 @section('contents') 
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-            <div class="dropdown">
-                <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Filter with Delivery Status
-                </button>
-                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                    <a class="dropdown-item" href="{{ route('orderprepared') }}">Order Prepare</a>
-                    <a class="dropdown-item" href="{{ route('deliveryd') }}">Delivery</a>
-                    <a class="dropdown-item" href="{{ route('paymentd') }}">Payment</a>
-                    <a class="dropdown-item" href="{{ route('completed') }}">Complete</a>
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('ddsearch') }}" method="GET">
+                @csrf
+                <div class="input-group">
+                    <label for="from">D-From</label>
+                    <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="ddfrom" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
+                    <label for="to">D-To</label>
+                    <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="ddto" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button class="btn btn-primary" type="submit" value="search">
+                        <i class="fas fa-search"></i>
+                        </button>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
+        
         <div class="col-md-6">
             <div class="folat-right" style="float: right;">
                 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchxls') }}" method="GET">
                     @csrf
                     <div class="input-group">
-                    <label for="from">From</label>
+                    <label for="from">O-From</label>
                     <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="from" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
-                    <label for="to">To</label>
+                    <label for="to">O-To</label>
                     <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="to" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="submit" value="search">
@@ -40,6 +49,17 @@
                     </div>
                 </form>
             </div>
+        </div>
+    </div> 
+    <div class="dropdown pt-1">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Filter with Delivery Status
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="{{ route('orderprepared') }}">Order Prepare</a>
+            <a class="dropdown-item" href="{{ route('deliveryd') }}">Delivery</a>
+            <a class="dropdown-item" href="{{ route('paymentd') }}">Payment</a>
+            <a class="dropdown-item" href="{{ route('completed') }}">Complete</a>
         </div>
     </div>
 </div>

@@ -15,7 +15,6 @@
 <div class="container">
     <div class="row">
         <div class="col-md-6">
-        <button onclick="exportTableToExcel('tblData', dateTime)">Export Excel File</button>
         <div class="dropdown">
                 <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     Filter with Delivery Status
@@ -46,6 +45,9 @@
                 </form>
             </div>
         </div>
+    </div>
+    <div class="pt-1">
+        <button onclick="exportTableToExcel('tblData', dateTime)" class="bg-success">Export Excel File</button>
     </div>
 </div>
 <br>

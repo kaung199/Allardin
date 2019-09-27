@@ -260,7 +260,6 @@ class OrderController extends Controller
                 $deliverystatus->update([
                     'deliverystatus' => 2,
                     'orderdate' =>  date('Y-m-d'),
-                    'deliverydate' =>  date('Y-m-d'),
                     'monthly' =>  date('Y-m'),
                     'yearly' =>  date('Y'),
                 ]);
@@ -297,7 +296,6 @@ class OrderController extends Controller
                 $deliverystatus->update([
                     'deliverystatus' => 2,
                     'orderdate' =>  date('Y-m-d'),
-                    'deliverydate' =>  date('Y-m-d'),
                     'monthly' =>  date('Y-m'),
                     'yearly' =>  date('Y'),
                 ]);
@@ -337,7 +335,6 @@ class OrderController extends Controller
                 'deliverystatus' => 2,
                 'delivery_id' => $request->delivery_id,
                 'orderdate' =>  date('Y-m-d'),
-                'deliverydate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
             ]);
@@ -355,7 +352,6 @@ class OrderController extends Controller
             $deliverystatus->update([
                 'deliverystatus' => 2,
                 'orderdate' =>  date('Y-m-d'),
-                'deliverydate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
                 'delivery_id' => $request->delivery_id
@@ -372,7 +368,6 @@ class OrderController extends Controller
             $deliverystatus->update([
                 'deliverystatus' => 2,
                 'orderdate' =>  date('Y-m-d'),
-                'deliverydate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
             ]);
@@ -709,6 +704,26 @@ class OrderController extends Controller
         return view('orders.daily.complete', \compact('orders', 'today', 'from', 'to'));  
     }
 
+    public function ddsearch(Request $request) 
+    {       
+        $ddfrom = $request->ddfrom;
+        $ddto = $request->ddto;
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        $orderso = Order::whereBetween('deliverydate', [$ddfrom, $ddto])
+                        ->where('deliverystatus', 1)
+                        ->get();
+        $ordersd = Order::whereBetween('deliverydate', [$ddfrom, $ddto])
+                        ->where('deliverystatus', 2)
+                        ->get();
+        $ordersp = Order::whereBetween('deliverydate', [$ddfrom, $ddto])
+                        ->where('deliverystatus', 3)
+                        ->get();
+        $ordersc = Order::whereBetween('deliverydate', [$ddfrom, $ddto])
+                        ->where('deliverystatus', 4)
+                        ->get();
+        return view('orders.daily', compact('orderso','ordersd','ordersp','ordersc', 'deliveries', 'ddfrom', 'ddto')); 
+
+    }
     public function searchxls(Request $request) 
     {       
         $from = $request->from;
@@ -729,6 +744,7 @@ class OrderController extends Controller
         return view('orders.exportxls', compact('orderso','ordersd','ordersp','ordersc', 'deliveries', 'from', 'to')); 
 
     }
+  
     public function searchdaily(Request $request) 
     {
         $from = $request->from;

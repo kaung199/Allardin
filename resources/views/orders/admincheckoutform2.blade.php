@@ -88,7 +88,7 @@
         </div>
         <div class="form-group">
             {{ Form::label(null,'DeliveryDate') }}
-            <input type="date" name="deliverydate" data-date-inline-picker="true" style="box-shadow: none;"  class="form-control" aria-label="Search" aria-describedby="basic-addon2">
+            <input type="date" name="deliverydate" data-date-inline-picker="true" style="box-shadow: none;"  class="form-control" aria-label="Search" aria-describedby="basic-addon2" required="required">
             
         </div>
         <div class="form-group">

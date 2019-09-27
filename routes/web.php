@@ -71,6 +71,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::get('/searchbydatep', 'OrderController@searchbydatep')->name('searchbydatep');
         Route::get('/searchbydatec', 'OrderController@searchbydatec')->name('searchbydatec');
         Route::get('/searchxls', 'OrderController@searchxls')->name('searchxls');
+        Route::get('/ddsearch', 'OrderController@ddsearch')->name('ddsearch');
         Route::post('/searchbydatedaily', 'OrderController@searchdaily')->name('searchbydatedaily');
         Route::post('/searchtotal', 'OrderController@searchtotal')->name('searchtotal');
         Route::post('/searchbydatedelivery', 'OrderController@searchdelivery')->name('searchbydatedelivery');
