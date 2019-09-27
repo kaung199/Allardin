@@ -2,7 +2,7 @@
 
 
 @section('contents')
-<div class="container">
+<div class="container hide">
   <div class="row">
     <div class="col-md-6">
     </div>
@@ -271,7 +271,7 @@
                         @endif
                       </td>
                     @else
-                    <td>
+                    <td class="hide">
                       @if($orderdetail->order->deliverystatus == 1)
                       <a href="#" class="btn btn-outline-primary">Order Prepare</a>
                       @endif
@@ -482,7 +482,7 @@
                           @endif
                         </td>
                       @else
-                      <td>
+                      <td class="hide">
                         @if($orderdetail->order->deliverystatus == 1)
                         <a href="#" class="btn btn-outline-primary">Order Prepare</a>
                         @endif
@@ -688,7 +688,7 @@
                           @endif
                         </td>
                       @else
-                      <td>
+                      <td class="hide">
                         @if($orderdetail->order->deliverystatus == 1)
                         <a href="#" class="btn btn-outline-primary">Order Prepare</a>
                         @endif

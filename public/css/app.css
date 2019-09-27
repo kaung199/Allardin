@@ -10868,6 +10868,10 @@ body {
   }
 }
 
+.orderprepare .cusmt {
+  margin-top: -109px;
+}
+
 .orderprepare .tr_hide {
   visibility: hidden;
 }
@@ -10882,12 +10886,6 @@ body {
 }
 
 @media print {
-  .orderprepare {
-    /* .print , .print1, .print2 {
-        max-height: 50%;
-    } */
-  }
-
   .orderprepare body * {
     visibility: hidden;
     font-size: 18px;
