@@ -195,7 +195,7 @@
           </tr>
         </tbody>
       </table>
-      <div class="deliverycss">
+      <div>
         @if($orderdetail->order->delivery_id != null)
         
         <h4>Delivery</h4>

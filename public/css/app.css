@@ -10868,6 +10868,104 @@ body {
   }
 }
 
+.orderprepare .tr_hide {
+  visibility: hidden;
+}
+
+.orderprepare .print12hide,
+.orderprepare .aladdinh2 {
+  display: none;
+}
+
+.orderprepare .displaynone {
+  display: none;
+}
+
+@media print {
+  .orderprepare {
+    /* .print , .print1, .print2 {
+        max-height: 50%;
+    } */
+  }
+
+  .orderprepare body * {
+    visibility: hidden;
+    font-size: 18px;
+  }
+
+  .orderprepare .card,
+  .orderprepare .footerhide {
+    display: none;
+  }
+
+  .orderprepare .displaynone {
+    display: block;
+  }
+
+  .orderprepare .table th,
+  .orderprepare .table td {
+    padding: 0.3rem !important;
+  }
+
+  .orderprepare .deliverycss {
+    display: none !important;
+  }
+
+  .orderprepare .printposition {
+    top: 0;
+    left: 0;
+    position: absolute;
+  }
+
+  .orderprepare .print12hide,
+  .orderprepare .aladdinh2 {
+    display: block;
+  }
+
+  .orderprepare .print *,
+  .orderprepare .print1 *,
+  .orderprepare .print2 * {
+    visibility: visible;
+  }
+
+  .orderprepare .print1,
+  .orderprepare .print2 {
+    padding-top: 20px;
+  }
+
+  .orderprepare .hr {
+    width: 100%;
+    border-top: solid 1px #0c0101;
+    border-style: dotted;
+    margin-bottom: 20px;
+  }
+
+  .orderprepare .printpdt {
+    left: 0;
+  }
+
+  .orderprepare .hide,
+  .orderprepare .spanshow {
+    display: none;
+  }
+
+  .orderprepare .tr_hide {
+    visibility: visible;
+  }
+
+  .orderprepare .tr_show {
+    display: none;
+  }
+
+  .orderprepare .cusmt {
+    margin-top: 0;
+  }
+
+  .orderprepare .cusmt table td {
+    font-size: 25px;
+  }
+}
+
 .orderprepare .table-bordered th,
 .orderprepare .table-bordered td {
   padding: 10px;
