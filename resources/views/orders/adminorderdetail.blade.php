@@ -302,6 +302,10 @@
         </table>
         @endif
       </div>
+      @if($orderdetail->order->remark)
+      <strong>Remark => </strong>
+      {{ $orderdetail->order->remark }}
+      @endif
     </div>
     
   </div>
