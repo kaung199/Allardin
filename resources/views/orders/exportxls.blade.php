@@ -47,7 +47,7 @@
         </div>
     </div>
     <div class="pt-1">
-        <button onclick="exportTableToExcel('tblData', dateTime)" class="bg-success">Export Excel File</button>
+        <a href="{{ route('export', [$from, $to]) }}"  class="btn btn-success">Export Excel File</a>
     </div>
 </div>
 <br>

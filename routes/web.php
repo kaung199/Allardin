@@ -121,6 +121,8 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::get('deliveryd', 'OrderController@deliveryd')->name('deliveryd');
         Route::get('paymentd', 'OrderController@paymentd')->name('paymentd');
         Route::get('completed', 'OrderController@completed')->name('completed');
+        Route::get('export/{from}/{to}', 'OrderController@export')->name('export');
+
         //daily order filterbydate
         Route::get('orderpreparedf/{from}/{to}', 'OrderController@orderpreparedf')->name('orderpreparedf');
         Route::get('deliverydf/{from}/{to}', 'OrderController@deliverydf')->name('deliverydf');
