@@ -7,6 +7,7 @@ use Spatie\Searchable\Search;
 use App\Http\Requests\Ostore;
 use Excel;
 use App\Township;
+use App\Delivery;
 use App\User;
 use App\Order_detail;
 use App\Order;

@@ -12,6 +12,7 @@
     </li>
 @endsection
 @section('contents') 
+<?php  use App\User; ?>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -170,6 +171,7 @@
             <th scope="col" class="text-right">Total Price</th>
             <th scope="col">Order Date</th>
             <th scope="col">Delivery Date</th>
+            <th scope="col">Delivery Name</th>
             <th scope="col">Remark</th>
             <th scope="col">Delivery Status</th>
             <th scope="col">Action</th>
@@ -184,6 +186,10 @@
                 <td class="text-right">{{ $orderd->totalprice + $orderd->user->township->deliveryprice }}</td>
                 <td>{{ $orderd->created_at }}</td>
                 <td>{{ $orderd->deliverydate }}</td>
+                <?php 
+                    $delivery = User::find($orderd->delivery_id);
+                ?>
+                <td>{{ $delivery->name }}</td>
                 <td>{{ $orderd->remark }}</td>
                 <td  data-th="">
                     @if($orderd->deliverystatus == 1)
@@ -278,6 +284,7 @@
             <th scope="col" class="text-right">Total Price</th>
             <th scope="col">Order Date</th>
             <th scope="col">Delivery Date</th>
+            <th scope="col">Delivery Name</th>
             <th scope="col">Remark</th>
             <th scope="col">Delivery Status</th>
             <th scope="col">Action</th>
@@ -292,6 +299,10 @@
                 <td class="text-right">{{ $orderp->totalprice + $orderp->user->township->deliveryprice }}</td>
                 <td>{{ $orderp->created_at }}</td>
                 <td>{{ $orderp->deliverydate }}</td>
+                <?php 
+                    $delivery = User::find($orderp->delivery_id);
+                ?>
+                <td>{{ $delivery->name }}</td>
                 <td>{{ $orderp->remark }}</td>
                 <td  data-th="">
                     @if($orderp->deliverystatus == 1)
@@ -386,6 +397,7 @@
             <th scope="col" class="text-right">Total Price</th>
             <th scope="col">Order Date</th>
             <th scope="col">Delivery Date</th>
+            <th scope="col">Delivery Name</th>
             <th scope="col">Remark</th>
             <th scope="col">Delivery Status</th>
             <th scope="col">Action</th>
@@ -400,6 +412,10 @@
                 <td class="text-right">{{ $orderc->totalprice + $orderc->user->township->deliveryprice }}</td>
                 <td>{{ $orderc->created_at }}</td>
                 <td>{{ $orderc->deliverydate }}</td>
+                <?php 
+                    $delivery = User::find($orderc->delivery_id);
+                ?>
+                <td>{{ $delivery->name }}</td>
                 <td>{{ $orderc->remark }}</td>
                 <td  data-th="">
                     @if($orderc->deliverystatus == 1)
