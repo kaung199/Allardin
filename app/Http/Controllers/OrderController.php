@@ -799,21 +799,17 @@ class OrderController extends Controller
     public function export($from , $to) 
     {
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                ->join('order_details', 'orders.id', '=', 'order_details.order_id')
                 ->join('users', 'orders.user_id', '=', 'users.id')
                 ->select('orders.order_id as Order_id', 
                         'users.name as CustomerName', 'orders.totalquantity as TotalQty',
                         'orders.totalprice as TotalPrice', 'orders.created_at as Order_date',
                         'orders.deliverydate as DeliveryDate', 'orders.remark as Remark', 
-                        'orders.deliverystatus as DeliveryStatus')
-                ->get();
-            
+                        'orders.deliverystatus as DeliveryStatus')->get()->toArray(); 
         return Excel::create($from.'/'.$to.'-aladdin', function($excel) use ($orders) {
-            $excel->sheet('mySheet', function($sheet) use ($orders)
-            {
+            $excel->sheet('Aladdin', function($sheet) use ($orders) {
                 $sheet->fromArray($orders);
             });
-        })->download('xls'); 
+        })->download('xlsx'); 
     }
     
 }

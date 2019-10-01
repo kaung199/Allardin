@@ -41,6 +41,11 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
+            @if(Auth::user()->role_id == 1)
+            <li class="nav-item active">
+              <a class="nav-link" href="{{ route('dashboard') }}">Dashboard<span class="sr-only">(current)</span></a>
+            </li>
+            @endif
             <li class="nav-item active">
               <a class="nav-link" href="{{ route('adminindex') }}">Home <span class="sr-only">(current)</span></a>
             </li>
