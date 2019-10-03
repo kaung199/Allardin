@@ -101,26 +101,30 @@
 				<img src="{{ asset('ui/images/messenger.png') }}" class="img-responsive" style="width:50px height:50px" alt="">
 			</a>
 		</div>
+		<div class="messageerbg">
+			<div class="container paddingtb">
+				<div class="borderpd">
+					<div class="textpadding">
+						<h3>How To Buy!</h3>
+						<p>မိမိဝယ္ယူလိုေသာ ပစၥည္းအား Screen Shot ရုိက္ျပီး (Icon Photo ထည့္ရန္) Messenger Button Icon ေလးကို ႏွိပ္ျပီး ေရွ႕ဆက္သြားမည္ ႏွိပ္ကာ Aladdin Online Messenger ထဲ ေရာက္သြားေသာအခါတြင္ Screen Shots ရုိက္ထားေသာ ယူမည့္ပစၥည္းမ်ားအား ပို႔ေပးျပီး မွာယူအားေပးႏုိင္ပါျပီ။ အားေပးမႈ အတြက္ အထူးပင္ ေက်းဇူးတင္ရွိပါတယ္။</p>
+					</div>
+				</div>
+			</div>
+		</div>
 		<div class="footer">
 			<div class="container">
 				<h3>About Us</h3>
-				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ut veniam dicta. Doloribus, cum repellat, aliquid unde illo eius illum debitis recusandae cumque deleniti itaque. Delectus asperiores in commodi. Nihil.</p>	
-				<div class="row"> 			
-					<div class="col-md-3">
-						<h4>Contact:</h4>
-						<p>No.123, Yangon, Familydoctor</p>
-					</div>
+				<p>Aladdin Onlineshopping သည္ လူသံုးကုန္ပစၥည္းမ်ားအား အတစ္ေနရာတည္းတြင္ ေစ်းႏႈန္းသက္သာစြာျဖင့္ ဝယ္ယူႏုိင္ျပီး ယံုၾကည္စိတ္ခ်ရေသာ Online Shopping ျဖစ္ပါတယ္။ ရန္ကုန္ျမိဳ႕ႏွင့္ ျမိဳ႕နယ္ေပါင္း ၁၀၀ ေက်ာ္ကို ပစၥည္းေရာက္ေငြေခ် စနစ္ျဖင့္ ပို႔ေဆာင္ေပးေနျပီျဖစ္ပါတယ္။ </p>	
+				<div class="row">
 					<div class="col-md-3">
 						<h4>Phone:</h4>
-						<p>098734783478, 093748346836</p>
-					</div>
-					<div class="col-md-3">
-						<h4>Email:</h4>
-						<p>example@gmail.com</p>
+						<p>09-686781222</p>
 					</div>
 					<div class="col-md-3">
 						<h4>Facebook:</h4>
-						<p>www.facebook.com</p>
+						<p>
+							<a href="https://www.facebook.com/Aladdin-online-shopping-271391543764511/?ref=br_rs">www.facebook.com/Aladdin-online-shopping</a>
+						</p>
 					</div>
 				</div>
 			</div>

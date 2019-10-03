@@ -63,7 +63,7 @@
     </ul>
     <div class="btn_form">
         <form>
-            <input type="submit" value="Add to Cart" title="">
+            <input type="submit" value="Add to Cart" title="" disabled>
         </form>
     </div>
     <h2 class="quick">Description:</h2>

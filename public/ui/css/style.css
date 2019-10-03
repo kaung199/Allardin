@@ -4,7 +4,26 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 */
-
+.footer a {
+	color: #ffffff;
+}
+.messageerbg {
+	background: #DFDDDD;
+}
+.messageerbg p{
+	text-align: justify;
+}
+.paddingtb {
+	padding: 40px 0;
+}
+.borderpd {
+	padding: 10px 0;
+	border: 3px solid #0783fc;
+	border-radius: 30px;
+}
+.textpadding {
+	padding: 5px 10px;
+}
 .messenger img {
 	width: 55px;
 	height: 55px;
