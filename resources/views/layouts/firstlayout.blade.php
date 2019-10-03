@@ -5,21 +5,18 @@
 <title>
     @yield('title')
 </title>
-<link href="{{ asset('ui/css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
-<script src="/ui/js/jquery.min.js"></script>
-<link href="/ui/css/style.css" rel='stylesheet' type='text/css' />
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="{{ asset('ui/css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
+<link href="{{ asset('ui/css/style.css') }}" rel='stylesheet' type='text/css' />
+<link href="{{ asset('vendor/fontawesome-free/css/all.min.css') }}" rel="stylesheet" type="text/css">
+<link rel="stylesheet" href="{{ asset('ui/css/etalage.css') }}">
+<link href="{{ asset('ui/css/magnific-popup.css') }}" rel="stylesheet" type="text/css">
+<script src="{{  asset('ui/js/jquery.min.js') }}"></script>
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<link href='http://fonts.googleapis.com/css?family=Raleway:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700,800,900' rel='stylesheet' type='text/css'>
-<script src="/ui/js/jquery.easydropdown.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Padauk&display=swap" rel="stylesheet">
-<link href="/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-<script src="/ui/js/jquery.magnific-popup.js" type="text/javascript"></script>
-<link href="/ui/css/magnific-popup.css" rel="stylesheet" type="text/css">
-<link rel="stylesheet" href="/ui/css/etalage.css">
-<script src="/ui/js/jquery.etalage.min.js"></script>
-<script src="{{ asset('js/easyResponsiveTabs.js')}}" type="text/javascript"></script>
+<script src="{{ asset('ui/js/jquery.easydropdown.js') }}"></script>
+<script src="{{ asset('ui/js/jquery.magnific-popup.js') }}" type="text/javascript"></script>
+<script src="{{ asset('ui/js/jquery.etalage.min.js') }}"></script>
 		<script>
 			$(document).ready(function() {
 				$('.popup-with-zoom-anim').magnificPopup({
@@ -58,11 +55,13 @@
 		<div class="menubar">
 			<div class="container">
 				<div class="row">
-					<div class="col-md-2 col-sm-12">
-						<div class="logoaladdin">
-							<img src="/ui/images/logo.png" alt="">
+					<a href="{{ url('/') }}">
+						<div class="col-md-2 col-sm-12">
+							<div class="logoaladdin">
+								<img src="/ui/images/logo.png" alt="">
+							</div>
 						</div>
-					</div>
+					</a>
 					<div class="col-md-6 col-sm-12">
 						<div class="searchbar">
 							<div class="header-search clearfix">
@@ -95,6 +94,12 @@
 				</div>
 			</div>
 			</div>
+		</div>
+
+		<div class="messenger">
+			<a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg">
+				<img src="{{ asset('ui/images/messenger.png') }}" class="img-responsive" style="width:50px height:50px" alt="">
+			</a>
 		</div>
 		<div class="footer">
 			<div class="container">

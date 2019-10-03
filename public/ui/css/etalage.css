@@ -73,3 +73,9 @@
 div.etalage_description{ position:absolute; bottom:0; left:0; z-index:999 }
 div.etalage_description.rtl{ direction:rtl; text-align:right }
 
+@media (max-width:480px){
+	
+	#etalage .etalage_hint {
+		display: none !important;
+	}
+}

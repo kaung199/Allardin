@@ -809,7 +809,7 @@ class OrderController extends Controller
             $excel->sheet('Aladdin', function($sheet) use ($orders) {
                 $sheet->fromArray($orders);
             });
-        })->download('xlsx'); 
+        })->download('xls'); 
     }
     
 }

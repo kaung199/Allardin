@@ -12,7 +12,7 @@
             <a href="{{ url('/') }}" title="Go to Home Page">Home</a>&nbsp;
             <span>&gt;</span>
         </li>
-        <li class="women">&nbsp;
+        <li class="women text1line">&nbsp;
             {{ $product->name }}&nbsp;
         </li>
     </ul>

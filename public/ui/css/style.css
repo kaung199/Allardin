@@ -4,6 +4,21 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 */
+
+.messenger img {
+	width: 55px;
+	height: 55px;
+	background: none;
+	position: fixed;
+	z-index: 999;
+	right: 10px;
+	bottom: 50px;
+}
+.messenger img:hover {
+	width: 60px;
+	height: 60px;
+}
+
 h4, h5, h6,
 h1, h2, h3 {margin-top: 0;}
 ul, ol {margin: 0;}
@@ -68,6 +83,7 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 	height: 52px;
 	background: rgb(255, 255, 255);
 	padding: 0px 15px;
+	outline: none;
 }
 .header-search-form input {
 	margin-bottom: 0px;
@@ -1557,6 +1573,16 @@ h2.resp-accordion:hover{
 	color: #FFF;
 }
 @media only screen and (max-width:480px) {
+.text1line {
+	max-width: 160px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-bottom: -8px;
+}
+.header-search {
+	padding-right: 80px;
+}
 .sap_tabs{
 	padding-top:0;
 }
@@ -2330,8 +2356,15 @@ p.cart_desc {
 }
 }
 @media (max-width:480px){
+
+#etalage .etalage_hint {
+	display: none;
+}
+.text1line {
+	max-width: 125px;
+}
 #etalage .etalage_thumb_image {
-	width: 353px !important;
+	width: 350px !important;
 }
 #etalage, .cont1.span_2_of_a1 {
 	padding-left: 0px;
@@ -2431,6 +2464,12 @@ i.pin {
 }
 }
 @media (max-width:320px){
+.previous {
+	display: none;
+}
+.view img {
+	width: 100%;
+}
 #etalage .etalage_thumb_image {
 	width: 292px !important;
 	height: 300px !important;

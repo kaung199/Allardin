@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<html lang="en">
 <head>
 	<title>Aladdin Online Shop</title>
 	<meta charset="utf-8">
@@ -12,9 +12,7 @@
 <body>
 	<div id="app">
 		<App></App>
-	</div>
-	
-	
+	</div>	
 	<script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
