@@ -122,6 +122,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::get('paymentd', 'OrderController@paymentd')->name('paymentd');
         Route::get('completed', 'OrderController@completed')->name('completed');
         Route::get('export/{from}/{to}', 'OrderController@export')->name('export');
+        Route::get('ddexport/{from}/{to}', 'OrderController@ddexport')->name('ddexport');
 
         //daily order filterbydate
         Route::get('orderpreparedf/{from}/{to}', 'OrderController@orderpreparedf')->name('orderpreparedf');

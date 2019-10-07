@@ -282,7 +282,9 @@ class OrderController extends Controller
             if($deliverystatus->deliverystatus == 4) {
                 $deliverystatus->update([
                     'deliverystatus' => 1,
-                    'delivery_id' => null
+                    'delivery_id' => null,
+                    'dname' => null,
+                    'dphone' => null,
                 ]);                
 
                 return redirect()->back()->with('deliverystatus', 'Status Change successful');
@@ -318,7 +320,9 @@ class OrderController extends Controller
             if($deliverystatus->deliverystatus == 4) {
                 $deliverystatus->update([
                     'deliverystatus' => 1,
-                    'delivery_id' => null
+                    'delivery_id' => null,
+                    'dname' => null,
+                    'dphone' => null,
                 ]);                
 
                 return redirect()->back()->with('deliverystatus', 'Status Change successful');
@@ -333,9 +337,12 @@ class OrderController extends Controller
         }
         $deliverystatus = Order::find($id);
         if($deliverystatus->deliverystatus == 1) {
+            $delivery = User::find($request->delivery_id);
             $deliverystatus->update([
                 'deliverystatus' => 2,
                 'delivery_id' => $request->delivery_id,
+                'dname' => $delivery->name,
+                'dphone' => $delivery->phone,
                 'orderdate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
@@ -351,12 +358,15 @@ class OrderController extends Controller
         }
         $deliverystatus = Order::find($id);
         if($deliverystatus->deliverystatus == 1) {
+            $delivery = User::find($request->delivery_id);
             $deliverystatus->update([
                 'deliverystatus' => 2,
                 'orderdate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
-                'delivery_id' => $request->delivery_id
+                'delivery_id' => $request->delivery_id,
+                'dname' => $delivery->name,
+                'dphone' => $delivery->phone,
             ]);
             return redirect()->route('order')->with('deliverystatus', 'Status Change successful');
         }
@@ -801,11 +811,26 @@ class OrderController extends Controller
         $orders = Order::whereBetween('orderdate', [$from, $to])
                 ->join('users', 'orders.user_id', '=', 'users.id')
                 ->select('orders.order_id as Order_id', 
-                        'users.name as CustomerName', 'orders.totalquantity as TotalQty',
+                        'users.name as CustomerName','users.phone as Phone','users.address as Address', 'orders.totalquantity as TotalQty',
                         'orders.totalprice as TotalPrice', 'orders.created_at as Order_date',
-                        'orders.deliverydate as DeliveryDate', 'orders.remark as Remark', 
+                        'orders.deliverydate as DeliveryDate','orders.dname as Delivery','orders.dphone as DePhone', 'orders.remark as Remark', 
                         'orders.deliverystatus as DeliveryStatus')->get()->toArray(); 
-        return Excel::create($from.'/'.$to.'-aladdin', function($excel) use ($orders) {
+        return Excel::create($from.'/'.$to.'-aladdin(OrderDate)', function($excel) use ($orders) {
+            $excel->sheet('Aladdin', function($sheet) use ($orders) {
+                $sheet->fromArray($orders);
+            });
+        })->download('xls'); 
+    }
+    public function ddexport($ddfrom , $ddto) 
+    {
+        $orders = Order::whereBetween('orderdate', [$ddfrom, $ddto])
+                ->join('users', 'orders.user_id', '=', 'users.id')
+                ->select('orders.order_id as Order_id', 
+                        'users.name as CustomerName', 'users.phone as Phone', 'users.address as Address', 'orders.totalquantity as TotalQty',
+                        'orders.totalprice as TotalPrice', 'orders.created_at as Order_date',
+                        'orders.deliverydate as DeliveryDate','orders.dname as Delivery','orders.dphone as DeliveryPhone', 'orders.remark as Remark', 
+                        'orders.deliverystatus as DeliveryStatus')->get()->toArray(); 
+        return Excel::create($ddfrom.'/'.$ddto.'-aladdin(DeliveryDate)', function($excel) use ($orders) {
             $excel->sheet('Aladdin', function($sheet) use ($orders) {
                 $sheet->fromArray($orders);
             });

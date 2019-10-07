@@ -52,6 +52,11 @@
             </div>
         </div>
     </div> 
+    @if($ddfrom && $ddto)
+    <div class="pt-1">
+        <a href="{{ route('ddexport', [$ddfrom, $ddto]) }}"  class="btn btn-success">Export Excel File</a>
+    </div>
+    @else
     <div class="dropdown pt-1">
         <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Filter with Delivery Status
@@ -63,6 +68,8 @@
             <a class="dropdown-item" href="{{ route('completed') }}">Complete</a>
         </div>
     </div>
+    @endif
+
 </div>
 <br>
 @if($orderso[0] != null)

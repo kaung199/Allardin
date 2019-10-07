@@ -89,7 +89,9 @@ class AccountController extends Controller
         }
         if($deliverystatus->deliverystatus == 4) {
             $deliverystatus->update([
-                'deliverystatus' => 1
+                'deliverystatus' => 1,
+                'dname' => '',
+                'dphone' => '',
             ]); 
             return redirect()->back()->with('deliverystatus', 'Status Change successful');
         }        
@@ -122,7 +124,9 @@ class AccountController extends Controller
         }
         if($deliverystatus->deliverystatus == 4) {
             $deliverystatus->update([
-                'deliverystatus' => 1
+                'deliverystatus' => 1,
+                'dname' => null,
+                'dphone' => null,
             ]); 
             return redirect('orderd')->with('deliverystatus', 'Status Change successful');
         }        
@@ -135,12 +139,15 @@ class AccountController extends Controller
         }
         $deliverystatus = Order::find($id);
         if($deliverystatus->deliverystatus == 1) {
+            $delivery = User::find($request->delivery_id);
             $deliverystatus->update([
                 'deliverystatus' => 2,
                 'orderdate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
-                'delivery_id' => $request->delivery_id
+                'delivery_id' => $request->delivery_id,
+                'dname' => $delivery->name,
+                'dphone' => $delivery->phone,
             ]);
             return redirect()->back()->with('deliverystatus', 'Status Change successful');
         }
@@ -153,12 +160,16 @@ class AccountController extends Controller
         }
         $deliverystatus = Order::find($id);
         if($deliverystatus->deliverystatus == 1) {
+            $delivery = User::find($request->delivery_id);
             $deliverystatus->update([
                 'deliverystatus' => 2,
                 'orderdate' =>  date('Y-m-d'),
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
-                'delivery_id' => $request->delivery_id
+                'delivery_id' => $request->delivery_id,
+                'dname' => $delivery->name,
+                'dphone' => $delivery->phone,
+                
             ]);
             return redirect('orderp')->with('deliverystatus', 'Status Change successful');
         }
