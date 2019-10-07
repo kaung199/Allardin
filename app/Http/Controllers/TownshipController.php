@@ -31,7 +31,6 @@ class TownshipController extends Controller
         return redirect()->route('townships.index');       
     }
 
-
     /**
      * Display the specified resource.
      *
@@ -42,7 +41,6 @@ class TownshipController extends Controller
     {
         return view('townships.edit', compact('township'));
     }
-
 
     /**
      * Update the specified resource in storage.
@@ -56,7 +54,6 @@ class TownshipController extends Controller
         $township->update($request->all());
         return redirect()->route('townships.index');
     }
-
 
     /**
      * Remove the specified resource from storage.

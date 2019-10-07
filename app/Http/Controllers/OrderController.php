@@ -194,18 +194,6 @@ class OrderController extends Controller
 
         // get next user id
         $next = Order_detail::where('order_id', '>', $id)->min('order_id');
-        
-        // get previous user id
-        // $previous = Order::where([
-        //     ['orders.id', '<', $id],
-        //     ['deliverystatus', 3]
-        //     ])->max('orders.id');
-
-        // // get next user id
-        // $next = Order::where([
-        //     ['orders.id', '>', $id],
-        //     ['deliverystatus', 3]
-        //     ])->max('orders.id');
 
         return view('orders.orderdetail', compact('orderdetails','previous','next','delivery', 'deliveries'));
     }
@@ -823,7 +811,7 @@ class OrderController extends Controller
     }
     public function ddexport($ddfrom , $ddto) 
     {
-        $orders = Order::whereBetween('orderdate', [$ddfrom, $ddto])
+        $orders = Order::whereBetween('deliverydate', [$ddfrom, $ddto])
                 ->join('users', 'orders.user_id', '=', 'users.id')
                 ->select('orders.order_id as Order_id', 
                         'users.name as CustomerName', 'users.phone as Phone', 'users.address as Address', 'orders.totalquantity as TotalQty',
