@@ -106,7 +106,7 @@
 				<div class="borderpd">
 					<div class="textpadding">
 						<h3>How To Buy!</h3>
-						<p>မိမိဝယ္ယူလိုေသာ ပစၥည္းအား Screen Shot ရုိက္ျပီး (Icon Photo ထည့္ရန္) Messenger Button Icon ေလးကို ႏွိပ္ျပီး ေရွ႕ဆက္သြားမည္ ႏွိပ္ကာ Aladdin Online Messenger ထဲ ေရာက္သြားေသာအခါတြင္ Screen Shots ရုိက္ထားေသာ ယူမည့္ပစၥည္းမ်ားအား ပို႔ေပးျပီး မွာယူအားေပးႏုိင္ပါျပီ။ အားေပးမႈ အတြက္ အထူးပင္ ေက်းဇူးတင္ရွိပါတယ္။</p>
+						<p>မိမိဝယ္ယူလိုေသာ ပစၥည္းအား Screen Shot ရုိက္ျပီး <img src="{{ asset('ui/images/messenger.png') }}" alt="" style="width:30px; height:30px;"> Messenger Button Icon ေလးကို ႏွိပ္ျပီး ေရွ႕ဆက္သြားမည္ ႏွိပ္ကာ Aladdin Online Messenger ထဲ ေရာက္သြားေသာအခါတြင္ Screen Shots ရုိက္ထားေသာ ယူမည့္ပစၥည္းမ်ားအား ပို႔ေပးျပီး မွာယူအားေပးႏုိင္ပါျပီ။ အားေပးမႈ အတြက္ အထူးပင္ ေက်းဇူးတင္ရွိပါတယ္။</p>
 					</div>
 				</div>
 			</div>

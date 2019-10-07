@@ -9,7 +9,7 @@ use Spatie\Searchable\SearchResult;
 class Order extends Model implements Searchable
 {
     protected $table = 'orders';
-    protected $fillable = ['order_id','delivery_id', 'totalquantity','discount','deliverydate','remark', 'totalprice','orderdate','monthly','yearly', 'deliverystatus', 'user_id'];
+    protected $fillable = ['order_id','delivery_id', 'totalquantity','discount','deliverydate','remark', 'totalprice','orderdate','monthly','yearly', 'deliverystatus','dname','dphone', 'user_id'];
 
     public function user()
     {

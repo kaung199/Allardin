@@ -80,12 +80,8 @@ class ProductController extends Controller
 
     public function edit($id, $page)
     {
-        if(Auth::user()->role_id == 1) {
-            $product = Product::find($id);
-            return view('products.edit', compact('product', 'page'));
-        } else {
-            return redirect()->back()->with('permission', 'Permission Deny');
-        }
+        $product = Product::find($id);
+        return view('products.edit', compact('product', 'page'));        
         
     }
     public function editdetail($id)
