@@ -19,6 +19,7 @@ class CreateOrdersTable extends Migration
             $table->string('delivery_id')->nullable();
             $table->unsignedInteger('totalquantity');
             $table->Integer('totalprice');
+            $table->Integer('grandtotal')->nullable();
             $table->string('deliverystatus');
             $table->unsignedInteger('discount')->nullable(); 
             $table->date('orderdate');

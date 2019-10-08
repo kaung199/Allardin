@@ -204,12 +204,14 @@
             <tr>
               <th scope="col">Name</th>
               <th scope="col">Phone</th>
+              <th scope="col">DeliveryDate</th>
             </tr>
           </thead>
           <tbody>
             <tr>
               <td>{{ $delivery->name }}</td>
               <td>{{ $delivery->phone }}</td>
+              <td>{{ $orderdetail->order->deliverydate }}</td>
             </tr>
           </tbody>
         </table>
@@ -405,7 +407,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="deliverycss">
+        <div>
           @if($orderdetail->order->delivery_id != null)
         
           <h4>Delivery</h4>
@@ -414,12 +416,14 @@
               <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Phone</th>
+                <th scope="col">DeliveryDate</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>{{ $delivery->name }}</td>
                 <td>{{ $delivery->phone }}</td>
+                <td>{{ $orderdetail->order->deliverydate }}</td>
               </tr>
             </tbody>
           </table>
@@ -611,7 +615,7 @@
             </tr>
           </tbody>
         </table>
-        <div class="deliverycss">
+        <div>
           @if($orderdetail->order->delivery_id != null)
           
           <h4>Delivery</h4>
@@ -620,12 +624,14 @@
               <tr>
                 <th scope="col">Name</th>
                 <th scope="col">Phone</th>
+                <th scope="col">DeliveryDate</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>{{ $delivery->name }}</td>
                 <td>{{ $delivery->phone }}</td>
+                <td>{{ $orderdetail->order->deliverydate }}</td>
               </tr>
             </tbody>
           </table>

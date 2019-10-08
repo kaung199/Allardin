@@ -65,6 +65,7 @@ class OrderController extends Controller
                 'order_id' => $unique,
                 'totalquantity' => $totalquantity,
                 'totalprice' =>  $total - $request->discount,
+                'grandtotal' =>  $total - $request->discount + $customer->township->deliveryprice,
                 'discount' =>  $request->discount,
                 'orderdate' =>  date('Y-m-d'),
                 'deliverydate' =>  $request->deliverydate,
@@ -800,7 +801,7 @@ class OrderController extends Controller
                 ->join('users', 'orders.user_id', '=', 'users.id')
                 ->select('orders.order_id as Order_id', 
                         'users.name as CustomerName','users.phone as Phone','users.address as Address', 'orders.totalquantity as TotalQty',
-                        'orders.totalprice as TotalPrice', 'orders.created_at as Order_date',
+                        'orders.grandtotal as TotalPrice', 'orders.created_at as Order_date',
                         'orders.deliverydate as DeliveryDate','orders.dname as Delivery','orders.dphone as DePhone', 'orders.remark as Remark', 
                         'orders.deliverystatus as DeliveryStatus')->orderBy('orders.deliverystatus')->get()->toArray(); 
         return Excel::create($from.'/'.$to.'-aladdin(OrderDate)', function($excel) use ($orders) {
@@ -815,7 +816,7 @@ class OrderController extends Controller
                 ->join('users', 'orders.user_id', '=', 'users.id')
                 ->select('orders.order_id as Order_id', 
                         'users.name as CustomerName', 'users.phone as Phone', 'users.address as Address', 'orders.totalquantity as TotalQty',
-                        'orders.totalprice as TotalPrice', 'orders.created_at as Order_date',
+                        'orders.grandtotal as TotalPrice', 'orders.created_at as Order_date',
                         'orders.deliverydate as DeliveryDate','orders.dname as Delivery','orders.dphone as DeliveryPhone', 'orders.remark as Remark', 
                         'orders.deliverystatus as DeliveryStatus')->orderBy('orders.deliverystatus')->get()->toArray(); 
         return Excel::create($ddfrom.'/'.$ddto.'-aladdin(DeliveryDate)', function($excel) use ($orders) {
