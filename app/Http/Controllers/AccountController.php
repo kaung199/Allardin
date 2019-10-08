@@ -184,7 +184,16 @@ class AccountController extends Controller
             ])->get();
         return view('delivery.delivery', compact('orders'));  
     }
-
+    public function searchdo(Request $request, $id) 
+    {
+        $from = $request->ddfrom;
+        $to = $request->ddto;
+        $orders = Order::whereBetween('deliverydate', [$from, $to])
+                        ->where('delivery_id', $id)->get();
+        $count = $orders->count();
+        return view('delivery.delivery', compact('orders', 'count'));  
+        
+    }
     public function orderprepare()
     {
         $orders = Order::where(deliverystatus, 1)->orderBy('orders.id', 'desc')->get();

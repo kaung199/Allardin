@@ -10868,6 +10868,15 @@ body {
   }
 }
 
+.orderprepare a.disabled {
+  pointer-events: none;
+  cursor: pointer;
+}
+
+.orderprepare .maxtd {
+  max-width: 0;
+}
+
 .orderprepare .cusmt {
   margin-top: -109px;
 }
@@ -10970,6 +10979,10 @@ body {
 }
 
 @media (max-width: 768px) {
+  .orderprepare label {
+    margin: auto;
+  }
+
   .orderprepare .card {
     margin: 0 auto;
   }

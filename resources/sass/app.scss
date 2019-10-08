@@ -208,6 +208,13 @@ body {
 }
 
 .orderprepare {
+    a.disabled {
+        pointer-events: none;
+        cursor: pointer;
+      }
+    .maxtd {
+        max-width: 0;
+    }
     .cusmt {
         margin-top: -109px;
     }
@@ -289,6 +296,10 @@ body {
         padding: 10px;
     }
     @media (max-width: 768px) { 
+       
+        label {
+            margin: auto;
+        }
         .card {
             margin: 0 auto;
         }

@@ -162,9 +162,10 @@
     <tbody>
       <tr>
         <td>{{ $orderdetail->user->name }}</td>
-        <td>{{ $orderdetail->user->phone }}</td>
-        <td>{{ $orderdetail->user->address }}</td>
-      
+        <td>{{ $orderdetail->user->phone }}</td>      
+      </tr>
+      <tr colspan="2">
+      <td class="maxtd">{{ $orderdetail->user->address }}</td>
       </tr>
     </tbody>
   </table>

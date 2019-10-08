@@ -802,7 +802,7 @@ class OrderController extends Controller
                         'users.name as CustomerName','users.phone as Phone','users.address as Address', 'orders.totalquantity as TotalQty',
                         'orders.totalprice as TotalPrice', 'orders.created_at as Order_date',
                         'orders.deliverydate as DeliveryDate','orders.dname as Delivery','orders.dphone as DePhone', 'orders.remark as Remark', 
-                        'orders.deliverystatus as DeliveryStatus')->get()->toArray(); 
+                        'orders.deliverystatus as DeliveryStatus')->orderBy('orders.deliverystatus')->get()->toArray(); 
         return Excel::create($from.'/'.$to.'-aladdin(OrderDate)', function($excel) use ($orders) {
             $excel->sheet('Aladdin', function($sheet) use ($orders) {
                 $sheet->fromArray($orders);
@@ -817,7 +817,7 @@ class OrderController extends Controller
                         'users.name as CustomerName', 'users.phone as Phone', 'users.address as Address', 'orders.totalquantity as TotalQty',
                         'orders.totalprice as TotalPrice', 'orders.created_at as Order_date',
                         'orders.deliverydate as DeliveryDate','orders.dname as Delivery','orders.dphone as DeliveryPhone', 'orders.remark as Remark', 
-                        'orders.deliverystatus as DeliveryStatus')->get()->toArray(); 
+                        'orders.deliverystatus as DeliveryStatus')->orderBy('orders.deliverystatus')->get()->toArray(); 
         return Excel::create($ddfrom.'/'.$ddto.'-aladdin(DeliveryDate)', function($excel) use ($orders) {
             $excel->sheet('Aladdin', function($sheet) use ($orders) {
                 $sheet->fromArray($orders);

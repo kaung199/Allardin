@@ -47,6 +47,12 @@
                 <th colspan="2" class="text-center">Delivery Price</th>
                 <td class="text-right">{{ $orderdetail->user->township->deliveryprice }}</td>
             </tr>
+            @if($orderdetail->order->discount != null)
+              <tr>
+                  <th colspan="2" class="text-center text-danger">Discount Price</th>
+                  <td class="text-right text-danger">-{{ $orderdetail->order->discount }}</td>
+              </tr>
+            @endif
             <tr>
                 <th colspan="2" class="text-center">Grand Total</th>
                 <th class="text-right">{{ $orderdetail->order->totalprice + $orderdetail->user->township->deliveryprice }}</th>
@@ -59,15 +65,15 @@
             <tr>
             <th scope="col">Name</th>
             <th scope="col">Phone</th>
-            <th scope="col">Address</th>
             </tr>
         </thead>
         <tbody>
             <tr>
             <td>{{ $orderdetail->user->name }}</td>
-            <td>{{ $orderdetail->user->phone }}</td>
-            <td>{{ $orderdetail->user->address }}</td>
-            
+            <td>{{ $orderdetail->user->phone }}</td>            
+            </tr>
+            <tr>
+              <td colspan="2"><strong>Address: </strong>{{ $orderdetail->user->address }}</td>
             </tr>
         </tbody>
         </table>

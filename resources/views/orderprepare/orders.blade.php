@@ -1,8 +1,23 @@
 @extends('layouts.orderprepare')
 
 @section('contents') 
-
-
+@if(Auth::user()->role_id == 3)
+<form class="d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchdo', Auth::user()->id) }}" method="GET">
+    @csrf
+    <div class="input-group">
+        <label for="from">From</label>
+        <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="ddfrom" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
+        <label for="to">To</label>
+        <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="ddto" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
+        <div class="input-group-append">
+            <button class="btn btn-primary" type="submit" value="search">
+            <i class="fas fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>
+<hr>
+@endif
 <div class="row">
     @foreach($orders as $order)
         <div class="col-md-4 pt-2">
@@ -18,16 +33,23 @@
                             <td>{{ $order->user->name }}</td>
                         </tr>
                         <tr>
+                            <th>Phone</th>
+                            <td>{{ $order->user->phone }}</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2" class="maxtd"><strong>Address: </strong>{{ $order->user->address }}</td>
+                        </tr>
+                        <tr>
                             <th>TotalQty</th>
                             <td>{{ $order->totalquantity }}</td>
                         </tr>
                         <tr>
-                            <th>TotalPrice</th>
-                            <td>{{ $order->totalprice + $order->user->township->deliveryprice }}</td>
+                            <th>DeliveryDate</th>
+                            <td>{{ $order->deliverydate }}</td>
                         </tr>
                         <tr>
-                            <th>OrderDate</th>
-                            <td>{{ $order->created_at }}</td>
+                            <th>TotalPrice</th>
+                            <td class="text-danger">{{ $order->totalprice + $order->user->township->deliveryprice }}</td>
                         </tr>
                     </table>
                     <div class="bt-2" style="padding-top:5px;">
@@ -78,21 +100,21 @@
                             </div>
                    
                         @else
-                        <button class="btn btn-success">Order Pepare</button>
+                        <button class="btn btn-success" disabled>Order Pepare</button>
                         @endif
                     @endif
                     @if($order->deliverystatus == 2)
                         @if(Auth::user()->role_id == 3)
                               <a href="{{ route('deliverystatusd', $order->id)}}" class="btn btn-secondary">Delivery</a>              
                         @else
-                        <button class="btn btn-secondary">Delivery</button>
+                        <button class="btn btn-secondary" disabled>Delivery</button>
                         @endif
                     @endif
                     @if($order->deliverystatus == 3)
-                    <button class="btn btn-info">Payment</button>
+                    <button class="btn btn-info" disabled>Payment</button>
                     @endif
                     @if($order->deliverystatus == 4)
-                    <button class="btn btn-success">Complete</button>
+                    <button class="btn btn-success" disabled>Complete</button>
                     @endif
                     @if(Auth::user()->role_id == 3)
                     <a href="{{ route('orderdetaild', $order->id) }}" class="btn btn-primary">Detail</a>

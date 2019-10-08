@@ -153,6 +153,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
     });
 
    
+    Route::get('searchdo/{id}', 'AccountController@searchdo')->name('searchdo');
     
     Route::group(['middleware' => ['auth', 'delivery']], function ()
 	{       
