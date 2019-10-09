@@ -6,6 +6,8 @@
     @yield('title')
 </title>
 <meta charset="utf-8">
+<link rel="apple-touch-icon" sizes="80×100" href="{{ asset('ui/images/Aladdin.png') }}">
+<link rel="shortcut icon" href="{{ asset('ui/images/Aladdin.png') }}" type="image/png">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href="{{ asset('ui/css/bootstrap.css') }}" rel='stylesheet' type='text/css' />
 <link href="{{ asset('ui/css/style.css') }}" rel='stylesheet' type='text/css' />
@@ -58,7 +60,7 @@
 					<a href="{{ url('/') }}">
 						<div class="col-md-2 col-sm-12">
 							<div class="logoaladdin">
-								<img src="/ui/images/logo.png" alt="">
+								<img src="/ui/images/Aladdin.png" alt="">
 							</div>
 						</div>
 					</a>
