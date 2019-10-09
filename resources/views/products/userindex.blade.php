@@ -5,7 +5,14 @@
 @endsection
 
 @section('contents')
-<h3 class="m_1 pdl">Products</h3>
+
+
+@if($products[0])
+    @if($count)
+        <h3 class="m_1 pdl"> ( {{$count}} ) Products Found</h3>
+    @else
+        <h3 class="m_1 pdl">Products</h3>    
+    @endif
     @foreach($products as $product)
         <div class="col_1_of_3 span_1_of_3"> 
             <div class="view view-first">
@@ -32,4 +39,11 @@
             </div>
         </div>
     @endforeach
+@else
+<h3 class="m_1 pdl"> No Products Found</h3> 
+<div class="text-center">
+    <a href="{{ url('/') }}" class="btn btn-primary">Go Home</a>  
+</div> 
+@endif
+    
 @endsection

@@ -30,6 +30,8 @@ Route::get('/orderlayout', function () {
 Route::get('/', 'ProductController@userindex');
 Route::get('/detail/{id}', 'ProductController@userdetail');
 Route::get('home', 'HomeController@index');
+Route::get('productssearch', 'ProductController@productssearch')->name('productssearch');
+
 
 Auth::routes();
 

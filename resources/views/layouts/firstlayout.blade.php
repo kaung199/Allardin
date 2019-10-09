@@ -66,10 +66,10 @@
 						<div class="searchbar">
 							<div class="header-search clearfix">
 								<div class="header-search-form">
-									<form action="#" method="get">
+									<form action="{{ route('productssearch') }}" method="get">
 										@csrf
-										<input type="text" name="query" placeholder="Search product...">
-										<input type="submit" name="submit" value="Search">
+										<input type="text" name="search" placeholder="Search product...">
+										<input type="submit">
 									</form>                                    
 								</div>
 							</div>

@@ -33,6 +33,15 @@ class ProductController extends Controller
        return view('products.search', compact('products','count'));       
 
     }
+    public function productssearch(Request $request)
+    {
+       $search =$request->search;
+       $products = Product::where('name', 'LIKE', '%' . $search . '%')
+                            ->orWhere('price', 'LIKE', '%' . $search . '%')->get();
+       $count = count($products);
+       return view('products.userindex', compact('products','count'));       
+
+    }
 
     public function productdetail($id)
     {
