@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="apple-touch-icon" sizes="80×100" href="{{ asset('ui/images/Aladdin.png') }}">
-    <link rel="shortcut icon" href="{{ asset('ui/images/Aladdin.png') }}" type="image/png">
+    <link rel="apple-touch-icon" sizes="30×30" href="{{ asset('ui/images/Aladdin.png') }}">
+    <link rel="shortcut icon" sizes="30×30" href="{{ asset('ui/images/Aladdin.png') }}" type="image/png">
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" rel="stylesheet">
 	  <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
