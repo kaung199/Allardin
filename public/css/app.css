@@ -10998,10 +10998,6 @@ body {
   }
 }
 
-.adminindex .maxtd {
-  max-width: 0;
-}
-
 .adminindex .cartt {
   font-size: 20px;
   color: #ffffff;
@@ -11129,6 +11125,14 @@ body {
 }
 
 @media (max-width: 768px) {
+  .adminindex .maxtd {
+    max-width: 0;
+  }
+
+  .adminindex .label {
+    margin: auto;
+  }
+
   .adminindex .card {
     margin: 0 auto;
   }
@@ -11143,6 +11147,14 @@ body {
 }
 
 @media (max-width: 576px) {
+  .adminindex table {
+    margin: auto;
+  }
+
+  .adminindex .bt-2 {
+    padding-left: 30px;
+  }
+
   .adminindex h3 {
     font-weight: 600 !important;
   }
@@ -11183,7 +11195,7 @@ body {
   }
 
   .adminindex .card {
-    width: 20rem !important;
+    width: 18rem !important;
   }
 
   .adminindex .btn {
@@ -11192,8 +11204,16 @@ body {
 }
 
 @media (max-width: 320px) {
+  .adminindex .navbar {
+    padding: 0.5rem 0.7rem;
+  }
+
+  .adminindex .bt-2 {
+    padding-left: 5px;
+  }
+
   .adminindex .card {
-    width: 17rem !important;
+    width: 16rem !important;
   }
 
   .adminindex .btn {

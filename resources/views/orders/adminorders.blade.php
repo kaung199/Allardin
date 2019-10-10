@@ -1,12 +1,12 @@
 @extends('layouts.adminindex')
 
 @section('contents')
-<form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('ddadminsearch') }}" method="GET">
+<form class="d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('ddadminsearch') }}" method="GET">
     @csrf
     <div class="input-group">
-        <label for="from">D-From</label>
+        <label for="from" class="label">D-From</label>
         <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="ddfrom" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
-        <label for="to">D-To</label>
+        <label for="to" class="label">D-To</label>
         <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="ddto" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
         <div class="input-group-append">
             <button class="btn btn-primary" type="submit" value="search">

@@ -19,7 +19,7 @@ class AccountController extends Controller
     }
     public function adminorders()
     {
-        $orders = Order::latest()->paginate(40);
+        $orders = Order::latest()->paginate(100);
         return view('orders.adminorders', compact('orders'));
     }
     public function orderd()

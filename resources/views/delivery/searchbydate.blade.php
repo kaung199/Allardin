@@ -15,7 +15,7 @@
         </div>
         <div class="col-md-6">
             <div class="folat-right" style="float: right;">
-                <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchbydatedelivery') }}" method="POST">
+                <form class="d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchbydatedelivery') }}" method="POST">
                     @csrf
                     <div class="input-group">
                     <label for="from">From</label>
