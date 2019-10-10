@@ -10998,6 +10998,10 @@ body {
   }
 }
 
+.adminindex .maxtd {
+  max-width: 0;
+}
+
 .adminindex .cartt {
   font-size: 20px;
   color: #ffffff;

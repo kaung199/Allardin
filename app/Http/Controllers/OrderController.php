@@ -420,26 +420,26 @@ class OrderController extends Controller
     public function orderpreparef($from, $to)
     {
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where(deliverystatus, 1)->get();
+                        ->where(deliverystatus, 1)->orderBy('dname')->get();
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         return view('orders.orderprepare', compact('orders', 'deliveries', 'from', 'to'));
     }
     public function deliveryf($from, $to)
     {
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where(deliverystatus, 2)->get();
+                        ->where(deliverystatus, 2)->orderBy('dname')->get();
         return view('orders.delivery', compact('orders', 'from', 'to'));  
     }
     public function paymentf($from, $to)
     {
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                    ->where(deliverystatus, 3)->get();
+                    ->where(deliverystatus, 3)->orderBy('dname')->get();
         return view('orders.payment', compact('orders', 'from', 'to'));
     }
     public function completef($from, $to)
     {
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where(deliverystatus, 4)->get();
+                        ->where(deliverystatus, 4)->orderBy('dname')->get();
         return view('orders.complete', compact('orders', 'from', 'to'));
     }
 
@@ -450,7 +450,7 @@ class OrderController extends Controller
         $orders = Order::where([ 
             [deliverystatus, 1],
             ['orderdate', $today]
-            ])->get();
+            ])->orderBy('dname')->get();
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         return view('orders.daily.orderprepare', compact('orders', 'today', 'deliveries'));
     }
@@ -460,7 +460,7 @@ class OrderController extends Controller
         $orders = Order::where([ 
             [deliverystatus, 2],
             ['orderdate', $today]
-            ])->get();
+            ])->orderBy('dname')->get();
         return view('orders.daily.delivery', compact('orders', 'today'));  
     }
     public function paymentd()
@@ -469,7 +469,7 @@ class OrderController extends Controller
         $orders = Order::where([ 
             [deliverystatus, 3],
             ['orderdate', $today]
-            ])->get();
+            ])->orderBy('dname')->get();
         return view('orders.daily.payment', compact('orders', 'today'));
     }
     public function completed()
@@ -478,7 +478,7 @@ class OrderController extends Controller
         $orders = Order::where([ 
             [deliverystatus, 4],
             ['orderdate', $today]
-            ])->get();
+            ])->orderBy('dname')->get();
         return view('orders.daily.complete', compact('orders', 'today'));
     }
     //daily order filterbydate
@@ -486,7 +486,7 @@ class OrderController extends Controller
     {
         $today = Carbon::now()->toDateString();
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where(deliverystatus, 1)->get();
+                        ->where(deliverystatus, 1)->orderBy('dname')->get();
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         return view('orders.daily.orderprepare', compact('orders', 'today', 'deliveries', 'from', 'to'));
     }
@@ -494,21 +494,21 @@ class OrderController extends Controller
     {
         $today = Carbon::now()->toDateString();
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where(deliverystatus, 2)->get();
+                        ->where(deliverystatus, 2)->orderBy('dname')->get();
         return view('orders.daily.delivery', compact('orders', 'today', 'from', 'to'));  
     }
     public function paymentdf($from, $to)
     {
         $today = Carbon::now()->toDateString();
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where(deliverystatus, 3)->get();
+                        ->where(deliverystatus, 3)->orderBy('dname')->get();
         return view('orders.daily.payment', compact('orders', 'today', 'from', 'to'));
     }
     public function completedf($from, $to)
     {
         $today = Carbon::now()->toDateString();
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where(deliverystatus, 4)->get();
+                        ->where(deliverystatus, 4)->orderBy('dname')->get();
         return view('orders.daily.complete', compact('orders', 'today', 'from', 'to'));
     }
 
@@ -597,13 +597,13 @@ class OrderController extends Controller
     {
       $today = Carbon::now()->toDateString();
       $orderso = Order::where('orderdate', $today)
-                    ->where('deliverystatus', 1)->get();
+                    ->where('deliverystatus', 1)->orderBy('dname')->get();
       $ordersd = Order::where('orderdate', $today)
-                    ->where('deliverystatus', 2)->get();
+                    ->where('deliverystatus', 2)->orderBy('dname')->get();
       $ordersp = Order::where('orderdate', $today)
-                    ->where('deliverystatus', 3)->get();
+                    ->where('deliverystatus', 3)->orderBy('dname')->get();
       $ordersc = Order::where('orderdate', $today)
-                    ->where('deliverystatus', 4)->get();
+                    ->where('deliverystatus', 4)->orderBy('dname')->get();
       $deliveries = User::where('role_id', 3)->pluck('name', 'id');
       return view('orders.daily', compact('orderso','ordersd','ordersp','ordersc', 'deliveries'));    
     }
@@ -631,7 +631,7 @@ class OrderController extends Controller
         $from = $request->from;
         $to = $request->to;
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
-        $orders = Order::whereBetween('orderdate', [$from, $to])->get();
+        $orders = Order::whereBetween('orderdate', [$from, $to])->orderBy('dname')->get();
         return view('orders.searchbydate', \compact('orders', 'deliveries', 'from', 'to'));  
     }
     public function searcho(Request $request) 
@@ -640,7 +640,7 @@ class OrderController extends Controller
         $to = $request->to;
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                            ->where('deliverystatus', 1)->get();
+                            ->where('deliverystatus', 1)->orderBy('dname')->get();
         return view('orders.orderprepare', \compact('orders', 'deliveries', 'from', 'to'));  
     }
     public function searchd(Request $request) 
@@ -648,7 +648,7 @@ class OrderController extends Controller
         $from = $request->from;
         $to = $request->to;
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where('deliverystatus', 2)->get();
+                        ->where('deliverystatus', 2)->orderBy('dname')->get();
         return view('orders.delivery', \compact('orders', 'from', 'to'));  
     }
     public function searchp(Request $request) 
@@ -656,7 +656,7 @@ class OrderController extends Controller
         $from = $request->from;
         $to = $request->to;
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where('deliverystatus', 3)->get();
+                        ->where('deliverystatus', 3)->orderBy('dname')->get();
         return view('orders.payment', \compact('orders', 'from', 'to'));  
     }
     public function searchc(Request $request) 
@@ -674,7 +674,7 @@ class OrderController extends Controller
         $to = $request->to;
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where('deliverystatus', 1)->get();
+                        ->where('deliverystatus', 1)->orderBy('dname')->get();
         return view('orders.daily.orderprepare', \compact('orders','today', 'deliveries', 'from', 'to'));  
     }
     public function searchbydated(Request $request) 
@@ -683,7 +683,7 @@ class OrderController extends Controller
         $to = $request->to;
         $today = Carbon::now()->toDateString();
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where('deliverystatus', 2)->get();
+                        ->where('deliverystatus', 2)->orderBy('dname')->get();
         return view('orders.daily.delivery', \compact('orders', 'today', 'from', 'to'));  
     }
     public function searchbydatep(Request $request) 
@@ -692,7 +692,7 @@ class OrderController extends Controller
         $to = $request->to;
         $today = Carbon::now()->toDateString();
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where('deliverystatus', 3)->get();
+                        ->where('deliverystatus', 3)->orderBy('dname')->get();
         return view('orders.daily.payment', \compact('orders', 'today', 'from', 'to'));  
     }
     public function searchbydatec(Request $request) 
@@ -701,7 +701,7 @@ class OrderController extends Controller
         $to = $request->to;
         $today = Carbon::now()->toDateString();
         $orders = Order::whereBetween('orderdate', [$from, $to])
-                        ->where('deliverystatus', 4)->get();
+                        ->where('deliverystatus', 4)->orderBy('dname')->get();
         return view('orders.daily.complete', \compact('orders', 'today', 'from', 'to'));  
     }
 
@@ -712,17 +712,27 @@ class OrderController extends Controller
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         $orderso = Order::whereBetween('deliverydate', [$ddfrom, $ddto])
                         ->where('deliverystatus', 1)
-                        ->get();
+                        ->orderBy('dname')->get();
         $ordersd = Order::whereBetween('deliverydate', [$ddfrom, $ddto])
                         ->where('deliverystatus', 2)
-                        ->get();
+                        ->orderBy('dname')->get();
         $ordersp = Order::whereBetween('deliverydate', [$ddfrom, $ddto])
                         ->where('deliverystatus', 3)
-                        ->get();
+                        ->orderBy('dname')->get();
         $ordersc = Order::whereBetween('deliverydate', [$ddfrom, $ddto])
                         ->where('deliverystatus', 4)
-                        ->get();
+                        ->orderBy('dname')->get();
         return view('orders.daily', compact('orderso','ordersd','ordersp','ordersc', 'deliveries', 'ddfrom', 'ddto')); 
+
+    }
+    public function ddadminsearch(Request $request) 
+    {       
+        $ddfrom = $request->ddfrom;
+        $ddto = $request->ddto;
+        $orders = Order::whereBetween('deliverydate', [$ddfrom, $ddto])
+                        ->orderBy('dname')->get();
+        $count = $orders->count();
+        return view('orders.ddadminsearch', compact('orders', 'ddfrom', 'ddto', 'count')); 
 
     }
     public function searchxls(Request $request) 
@@ -732,16 +742,16 @@ class OrderController extends Controller
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
         $orderso = Order::whereBetween('orderdate', [$from, $to])
                         ->where('deliverystatus', 1)
-                        ->get();
+                        ->orderBy('dname')->get();
         $ordersd = Order::whereBetween('orderdate', [$from, $to])
                         ->where('deliverystatus', 2)
-                        ->get();
+                        ->orderBy('dname')->get();
         $ordersp = Order::whereBetween('orderdate', [$from, $to])
                         ->where('deliverystatus', 3)
-                        ->get();
+                        ->orderBy('dname')->get();
         $ordersc = Order::whereBetween('orderdate', [$from, $to])
                         ->where('deliverystatus', 4)
-                        ->get();
+                        ->orderBy('dname')->get();
         return view('orders.exportxls', compact('orderso','ordersd','ordersp','ordersc', 'deliveries', 'from', 'to')); 
 
     }
@@ -762,7 +772,7 @@ class OrderController extends Controller
         $delivery = User::find($id);
         $orders = Order::whereBetween('orderdate', [$from, $to])
                 ->where('delivery_id', $id)
-                ->get();
+                ->orderBy('dname')->get();
         return view('delivery.searchbydate', \compact('orders', 'delivery'));  
     }
 
@@ -803,7 +813,7 @@ class OrderController extends Controller
                         'users.name as CustomerName','users.phone as Phone','users.address as Address', 'orders.totalquantity as TotalQty',
                         'orders.grandtotal as TotalPrice', 'orders.created_at as Order_date',
                         'orders.deliverydate as DeliveryDate','orders.dname as Delivery','orders.dphone as DePhone', 'orders.remark as Remark', 
-                        'orders.deliverystatus as DeliveryStatus')->orderBy('orders.deliverystatus')->get()->toArray(); 
+                        'orders.deliverystatus as DeliveryStatus')->orderBy('dname')->get()->toArray(); 
         return Excel::create($from.'/'.$to.'-aladdin(OrderDate)', function($excel) use ($orders) {
             $excel->sheet('Aladdin', function($sheet) use ($orders) {
                 $sheet->fromArray($orders);
@@ -818,7 +828,7 @@ class OrderController extends Controller
                         'users.name as CustomerName', 'users.phone as Phone', 'users.address as Address', 'orders.totalquantity as TotalQty',
                         'orders.grandtotal as TotalPrice', 'orders.created_at as Order_date',
                         'orders.deliverydate as DeliveryDate','orders.dname as Delivery','orders.dphone as DeliveryPhone', 'orders.remark as Remark', 
-                        'orders.deliverystatus as DeliveryStatus')->orderBy('orders.deliverystatus')->get()->toArray(); 
+                        'orders.deliverystatus as DeliveryStatus')->orderBy('dname')->get()->toArray(); 
         return Excel::create($ddfrom.'/'.$ddto.'-aladdin(DeliveryDate)', function($excel) use ($orders) {
             $excel->sheet('Aladdin', function($sheet) use ($orders) {
                 $sheet->fromArray($orders);

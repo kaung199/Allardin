@@ -315,6 +315,9 @@ body {
 }
 
 .adminindex {
+    .maxtd {
+        max-width: 0;
+    }
     .cartt {
         font-size: 20px;
         color: #ffffff;

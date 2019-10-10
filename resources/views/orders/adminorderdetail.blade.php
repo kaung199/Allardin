@@ -55,7 +55,7 @@
             <tr>
             <td>{{ $orderdetail->user->name }}</td>
             <td>{{ $orderdetail->user->phone }}</td>
-            <td>{{ $orderdetail->user->address }}</td>
+            <td class="maxtd">{{ $orderdetail->user->address }}</td>
             
             </tr>
         </tbody>
