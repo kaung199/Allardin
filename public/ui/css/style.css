@@ -4,20 +4,21 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 */
+
 .footer a {
 	color: #ffffff;
 }
 .messageerbg {
-	background: #DFDDDD;
+	background: #e3ebef;
 }
 .messageerbg p{
 	text-align: justify;
 }
 .paddingtb {
-	padding: 40px 0;
+	padding: 40px 7px;
 }
 .borderpd {
-	padding: 10px 0;
+	padding: 10px 5px;
 	border: 3px solid #0783fc;
 	border-radius: 30px;
 }
@@ -1591,7 +1592,23 @@ h2.resp-accordion:hover{
 	text-shadow: none;
 	color: #FFF;
 }
+.youtubelayout {
+    background: #eff0f1;
+    text-align: center;
+}
+.youtube {
+	padding: 30px 0;
+}
 @media only screen and (max-width:480px) {
+.youtube {
+	width: 100%;
+}
+.youtube iframe{
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 200px;
+}
 .text1line {
 	max-width: 160px;
     text-overflow: ellipsis;
@@ -2081,6 +2098,9 @@ ul.size li {
 }
 }
 @media (max-width:800px){
+.span_2_of_a1 {
+	width: 48.1%;
+}
 .etalage_zoom_area, .etalage_icon {
 	display: none !important;
 }

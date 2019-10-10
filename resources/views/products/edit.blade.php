@@ -70,6 +70,21 @@
             @endif
         </div>
         <div class="form-group">
+            {{ Form::label(null,'Video') }}
+            {{ Form::text('youtube', null, [
+                'class' => ($errors->has('youtube')? 'form-control is-invalid': 'form-control'),
+                'placeholder' => 'Have Product Video?'
+                ]) }}
+
+            @if($errors->has('youtube'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>
+                        {{ $errors->first('youtube') }}
+                    </strong>
+                </span>
+            @endif
+        </div>
+        <div class="form-group">
             {{ Form::label(null,'Description') }}
             {{ Form::textarea('description', null, [
                 'class' => ($errors->has('description')? 'form-control is-invalid': 'form-control'),

@@ -97,7 +97,9 @@
 			</div>
 			</div>
 		</div>
-
+		<div class="youtubelayout">
+			@yield('youtube')
+		</div>
 		<div class="messenger">
 			<a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F271391543764511&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg">
 				<img src="{{ asset('ui/images/messenger.png') }}" class="img-responsive" style="width:50px height:50px" alt="">

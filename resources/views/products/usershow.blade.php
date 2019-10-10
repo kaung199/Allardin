@@ -70,8 +70,14 @@
     <p class="quick_desc">
         {{ $product->description }}
     </p>
-
 </div>
 <div class="clearfix"></div>
 </div>
+@endsection
+@section('youtube')
+    @if($product->youtube != null)
+    <div class="youtube">
+        <iframe width="560" height="315" src="https://youtube.com/embed/{{ $product->youtube }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    @endif
 @endsection
