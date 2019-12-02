@@ -69,6 +69,7 @@ class OrderController extends Controller
                 'discount' =>  $request->discount,
                 'orderdate' =>  date('Y-m-d'),
                 'deliverydate' =>  $request->deliverydate,
+                'orderby' =>  Auth::user()->name,
                 'remark' =>  $request->remark,
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
