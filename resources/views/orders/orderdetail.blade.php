@@ -12,7 +12,7 @@
   <div class="print">
     <div class="container">
       <div class="text-center aladdinh2">
-        <h2>Aladdin Online Shop</h2>
+        <h2>Aladdin Online Shop (09-686781222)</h2>
       </div>
       <div class="row">
         <div class="col-md-6">
@@ -229,7 +229,7 @@
       <div class="hr"></div>
       <div class="container">
       <div class="text-center aladdinh2">
-        <h2>Aladdin Online Shop</h2>
+        <h2>Aladdin Online Shop (09-686781222)</h2>
       </div>
         <div class="row">
           <div class="col-md-6">
@@ -437,7 +437,7 @@
       <div class="hr"></div>
       <div class="container">
       <div class="text-center aladdinh2">
-        <h2>Aladdin Online Shop</h2>
+        <h2>Aladdin Online Shop (09-686781222)</h2>
       </div>
         <div class="row">
           <div class="col-md-6">
@@ -657,4 +657,46 @@
         </script>
     
     @endif
+
+<button type="button" class="btn btn-primary btn-md" data-toggle="modal" data-target="#EditForm">
+    Edit
+</button>
+<div id="EditForm" class="modal fade">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title">Edit Customer</h1>
+            </div>
+            <div class="modal-body">
+                <form role="form" method="GET" action="{{route('editOrderDetail')}}">
+                    <input type="hidden" name="order_id" value="{{ $orderdetail->order->id }}">
+                    <div class="form-group">
+                        <label class="control-label">Phone</label>
+                        <div>
+                            <input type="text" class="form-control input-lg" name="phone" value="{{$orderdetail->user->phone}}">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Address</label>
+                        <div>
+                            <textarea type="text" rows="5" class="form-control input-lg" name="address">{{$orderdetail->user->address}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label">Remark</label>
+                        <div>
+                            <textarea type="text" rows="3" class="form-control input-lg" name="remark">{{$orderdetail->order->remark}}</textarea>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div>
+                            <button type="submit" class="btn btn-success">Update</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
 @endsection

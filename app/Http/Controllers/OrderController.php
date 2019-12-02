@@ -198,6 +198,18 @@ class OrderController extends Controller
 
         return view('orders.orderdetail', compact('orderdetails','previous','next','delivery', 'deliveries'));
     }
+    public function editOrderDetail(Request $request){
+        $update = Order::where('id', $request->order_id)->first();
+        $update->remark = $request->remark;
+        $update->save();
+
+        $user_update = User::where('id', $update->user_id)->first();
+        $user_update->phone = $request->phone;
+        $user_update->address = $request->address;
+        $user_update->save();
+
+        return redirect()->back();
+    }
     public function orderdetailsimple($id)
     {
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');

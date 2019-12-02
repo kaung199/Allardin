@@ -46,7 +46,9 @@
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="{{ route('editdetail', $product->id) }}">Edit</a>
-                            <button class="dropdown-item">Delete</button>
+                            @if(Auth::user()->role_id == 1)
+                                <button class="dropdown-item">Delete</button>
+                            @endif
                         </div>
                     </div>
                         

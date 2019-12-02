@@ -28,36 +28,74 @@
                 </span>
             @endif
         </div>
-        <div class="form-group">
-            {{ Form::label(null,'Quantity') }}
-            {{ Form::number('quantity', null, [
-                'class' => ($errors->has('quantity')? 'form-control is-invalid': 'form-control'),
-                'placeholder' => 'Enter Quanties'
-                ]) }}
+        @if(Auth::user()->role_id == 1)
+	        <div class="form-group">
+	            {{ Form::label(null,'Quantity') }}
+	            {{ Form::number('quantity', null, [
+	                'class' => ($errors->has('quantity')? 'form-control is-invalid': 'form-control'),
+	                'placeholder' => 'Enter Quanties'
+	                ]) }}
 
-            @if($errors->has('quantity'))
-                <span class="invalid-feedback" role="alert">
-                    <strong>
-                        {{ $errors->first('quantity') }}
-                    </strong>
-                </span>
-            @endif
-        </div>
-        <div class="form-group">
-            {{ Form::label(null,'Price') }}
-            {{ Form::number('price', null, [
-                'class' => ($errors->has('price')? 'form-control is-invalid': 'form-control'),
-                'placeholder' => 'Enter price' 
-                ]) }}
+	            @if($errors->has('quantity'))
+	                <span class="invalid-feedback" role="alert">
+	                    <strong>
+	                        {{ $errors->first('quantity') }}
+	                    </strong>
+	                </span>
+	            @endif
+	        </div>
+        @else
+        	<div class="form-group">
+	            {{ Form::label(null,'Quantity') }}
+	            {{ Form::number('quantity', null, [
+	                'class' => ($errors->has('quantity')? 'form-control is-invalid': 'form-control'),
+	                'placeholder' => 'Enter Quanties', 'disabled' => 'disabled'
+	                ]) }}
 
-            @if($errors->has('price'))
-                <span class="invalid-feedback" role="alert">
-                    <strong>
-                        {{ $errors->first('price') }}
-                    </strong>
-                </span>
-            @endif
-        </div>
+	           <!--  @if($errors->has('quantity'))
+	                <span class="invalid-feedback" role="alert">
+	                    <strong>
+	                        {{ $errors->first('quantity') }}
+	                    </strong>
+	                </span>
+	            @endif -->
+        	</div>
+        @endif
+        
+        @if(Auth::user()->role_id == 1)
+        	<div class="form-group">
+	            {{ Form::label(null,'Price') }}
+	            {{ Form::number('price', null, [
+	                'class' => ($errors->has('price')? 'form-control is-invalid': 'form-control'),
+	                'placeholder' => 'Enter price' 
+	                ]) }}
+
+	            @if($errors->has('price'))
+	                <span class="invalid-feedback" role="alert">
+	                    <strong>
+	                        {{ $errors->first('price') }}
+	                    </strong>
+	                </span>
+	            @endif
+        	</div>
+		@else
+			<div class="form-group">
+	            {{ Form::label(null,'Price') }}
+	            {{ Form::number('price', null, [
+	                'class' => ($errors->has('price')? 'form-control is-invalid': 'form-control'),
+	                'placeholder' => 'Enter price', 'disabled' => 'disabled'
+	                ]) }}
+
+	            <!-- @if($errors->has('price'))
+	                <span class="invalid-feedback" role="alert">
+	                    <strong>
+	                        {{ $errors->first('price') }}
+	                    </strong>
+	                </span>
+	            @endif -->
+        	</div>
+        @endif
+        
         <label for="photos">Photos</label>
         <div class="form-group input-group">
             <input type="file"  value="{{ $product->photos }}" name="photos[]" class="form-control @error('photos') is-invalid @enderror" multiple>

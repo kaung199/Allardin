@@ -47,7 +47,9 @@
                             <a class="dropdown-item" href="{{ route('products.show', $product->id) }}">Detail</a>
                             <?php $page = $products->currentPage(); ?>
                             <a class="dropdown-item" href="{{ route('editproduct', ['id' => $product->id,'page' => $page ]) }}" >Edit</a>
-                            <button class="dropdown-item">Delete</button>
+                            @if(Auth::user()->role_id == 1)
+                                <button class="dropdown-item">Delete</button>
+                            @endif
                         </div>
                     </div>
                         

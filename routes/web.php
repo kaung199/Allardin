@@ -103,6 +103,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::post('orderdelivery/{id}', 'OrderController@orderdelivery')->name('orderdelivery');
         Route::post('orderdeliverysearch/{id}', 'OrderController@orderdeliverysearch')->name('orderdeliverysearch');
         Route::get('deliverystatussearch/{id}', 'OrderController@deliverystatussearch')->name('deliverystatussearch');
+        Route::get('editorderdetail', 'OrderController@editOrderDetail')->name('editOrderDetail');
 
         //all order
         Route::get('totalsaledetail/{id}', 'OrderController@totalsaledetail')->name('totalsaledetail');
