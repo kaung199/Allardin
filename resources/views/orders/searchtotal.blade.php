@@ -24,7 +24,7 @@
                             <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="from" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
                             <label for="to">To</label>
                             <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="to" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
-                            <input type="hidden" name="p_id" value="{{ $totalsales[0]->tsp_id }}">
+                            <input type="hidden" name="p_id" value="{{ $totalsales[0]->product_id }}">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="submit" value="search">
                                 <i class="fas fa-search"></i>

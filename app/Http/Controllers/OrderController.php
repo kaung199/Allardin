@@ -12,6 +12,7 @@ use App\User;
 use App\Order_detail;
 use App\Order;
 use Auth;
+use DB;
 use App\Product;
 use App\Totalsaleproduct;
 use App\Totalsaledetail;
@@ -94,13 +95,13 @@ class OrderController extends Controller
             ]);
 
             //start
-            $totalsale_pid = Totalsaleproduct::where('product_id', $details['id'])->get();
+            $totalsale_pid = Totalsaleproduct::where('product_id', $details['id'])->where('date', date('Y-m-d'))->get();
 
             if($totalsale_pid[0] == null) {
                 $totalsale = Totalsaleproduct::create([
                     'product_id' => $details['id'],
                     'totalqty' => $details['quantity'],
-                    'totalprice' =>  $details['price'] * $details['quantity'] + $order->user->township->deliveryprice,
+                    'totalprice' =>  $details['price'] * $details['quantity'],
                     'date' => date('Y-m-d'),
                     'deliveryprice' =>  $order->user->township->deliveryprice,
         
@@ -108,8 +109,9 @@ class OrderController extends Controller
 
                 Totalsaledetail::create([
                     'user_id' => $order->user->id,
+                    'product_id' => $details['id'],
                     'totalqty' => $details['quantity'],
-                    'totalprice' => $details['price'] * $details['quantity'] + $order->user->deliveryprice,
+                    'totalprice' => $details['price'] * $details['quantity'],
                     'date' =>  date('Y-m-d'),
                     'tsp_id' => $totalsale->id,
                     'order_id' => $order->id,
@@ -121,15 +123,16 @@ class OrderController extends Controller
                     foreach($totalsale_pid as $tsp)  {
                         $tsp->update([
                             'totalqty' => $totalsale_pid[0]->totalqty + $details['quantity'],
-                            'totalprice' => $totalsale_pid[0]->totalprice + $details['price'] * $details['quantity'] + $order->user->township->deliveryprice,
+                            'totalprice' => $totalsale_pid[0]->totalprice + $details['price'] * $details['quantity'],
                             'deliveryprice' => $totalsale_pid[0]->deliveryprice +  $order->user->township->deliveryprice,
                 
                         ]);  
                         
                         Totalsaledetail::create([
                             'user_id' => $order->user->id,
+                            'product_id' => $details['id'],
                             'totalqty' => $details['quantity'],
-                            'totalprice' => $details['price'] * $details['quantity'] + $order->user->deliveryprice,
+                            'totalprice' => $details['price'] * $details['quantity'],
                             'date' =>  date('Y-m-d'),
                             'tsp_id' => $tsp->id,
                             'order_id' => $order->id,
@@ -144,7 +147,7 @@ class OrderController extends Controller
                     $totalsalee = Totalsaleproduct::create([
                         'product_id' => $details['id'],
                         'totalqty' => $details['quantity'],
-                        'totalprice' =>  $details['price'] * $details['quantity'] + $order->user->township->deliveryprice,
+                        'totalprice' =>  $details['price'] * $details['quantity'],
                         'date' => date('Y-m-d'),
                         'deliveryprice' =>  $order->user->township->deliveryprice,
             
@@ -152,8 +155,9 @@ class OrderController extends Controller
     
                     Totalsaledetail::create([
                         'user_id' => $order->user->id,
+                        'product_id' => $details['id'],
                         'totalqty' => $details['quantity'],
-                        'totalprice' => $details['price'] * $details['quantity'] + $order->user->deliveryprice,
+                        'totalprice' => $details['price'] * $details['quantity'],
                         'date' =>  date('Y-m-d'),
                         'tsp_id' => $totalsalee->id,
                         'order_id' => $order->id,
@@ -164,7 +168,8 @@ class OrderController extends Controller
 
             }
            
-        //end    
+        //end  
+        
 
             
         }   
@@ -199,6 +204,7 @@ class OrderController extends Controller
 
         return view('orders.orderdetail', compact('orderdetails','previous','next','delivery', 'deliveries'));
     }
+
     public function editOrderDetail(Request $request){
         $update = Order::where('id', $request->order_id)->first();
         $update->remark = $request->remark;
@@ -773,10 +779,12 @@ class OrderController extends Controller
     {
         $from = $request->from;
         $to = $request->to;
-        $totalsales = Totalsaleproduct::whereBetween('date', [$from, $to])->get();
-        return view('orders.totalsale', \compact('totalsales'));  
+        $totalsales = Totalsaleproduct::whereBetween('date', [$from, $to])
+        ->select('product_id', DB::raw("SUM(totalqty) as qty"), DB::raw("SUM(totalprice) as tp"), DB::raw("SUM(deliveryprice) as dp"))
+        ->groupBy('product_id')->get();
+        return view('orders.totalsale', \compact('totalsales', 'from', 'to'));  
     }
-
+  
     public function searchdelivery(Request $request) 
     {
         $from = $request->from;
@@ -804,9 +812,17 @@ class OrderController extends Controller
     }
 
     public function totalsaledetail($id) {
-        $totalsales = Totalsaledetail::where('tsp_id', $id)->paginate(15);
+        $totalsales = Totalsaledetail::where('tsp_id', $id)->get();
         $product = Totalsaleproduct::find($id);
         return view('orders.totalsaledetail', compact('totalsales', 'product'));
+    }
+
+    public function totalsalebydate($id, $from, $to) {
+        $totalsales = Totalsaledetail::where('product_id', $id)
+                    ->whereBetween('date', [$from, $to])
+                    ->get();
+        $productid = Product::find($id);
+        return view('orders.totalsaledetail', compact('totalsales', 'productid'));
     }
 
     public function searchtotal(Request $request) 
@@ -815,9 +831,10 @@ class OrderController extends Controller
         $to = $request->to;
         $id = $request->p_id;
         $product = Totalsaleproduct::find($id);
-        $totalsales = Totalsaledetail::whereBetween('date', [$from, $to])->where('tsp_id', $id)->paginate(15);
+        $totalsales = Totalsaledetail::whereBetween('date', [$from, $to])->where('product_id', $id)->paginate(15);
         return view('orders.searchtotal', \compact('totalsales', 'product'));  
     }
+
     public function export($from , $to) 
     {
         $orders = Order::whereBetween('orderdate', [$from, $to])

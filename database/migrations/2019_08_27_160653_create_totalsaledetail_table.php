@@ -17,9 +17,10 @@ class CreateTotalsaledetailTable extends Migration
             $table->Increments('id');
             $table->unsignedInteger('user_id');
             $table->unsignedInteger('order_id');
+            $table->unsignedInteger('product_id');
             $table->integer('totalqty');
             $table->Integer('totalprice');
-            $table->string('date');
+            $table->string('date')->nullable();
             $table->timestamps();
         });
     }

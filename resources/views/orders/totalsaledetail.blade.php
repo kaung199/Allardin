@@ -12,7 +12,11 @@
         <div class="container">
             <div class="row pb-2">
                 <div class="col-md-6">
+                    @if($productid)
+                    <h3>{{ $productid->name }}'s Detail</h3> 
+                    @else
                     <h3>{{ $product->product->name }}'s Detail</h3> 
+                    @endif
                 </div>
                 <div class="col-md-6">
                     <div class="folat-right" style="float: right;">
@@ -23,7 +27,7 @@
                             <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="from" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
                             <label for="to">To</label>
                             <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="to" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
-                            <input type="hidden" name="p_id" value="{{ $totalsales[0]->tsp_id }}">
+                            <input type="hidden" name="p_id" value="{{ $totalsales[0]->product_id }}">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="submit" value="search">
                                 <i class="fas fa-search"></i>
@@ -75,9 +79,6 @@
             @endforeach            
         </tbody>
         </table>
-    </div>
-    <div class="text-center">{{ $totalsales->links() }}</div>
-    
- 
+    </div> 
 
 @endsection
