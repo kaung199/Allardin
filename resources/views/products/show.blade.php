@@ -9,7 +9,11 @@
 @endsection
 @section('contents') 
     <div class="table-responsive">
+        @if(session('order_cart'))
+        <a href="{{ route('orders.order_cart_editp', session('order_cart')) }}" class="btn btn-warning">Back To Edit</a>
+        @else
         <h3>Products</h3>
+        @endif
         <hr>
         <table class="table" width="100%" cellspacing="0">
         <thead>
@@ -32,8 +36,11 @@
                 <td>{{  $product->name}}</td>
                 <td>{{ $product->quantity }}</td>
                 <td>{{ $product->price }}</td>
-                <td> <a href="{{ route('cartadd', $product->id) }}" class="btn btn-primary addtocart"><i class="fas fa-cart-plus"></i>Add Order</a></td>
-
+                @if(session('order_cart'))
+                <td> <a href="{{ route('cartadd_cart_order', [ $product->id,session('order_cart') ] ) }}" class="btn btn-warning addtocart"><i class="fas fa-cart-plus"></i>Add Cart_Order</a></td>    
+                @else            
+                <td> <a href="{{ route('cartadd', $product->id) }}" class="btn btn-primary addtocart"><i class="fas fa-cart-plus"></i>Add Cart_Order</a></td>    
+                @endif
                 <td>
                     {{ Form::model($product, [ 
                         'route'=> ['products.destroy', $product->id], 
@@ -65,4 +72,33 @@
     <p class="text-justify">
         {{ $product->description}}
     </p>
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
+    <script>
+        @if(session('success'))        
+                Swal.fire({
+                    title: 'Product Added To Cart Successfuly',
+                    animation: false,
+                    customClass: {
+                        popup: 'animated tada'
+                    }
+                })      
+        @endif
+
+        @if(session('outofstock'))
+                Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Product Out Of Stock!',
+                })    
+        @endif
+        @if(session('permission'))
+                Swal.fire({
+                type: 'error',
+                title: 'Oops...',
+                text: 'Permission Denined !!!Ask Admin!!!',
+                })    
+        @endif
+    
+    </script>
 @endsection

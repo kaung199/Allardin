@@ -10,7 +10,7 @@
 @section('contents') 
     <h3>Customer Create</h3>
     <hr>
-    {{ Form::open([ 'route'=>'checkout', 'method' => 'POST' ]) }}
+    {{ Form::open([ 'route'=>'cart_checkout', 'method' => 'POST' ]) }}
         <div class="form-group">
             {{ Form::label(null,'Name') }}
             {{ Form::text('name', null, [
@@ -88,7 +88,7 @@
         </div>
         <div class="form-group">
             {{ Form::label(null,'DeliveryDate') }}
-            <input type="date" name="deliverydate" data-date-inline-picker="true" style="box-shadow: none;"  class="form-control" aria-label="Search" aria-describedby="basic-addon2" required="required">
+            <input type="date" name="delivery_date" data-date-inline-picker="true" style="box-shadow: none;"  class="form-control" aria-label="Search" aria-describedby="basic-addon2" required="required">
             
         </div>
         <div class="form-group">

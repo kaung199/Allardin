@@ -9,6 +9,8 @@ use Excel;
 use App\Township;
 use App\Delivery;
 use App\User;
+use App\Cart;
+use App\Cart_product;
 use App\Order_detail;
 use App\Order;
 use Auth;
@@ -29,6 +31,33 @@ class OrderController extends Controller
     {
         $townships = Township::pluck('name', 'id')->all();
         return view('orders.admincheckoutform2', \compact('townships'));
+    }
+
+    public function cart_checkout(Ostore $request) 
+    {
+        $cart = session()->get('cart');
+
+        $order_cart =  Cart::create($request->all());
+
+        foreach(session('cart') as $cart => $details) {
+
+            $product = Product::find($details['id']);
+            $product->update([
+                'quantity' => $product->quantity - $details['quantity'],
+            ]);
+            $cart_product = Cart_product::create([
+                    'product_id' => $details['id'],
+                    'name' => $details['name'],
+                    'price' => $details['price'],
+                    'quantity' => $details['quantity'],
+                    'image' => $details['image'],
+                    'cart_id' => $order_cart->id,
+            ]);
+
+        }            
+           
+        session()->forget('cart');                
+        return redirect()->route('order_cart')->with('ordersuccess', 'Order Success!'); 
     }
 
     public function checkout(Ostore $request) 
@@ -182,6 +211,240 @@ class OrderController extends Controller
         }
     }
 
+    public function order_cart()
+    {
+        $orders = Cart::orderBy('id', 'desc')->paginate(15);
+        $count = count($orders);
+        if(Auth::user()->role_id == 2) {
+            return view('orders.admin_order_cart', compact('orders', 'count'));
+        } else {
+            return view('orders.order_cart', compact('orders', 'count'));
+
+        }
+    }
+
+    public function admin_cart_detail($id)
+    {
+        $order = Cart::find($id);
+        return view('orders.admin_cart_detail', compact('order'));
+        
+    }
+
+    public function order_cart_confirm($id)
+    {
+
+        $cart = Cart::find($id);
+
+        $total = 0;
+        $totalquantity = 0;
+        $totalsaleproduct = 0;
+        $totalsaleprice = 0;
+
+        //customer create
+       $customer =  User::create([
+            'name' => $cart->name,
+            'phone' => $cart->phone,
+            'address' => $cart->address,
+            'township_id' => $cart->township_id,
+       ]);
+
+        foreach($cart->cart_products as  $details) {
+
+            $totalq = 0;
+            $totalp = 0;
+
+            $total += $details['price'] * $details['quantity'];
+            $totalquantity += $details['quantity'];
+
+
+            $product = Product::find($details['product_id']);
+            $grandqty = $product->quantity - $details['quantity'];
+            
+            // $product->update([
+            //     'quantity' => $grandqty,
+            // ]);
+
+        }
+
+            $today = date("Ymd");
+            $rand = sprintf("%04d", rand(0,9999));
+            $unique = $today . $rand;
+            $order = Order::create([
+                'order_id' => $unique,
+                'totalquantity' => $totalquantity,
+                'totalprice' =>  $total - $cart->discount,
+                'grandtotal' =>  $total - $cart->discount + $customer->township->deliveryprice,
+                'discount' =>  $cart->discount,
+                'orderdate' =>  date('Y-m-d'),
+                'deliverydate' =>  $cart->delivery_date,
+                'orderby' =>  Auth::user()->name,
+                'remark' =>  $cart->remark,
+                'monthly' =>  date('Y-m'),
+                'yearly' =>  date('Y'),
+                'deliverystatus' => 1,
+                'user_id' => $customer->id,
+    
+            ]);
+                
+            
+
+        foreach($cart->cart_products as  $details) {
+        
+            Order_detail::create([
+                'product_id' => $details['product_id'],
+                'name' => $details['name'],
+                'quantity' =>   $details['quantity'],
+                'price' =>  $details['price'],
+                'totalprice' => $details['price'] * $details['quantity'],
+                'user_id' => $customer->id,
+                'order_id' => $order->id,
+
+            ]);
+
+            //start
+            $totalsale_pid = Totalsaleproduct::where('product_id', $details['product_id'])->where('date', date('Y-m-d'))->get();
+
+            if($totalsale_pid[0] == null) {
+                $totalsale = Totalsaleproduct::create([
+                    'product_id' => $details['product_id'],
+                    'totalqty' => $details['quantity'],
+                    'totalprice' =>  $details['price'] * $details['quantity'],
+                    'date' => date('Y-m-d'),
+                    'deliveryprice' =>  $order->user->township->deliveryprice,
+        
+                ]);
+
+                Totalsaledetail::create([
+                    'user_id' => $order->user->id,
+                    'product_id' => $details['product_id'],
+                    'totalqty' => $details['quantity'],
+                    'totalprice' => $details['price'] * $details['quantity'],
+                    'date' =>  date('Y-m-d'),
+                    'tsp_id' => $totalsale->id,
+                    'order_id' => $order->id,
+    
+                ]);
+
+            } else {
+                if($totalsale_pid[0]->date == date('Y-m-d')) {    
+                    foreach($totalsale_pid as $tsp)  {
+                        $tsp->update([
+                            'totalqty' => $totalsale_pid[0]->totalqty + $details['quantity'],
+                            'totalprice' => $totalsale_pid[0]->totalprice + $details['price'] * $details['quantity'],
+                            'deliveryprice' => $totalsale_pid[0]->deliveryprice +  $order->user->township->deliveryprice,
+                
+                        ]);  
+                        
+                        Totalsaledetail::create([
+                            'user_id' => $order->user->id,
+                            'product_id' => $details['product_id'],
+                            'totalqty' => $details['quantity'],
+                            'totalprice' => $details['price'] * $details['quantity'],
+                            'date' =>  date('Y-m-d'),
+                            'tsp_id' => $tsp->id,
+                            'order_id' => $order->id,
+            
+                        ]);
+                    }           
+
+                    
+
+                } else {
+
+                    $totalsalee = Totalsaleproduct::create([
+                        'product_id' => $details['product_id'],
+                        'totalqty' => $details['quantity'],
+                        'totalprice' =>  $details['price'] * $details['quantity'],
+                        'date' => date('Y-m-d'),
+                        'deliveryprice' =>  $order->user->township->deliveryprice,
+            
+                    ]);
+    
+                    Totalsaledetail::create([
+                        'user_id' => $order->user->id,
+                        'product_id' => $details['product_id'],
+                        'totalqty' => $details['quantity'],
+                        'totalprice' => $details['price'] * $details['quantity'],
+                        'date' =>  date('Y-m-d'),
+                        'tsp_id' => $totalsalee->id,
+                        'order_id' => $order->id,
+        
+                    ]);
+                }
+           
+
+            }
+           
+        //end  
+        
+
+            
+        }   
+        session()->forget('cart'); 
+        session()->forget('order_cart');
+
+        Cart_product::where('cart_id', $id)->delete();
+        $cart->delete(); 
+
+        if(Auth::user()->role_id == 2) {
+        return redirect()->route('adminorders')->with('ordersuccess', 'Order Success!'); 
+        } else {                
+            return redirect()->route('order')->with('ordersuccess', 'Order Success!'); 
+        }
+    }
+
+    public function order_cart_edit($id)
+    {
+        $order = Cart::find($id);
+        $townships = Township::pluck('name', 'id')->all();
+        $selected_township = $order->township->pluck('id')->all();
+        if(Auth::user()->role_id == 2) {
+            return view('orders.admin_order_cart_edit', compact('order', 'townships'));
+        } else {
+            return view('orders.order_cart_edit', compact('order', 'townships'));
+        }
+    }
+
+    public function order_cart_editp($id)
+    {
+        session()->forget('order_cart');
+        $orders = Cart_product::where('cart_id', $id)->get();
+        if(Auth()->user()->role_id == 2) {
+            return view('orders.admin_cart_edit_product', compact('orders'));
+        } else {
+            return view('orders.order_cart_edit_product', compact('orders'));
+        }
+    }
+
+    public function order_cart_update(Ostore $request, $id)
+    {
+        $order = Cart::find($id);
+        $order->update($request->all());
+        if(Auth::user()->role_id == 2) {
+            return redirect()->route('admin_cart_detail', $id)->with('order_cart_updated', 'Order_cart Updated Successfully!');
+        } else {            
+            return redirect()->route('order_cart')->with('order_cart_updated', 'Order_cart Updated Successfully!');
+        }
+    }
+
+    public function order_cart_delete($id)
+    {
+        $cart = Cart::find($id);
+        $cart_products = Cart_product::where('cart_id', $id)->get();
+
+        foreach($cart_products as $cp) {
+            $product = Product::find($cp->product_id);
+            $product->update([
+                'quantity' => $product->quantity + $cp->quantity,
+            ]);
+            $cp->delete();
+        }
+
+        
+        $cart->delete();
+        return redirect()->back()->with('deleted', 'Order_cart Deleted Successfully');
+    }
+    
     public function order()
     {
         $orders = Order::orderBy('id', 'desc')->paginate(15);

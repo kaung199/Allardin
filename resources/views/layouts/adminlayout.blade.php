@@ -148,6 +148,11 @@
       </li>
 
       <li class="nav-item">
+        <a class="nav-link" href="{{ route('order_cart') }}">
+        <i class="fas fa-shopping-cart text-danger"></i>
+          <span>Order_Cart</span></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="{{ route('order') }}">
         <i class="fab fa-accessible-icon text-success"></i>
           <span>Orders</span></a>

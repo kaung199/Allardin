@@ -15,14 +15,27 @@ use App\ProductsPhoto;
 
 class ProductController extends Controller
 {
+    
     public function index()
     {
         $products = Product::latest()->paginate(15);
         return view('products.index',compact('products'));
     }
+    public function cart_product($id)
+    {
+        $cart = session()->get('order_cart');
+        session()->put('order_cart', $id);
+        $products = Product::latest()->paginate(15);
+        if(Auth()->user()->role_id ==2) {
+            return view('products.adminindex',compact('products'));
+        } else {
+            return view('products.index',compact('products'));
+        }
+
+    }
     public function adminindex()
     {
-        $products = Product::latest()->paginate(40);
+        $products = Product::latest()->paginate(10);
         return view('products.adminindex',compact('products'));
     }
     public function searchproducts(Request $request)
@@ -89,8 +102,13 @@ class ProductController extends Controller
 
     public function edit($id, $page)
     {
-        $product = Product::find($id);
-        return view('products.edit', compact('product', 'page'));        
+        if(Auth::user()->role_id == 1) {
+            $product = Product::find($id);
+            return view('products.edit', compact('product', 'page'));
+        } else {
+            return redirect()->back()->with('permission', 'Permission Deny');
+        }
+                
         
     }
     public function editdetail($id)

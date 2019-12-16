@@ -1,16 +1,17 @@
-@extends('layouts.adminindex')
+@extends('layouts.adminlayout')
 
 @section('title')
     Customer Create
 @endsection
 @section('breadcrumbs')
-    <li class="breadcrumb-item active">Customer</li>
-    <li class="breadcrumb-item active">Create</li>
+    <li class="breadcrumb-item active">Order_cart Edit</li>
 @endsection
 @section('contents') 
-    <h3>Customer Create</h3>
+    <h3>Order_customer Edit</h3>
     <hr>
-    {{ Form::open([ 'route'=>'cart_checkout', 'method' => 'POST' ]) }}
+    {{ Form::model($order, [ 
+        'route'=> ['orders.order_cart_update', $order->id],
+         'method' => 'PUT' ]) }}
         <div class="form-group">
             {{ Form::label(null,'Name') }}
             {{ Form::text('name', null, [
@@ -59,10 +60,12 @@
         
         <div class="form-group">
             {{ Form::label(null,'Townships') }}
-            {{ Form::select('township_id', $townships, 'null', [
+            {{ Form::select('township_id', $townships, $selected_township, [
                 'class' => 
                 ($errors->has('township_id')? 'form-control is-invalid': 'form-control'), 
             ]) }}
+
+
             @if($errors->has('township_id'))
                 <span class="invalid-feedback" role="alert">
                     <strong>
@@ -88,7 +91,7 @@
         </div>
         <div class="form-group">
             {{ Form::label(null,'DeliveryDate') }}
-            <input type="date" name="delivery_date" data-date-inline-picker="true" style="box-shadow: none;"  class="form-control" aria-label="Search" aria-describedby="basic-addon2" required="required">
+            <input type="date" name="delivery_date" data-date-inline-picker="true" style="box-shadow: none;" value="{{ $order->delivery_date }}"  class="form-control" aria-label="Search" aria-describedby="basic-addon2" required="required">
             
         </div>
         <div class="form-group">
@@ -97,7 +100,7 @@
         </div>
 
 		
-        <button class="btn btn-primary" OnClick="return confirm('Are You Sure to Order');">Order</button>
+        <button class="btn btn-primary">Update</button>
 
 	{{ Form:: close() }}
 

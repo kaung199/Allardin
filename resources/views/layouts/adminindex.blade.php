@@ -50,6 +50,9 @@
               <a class="nav-link" href="{{ route('adminindex') }}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="{{ route('order_cart') }}">Order_Cart</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{{ route('adminorders') }}">Orders</a>
             </li>
           <li class="nav-item">

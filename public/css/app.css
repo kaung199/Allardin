@@ -11155,6 +11155,10 @@ body {
     padding-left: 30px;
   }
 
+  .adminindex .btnpad {
+    padding-left: 46px;
+  }
+
   .adminindex h3 {
     font-weight: 600 !important;
   }
@@ -11200,6 +11204,10 @@ body {
 
   .adminindex .btn {
     padding: 0.375rem 0.6rem !important;
+  }
+
+  .adminindex .btnpad {
+    padding-left: 20px;
   }
 }
 

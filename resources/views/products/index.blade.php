@@ -7,8 +7,13 @@
     <li class="breadcrumb-item active">Products</li>
 @endsection
 @section('contents') 
+
     <div class="table-responsive">
+        @if(session('order_cart'))
+        <a href="{{ route('orders.order_cart_editp', session('order_cart')) }}" class="btn btn-warning">Back To Edit</a>
+        @else
         <h3>Products</h3>
+        @endif
         <a href="{{ route('products.create') }}" class="btn btn-primary float-right mtc">Add Product</a>
         <table class="table" width="100%" cellspacing="0">
         <thead>
@@ -32,7 +37,11 @@
                 <td>{{  $product->name}}</td>
                 <td>{{ $product->quantity }}</td>
                 <td>{{ $product->price }}</td>
-                <td> <a href="{{ route('cartadd', $product->id) }}" class="btn btn-primary addtocart"><i class="fas fa-cart-plus"></i>Add Order</a></td>
+                @if(session('order_cart'))
+                <td> <a href="{{ route('cartadd_cart_order', [ $product->id, session('order_cart') ] ) }}" class="btn btn-warning addtocart"><i class="fas fa-cart-plus"></i>Add Cart_Order</a></td>    
+                @else            
+                <td> <a href="{{ route('cartadd', $product->id) }}" class="btn btn-primary addtocart"><i class="fas fa-cart-plus"></i>Add Order</a></td>    
+                @endif
                 <td>
                     {{ Form::model($product, [ 
                         'route'=> ['products.destroy', $product->id], 
@@ -46,8 +55,8 @@
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                             <a class="dropdown-item" href="{{ route('products.show', $product->id) }}">Detail</a>
                             <?php $page = $products->currentPage(); ?>
-                            <a class="dropdown-item" href="{{ route('editproduct', ['id' => $product->id,'page' => $page ]) }}" >Edit</a>
                             @if(Auth::user()->role_id == 1)
+                                <a class="dropdown-item" href="{{ route('editproduct', ['id' => $product->id,'page' => $page ]) }}" >Edit</a>
                                 <button class="dropdown-item">Delete</button>
                             @endif
                         </div>

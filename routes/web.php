@@ -3,6 +3,7 @@ if (version_compare(PHP_VERSION, '7.2.0', '>=')) {
 
     error_reporting(E_ALL ^ E_NOTICE ^ E_WARNING);
 }
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -55,6 +56,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::get('admincheckoutform', 'OrderController@admincheckoutform')->name('admincheckoutform');
         Route::get('adminorders', 'AccountController@adminorders')->name('adminorders');
         Route::get('adminorderdetail/{id}', 'AccountController@adminorderdetail')->name('adminorderdetail');
+        Route::get('admin_cart_detail/{id}', 'OrderController@admin_cart_detail')->name('admin_cart_detail');
 
         Route::get('/editdetail/{id}', 'ProductController@editdetail')->name('editdetail');
 
@@ -82,11 +84,14 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::get('/cartadd/{id}', 'CartController@cartadd')->name('cartadd');
         Route::get('/cartview', 'CartController@cartview');
         Route::patch('/update-cart', 'CartController@update');
+        Route::patch('/update_order_cart', 'CartController@update_order_cart');
         Route::patch('/update-cart-sub', 'CartController@updatesub');
+        Route::patch('/update_order_cart_sub', 'CartController@update_order_cart_sub');
         
         // cartremove
         Route::get('/cart/remove/all', 'CartController@alldelete')->name('cart.alldelete');
         Route::delete('cart/remove-from-cart', 'CartController@remove')->name('cart.remove-from-cart');
+        Route::delete('cart/remove-from-order-cart', 'CartController@remove_order_cart')->name('cart.remove-from-order-cart');
 
         //admin order 
         Route::delete('orderdelivery/{id}', 'OrderController@orderdelivery')->name('orders.orderdelivery');
@@ -94,7 +99,17 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
 
         Route::get('checkoutform', 'OrderController@checkoutform')->name('checkoutform');
         Route::post('checkout', 'OrderController@checkout')->name('checkout');
+        Route::post('cart_checkout', 'OrderController@cart_checkout')->name('cart_checkout');
         Route::get('order', 'OrderController@order')->name('order');
+        Route::get('order_cart', 'OrderController@order_cart')->name('order_cart');
+        Route::delete('order_cart_delete/{id}', 'OrderController@order_cart_delete')->name('order_cart_delete');
+        Route::get('order_cart_edit/{id}', 'OrderController@order_cart_edit')->name('orders.order_cart_edit');
+        Route::get('order_cart_editp/{id}', 'OrderController@order_cart_editp')->name('orders.order_cart_editp');
+        Route::put('order_cart_update/{id}', 'OrderController@order_cart_update')->name('orders.order_cart_update');
+        Route::get('order_cart_confirm/{id}', 'OrderController@order_cart_confirm')->name('orders.order_cart_confirm');
+        Route::get('cart_product/{id}', 'ProductController@cart_product')->name('products.cart_product');
+        Route::get('cartadd_cart_order/{id}/{o_id}', 'CartController@cartadd_cart_order')->name('cartadd_cart_order');
+
         Route::get('orderdetail/{id}', 'OrderController@orderdetail')->name('orderdetail');
         Route::get('orderdetailsimple/{id}', 'OrderController@orderdetailsimple')->name('orderdetailsimple');
         Route::get('deliveryorderdetail/{id}', 'OrderController@deliveryorderdetail')->name('deliveryorderdetail');

@@ -4,7 +4,11 @@
 @if($count)
     <h3><span class="badge badge-success">{{$count}}</span> Product Found</h3>
 @else
-    <h3 class="padl">Products</h3>
+        @if(session('order_cart'))
+            <a href="{{ route('orders.order_cart_editp', session('order_cart')) }}" class="btn btn-warning">Back To Edit</a>
+        @else
+            <h3>Products</h3>
+        @endif
 @endif
 <div class="row">
     @foreach($products as $product)
@@ -21,7 +25,11 @@
                     <h5 class="card-title">{{ $product->name }}</h5>
                     <p class="card-text">Qty: {{ $product->quantity }}</p>
                     <p class="card-text">{{ $product->price }} Ks</p>
-                    <a href="{{ route('cartadd', $product->id) }}" class="btn btn-primary">Add To Cart</a>
+                    @if(session('order_cart'))
+                    <a href="{{ route('cartadd_cart_order', [ $product->id, session('order_cart') ] ) }}" class="btn btn-warning addtocart"><i class="fas fa-cart-plus"></i>Add Cart_Order</a>   
+                    @else            
+                    <a href="{{ route('cartadd', $product->id) }}" class="btn btn-primary">Add To Cart</a>    
+                    @endif
                 </div>
             </div>
         </div>
