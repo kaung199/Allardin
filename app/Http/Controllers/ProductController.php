@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Storage;
 use Spatie\Searchable\Search;
 use App\Product;
 use App\User;
+use Excel;
 use App\Order;
 use Auth;
 use App\Township;
@@ -162,5 +163,15 @@ class ProductController extends Controller
             ->perform($request->input('query'));
 
         return view('search', compact('searchResults'));
+    }
+
+    public function product_export() 
+    {
+        $products = Product::select('products.id', 'products.name')->get()->toArray(); 
+        return Excel::create('Aladdin(Products)', function($excel) use ($products) {
+            $excel->sheet('Aladdin', function($sheet) use ($products) {
+                $sheet->fromArray($products);
+            });
+        })->download('xls'); 
     }
 }

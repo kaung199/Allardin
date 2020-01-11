@@ -42,7 +42,8 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::get('/admin', function () {
             return redirect()->route('dashboard');
         });
-        
+        //export 
+        Route::get('product_export', 'ProductController@product_export')->name('product_export');
         Route::resource('deliveries', 'DeliveryController');
         Route::resource('products', 'ProductController');
         Route::resource('townships', 'TownshipController');
