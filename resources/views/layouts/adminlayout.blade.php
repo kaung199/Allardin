@@ -136,6 +136,13 @@
         </a>
       </li>
     @endif
+    @if(Auth::user()->role_id == 1)
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('category') }}">
+        <i class="fas fa-umbrella text-success"></i>
+          <span>Category</span></a>
+      </li>
+    @endif
       <li class="nav-item">
         <a class="nav-link" href="{{ url('products') }}">
         <i class="fas fa-umbrella text-primary"></i>
