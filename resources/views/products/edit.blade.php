@@ -28,6 +28,20 @@
                 </span>
             @endif
         </div>
+        <div class="form-group">
+            {{ Form::label(null,'Category') }}
+            {{ Form::select('category_id', $category, $product->category->id, [
+                'class' => 
+                ($errors->has('category_id')? 'form-control is-invalid': 'form-control'), 
+            ]) }}
+            @if($errors->has('category_id'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>
+                        {{ $errors->first('category_id') }}
+                    </strong>
+                </span>
+            @endif
+        </div>
         @if(Auth::user()->role_id == 1)
 	        <div class="form-group">
 	            {{ Form::label(null,'Quantity') }}

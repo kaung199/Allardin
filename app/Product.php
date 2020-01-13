@@ -9,12 +9,16 @@ use Spatie\Searchable\SearchResult;
 class Product extends Model  implements Searchable
 {
     protected $table = 'products';
-    protected $fillable = ['name', 'quantity', 'price', 'count_method', 'photo', 'youtube', 'images', 'description'];
+    protected $fillable = ['name', 'category_id', 'quantity', 'price', 'count_method', 'photo', 'youtube', 'images', 'description'];
 
 
     public function photos()
     {
         return $this->hasMany('App\ProductsPhoto');
+    }
+    public function category()
+    {
+        return $this->belongsTo('App\Category');
     }
 
     public function getSearchResult(): SearchResult

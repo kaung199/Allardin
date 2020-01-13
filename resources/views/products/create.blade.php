@@ -27,6 +27,20 @@
             @endif
         </div>
         <div class="form-group">
+            {{ Form::label(null,'Category') }}
+            {{ Form::select('category_id', $category, 'null', [
+                'class' => 
+                ($errors->has('category_id')? 'form-control is-invalid': 'form-control'), 
+            ]) }}
+            @if($errors->has('category_id'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>
+                        {{ $errors->first('category_id') }}
+                    </strong>
+                </span>
+            @endif
+        </div>
+        <div class="form-group">
             {{ Form::label(null,'Quantity') }}
             {{ Form::number('quantity', null, [
                 'class' => ($errors->has('quantity')? 'form-control is-invalid': 'form-control'),

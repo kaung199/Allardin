@@ -7,6 +7,7 @@ use App\Http\Requests\Pstore;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Searchable\Search;
 use App\Product;
+use App\Category;
 use App\User;
 use Excel;
 use App\Order;
@@ -76,7 +77,8 @@ class ProductController extends Controller
 
     public function create()
     {
-        return view('products.create');
+        $category = Category::pluck('name', 'id')->all();
+        return view('products.create', compact('category'));
     }
 
     public function store(Pstore $request)
@@ -104,8 +106,9 @@ class ProductController extends Controller
     public function edit($id, $page)
     {
         if(Auth::user()->role_id == 1) {
+            $category = Category::pluck('name', 'id')->all();
             $product = Product::find($id);
-            return view('products.edit', compact('product', 'page'));
+            return view('products.edit', compact('product', 'page', 'category'));
         } else {
             return redirect()->back()->with('permission', 'Permission Deny');
         }

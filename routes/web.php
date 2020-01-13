@@ -42,6 +42,13 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::get('/admin', function () {
             return redirect()->route('dashboard');
         });
+
+        //category 
+        Route::get('category', 'CategoryController@index')->name('category');
+        Route::post('category_store', 'CategoryController@store')->name('category_store');
+        Route::get('category_edit/{id}', 'CategoryController@edit')->name('category_edit');
+        Route::post('category_update/{id}', 'CategoryController@update')->name('category_update');
+        Route::delete('category_delete/{id}', 'CategoryController@destroy')->name('category_delete');
         //export 
         Route::get('product_export', 'ProductController@product_export')->name('product_export');
         Route::resource('deliveries', 'DeliveryController');
