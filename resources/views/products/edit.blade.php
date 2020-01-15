@@ -14,6 +14,22 @@
         'route'=> ['products.update', $product->id],
          'method' => 'PUT','enctype' => 'multipart/form-data' ]) }}
         <div class="form-group">
+            {{ Form::label(null,'Code') }}
+            {{ Form::text('code', null, [
+                'class' => ($errors->has('code')? 'form-control is-invalid': 'form-control'),
+                'placeholder' => 'Products code',
+                readonly
+                ]) }}
+
+            @if($errors->has('code'))
+                <span class="invalid-feedback" role="alert">
+                    <strong>
+                        {{ $errors->first('code') }}
+                    </strong>
+                </span>
+            @endif
+        </div>
+        <div class="form-group">
             {{ Form::label(null,'Name') }}
             {{ Form::text('name', null, [
                 'class' => ($errors->has('name')? 'form-control is-invalid': 'form-control'),

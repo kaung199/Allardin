@@ -17,9 +17,9 @@
                 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchbydatedelivery') }}" method="POST">
                     @csrf
                     <div class="input-group">
-                    <label for="from">From</label>
+                    <label for="from">D_From</label>
                     <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="from" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
-                    <label for="to">To</label>
+                    <label for="to">D_To</label>
                     <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="to" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
                     <input type="hidden" value="{{ $orders[0]->delivery_id }}" name="delivery_id">
                     <div class="input-group-append">
@@ -38,6 +38,7 @@
     
 </div>    
 <br>
+<?php $total = 0; ?>
 <div class="table-responsive-sm">
     <table class="table table-striped">
     <thead>
@@ -58,6 +59,7 @@
             <td>{{ $order->user->name }}</td>
             <td>{{ $order->totalquantity }}</td>
             <td class="text-right">{{ $order->totalprice + $order->user->township->deliveryprice }}</td>
+            <?php $total += $order->totalprice + $order->user->township->deliveryprice;  ?>
             <td>{{ $order->created_at }}</td>
             @if(Auth::user()->role_id == 1)
             <td  data-th="">
@@ -157,6 +159,11 @@
         @endforeach
     </tbody>
     </table>
+    <div class="row">
+        <div class="col-md-12 bg-dark">
+                    <h3 class="text-center text-danger pt-2">Grand Total = {{  $total }}</h3>
+        </div>
+    </div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
@@ -177,6 +184,18 @@
         <script>
             Swal.fire({
                 title: 'Permission Access Deny !!Ask Admin!!',
+                animation: false,
+                customClass: {
+                    popup: 'animated tada'
+                }
+            })
+        </script>
+    
+    @endif
+    @if(session('idNull'))
+        <script>
+            Swal.fire({
+                title: '<div style="color:red;">No Data Found!</div>',
                 animation: false,
                 customClass: {
                     popup: 'animated tada'

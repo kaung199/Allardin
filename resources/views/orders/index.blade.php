@@ -57,12 +57,16 @@
                 @if($order->deliverydate != null)
                 <h6><strong>Delivery_Date = {{ $order->deliverydate }}</strong></h6>
                 @endif
+                @if($order->dname != null)
+                <h6><strong>Delivery_name = {{ $order->dname }}</strong></h6>
+                @endif
                 @if($order->orderby != null)
                 <h6><strong>Admin => {{ $order->orderby }}</strong></h6>
                 @endif
                 @if($order->remark != null)
                 <h6><strong>Remark = {{ $order->remark }}</strong></h6>
                 @endif
+                
             </div>
             <div class="col-md-3">
                 <h6><strong>

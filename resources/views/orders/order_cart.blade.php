@@ -116,6 +116,15 @@
                     }
                 })      
         @endif
+        @if(session('d_date_error'))        
+                Swal.fire({
+                    title: '<div style="color:red;">Delivery Date Can\'t be Today!!</div>',
+                    animation: false,
+                    customClass: {
+                        popup: 'animated tada'
+                    }
+                })      
+        @endif
     </script>
 
 @endsection

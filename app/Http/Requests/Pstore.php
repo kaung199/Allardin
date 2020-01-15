@@ -32,6 +32,7 @@ class Pstore extends FormRequest
         // ];
         $rules = [
             'name' => 'required|max:50',
+            'code' => 'required||unique:products',
             'quantity' => 'required|max:100',
             'price' => 'required|max:100',
             'description' => 'required',

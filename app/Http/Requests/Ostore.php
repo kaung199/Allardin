@@ -27,6 +27,7 @@ class Ostore extends FormRequest
             'name' => 'required|max:50',
             'phone' => 'required',
             'address' => 'required',
+            'delivery_date' => 'required',
             'township_id' => 'required',
         ];
     }

@@ -88,8 +88,10 @@
         </div>
         <div class="form-group">
             {{ Form::label(null,'DeliveryDate') }}
-            <input type="date" name="delivery_date" data-date-inline-picker="true" style="box-shadow: none;"  class="form-control" aria-label="Search" aria-describedby="basic-addon2" required="required">
-            
+            <input type="date" name="delivery_date" data-date-inline-picker="true" style="box-shadow: none;"  class="form-control @error('delivery_date') is-invalid @enderror" aria-label="Search" aria-describedby="basic-addon2" required="required" min="{{ date('Y-m-d', strtotime('+1 day')) }}">
+            @error('delivery_date')
+                <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         <div class="form-group">
             {{ Form::label(null,'Remark') }}

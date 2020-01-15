@@ -78,7 +78,15 @@ class ProductController extends Controller
     public function create()
     {
         $category = Category::pluck('name', 'id')->all();
+
+        $id = Product::latest()->first();
+
+        if (isset($id)){
+            $code = $id->id + 1;
+            return view('products.create',compact('category', 'code'));
+        }
         return view('products.create', compact('category'));
+
     }
 
     public function store(Pstore $request)

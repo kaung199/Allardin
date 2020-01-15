@@ -91,7 +91,7 @@
         </div>
         <div class="form-group">
             {{ Form::label(null,'DeliveryDate') }}
-            <input type="date" name="delivery_date" data-date-inline-picker="true" style="box-shadow: none;" value="{{ $order->delivery_date }}"  class="form-control" aria-label="Search" aria-describedby="basic-addon2" required="required">
+            <input type="date" name="delivery_date" data-date-inline-picker="true" style="box-shadow: none;" value="{{ $order->delivery_date }}"  class="form-control" aria-label="Search" aria-describedby="basic-addon2" required="required" min="{{ date('Y-m-d') }}">
             
         </div>
         <div class="form-group">

@@ -9,7 +9,7 @@ use Spatie\Searchable\SearchResult;
 class Product extends Model  implements Searchable
 {
     protected $table = 'products';
-    protected $fillable = ['name', 'category_id', 'quantity', 'price', 'count_method', 'photo', 'youtube', 'images', 'description'];
+    protected $fillable = ['name', 'category_id','code', 'quantity', 'price', 'count_method', 'photo', 'youtube', 'images', 'description'];
 
 
     public function photos()

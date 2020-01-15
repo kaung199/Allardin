@@ -234,7 +234,9 @@ class OrderController extends Controller
     {
 
         $cart = Cart::find($id);
-
+        if($cart->delivery_date == date('Y-m-d')) {
+            return redirect()->back()->with('d_date_error', "Delivery Date Can't Equal to Today!!");
+        }
         $total = 0;
         $totalquantity = 0;
         $totalsaleproduct = 0;
@@ -1054,9 +1056,12 @@ class OrderController extends Controller
         $to = $request->to;
         $id = $request->delivery_id;
         $delivery = User::find($id);
-        $orders = Order::whereBetween('orderdate', [$from, $to])
+        $orders = Order::whereBetween('deliverydate', [$from, $to])
                 ->where('delivery_id', $id)
                 ->orderBy('dname')->get();
+        if(collect($orders)->isEmpty()) {
+            return redirect()->back()->with('idNull', 'No Data');
+        }
         return view('delivery.searchbydate', \compact('orders', 'delivery'));  
     }
 
