@@ -8,6 +8,8 @@
     <li class="breadcrumb-item active">Delivery OrdersbyDate</li>
 @endsection
 @section('contents') 
+
+<?php  $total = 0; ?>
 <div class="container">
     <div class="row">
         <div class="col-md-6">
@@ -54,6 +56,7 @@
         <td>{{ $order->user->name }}</td>
         <td>{{ $order->totalquantity }}</td>
         <td class="text-right">{{ $order->totalprice + $order->user->township->deliveryprice }}</td>
+        <?php $total += $order->totalprice + $order->user->township->deliveryprice;  ?>
         <td>{{ $order->created_at }}</td>
         @if(Auth::user()->role_id ==1 )
         <td  data-th="">
@@ -108,6 +111,11 @@
     @endforeach
   </tbody>
 </table>
+<div class="row">
+    <div class="col-md-12 bg-dark">
+        <h3 class="text-center text-danger pt-2">Grand Total = {{  $total }}</h3>
+    </div>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
 
@@ -127,6 +135,18 @@
         <script>
             Swal.fire({
                 title: 'Permission Access Deny !!Ask Admin!!',
+                animation: false,
+                customClass: {
+                    popup: 'animated tada'
+                }
+            })
+        </script>
+    
+    @endif
+    @if(session('idNull'))
+        <script>
+            Swal.fire({
+                title: '<div style="color:red;">No Data Found!</div>',
                 animation: false,
                 customClass: {
                     popup: 'animated tada'
