@@ -4,6 +4,8 @@
     Orders Daily
 @endsection
 @section('breadcrumbs')
+
+
     @if($ddfrom && $ddto)
     <li class="breadcrumb-item active"> <a href="{{ url('daily') }}">Daily</a></li>
     <li class="breadcrumb-item active">Dliverydate ({{ $ddfrom . '/' . $ddto }})</li>
@@ -78,7 +80,7 @@
     <table class="table table-primary">
         <thead>
             <tr>
-            <th scope="col">Order_id</th>
+            <th scope="col">Address</th>
             <th scope="col">Customer Name</th>
             <th scope="col">Total Qty</th>
             <th scope="col" class="text-right">Total Price</th>
@@ -92,7 +94,7 @@
         <tbody>
             @foreach($orderso as $ordero)
                 <tr>
-                    <th scope="row">{{ $ordero->order_id }}</th>
+                    <th scope="row">{{ $ordero->user->address }}</th>
                     <td>{{ $ordero->user->name }}</td>
                     <td>{{ $ordero->totalquantity }}</td>
                     <td class="text-right">{{ $ordero->totalprice + $ordero->user->township->deliveryprice }}</td>
@@ -185,7 +187,7 @@
     <table class="table table-active">
         <thead>
             <tr>
-            <th scope="col">Order_id</th>
+            <th scope="col">Address</th>
             <th scope="col">Customer Name</th>
             <th scope="col">Total Qty</th>
             <th scope="col" class="text-right">Total Price</th>
@@ -200,7 +202,7 @@
         <tbody>
             @foreach($ordersd as $orderd)
                 <tr>
-                <th scope="row">{{ $orderd->order_id }}</th>
+                <th scope="row">{{ $orderd->user->address }}</th>
                 <td>{{ $orderd->user->name }}</td>
                 <td>{{ $orderd->totalquantity }}</td>
                 <td class="text-right">{{ $orderd->totalprice + $orderd->user->township->deliveryprice }}</td>
@@ -298,7 +300,7 @@
     <table class="table table-danger">
         <thead>
             <tr>
-            <th scope="col">Order_id</th>
+            <th scope="col">Address</th>
             <th scope="col">Customer Name</th>
             <th scope="col">Total Qty</th>
             <th scope="col" class="text-right">Total Price</th>
@@ -313,7 +315,7 @@
         <tbody>
             @foreach($ordersp as $orderp)
                 <tr>
-                <th scope="row">{{ $orderp->order_id }}</th>
+                <th scope="row">{{ $orderp->user->address }}</th>
                 <td>{{ $orderp->user->name }}</td>
                 <td>{{ $orderp->totalquantity }}</td>
                 <td class="text-right">{{ $orderp->totalprice + $orderp->user->township->deliveryprice }}</td>
@@ -411,7 +413,7 @@
     <table class="table table-success">
         <thead>
             <tr>
-            <th scope="col">Order_id</th>
+            <th scope="col">Address</th>
             <th scope="col">Customer Name</th>
             <th scope="col">Total Qty</th>
             <th scope="col" class="text-right">Total Price</th>
@@ -426,7 +428,7 @@
         <tbody>
             @foreach($ordersc as $orderc)
                 <tr>
-                <th scope="row">{{ $orderc->order_id }}</th>
+                <th scope="row">{{ $orderc->user->address }}</th>
                 <td>{{ $orderc->user->name }}</td>
                 <td>{{ $orderc->totalquantity }}</td>
                 <td class="text-right">{{ $orderc->totalprice + $orderc->user->township->deliveryprice }}</td>
