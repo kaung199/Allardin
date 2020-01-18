@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\Pstore;
+use App\Http\Requests\uPstore;
 use Illuminate\Support\Facades\Storage;
 use Spatie\Searchable\Search;
 use App\Product;
@@ -129,7 +130,7 @@ class ProductController extends Controller
         return view('products.edit', compact('product'));
     }
 
-    public function update(Pstore $request,Product $product)
+    public function update(uPstore $request,Product $product)
     {        
         $product->update($request->all());      
 
