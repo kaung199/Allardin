@@ -29,7 +29,7 @@ class VoucherController extends Controller
                 $session_data = array();
             }
         }
-        return view('voucher.index', compact('voucher_data'));
+        return view('voucher.index', compact('session_data'));
     }
 
     public function order_search(Request $request) 
@@ -57,9 +57,10 @@ class VoucherController extends Controller
         if($order != null)
         {
             if($order->dname == null) {
-                return redirect()->back()->with('notDelivery', 'This order has no Delivery!!');
+                return json_encode(array('sales_table'=>array(),'msg'=>'This order has no Delivery!'));
             }
             $id = $order->id;
+            $count = count(session('voucher_data'));
             $order_id = $order->order_id;
             $total_qty = $order->totalquantity;
             $d_name = $order->dname;
@@ -69,17 +70,18 @@ class VoucherController extends Controller
 
             foreach($session_data as $key => $sd){
                 if($sd['order_id'] == $order_id){
-                        return redirect()->back()->with('exist', 'Already Exist');
+                    return json_encode(array('sales_table'=>array(),'msg'=>'Aready Exists!'));
                 
                 }
             }
-            $session_data[] = array('id'=>$id,'order_id'=>$order_id,'total_qty'=>$total_qty,'d_name'=>$d_name,'d_date'=>$d_date,'grand_total'=>$grand_total,'cus_name'=>$cus_name);
-            $request->session()->put('voucher_data', $session_data);   
-            return redirect()->back()->with('success', 'Success!');
+            $session_data[] = array('id'=>$id,'count'=>$count,'order_id'=>$order_id,'total_qty'=>$total_qty,'d_name'=>$d_name,'d_date'=>$d_date,'grand_total'=>$grand_total,'cus_name'=>$cus_name);
+            $request->session()->put('voucher_data', $session_data); 
+            $count = count(session('voucher_data'));
+            return json_encode(array('sales_table'=>$session_data,'msg'=>'', 'count'=>$count));
            
         } else
         {
-            return redirect()->back()->with('notFound', 'Not Found!');
+            return json_encode(array('sales_table'=>array(),'msg'=>'Not Found!'));
         }
     }
 
@@ -109,11 +111,11 @@ class VoucherController extends Controller
             ]);
         }
         $request->session()->forget('voucher_data');
-        return redirect()->back()->with('success', 'Successfully Updated Status!');
+        return json_encode(array('sales_table'=> '','msg'=>'Status Updated Successfully!'));
     }
     public function destroy(Request $request)
     {
         $request->session()->forget('voucher_data');
-        return redirect()->back()->with('success', 'Successfully Removed!');
+        return json_encode(array('msg'=>'Removed Successfully!'));
     }
 }

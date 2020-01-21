@@ -46,6 +46,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         // voucher
         Route::get('voucher_data', 'VoucherController@index')->name('voucher_data');
         Route::get('voucher_search', 'VoucherController@order_search')->name('voucher_search');
+        
         Route::get('voucher_cancel', 'VoucherController@destroy')->name('voucher_cancel');
         Route::get('voucher_confirm', 'VoucherController@confirm')->name('voucher_confirm');
 
