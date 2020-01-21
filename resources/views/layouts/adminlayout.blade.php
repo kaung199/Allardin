@@ -188,11 +188,16 @@
           <span>Delivery</span></a>
       </li>
       @if(Auth::user()->role_id == 1)
-      <li class="nav-item">
-        <a class="nav-link" href="{{ route('deliveries.create') }}">
-        <i class="fas fa-user-plus text-info"></i>
-          <span>Accounts Create</span></a>
-      </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('voucher_data') }}">
+            <i class="fas fa-file-medical-alt text-light"></i>
+            <span>Voucher</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('deliveries.create') }}">
+          <i class="fas fa-user-plus text-info"></i>
+            <span>Accounts Create</span></a>
+        </li>
       @endif
       @if(Auth::user()->role_id == 1)
       <li class="nav-item">
@@ -241,7 +246,7 @@
       <footer class="sticky-footer">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright © Medifuture co.,ltd 2019</span>
+            <span>Copyright © Medifuture co.,ltd 2020</span>
           </div>
         </div>
       </footer>

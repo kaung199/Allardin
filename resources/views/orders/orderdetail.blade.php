@@ -20,21 +20,16 @@
             {{ $orderdetails[0]->user->name }}'s Order Detail
           </h3>
         </div>
-        <div class="col-md-6 hide">
+        <div class="col-md-6 pb-1">
           <div class="float-right">
-            @if($previous)
-            <a href="{{ URL::to( 'orderdetail/' . $previous ) }}" class="btn btn-outline-light text-dark text-decoration-none"><i class="fas fa-backward"></i> Previous</a>
-            @endif
-            @if($next)
-            <a href="{{ URL::to( 'orderdetail/' . $next ) }}" class="btn btn-outline-light text-dark text-decoration-none">Next <i class="fas fa-forward"></i></a>
-            @endif
+                  @php
+                      echo DNS1D::getBarcodeSVG($orderdetails[0]->order->order_id, "C39",1,44);
+                  @endphp
           </div>
           <div class="clearfix"></div>
         </div>
       </div>
     </div>
-
-
 
     <table class="table table-bordered ">
       <thead>
@@ -237,14 +232,11 @@
               {{ $orderdetails[0]->user->name }}'s Order Detail
             </h3>
           </div>
-          <div class="col-md-6 hide">
+          <div class="col-md-6 pb-1">
             <div class="float-right">
-              @if($previous)
-              <a href="{{ URL::to( 'orderdetail/' . $previous ) }}" class="btn btn-outline-light text-dark text-decoration-none"><i class="fas fa-backward"></i> Previous</a>
-              @endif
-              @if($next)
-              <a href="{{ URL::to( 'orderdetail/' . $next ) }}" class="btn btn-outline-light text-dark text-decoration-none">Next <i class="fas fa-forward"></i></a>
-              @endif
+                  @php
+                      echo DNS1D::getBarcodeSVG($orderdetails[0]->order->order_id, "C39",1,44);
+                  @endphp
             </div>
             <div class="clearfix"></div>
           </div>
@@ -445,14 +437,11 @@
               {{ $orderdetails[0]->user->name }}'s Order Detail
             </h3>
           </div>
-          <div class="col-md-6 hide">
+          <div class="col-md-6 pb-1">
             <div class="float-right">
-              @if($previous)
-              <a href="{{ URL::to( 'orderdetail/' . $previous ) }}" class="btn btn-outline-light text-dark text-decoration-none"><i class="fas fa-backward"></i> Previous</a>
-              @endif
-              @if($next)
-              <a href="{{ URL::to( 'orderdetail/' . $next ) }}" class="btn btn-outline-light text-dark text-decoration-none">Next <i class="fas fa-forward"></i></a>
-              @endif
+                @php
+                    echo DNS1D::getBarcodeSVG($orderdetails[0]->order->order_id, "C39",1,44);
+                @endphp
             </div>
             <div class="clearfix"></div>
           </div>

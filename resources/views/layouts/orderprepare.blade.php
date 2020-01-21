@@ -70,7 +70,7 @@
   
   
 <div class="bg-dark">
-    <p class="text-center pt-3 pb-3 text-muted">Copyright © Medifuture co.,ltd 2019</p>
+    <p class="text-center pt-3 pb-3 text-muted">Copyright © Medifuture co.,ltd 2020</p>
 </div>
 </body>
 </html>

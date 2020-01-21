@@ -136,7 +136,7 @@
 		<div class="footer_bottom">
 			<div class="container">
 				<div class="copy">
-					<p> Copyright &copy;2019 Medifuture co.,ltd</p>
+					<p> Copyright &copy;2020 Medifuture co.,ltd</p>
 				</div>
 			</div>
 		</div>

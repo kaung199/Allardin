@@ -51,7 +51,7 @@
 @foreach($orders as $order)
     <div class="shadow-lg p-3 mb-5 bg-white rounded">
         <div class="row">
-            <div class="col-md-9">
+            <div class="col-md-9">                
                 <h6><strong>Order_id = {{ $order->order_id }}</strong></h6>
                 <h6><strong>Order_Date = {{ $order->created_at }}</strong></h6>
                 @if($order->deliverydate != null)

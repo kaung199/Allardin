@@ -540,13 +540,13 @@ class OrderController extends Controller
                 ]);
                 return redirect()->back()->with('deliverystatus', 'Status Change successful');
             }
+            // if($deliverystatus->deliverystatus == 2) {
+            //     $deliverystatus->update([
+            //         'deliverystatus' => 3
+            //     ]);  
+            //     return redirect()->back()->with('deliverystatus', 'Status Change successful');
+            // }
             if($deliverystatus->deliverystatus == 2) {
-                $deliverystatus->update([
-                    'deliverystatus' => 3
-                ]);  
-                return redirect()->back()->with('deliverystatus', 'Status Change successful');
-            }
-            if($deliverystatus->deliverystatus == 3) {
                 $deliverystatus->update([
                     'deliverystatus' => 4
                 ]); 
@@ -578,13 +578,13 @@ class OrderController extends Controller
                 ]);
                 return redirect()->back()->with('deliverystatus', 'Status Change successful');
             }
+            // if($deliverystatus->deliverystatus == 2) {
+            //     $deliverystatus->update([
+            //         'deliverystatus' => 3
+            //     ]);  
+            //     return redirect()->back()->with('deliverystatus', 'Status Change successful');
+            // }
             if($deliverystatus->deliverystatus == 2) {
-                $deliverystatus->update([
-                    'deliverystatus' => 3
-                ]);  
-                return redirect()->back()->with('deliverystatus', 'Status Change successful');
-            }
-            if($deliverystatus->deliverystatus == 3) {
                 $deliverystatus->update([
                     'deliverystatus' => 4
                 ]); 
@@ -658,13 +658,13 @@ class OrderController extends Controller
             ]);
             return redirect()->route('order')->with('deliverystatus', 'Status Change successful');
         }
+        // if($deliverystatus->deliverystatus == 2) {
+        //     $deliverystatus->update([
+        //         'deliverystatus' => 3
+        //     ]);  
+        //     return redirect()->route('order')->with('deliverystatus', 'Status Change successful');
+        // }
         if($deliverystatus->deliverystatus == 2) {
-            $deliverystatus->update([
-                'deliverystatus' => 3
-            ]);  
-            return redirect()->route('order')->with('deliverystatus', 'Status Change successful');
-        }
-        if($deliverystatus->deliverystatus == 3) {
             $deliverystatus->update([
                 'deliverystatus' => 4
             ]); 
@@ -672,7 +672,10 @@ class OrderController extends Controller
         }
         if($deliverystatus->deliverystatus == 4) {
             $deliverystatus->update([
-                'deliverystatus' => 1
+                'deliverystatus' => 1,
+                'delivery_id' => null,
+                'dname' => null,
+                'dphone' => null,
             ]); 
             return redirect()->route('order')->with('deliverystatus', 'Status Change successful');
         }        
