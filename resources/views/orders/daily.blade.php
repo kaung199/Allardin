@@ -66,7 +66,6 @@
         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="{{ route('orderprepared') }}">Order Prepare</a>
             <a class="dropdown-item" href="{{ route('deliveryd') }}">Delivery</a>
-            <a class="dropdown-item" href="{{ route('paymentd') }}">Payment</a>
             <a class="dropdown-item" href="{{ route('completed') }}">Complete</a>
         </div>
     </div>
@@ -154,7 +153,7 @@
                         <a href="{{ route('deliverystatus', $ordero->id) }}" class="btn btn-outline-info">Payment</a>
                         @endif
                         @if($ordero->deliverystatus == 4)
-                        <a href="{{ route('deliverystatus', $ordero->id) }}" class="btn btn-outline-success">Complete</a>
+                        <a class="btn btn-outline-success text-success">Complete</a>
                         @endif
                     </td>
                     <td>
@@ -219,11 +218,43 @@
                         <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal{{ $orderd->id }}">
                         Order Prepare
                         </button>
-
-                        <!-- Modal -->
-                        <div class="modal fade" id="exampleModal{{ $orderd->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog" role="document">
-                            <div class="modal-content">
+                    @endif
+                        
+                    
+                    @if($orderd->deliverystatus == 2)
+                    <a href="{{ route('deliverystatus', $orderd->id) }}" class="btn btn-outline-secondary">Delivery</a>
+                    @endif
+                    @if($orderd->deliverystatus == 3)
+                    <a href="{{ route('deliverystatus', $orderd->id) }}" class="btn btn-outline-info">Payment</a>
+                    @endif
+                    @if($orderd->deliverystatus == 4)
+                    <a class="btn btn-outline-success text-success">Complete</a>
+                    @endif
+                </td>
+                <td>
+                    {{ Form::model($orderd, [ 
+                        'route'=> ['orders.destroy', $orderd->id], 
+                        'method' => 'DELETE',
+                        'onsubmit' => "return confirm('Are you sure you want to DELETE this ORDER?');"
+                    ]) }}
+                        <div class="dropdown">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Action
+                            </button>
+                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                <a class="dropdown-item" href="{{ route('orderdetail', $orderd->id) }}">Detail</a>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#exampleModal{{ $orderd->id }}">Change Delivery</a>
+                                <button class="dropdown-item">Delete</button>
+                            </div>
+                        </div>
+                        
+                    {{ Form::close() }}
+                </td>
+                </tr>
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal{{ $orderd->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
                             <div class="modal-header">
                                 <h5 class="modal-title" id="exampleModalLabel">Choose Delivery Man</h5>
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -255,39 +286,9 @@
                                     <button class="btn btn-success">Next</button>
                                 </div>
                             {{ Form::close() }}
-                            </div>
                         </div>
-                        </div>
-                    @endif
-                    @if($orderd->deliverystatus == 2)
-                    <a href="{{ route('deliverystatus', $orderd->id) }}" class="btn btn-outline-secondary">Delivery</a>
-                    @endif
-                    @if($orderd->deliverystatus == 3)
-                    <a href="{{ route('deliverystatus', $orderd->id) }}" class="btn btn-outline-info">Payment</a>
-                    @endif
-                    @if($orderd->deliverystatus == 4)
-                    <a href="{{ route('deliverystatus', $orderd->id) }}" class="btn btn-outline-success">Complete</a>
-                    @endif
-                </td>
-                <td>
-                    {{ Form::model($orderd, [ 
-                        'route'=> ['orders.destroy', $orderd->id], 
-                        'method' => 'DELETE',
-                        'onsubmit' => "return confirm('Are you sure you want to DELETE this ORDER?');"
-                    ]) }}
-                        <div class="dropdown">
-                            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Action
-                            </button>
-                            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                <a class="dropdown-item" href="{{ route('orderdetail', $orderd->id) }}">Detail</a>
-                                <button class="dropdown-item">Delete</button>
-                            </div>
-                        </div>
-                        
-                    {{ Form::close() }}
-                </td>
-                </tr>
+                    </div>
+                </div>
             @endforeach
         </tbody>
     </table>
@@ -379,7 +380,7 @@
                     <a href="{{ route('deliverystatus', $orderp->id) }}" class="btn btn-outline-info">Payment</a>
                     @endif
                     @if($orderp->deliverystatus == 4)
-                    <a href="{{ route('deliverystatus', $orderp->id) }}" class="btn btn-outline-success">Complete</a>
+                    <a class="btn btn-outline-success text-success">Complete</a>
                     @endif
                 </td>
                 <td>
@@ -492,7 +493,7 @@
                     <a href="{{ route('deliverystatus', $orderc->id) }}" class="btn btn-outline-info">Payment</a>
                     @endif
                     @if($orderc->deliverystatus == 4)
-                    <a href="{{ route('deliverystatus', $orderc->id) }}" class="btn btn-outline-success">Complete</a>
+                    <a class="btn btn-outline-success text-success">Complete</a>
                     @endif
                 </td>
                 <td>

@@ -24,12 +24,10 @@
                     @if($from && $to)
                     <a class="dropdown-item" href="{{ route('orderpreparef',[$from, $to]) }}">Order Prepare</a>
                     <a class="dropdown-item" href="{{ route('deliveryf', [$from, $to]) }}">Delivery</a>
-                    <a class="dropdown-item" href="{{ route('paymentf', [$from, $to]) }}">Payment</a>
                     <a class="dropdown-item" href="{{ route('completef', [$from, $to]) }}">Complete</a>
                     @else
                     <a class="dropdown-item" href="{{ route('orderprepare') }}">Order Prepare</a>
                     <a class="dropdown-item" href="{{ route('delivery') }}">Delivery</a>
-                    <a class="dropdown-item" href="{{ route('payment') }}">Payment</a>
                     <a class="dropdown-item" href="{{ route('complete') }}">Complete</a>
                     @endif
                 </div>
@@ -40,9 +38,9 @@
                 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchallc') }}" method="GET">
                     @csrf
                     <div class="input-group">
-                    <label for="from">From</label>
+                    <label for="from">D-From</label>
                     <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="from" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
-                    <label for="to">To</label>
+                    <label for="to">D-To</label>
                     <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="to" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
                     <div class="input-group-append">
                         <button class="btn btn-primary" type="submit" value="search">
@@ -155,7 +153,7 @@
                             <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-info">Payment</a>
                             @endif
                             @if($order->deliverystatus == 4)
-                            <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-success">Complete</a>
+                            <a class="btn btn-outline-success text-success">Complete</a>
                             @endif
                         @else
                                 @if($order->deliverystatus == 1)
@@ -168,7 +166,7 @@
                                 <a href="#" class="btn btn-outline-info">Payment</a>
                                 @endif
                                 @if($order->deliverystatus == 4)
-                                <a href="#" class="btn btn-outline-success">Complete</a>
+                                <a  class="btn btn-outline-success text-success">Complete</a>
                                 @endif
                         @endif 
 

@@ -609,7 +609,7 @@ class OrderController extends Controller
             return redirect()->back();
         }
         $deliverystatus = Order::find($id);
-        if($deliverystatus->deliverystatus == 1) {
+        if($deliverystatus->deliverystatus == 1 || $deliverystatus->deliverystatus == 2) {
             $delivery = User::find($request->delivery_id);
             $deliverystatus->update([
                 'deliverystatus' => 2,
@@ -691,7 +691,8 @@ class OrderController extends Controller
     public function delivery()
     {
         $orders = Order::where(deliverystatus, 2)->get();
-        return view('orders.delivery', compact('orders'));  
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        return view('orders.delivery', compact('orders', 'deliveries'));  
     }
     public function payment()
     {
@@ -918,8 +919,8 @@ class OrderController extends Controller
         $from = $request->from;
         $to = $request->to;
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
-        $orders = Order::whereBetween('orderdate', [$from, $to])->orderBy('dname')->get();
-        return view('orders.searchbydate', \compact('orders', 'deliveries', 'from', 'to'));  
+        $orders = Order::whereBetween('orderdate', [$from, $to])->orderBy('dname')->paginate(15);;
+        return view('orders.index', \compact('orders', 'deliveries', 'from', 'to'));  
     }
     public function searcho(Request $request) 
     {
@@ -934,9 +935,10 @@ class OrderController extends Controller
     {
         $from = $request->from;
         $to = $request->to;
-        $orders = Order::whereBetween('orderdate', [$from, $to])
+        $orders = Order::whereBetween('deliverydate', [$from, $to])
                         ->where('deliverystatus', 2)->orderBy('dname')->get();
-        return view('orders.delivery', \compact('orders', 'from', 'to'));  
+        $deliveries = User::where('role_id', 3)->pluck('name', 'id');
+        return view('orders.delivery', \compact('orders', 'from', 'to', 'deliveries'));  
     }
     public function searchp(Request $request) 
     {
@@ -950,7 +952,7 @@ class OrderController extends Controller
     {
         $from = $request->from;
         $to = $request->to;
-        $orders = Order::whereBetween('orderdate', [$from, $to])
+        $orders = Order::whereBetween('deliverydate', [$from, $to])
                         ->where('deliverystatus', 4)->get();
         return view('orders.complete', \compact('orders', 'from', 'to'));  
     }
@@ -1061,19 +1063,25 @@ class OrderController extends Controller
         $delivery = User::find($id);
         $orders = Order::whereBetween('deliverydate', [$from, $to])
                 ->where('delivery_id', $id)
+                ->where('deliverystatus', 2)
                 ->orderBy('dname')->get();
-        if(collect($orders)->isEmpty()) {
+        $completed = Order::whereBetween('deliverydate', [$from, $to])
+                ->where('delivery_id', $id)
+                ->where('deliverystatus', 4)
+                ->orderBy('dname')->get();
+        if(collect($orders)->isEmpty() && collect($completed)->isEmpty() ) {
             return redirect()->back()->with('idNull', 'No Data');
         }
-        return view('delivery.searchbydate', \compact('orders', 'delivery'));  
+        return view('delivery.orders', \compact('orders', 'delivery', 'completed'));  
     }
 
     public function deliverydetail($id)
     {
         $delivery = User::find($id);
-        $orders = Order::where('delivery_id', $id)->get();
+        $orders = Order::where('delivery_id', $id)->where('deliverystatus', 2)->get();
+        $completed = Order::where('delivery_id', $id)->where('deliverystatus', 4)->get();
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
-        return view('delivery.orders', compact('orders', 'deliveries', 'delivery')); 
+        return view('delivery.orders', compact('orders', 'deliveries', 'delivery', 'completed')); 
     }
 
     public function totalsale() {

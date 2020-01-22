@@ -35,25 +35,21 @@
                     @if($from && $to)
                         <a class="dropdown-item" href="{{ route('orderpreparedf', [$from, $to]) }}">Order Prepare</a>
                         <a class="dropdown-item" href="{{ route('deliverydf', [$from, $to]) }}">Delivery</a>
-                        <a class="dropdown-item" href="{{ route('paymentdf', [$from, $to]) }}">Payment</a>
                         <a class="dropdown-item" href="{{ route('completedf', [$from, $to]) }}">Complete</a>
                         @else
                         <a class="dropdown-item" href="{{ route('orderprepared') }}">Order Prepare</a>
                         <a class="dropdown-item" href="{{ route('deliveryd') }}">Delivery</a>
-                        <a class="dropdown-item" href="{{ route('paymentd') }}">Payment</a>
                         <a class="dropdown-item" href="{{ route('completed') }}">Complete</a>
                         @endif
                     @endif
                     @if($thismonth)
                         <a class="dropdown-item" href="{{ route('orderpreparem') }}">Order Prepare</a>
                         <a class="dropdown-item" href="{{ route('deliverym') }}">Delivery</a>
-                        <a class="dropdown-item" href="{{ route('paymentm') }}">Payment</a>
                         <a class="dropdown-item" href="{{ route('completem') }}">Complete</a>
                     @endif
                     @if($thisyear)
                         <a class="dropdown-item" href="{{ route('orderpreparey') }}">Order Prepare</a>
                         <a class="dropdown-item" href="{{ route('deliveryy') }}">Delivery</a>
-                        <a class="dropdown-item" href="{{ route('paymenty') }}">Payment</a>
                         <a class="dropdown-item" href="{{ route('completey') }}">Complete</a>
                     @endif
                 </div>
@@ -118,7 +114,7 @@
                 <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-info">Payment</a>
                 @endif
                 @if($order->deliverystatus == 4)
-                <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-success">Complete</a>
+                <a class="btn btn-outline-success">Complete</a>
                 @endif
             </td>
             <td>

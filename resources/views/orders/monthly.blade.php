@@ -17,7 +17,6 @@
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
     <a class="dropdown-item" href="{{ route('orderpreparem') }}">Order Prepare</a>
     <a class="dropdown-item" href="{{ route('deliverym') }}">Delivery</a>
-    <a class="dropdown-item" href="{{ route('paymentm') }}">Payment</a>
     <a class="dropdown-item" href="{{ route('completem') }}">Complete</a>
   </div>
 </div>
@@ -97,7 +96,7 @@
                     <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-info">Payment</a>
                     @endif
                     @if($order->deliverystatus == 4)
-                    <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-success">Complete</a>
+                    <a class="btn btn-outline-success text-success">Complete</a>
                     @endif
                 </td>
                 <td>

@@ -17,7 +17,6 @@
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                     <a class="dropdown-item" href="{{ route('orderprepare') }}">Order Prepare</a>
                     <a class="dropdown-item" href="{{ route('delivery') }}">Delivery</a>
-                    <a class="dropdown-item" href="{{ route('payment') }}">Payment</a>
                     <a class="dropdown-item" href="{{ route('complete') }}">Complete</a>
                 </div>
             </div>
@@ -85,6 +84,9 @@
                                 @else
                                 <a class="dropdown-item" href="{{ route('orderdetail', $order->id) }}">Detail</a>
                                 @endif
+                                @if(Auth::user()->role_id == 1 && $order->deliverystatus == 2)
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#exampleModal{{ $order->id }}">Edit Delivery</a>
+                                @endif
                                 <button class="dropdown-item">Delete</button>
                             </div>
                         </div>
@@ -99,11 +101,11 @@
                                 <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal{{ $order->id }}">
                                 Order Prepare
                                 </button>
-
-                                <!-- Modal -->
-                                <div class="modal fade" id="exampleModal{{ $order->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                                <div class="modal-dialog" role="document">
-                                    <div class="modal-content">
+                            @endif
+                            <!-- Modal -->
+                            <div class="modal fade" id="exampleModal{{ $order->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="exampleModalLabel">Choose Delivery Man</h5>
                                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -111,42 +113,42 @@
                                         </button>
                                     </div>
                                     @if(Auth::user()->role_id ==4 )
-                                    {{ Form::model($order, [ 
-                                            'route'=> ['orderdeliveryp', $order->id], 
-                                            'method' => 'POST',
-                                        ]) }}
-                                    @else
-                                    {{ Form::model($order, [ 
-                                            'route'=> ['orderdelivery', $order->id], 
-                                            'method' => 'POST',
-                                        ]) }}
-                                    @endif
-                                        <div class="modal-body">                        
-
-                                            {{ Form::label(null,'Delivery Man') }}
-                                            {{ Form::select('delivery_id', $deliveries, 'null', [
-                                                'class' => 
-                                                ($errors->has('delivery_id')? 'form-control is-invalid': 'form-control'), 
+                                        {{ Form::model($order, [ 
+                                                'route'=> ['orderdeliveryp', $order->id], 
+                                                'method' => 'POST',
                                             ]) }}
-                                            @if($errors->has('delivery_id'))
-                                                <span class="invalid-feedback" role="alert">
-                                                    <strong>
-                                                        {{ $errors->first('delivery_id') }}
-                                                    </strong>
-                                                </span>
-                                            @endif
-                                            
-                                        </div>
-                                        <div class="modal-footer">
-                                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                            <!-- <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-primary">Order Prepare</a> -->
-                                            <button class="btn btn-success">Next</button>
-                                        </div>
-                                    {{ Form::close() }}
+                                    @else
+                                        {{ Form::model($order, [ 
+                                                'route'=> ['orderdelivery', $order->id], 
+                                                'method' => 'POST',
+                                            ]) }}
+                                    @endif
+                                    <div class="modal-body">                        
+
+                                        {{ Form::label(null,'Delivery Man') }}
+                                        {{ Form::select('delivery_id', $deliveries, 'null', [
+                                            'class' => 
+                                            ($errors->has('delivery_id')? 'form-control is-invalid': 'form-control'), 
+                                        ]) }}
+                                        @if($errors->has('delivery_id'))
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>
+                                                    {{ $errors->first('delivery_id') }}
+                                                </strong>
+                                            </span>
+                                        @endif
+                                        
                                     </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <!-- <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-primary">Order Prepare</a> -->
+                                        <button class="btn btn-success">Next</button>
+                                    </div>
+                                        {{ Form::close() }}
                                 </div>
-                                </div>
-                            @endif
+                            </div>
+                        </div>
+                            
                             @if($order->deliverystatus == 2)
                             <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-secondary">Delivery</a>
                             @endif
@@ -154,7 +156,7 @@
                             <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-info">Payment</a>
                             @endif
                             @if($order->deliverystatus == 4)
-                            <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-success">Complete</a>
+                            <a  class="btn btn-outline-success text-success">Complete</a>
                             @endif
                         @else
                                 @if($order->deliverystatus == 1)
@@ -167,7 +169,7 @@
                                 <a href="#" class="btn btn-outline-info">Payment</a>
                                 @endif
                                 @if($order->deliverystatus == 4)
-                                <a href="#" class="btn btn-outline-success">Complete</a>
+                                <a class="btn btn-outline-success text-success">Complete</a>
                                 @endif
                         @endif 
 

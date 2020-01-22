@@ -14,7 +14,7 @@
     <div class="container pt-5 pb-5">
         <h2 class="text-center font-weight-bold">Voucher</h2>
 
-        <input type="text" class="form-control" id="voucher_search"  style="width: 100%" name="order_id" placeholder="Enteer Voucher No." onblur="this.focus()" autofocus />
+        <input type="text" class="form-control" id="voucher_search"  style="width: 100%" name="order_id" placeholder="Enteer Voucher No." autofocus />
 
         <br><br>
         @if(is_array($session_data))
@@ -52,15 +52,37 @@
 
                                     
                                 </tr>
-                            @endforeach
-                            <thead class="thead-light">
-                                <tr>
-                                    <th scope="col" colspan="6" class="text-center pt-3"><h5>Grand Total</h5></th>
-                                <th scope="col" class="pt-3 text-left"><h5 id="grand_total">{{ $total }}</h5></th>
-                                </tr>
-                            </thead>
-
+                            @endforeach 
                     </tbody>
+            </table>
+            <hr>
+            <div class="float-right">
+                <div class="form-group">
+                    <label class="text-danger" value="0">Cancel Amount:: </label>
+                    <input type="text" id="cancel_amount">
+                </div>
+                <div class="form-group">
+                    <label class="text-danger" style="width: 106px;">Discount:: </label>
+                    <input type="text" id="discount">
+                </div>
+                <div class="form-group">
+                    <label class="text-success" style="width: 106px;">Add Amount:: </label>
+                    <input type="text" id="add_amount">
+                </div>
+                
+            </div>
+            <table class="table">
+                <tbody>
+                    <thead class="thead-light">
+                        <tr>
+                            <td></td><td></td><td></td><td></td><td></td><td></td><td></td>
+                        </tr>
+                        <tr>
+                            <th scope="col" colspan="6" class="text-center pt-3"><h5>Grand Total</h5></th>
+                            <th scope="col" class="pt-3 text-center"><h5 id="grand_total">{{ $total }}</h5></th>
+                        </tr>
+                    </thead>
+                </tbody>
             </table>
             <br>
             <div class="float-right">
@@ -169,6 +191,18 @@
                     });
             }
         });
+        // //add to list
+        // $("#cancel_amount").keyup(function(e){
+        //     if(e.keyCode == 8) {
+        //         alert($('#cancel_amount').val());
+                
+        //     }
+        //     var cancel_amount = $('#cancel_amount').val();
+        //     var grand_total = $('#grand_total').html();
+        //     var num = Number(grand_total);
+        //     var ans = grand_total - cancel_amount;
+        //     $('#grand_total').html(ans);
+        // });
 
         //alldelete session
         $('#alldelete').on('click', function(){

@@ -156,7 +156,6 @@
       <tr>
         <th scope="col">Name</th>
         <th scope="col">Phone</th>
-        <th scope="col">Address</th>
       </tr>
     </thead>
     <tbody>
@@ -164,8 +163,8 @@
         <td>{{ $orderdetail->user->name }}</td>
         <td>{{ $orderdetail->user->phone }}</td>      
       </tr>
-      <tr colspan="2">
-      <td class="maxtd">{{ $orderdetail->user->address }}</td>
+      <tr>
+      <td class="maxtd" colspan="2">Address:: {{ $orderdetail->user->address }}</td>
       </tr>
     </tbody>
   </table>

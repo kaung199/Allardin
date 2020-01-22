@@ -25,12 +25,10 @@
                     @if($from && $to)
                     <a class="dropdown-item" href="{{ route('orderpreparef',[$from, $to]) }}">Order Prepare</a>
                     <a class="dropdown-item" href="{{ route('deliveryf', [$from, $to]) }}">Delivery</a>
-                    <a class="dropdown-item" href="{{ route('paymentf', [$from, $to]) }}">Payment</a>
                     <a class="dropdown-item" href="{{ route('completef', [$from, $to]) }}">Complete</a>
                     @else
                     <a class="dropdown-item" href="{{ route('orderprepare') }}">Order Prepare</a>
                     <a class="dropdown-item" href="{{ route('delivery') }}">Delivery</a>
-                    <a class="dropdown-item" href="{{ route('payment') }}">Payment</a>
                     <a class="dropdown-item" href="{{ route('complete') }}">Complete</a>
                     @endif
                 </div>

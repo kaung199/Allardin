@@ -53,7 +53,6 @@
                     @if($thisyear)
                         <a class="dropdown-item" href="{{ route('orderpreparey') }}">Order Prepare</a>
                         <a class="dropdown-item" href="{{ route('deliveryy') }}">Delivery</a>
-                        <a class="dropdown-item" href="{{ route('paymenty') }}">Payment</a>
                         <a class="dropdown-item" href="{{ route('completey') }}">Complete</a>
                     @endif
                 </div>
@@ -118,7 +117,7 @@
                 <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-info">Payment</a>
                 @endif
                 @if($order->deliverystatus == 4)
-                <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-success">Complete</a>
+                <a class="btn btn-outline-success text-success">Complete</a>
                 @endif
             </td>
             <td>
