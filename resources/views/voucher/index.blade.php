@@ -55,8 +55,7 @@
                             @endforeach 
                     </tbody>
             </table>
-            <hr>
-            <div class="float-right">
+            {{-- <div class="float-right">
                 <div class="form-group">
                     <label class="text-danger" value="0">Cancel Amount:: </label>
                     <input type="text" id="cancel_amount">
@@ -70,7 +69,7 @@
                     <input type="text" id="add_amount">
                 </div>
                 
-            </div>
+            </div> --}}
             <table class="table">
                 <tbody>
                     <thead class="thead-light">
