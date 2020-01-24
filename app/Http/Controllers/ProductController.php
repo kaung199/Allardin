@@ -179,11 +179,12 @@ class ProductController extends Controller
 
     public function product_export() 
     {
-        $products = Product::select('products.id', 'products.code', 'products.category_id', 'products.name', 'products.price', 'products.description')->get()->toArray(); 
+        
+        $products = Product::select('products.id', 'products.code', 'products.category_id', 'products.name', 'products.price', 'products.quantity')->get()->toArray(); 
         return Excel::create('Aladdin(Products)', function($excel) use ($products) {
             $excel->sheet('Aladdin', function($sheet) use ($products) {
                 $sheet->fromArray($products);
             });
-        })->download('xlsx'); 
+        })->download('xls'); 
     }
 }
