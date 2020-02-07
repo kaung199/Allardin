@@ -218,6 +218,13 @@
           <span>Add Orders</span></a>
       </li>
       @endif
+      @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('barcode') }}">
+            <i class="fas fa-barcode text-success"></i>
+            <span>Barcode</span></a>
+        </li>
+      @endif
     </ul>
 
     <div id="content-wrapper">

@@ -186,6 +186,9 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
 
         // dashboard page
         Route::get('dashboard', 'CustomerController@dashboard')->name('dashboard');
+
+        // Barcode
+        Route::get('barcode', 'BarcodeController@barcode')->name('barcode');
     });
 
    
