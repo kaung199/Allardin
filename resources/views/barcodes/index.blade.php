@@ -97,8 +97,16 @@
                                 <b>{{ $barcode["name"] }}</b>
                             </span>
                             <br/>
-                            <svg id="barcode"
-                                 jsbarcode-value="{!!  $barcode["code"] !!}">
+                            {{--<svg id="barcode"--}}
+                                 {{--jsbarcode-value="{!!  $barcode["code"] !!}">--}}
+                            {{--</svg>--}}
+                            <svg class="barcode d-block"
+                                jsbarcode-format="CODE128"
+                                jsbarcode-value="{!!  $barcode["code"] !!}"
+                                jsbarcode-textmargin="0"
+                                jsbarcode-fontoptions="bold"
+                                jsbarcode-font ="OCRB"
+                                jsbarcode-fontSize ="18">
                             </svg>
 
                             <br>
@@ -113,6 +121,6 @@
 <script src="{{asset('js/JsBarcode.all.min.js')}}"></script>
 
 <script type="text/javascript">
-    JsBarcode("#barcode").init();
+    JsBarcode(".barcode").init();
 </script>
 </html>
