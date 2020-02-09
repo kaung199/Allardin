@@ -21,6 +21,7 @@ class CreateOrdersTable extends Migration
             $table->Integer('totalprice');
             $table->Integer('grandtotal')->nullable();
             $table->string('deliverystatus');
+            $table->integer('checkstatus')->nullable();
             $table->string('orderby');
             $table->unsignedInteger('discount')->nullable(); 
             $table->date('orderdate');

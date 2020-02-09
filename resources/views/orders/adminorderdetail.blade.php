@@ -80,7 +80,7 @@
         @endif
         <td>
             @if($orderdetail->order->deliverystatus == 1)                   
-                <button class="btn btn-success">Order Pepare</button>
+                <button class="btn btn-success">Order Prepare</button>
             @endif
             @if($orderdetail->order->deliverystatus == 2)                  
              <button class="btn btn-secondary">Delivery</button>
@@ -92,6 +92,8 @@
                 <button class="btn btn-success">Complete</button>
             @endif
         </td>
+        <a href="{{ route('o_prepare', $orderdetail->order->id)  }}" class="btn btn-primary">Check Products</a>
+
     </div>
 </div>
 
@@ -477,16 +479,23 @@
 </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
-    @if(session('deliverystatus'))
-        <script>
-            Swal.fire({
-                title: 'Delivery Status Updated Successfuly',
-                animation: false,
-                customClass: {
-                    popup: 'animated tada'
-                }
-            })
-        </script>
     
-    @endif
+      @if(session('deliverystatus'))
+        <script>
+          Swal.fire({
+                    title: 'Delivery Status Updated Successfuly',
+                    animation: false,
+                    customClass: {
+                        popup: 'animated tada'
+                    }
+                })
+        </script>
+      @endif
+  
+  <script>
+    window.onkeyup = function(e) {
+        if (e.keyCode == 8) window.history.back();
+      }
+  </script>
+    
 @endsection

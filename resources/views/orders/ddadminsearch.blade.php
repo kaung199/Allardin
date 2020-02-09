@@ -50,18 +50,24 @@
                         </tr>
                     </table>
                     <div class="bt-2" style="padding-top:5px;">
-                    @if($order->deliverystatus == 1)
-                    <button class="btn btn-success" disabled>Order Pepare</button>
-                    @endif
-                    @if($order->deliverystatus == 2)                       
-                    <button class="btn btn-secondary" disabled>Delivery</button>
-                    @endif
-                    @if($order->deliverystatus == 3)
-                    <button class="btn btn-info" disabled>Payment</button>
-                    @endif
-                    @if($order->deliverystatus == 4)
-                    <button class="btn btn-success" disabled>Complete</button>
-                    @endif
+                        @if($order->deliverystatus == 1)
+                        <button class="btn btn-success" disabled>Order Pepare</button>
+                        @endif
+                        @if($order->deliverystatus == 2)                       
+                        <button class="btn btn-secondary" disabled>Delivery</button>
+                        @endif
+                        @if($order->deliverystatus == 3)
+                        <button class="btn btn-info" disabled>Payment</button>
+                        @endif
+                        @if($order->deliverystatus == 4)
+                        <button class="btn btn-success" disabled>Complete</button>
+                        @endif
+                        
+                        @if(Auth::user()->role_id == 3)
+                        <a href="{{ route('orderdetaild', $order->id) }}" class="btn btn-primary">Detail</a>
+                        @else
+                            <a href="{{ route('adminorderdetail', $order->id) }}" class="btn btn-primary">Detail</a>
+                        @endif
                     </div>
                     
                 </div>

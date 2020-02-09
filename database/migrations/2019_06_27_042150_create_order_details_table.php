@@ -17,6 +17,8 @@ class CreateOrderDetailsTable extends Migration
             $table->increments('id');
             $table->unsignedInteger('product_id');
             $table->string('name');
+            $table->string('code')->nullable();
+            $table->integer('check')->default(0);
             $table->Integer('quantity');
             $table->unsignedInteger('price');
             $table->Integer('totalprice');
