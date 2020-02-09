@@ -23,6 +23,7 @@
                 </a>
                 <div class="card-body">
                     <h5 class="card-title">{{ $product->name }}</h5>
+                    <p class="card-text">Code: {{ $product->code }}</p>
                     <p class="card-text">Qty: {{ $product->quantity }}</p>
                     <p class="card-text">{{ $product->price }} Ks</p>
                     @if(session('order_cart'))
