@@ -50,8 +50,8 @@
                 <form action="{{ route('barcode') }}" method="get">
                     @csrf
                     <div class="form-group">
-                        <label for="category">From Products</label>
-                        <select class="form-control" name="from_product" style="width: 100%" required>
+                        <label for="category">Products</label>
+                        <select class="form-control" name="product" style="width: 100%" required>
                             @foreach($products as $p)
                                 <option value="{{ $p->id }}">
                                     {{ $p->code }} | {{ $p->name }}
@@ -60,13 +60,13 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="category">To Products</label>
-                        <select class="form-control" name="to_product" style="width: 100%" required>
-                            @foreach($products as $p)
-                                <option value="{{ $p->id }}">
-                                    {{ $p->code }} | {{ $p->name }}
+                        <label for="category">Number</label>
+                        <select class="form-control" name="number" style="width: 100%" required>
+                            @for($i=1; $i <= 300; $i++)
+                                <option value="{{ $i }}">
+                                    {{ $i }}
                                 </option>
-                            @endforeach
+                            @endfor
                         </select>
                     </div>
                     <button class="btn btn-info">All Barcode</button>
@@ -75,46 +75,47 @@
         </div>
     </div>
 </div>
-@if(isset($pds))
+@if(isset($barcode))
     <div class="Bshow">
         <div class="wrap">
             @php
-                $pdChunks = $pds->chunk(3)->toArray();
-                //dd($pdChunks);
+                $pdChunks = $barcode->chunk(3);
             @endphp
+
             @foreach($pdChunks as $pd)
                 <div class="row">
-                    @foreach($pd as $barcode)
+                    @foreach($pd as $barcodes)
                         @php
-                            $barcode["code"] = preg_replace('/\s+/', '', $barcode["code"]);
+                            $barcodes->code = preg_replace('/\s+/', '', $barcodes->code);
                             //dd(preg_replace('/\s+/', '', $barcode["Barcode"]));
                         @endphp
-                        <div class="col mb-5 mt-3 pad">
-                            <span class="barcodeFont price" style="font:bold 15px monospace;">
-                                {{ $barcode["price"] }} Ks
-                            </span><br/>
-                            <span class="text-center pl-3">
-                                <b>{{ $barcode["name"] }}</b>
-                            </span>
-                            <br/>
-                            {{--<svg id="barcode"--}}
-                                 {{--jsbarcode-value="{!!  $barcode["code"] !!}">--}}
-                            {{--</svg>--}}
-                            <svg class="barcode d-block"
-                                jsbarcode-format="CODE128"
-                                jsbarcode-value="{!!  $barcode["code"] !!}"
-                                jsbarcode-textmargin="0"
-                                jsbarcode-fontoptions="bold"
-                                jsbarcode-font ="OCRB"
-                                jsbarcode-fontSize ="18">
-                            </svg>
 
+                        <div class="col mb-5 mt-3 pad">
+                                <span class="barcodeFont price" style="font:bold 15px monospace;">
+                                    {{ $barcodes->price }} Ks
+                                </span><br/>
+                            <span class="text-center pl-3">
+                                    <b>{{ $barcodes->name }}</b>
+                                </span>
+                            <br/>
+                            <svg class="barcode"
+                                 jsbarcode-format="CODE128"
+                                 jsbarcode-textmarginTop="3"
+                                 jsbarcode-value="{!!  $barcodes->code !!}"
+                                 jsbarcode-textmargin="0"
+                                 jsbarcode-fontoptions="bold"
+                                 jsbarcode-font ="OCRB"
+                                 jsbarcode-fontSize ="18">
+                            </svg>
                             <br>
                         </div>
                     @endforeach
                 </div>
+
             @endforeach
+
         </div>
+
     </div>
 @endif
 </body>
