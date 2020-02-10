@@ -291,10 +291,11 @@ class OrderController extends Controller
             
 
         foreach($cart->cart_products as  $details) {
-        
+            $product = Product::find($details['product_id']);
             Order_detail::create([
                 'product_id' => $details['product_id'],
                 'name' => $details['name'],
+                'code' => $product->code,
                 'quantity' =>   $details['quantity'],
                 'price' =>  $details['price'],
                 'totalprice' => $details['price'] * $details['quantity'],
@@ -461,10 +462,10 @@ class OrderController extends Controller
         $d_id = $orderdetails[0]->order->delivery_id;
         $delivery = User::find($d_id);
 
-        // get previous user id
+        // get previous user id 
         $previous = Order_detail::where('order_id', '<', $id)->max('order_id');
 
-        // get next user id
+        // get next user id 
         $next = Order_detail::where('order_id', '>', $id)->min('order_id');
 
         return view('orders.orderdetail', compact('orderdetails','previous','next','delivery', 'deliveries'));

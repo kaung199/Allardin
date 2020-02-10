@@ -64,7 +64,9 @@
                     <a href="{{ route('orderdetaild', $order->id) }}" class="btn btn-primary">Detail</a>
                     @else
                         <a href="{{ route('adminorderdetail', $order->id) }}" class="btn btn-primary">Detail</a>
+
                     @endif
+
                     </div>
                     
                 </div>

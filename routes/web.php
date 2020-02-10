@@ -33,7 +33,11 @@ Route::get('/detail/{id}', 'ProductController@userdetail');
 Route::get('home', 'HomeController@index');
 Route::get('productssearch', 'ProductController@productssearch')->name('productssearch');
 
-
+//order_prepare
+Route::get('o_prepare/{id}', 'OrderprepareController@index')->name('o_prepare');
+Route::get('o_p_barcode', 'OrderprepareController@barcode')->name('o_p_barcode');
+Route::get('o_p_cancel', 'OrderprepareController@remove')->name('o_p_cancel');
+Route::get('o_p_confirm', 'OrderprepareController@confirm')->name('o_p_confirm');
 Auth::routes();
 
 

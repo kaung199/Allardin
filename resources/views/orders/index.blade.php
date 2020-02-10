@@ -101,6 +101,7 @@
                                 <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#exampleModal{{ $order->id }}">
                                 Order Prepare
                                 </button>
+                            {{-- <a href="{{ route('o_prepare', $order->id)  }}" class="btn btn-outline-primary">Order Prepare</a> --}}
                             @endif
                             <!-- Modal -->
                             <div class="modal fade" id="exampleModal{{ $order->id }}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">

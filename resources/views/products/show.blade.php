@@ -19,6 +19,7 @@
         <thead>
             <tr>
             <th scope="col">Photo</th>
+            <th scope="col">Code</th>
             <th scope="col">Name</th>
             <th scope="col">Quantity</th>
             <th scope="col">Price</th>
@@ -33,6 +34,7 @@
                         <img src="{{ asset('storage/' . $photo->filename) }}" alt="" style="width:50px; height:50px;">
                     @endforeach
                 </td>
+                <td>{{  $product->code}}</td>
                 <td>{{  $product->name}}</td>
                 <td>{{ $product->quantity }}</td>
                 <td>{{ $product->price }}</td>

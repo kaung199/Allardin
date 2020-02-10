@@ -86,6 +86,7 @@
             <th scope="col">Order Date</th>
             <th scope="col">Delivery Date</th>
             <th scope="col">Remark</th>
+            <th scope="col">Check</th>
             <th scope="col">Delivery Status</th>
             <th scope="col">Action</th>
             </tr>
@@ -100,6 +101,13 @@
                     <td>{{ $ordero->created_at }}</td>
                     <td>{{ $ordero->deliverydate }}</td>
                     <td class="remark">{{ $ordero->remark }}</td>
+                    <td>
+                        @if($ordero->checkstatus == 1)
+                        <span class="text-success">&#10004;</span>
+                        @else 
+                        <span class="text-danger">&#10540;</span>
+                        @endif
+                    </td>
                     <td  data-th="">
                         @if($ordero->deliverystatus == 1)
                             <!-- Button trigger modal -->
@@ -194,6 +202,7 @@
             <th scope="col">Delivery Date</th>
             <th scope="col">Delivery Name</th>
             <th scope="col">Remark</th>
+            <th scope="col">Check</th>
             <th scope="col">Delivery Status</th>
             <th scope="col">Action</th>
             </tr>
@@ -212,6 +221,13 @@
                 ?>
                 <td>{{ $delivery->name }}</td>
                 <td class="remark">{{ $orderd->remark }}</td>
+                <td>
+                    @if($orderd->checkstatus == 1)
+                    <span class="text-success">&#10004;</span>
+                    @else 
+                    <span class="text-danger">&#10540;</span>
+                    @endif
+                </td>
                 <td  data-th="">
                     @if($orderd->deliverystatus == 1)
                         <!-- Button trigger modal -->
@@ -309,6 +325,7 @@
             <th scope="col">Delivery Date</th>
             <th scope="col">Delivery Name</th>
             <th scope="col">Remark</th>
+            <th scope="col">Check</th>
             <th scope="col">Delivery Status</th>
             <th scope="col">Action</th>
             </tr>
@@ -327,6 +344,13 @@
                 ?>
                 <td>{{ $delivery->name }}</td>
                 <td class="remark">{{ $orderp->remark }}</td>
+                <td>
+                    @if($orderp->checkstatus == 1)
+                    <span class="text-success">&#10004;</span>
+                    @else 
+                    <span class="text-danger">&#10540;</span>
+                    @endif
+                </td>
                 <td  data-th="">
                     @if($orderp->deliverystatus == 1)
                         <!-- Button trigger modal -->
@@ -422,6 +446,7 @@
             <th scope="col">Delivery Date</th>
             <th scope="col">Delivery Name</th>
             <th scope="col">Remark</th>
+            <th scope="col">Check</th>
             <th scope="col">Delivery Status</th>
             <th scope="col">Action</th>
             </tr>
@@ -440,6 +465,13 @@
                 ?>
                 <td>{{ $delivery->name }}</td>
                 <td class="remark">{{ $orderc->remark }}</td>
+                <td>
+                    @if($orderc->checkstatus == 1)
+                    <span class="text-success">&#10004;</span>
+                    @else 
+                    <span class="text-danger">&#10540;</span>
+                    @endif
+                </td>
                 <td  data-th="">
                     @if($orderc->deliverystatus == 1)
                         <!-- Button trigger modal -->
