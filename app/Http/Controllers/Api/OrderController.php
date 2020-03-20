@@ -14,24 +14,28 @@ use App\Order_detail;
 
 class OrderController extends Controller
 {         	
-
     public function stor(Request $request)
     {
       $gtotalprice = 0;
       $gtotalquantity = 0;
       $products = $request->json()->all();
+
       foreach($products[1] as $product) {
         $productt = Product::find($product['product_id']);
+
         if( $productt->quantity < $product['quantity'] ) {
           $response = "Out Of Stock";
           return response()->json($response, 400);
         }  
+
         $productt->update([
           'quantity' => $productt->quantity - $product['quantity'],
         ]);
+
         $gtotalprice += $product['totalprice'];
         $gtotalquantity += $product['quantity'];
       }
+
       $userlocation = User::find($products[0]['user_id']);
       $deliveryprice = $userlocation['township']['deliveryprice'];
       $order = Order::create([
@@ -72,10 +76,12 @@ class OrderController extends Controller
           'totalprice' => 'required',
           'user_id' => 'required',
         ]);
+
         if($product['user_id'] == 0) {
           $required = 'user_id required!';
           return response()->json($required, 404); 
         }
+
         if ($validator->fails()) {
             $response = [
                 'success' => false,

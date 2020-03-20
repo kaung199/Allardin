@@ -12,7 +12,7 @@
         <h3 class="m_1 pdl"> ( {{$count}} ) Products Found</h3>
     @else
         <h3 class="m_1 pdl">Products</h3>    
-    @endif
+    @endif 
     @foreach($products as $product)
         <div class="col_1_of_3 span_1_of_3"> 
             <div class="view view-first">
@@ -32,10 +32,14 @@
                                 <p class="title">{{ $product->name }}</p>
                             </div>
                             <div class="price">{{ $product->price }} Ks</div>                             
-                        </div>		
+                        </div>	
+                    </a>
+                        {{-- <div class="button">
+                         <button type="button" class="add-to-cart-button">Add To Cart</button>   
+                        </div>	 --}}
                     </div>	
                 </div>
-                </a>
+                
             </div>
         </div>
     @endforeach

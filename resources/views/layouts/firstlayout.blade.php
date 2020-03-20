@@ -3,6 +3,7 @@
 <html lang="en">
 <head>
 <title>
+	Aladdin -
     @yield('title')
 </title>
 <meta charset="utf-8">
@@ -101,7 +102,8 @@
 			@yield('youtube')
 		</div>
 		<div class="messenger">
-			<a href="https://www.messenger.com/t/107507034215941">
+			<a href="https://www.messenger.com/t/108801377417228">
+			{{-- <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fm.me%2F107507034215941&h=AT1daWAu42wwW1x09yX7wHxkPK8sxJf9keHfX4e5iSBDo-AIDoi92RXQvj_xla1s71opiiXFOpPfyGcdDYMz9RvPToEf5fv8vGIHbF6gaIV4_K3mBTglx2bJ56Vifg"> --}}
 				<img src="{{ asset('ui/images/messenger.png') }}" class="img-responsive" style="width:50px height:50px" alt="">
 			</a>
 		</div>
@@ -127,7 +129,7 @@
 					<div class="col-md-3">
 						<h4>Facebook:</h4>
 						<p>
-							<a href="https://www.facebook.com/Aladdin-online-shopping-271391543764511/?ref=br_rs">www.facebook.com/Aladdin-online-shopping</a>
+							<a href="https://www.facebook.com/Aladdin-Myanmar-online-shopping-108801377417228/">www.facebook.com/Aladdin-Online-Shopping</a>
 						</p>
 					</div>
 				</div>
