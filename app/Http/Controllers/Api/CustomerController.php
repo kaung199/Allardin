@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\AppUser;
 use App\User;
 use Validator;
 use Illuminate\Http\Request;
@@ -9,12 +10,11 @@ use App\Http\Controllers\Controller;
 
 class CustomerController extends Controller
 {
-    public function index()
+        public function index()
         {
-            $users = User::latest()->get();
-            $data = $users->toArray();
+            $users = AppUser::latest()->get();
 
-            return response()->json($data, 200);
+            return response()->json($users, 200);
         }
 
 
@@ -26,28 +26,35 @@ class CustomerController extends Controller
          */
         public function store(Request $request)
         {
-            $input = $request->all();
+            $users = AppUser::where('facebook_id', $request->facebook_id)->get();
+            if (count($users)>0){
+                return response()->json(['message' => 'Facebook ID is duplicate'], 401);
+            }else{
+                $user = new AppUser();
+                $user->name = $request->name;
+                $user->phone = $request->phone;
+                $user->address = $request->address;
+                $user->facebook_id = $request->facebook_id;
+                $file = $request->file('image');
+                if (isset($file)){
+                    $extension = $file->getClientOriginalExtension();
+                    $filename = time() . '.' . $extension;
+                    $request->image->storeAs('public/user/', $filename);
+                    $user->image = $filename;
+                }
+                $user->save();
 
-            $validator = Validator::make($input, [
-                'name' => 'required|max:50',
-                'phone' => 'required|max:40',
-                'address' => 'required|max:2048',
-                'township_id' => 'required',
-            ]);
-
-            if ($validator->fails()) {
-                $response = [
-                    'success' => false,
-                    'data' => 'Validation Error.',
-                    'message' => $validator->errors()
-                ];
-                return response()->json($response, 404);
+                if($user) {
+                    return response()->json([
+                        'id'         => $user->id,
+                        'message'      => 'success',
+                    ]);
+                } else {
+                    return response()->json([
+                        'message' => 'Registration failed, please try again.',
+                    ], 400);
+                }
             }
-
-            $users = User::create($input);
-            $data = $users->toArray();
-
-            return response()->json($data, 200);
         }
 
 
