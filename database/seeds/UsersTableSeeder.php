@@ -15,6 +15,7 @@ class UsersTableSeeder extends Seeder
         
 
         User::create([
+            'id' => 1,
             'name' => 'Super Admin',
             'phone' => '09789',
             'address' => 'admin',
