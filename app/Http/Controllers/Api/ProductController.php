@@ -6,16 +6,18 @@ use Validator;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Storage;
+use DB;
 
 class ProductController extends Controller
 {
-    public function index()
+        public function index()
         {
-            $products = Product::latest()->get();
-            $data = $products->toArray();
-            return response()->json($data, 200);
+            $products = Product::with('photos')
+                ->select('id', 'name', 'quantity', 'price', 'description')
+                ->orderBy(DB::raw('RAND()'))
+                ->paginate(10);
+            return response()->json($products, 200);
         }
-
 
         /**
          * Store a newly created resource in storage.
