@@ -20,7 +20,12 @@ class CustomerController extends Controller
         public function facebookId(Request $request){
             $facebook = AppUser::where('facebook_id', $request->facebook_id)->get();
             if (count($facebook)>0){
-                return response()->json(['message' => 'Success'], 401);
+                $user = AppUser::where('facebook_id', $request->facebook_id)->first();
+                return response()->json(
+                    [   'message' => 'Success',
+                        'id'         => $user->id,
+                        'facebook_id' => $user->facebook_id,
+                    ], 401);
             }else{
                 return response()->json(['message' => 'Unsuccess'], 401);
             }
@@ -55,7 +60,8 @@ class CustomerController extends Controller
                 if($user) {
                     return response()->json([
                         'id'         => $user->id,
-                        'message'      => 'success',
+                        'facebook_id' => $user->facebook_id,
+                        'message'      => 'Success',
                     ]);
                 } else {
                     return response()->json([
