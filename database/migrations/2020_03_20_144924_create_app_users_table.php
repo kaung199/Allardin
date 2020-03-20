@@ -21,7 +21,7 @@ class CreateAppUsersTable extends Migration
             $table->string('email')->unique()->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password')->nullable();
-            $table->string('image');
+            $table->string('image')->nullable();
             $table->text('facebook_id');
             $table->rememberToken();
             $table->timestamps();

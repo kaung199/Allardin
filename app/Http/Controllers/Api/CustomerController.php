@@ -17,6 +17,14 @@ class CustomerController extends Controller
             return response()->json($users, 200);
         }
 
+        public function facebookId(Request $request){
+            $facebook = AppUser::where('facebook_id', $request->facebook_id)->get();
+            if (count($facebook)>0){
+                return response()->json(['message' => 'Success'], 401);
+            }else{
+                return response()->json(['message' => 'Unsuccess'], 401);
+            }
+        }
 
         /**
          * Store a newly created resource in storage.
@@ -66,8 +74,7 @@ class CustomerController extends Controller
          */
         public function show($id)
         {
-            $user = User::find($id);
-            $data = $user->toArray();
+            $user = AppUser::find($id);
 
             if (is_null($user)) {
                 $response = [
@@ -75,10 +82,10 @@ class CustomerController extends Controller
                     'data' => 'Empty',
                     'message' => 'User not found.'
                 ];
-                return response()->json($response, 404);
+                return response()->json($response, 401);
             }
 
-            return response()->json($data, 200);
+            return response()->json($user, 200);
         }
 
 
