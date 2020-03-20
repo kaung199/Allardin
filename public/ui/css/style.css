@@ -4,7 +4,15 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 */
-
+.add-to-cart-button {
+    width: 100%;
+    color: #ffffff;
+    background-color: rgb(55, 51, 51);
+    padding: 5px;
+	border-radius: 10px;
+	outline: none;
+    text-decoration: none;
+}
 .footer a {
 	color: #ffffff;
 }
@@ -845,8 +853,8 @@ h3.m_2 {
    position: relative;
    text-align: center;
    cursor: default;
-   max-height: 360px;
-   height: 360px;
+   max-height: 370px;
+   height: 370px;
 }
 .view .mask,.view .content {
    position: absolute;
