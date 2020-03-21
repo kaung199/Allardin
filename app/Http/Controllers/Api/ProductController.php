@@ -69,8 +69,10 @@ class ProductController extends Controller
          */
         public function show($id)
         {
-            $product = Product::find($id);
-            $data = $product->toArray();
+            $product = Product::with('photos')->where('id', $id)
+                        ->select('id', 'name', 'price', 'description')
+                        ->get();
+                dd($product->toArray());
 
             if (is_null($product)) {
                 $response = [
@@ -81,7 +83,7 @@ class ProductController extends Controller
                 return response()->json($response, 404);
             }
 
-            return response()->json($data, 200);
+            return response()->json($product, 200);
         }
 
 
