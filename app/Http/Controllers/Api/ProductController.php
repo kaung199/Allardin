@@ -12,8 +12,8 @@ class ProductController extends Controller
 {
         public function index()
         {
-            $products = Product::with('photos')
-                ->select('id', 'name', 'quantity', 'price', 'description')
+            $products = Product::join('products_photos', 'products.id', '=', 'products_photos.product_id')
+                ->select('products.id as product_id', 'products.name as product_name', 'price', 'products_photos.filename as photo')
                 ->orderBy(DB::raw('RAND()'))
                 ->where('quantity', '!=', 0)
                 ->paginate(10);

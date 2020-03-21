@@ -59,9 +59,11 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {
+      // dd($request->json()->Orders);
       $gtotalprice = 0;
       $gtotalquantity = 0;
       $products = $request->json()->all();
+      dd($products['Orders']);
       foreach($products as $product) {
 
         $validator = Validator::make($product, [
@@ -87,13 +89,21 @@ class OrderController extends Controller
 
 
         $productt = Product::find($product['product_id']);
+        // dd($productt->quantity);
         if( $productt->quantity < $product['quantity'] ) {
-          $response = "Out Of Stock";
+          $response = $product['name']. " is Out Of Stock";
           return response()->json($response, 400);
-        }  
-        $productt->update([
-          'quantity' => $productt->quantity - $product['quantity'],
+        } 
+
+        $cart_product = Cart_product::create([
+          'product_id' => $details['id'],
+          'name' => $details['name'],
+          'price' => $details['price'],
+          'quantity' => $details['quantity'],
+          'image' => $details['image'],
+          'cart_id' => $order_cart->id,
         ]);
+
         $gtotalprice += $product['totalprice'];
         $gtotalquantity += $product['quantity'];
       }
