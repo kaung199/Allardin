@@ -51,7 +51,7 @@ class ProductController extends Controller
                     'data' => 'Validation Error.',
                     'message' => $validator->errors()
                 ];
-                return response()->json($response, 404);
+                return response()->json($response, 401);
             }
 
             $products = Product::create($input);
@@ -77,7 +77,7 @@ class ProductController extends Controller
                     'data' => 'Empty',
                     'message' => 'Product not found.'
                 ];
-                return response()->json($response, 404);
+                return response()->json($response, 401);
             }
 
             return response()->json($product, 200);
@@ -116,7 +116,7 @@ class ProductController extends Controller
                     'data' => 'Validation Error.',
                     'message' => $validator->errors()
                 ];
-                return response()->json($response, 404);
+                return response()->json($response, 401);
             }
 
             $product->update($input);

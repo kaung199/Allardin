@@ -78,31 +78,23 @@ class OrderController extends Controller
             'data' => 'Validation Error.',
             'message' => $validator->errors()
         ];
-        return response()->json($response, 404);
+        return response()->json($response, 401);
       }
     $product = Product::find($request->product_id);
     $user_null = AppUser::find($request->user_id);
     if($user_null == null) {
-      $response = [
-        'success' => false,
-        'data' => 'Users Not Found',
-    ];
-      return response()->json([$response, 404]);
+      return response()->json(['message' => 'User Not Found!!', 'status' => 401]);
     }
     if($product == null) {
-      $response = [
-        'success' => false,
-        'data' => 'Product Not Found',
-    ];
-      return response()->json([$response, 404]);
+      return response()->json(['message' => "Product Not Found!",'status' => 401]);
+    }
+    if( $request->quantity == 0)
+    {
+      return response()->json(['message' => 'Quantity must be greather than zero!', 'status' => 400]);
     }
     if($product->quantity < $request->quantity)
     {
-      $response = [
-        'success' => false,
-        'data' => 'Out of Stock!',
-    ];
-      return response()->json($response, 404);
+      return response()->json(['message' => 'Out Of Stock!', 'status' => 400]);
     }
     $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
     if($session_user_id == null) {
@@ -131,18 +123,27 @@ class OrderController extends Controller
         'product_id' => 'required',
         'user_id' => 'required',
       ]);
-
       if ($validator->fails()) {
         $response = [
             'success' => false,
             'data' => 'Validation Error.',
             'message' => $validator->errors()
         ];
-        return response()->json($response, 404);
+        return response()->json($response, 401);
       }
-    $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
-    $session_user_id->delete();
-    return response()->json(['message'=> 'Success', 'status' => 200]);
+
+      $product = Product::find($request->product_id);
+      $user_null = AppUser::find($request->user_id);
+      if($user_null == null) {
+        return response()->json(['message' => 'User Not Found!!', 'status' => 401]);
+      }
+      if($product == null) {
+        return response()->json(['message' => "Product Not Found!",'status' => 401]);
+      }
+
+      $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
+      $session_user_id->delete();
+      return response()->json(['message'=> 'Success', 'status' => 200]);
 
     }
 
@@ -159,8 +160,14 @@ class OrderController extends Controller
             'data' => 'Validation Error.',
             'message' => $validator->errors()
         ];
-        return response()->json($response, 404);
+        return response()->json($response, 401);
       }
+
+      $user_null = AppUser::find($request->user_id);
+      if($user_null == null) {
+        return response()->json(['message' => 'User Not Found!!', 'status' => 401]);
+      }
+
       $session_user_id = Session::where('user_id', $request->user_id)->get();
       if(collect($session_user_id)->isEmpty()) {
         return response()->json(['message'=>'Empty-cart', 'status'=>400 ]);
@@ -183,10 +190,9 @@ class OrderController extends Controller
           'user_id' => 'required',
           'township_id' => 'required'
         ]);
-
         if($product['user_id'] == 0) {
-          $required = 'user_id required!';
-          return response()->json($required, 404); 
+          $required = 'user_id required!!';
+          return response()->json($required, 401); 
         }
 
         if ($validator->fails()) {
@@ -195,14 +201,22 @@ class OrderController extends Controller
                 'data' => 'Validation Error.',
                 'message' => $validator->errors()
             ];
-            return response()->json($response, 404);
+            return response()->json($response, 401);
         }
 
+        $user_null = AppUser::find($product['user_id']);
+        $t_null = Township::find($product['township_id']);
+        if($user_null == null) {
+          return response()->json(['message' => 'User Not Found!!', 'status' => 401]);
+        }
+        if($t_null == null) {
+          return response()->json(['message' => 'Township Not Found!!', 'status' => 401]);
+        }
 
         $sessions = Session::where('user_id', $product['user_id'])->get()->toArray();
 
         if($sessions == null) {
-          return response()->json([ 'message' => 'cart-is-empty','status' => 404]);
+          return response()->json([ 'message' => 'cart-is-empty','status' => 401]);
         }
         $datetime = new DateTime('tomorrow');
         $delivery_date= $datetime->format('Y-m-d');
