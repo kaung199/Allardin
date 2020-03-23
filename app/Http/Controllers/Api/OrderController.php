@@ -79,8 +79,23 @@ class OrderController extends Controller
             'message' => $validator->errors()
         ];
         return response()->json($response, 404);
-    }
+      }
     $product = Product::find($request->product_id);
+    $user_null = AppUser::find($request->user_id);
+    if($user_null == null) {
+      $response = [
+        'success' => false,
+        'data' => 'Users Not Found',
+    ];
+      return response()->json([$response, 404]);
+    }
+    if($product == null) {
+      $response = [
+        'success' => false,
+        'data' => 'Product Not Found',
+    ];
+      return response()->json([$response, 404]);
+    }
     if($product->quantity < $request->quantity)
     {
       $response = [
@@ -193,30 +208,21 @@ class OrderController extends Controller
         $delivery_date= $datetime->format('Y-m-d');
 
         $order_cart =  Cart::create([
-        // $order_cart =  DB::table('app_cards')->insertGetId([
           'name' => $product['name'],
           'customer_status' => 1,
           'phone' => $product['phone'],
           'address' => $product['address'],
           'township_id' => $product['township_id'],
           'delivery_date' => $delivery_date,
-          // delete"
-          // 'created_at' => date('Y-m-d h:i:s'),
-          // 'updated_at' => date('Y-m-d h:i:s')
         
         ]);
-        // dd($order_cart);
         foreach($sessions as $s) {
           $cart_product = Cart_product::create([
-          // $cart_product = DB::table('app_card_products')->insert([
             'product_id' => $s['product_id'],
             'name' => $s['name'],
             'price' => $s['price'],
             'quantity' => $s['quantity'],
             'cart_id' => $order_cart->id,
-            // 'cart_id' => $order_cart,
-            // 'created_at' => date('Y-m-d h:i:s'),
-            // 'updated_at' => date('Y-m-d h:i:s')
           ]);
         }
         Session::where('user_id', $product['user_id'])->delete();
