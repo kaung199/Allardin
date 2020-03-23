@@ -6,7 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Cart extends Model
 {
-    protected $table = 'cart';
+    protected $table = 'app_cards';
+
     protected $fillable = [
         'name', 'phone', 'address', 'township_id','customer_status', 'discount', 'delivery_date', 'remark'
     ];

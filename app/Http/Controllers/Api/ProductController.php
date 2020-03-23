@@ -72,7 +72,7 @@ class ProductController extends Controller
             $product = Product::with('photos')->where('id', $id)
                         ->select('id', 'name', 'price', 'description')
                         ->get();
-                dd($product->toArray());
+                // dd($product->toArray());
 
             if (is_null($product)) {
                 $response = [
