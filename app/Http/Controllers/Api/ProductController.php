@@ -14,7 +14,8 @@ class ProductController extends Controller
         {
             $products = Product::join('products_photos', 'products.id', '=', 'products_photos.product_id')
                 ->select('products.id as product_id', 'products.name as product_name', 'price', 'products_photos.filename as photo')
-                ->orderBy(DB::raw('RAND()'))
+//                ->orderBy(DB::raw('RAND()'))
+                ->inRandomOrder()
                 ->where('quantity', '!=', 0)
                 ->paginate(10);
             return response()->json($products, 200);
