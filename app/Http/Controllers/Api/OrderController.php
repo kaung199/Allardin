@@ -146,12 +146,11 @@ class OrderController extends Controller
         ];
         return response()->json($response, 404);
       }
-      $townships = Township::select('id', 'name')->get();
       $session_user_id = Session::where('user_id', $request->user_id)->get();
       if(collect($session_user_id)->isEmpty()) {
         return response()->json(['message'=>'Empty-cart', 'status'=>400 ]);
       }
-      return response()->json(['cart'=>$session_user_id, 'tosnships'=>$townships], 200);
+      return response()->json($session_user_id, 200);
 
 
 
@@ -194,7 +193,7 @@ class OrderController extends Controller
         $delivery_date= $datetime->format('Y-m-d');
 
         // $order_cart =  Cart::create([
-        $order_cart =  DB::table('app_card')->insertGetId([
+        $order_cart =  DB::table('app_cards')->insertGetId([
           'name' => $product['name'],
           'customer_status' => 1,
           'phone' => $product['phone'],
