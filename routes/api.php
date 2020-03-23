@@ -27,6 +27,9 @@ Route::post('facebook_id', 'Api\CustomerController@facebookId');
 Route::post('order', 'Api\OrderController@store');
 Route::post('od', 'Api\OrderController@stor');
 
+Route::get('session', 'Api\OrderController@session');
+Route::get('show_cart', 'Api\OrderController@show_cart');
+
 
 Route::get('/getorderdetail/{id}', 'Api\OrderController@orderdetail');
 

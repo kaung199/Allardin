@@ -56,7 +56,7 @@ class CustomerController extends Controller
                     $user->image = $filename;
                 }
                 $user->save();
-
+                
                 if($user) {
                     return response()->json([
                         'id'         => $user->id,
