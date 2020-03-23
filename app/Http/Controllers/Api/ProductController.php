@@ -69,10 +69,7 @@ class ProductController extends Controller
          */
         public function show($id)
         {
-            $product = Product::with('photos')->where('id', $id)
-                        ->select('id', 'name', 'price', 'description')
-                        ->get();
-                dd($product->toArray());
+            $product = Product::with('photos')->find($id);
 
             if (is_null($product)) {
                 $response = [
