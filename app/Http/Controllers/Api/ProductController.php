@@ -12,8 +12,8 @@ class ProductController extends Controller
 {
         public function index()
         {
-            $products = Product::with('photos')
-                ->select('id', 'name', 'quantity', 'price', 'description')
+            $products = Product::join('products_photos', 'products.id', '=', 'products_photos.product_id')
+                ->select('products.id as product_id', 'products.name as product_name', 'price', 'products_photos.filename as photo')
                 ->orderBy(DB::raw('RAND()'))
                 ->where('quantity', '!=', 0)
                 ->paginate(10);
@@ -69,8 +69,10 @@ class ProductController extends Controller
          */
         public function show($id)
         {
-            $product = Product::find($id);
-            $data = $product->toArray();
+            $product = Product::with('photos')->where('id', $id)
+                        ->select('id', 'name', 'price', 'description')
+                        ->get();
+                dd($product->toArray());
 
             if (is_null($product)) {
                 $response = [
@@ -81,7 +83,7 @@ class ProductController extends Controller
                 return response()->json($response, 404);
             }
 
-            return response()->json($data, 200);
+            return response()->json($product, 200);
         }
 
 

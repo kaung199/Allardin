@@ -14,28 +14,24 @@ use App\Order_detail;
 
 class OrderController extends Controller
 {         	
+
     public function stor(Request $request)
     {
       $gtotalprice = 0;
       $gtotalquantity = 0;
       $products = $request->json()->all();
-
       foreach($products[1] as $product) {
         $productt = Product::find($product['product_id']);
-
         if( $productt->quantity < $product['quantity'] ) {
           $response = "Out Of Stock";
           return response()->json($response, 400);
         }  
-
         $productt->update([
           'quantity' => $productt->quantity - $product['quantity'],
         ]);
-
         $gtotalprice += $product['totalprice'];
         $gtotalquantity += $product['quantity'];
       }
-
       $userlocation = User::find($products[0]['user_id']);
       $deliveryprice = $userlocation['township']['deliveryprice'];
       $order = Order::create([
@@ -63,9 +59,11 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {
+      // dd($request->json()->Orders);
       $gtotalprice = 0;
       $gtotalquantity = 0;
       $products = $request->json()->all();
+      dd($products['Orders']);
       foreach($products as $product) {
 
         $validator = Validator::make($product, [
@@ -76,12 +74,10 @@ class OrderController extends Controller
           'totalprice' => 'required',
           'user_id' => 'required',
         ]);
-
         if($product['user_id'] == 0) {
           $required = 'user_id required!';
           return response()->json($required, 404); 
         }
-
         if ($validator->fails()) {
             $response = [
                 'success' => false,
@@ -93,13 +89,21 @@ class OrderController extends Controller
 
 
         $productt = Product::find($product['product_id']);
+        // dd($productt->quantity);
         if( $productt->quantity < $product['quantity'] ) {
-          $response = "Out Of Stock";
+          $response = $product['name']. " is Out Of Stock";
           return response()->json($response, 400);
-        }  
-        $productt->update([
-          'quantity' => $productt->quantity - $product['quantity'],
+        } 
+
+        $cart_product = Cart_product::create([
+          'product_id' => $details['id'],
+          'name' => $details['name'],
+          'price' => $details['price'],
+          'quantity' => $details['quantity'],
+          'image' => $details['image'],
+          'cart_id' => $order_cart->id,
         ]);
+
         $gtotalprice += $product['totalprice'];
         $gtotalquantity += $product['quantity'];
       }

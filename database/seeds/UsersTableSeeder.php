@@ -15,11 +15,12 @@ class UsersTableSeeder extends Seeder
         
 
         User::create([
+            'id' => 1,
             'name' => 'Super Admin',
             'phone' => '09789',
             'address' => 'admin',
-            'email' => 'superadmin@gmail.com',
-            'password' => Hash::make('familydocadmin'),
+            'email' => 'familysuperadmin@gmail.com',
+            'password' => Hash::make('Family@123@superadmin'),
             'role_id' => 1
         ]);
 
