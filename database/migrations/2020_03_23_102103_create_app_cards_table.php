@@ -16,6 +16,7 @@ class CreateAppCardsTable extends Migration
         Schema::create('app_cards', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
+            $table->integer('customer_status')->nullable();
             $table->string('phone');
             $table->text('address');
             $table->unsignedInteger('township_id');

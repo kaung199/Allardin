@@ -13,6 +13,10 @@ use App\Township;
 use App\AppUser;
 use App\Order_detail;
 use App\Session;
+use DateTime;
+use App\Cart_product;
+use App\Cart;
+use DB;
 
 class OrderController extends Controller
 {         	
@@ -77,6 +81,14 @@ class OrderController extends Controller
         return response()->json($response, 404);
     }
     $product = Product::find($request->product_id);
+    if($product->quantity < $request->quantity)
+    {
+      $response = [
+        'success' => false,
+        'data' => 'Out of Stock!',
+    ];
+      return response()->json($response, 404);
+    }
     $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
     if($session_user_id == null) {
       $session_table = Session::create([
@@ -134,9 +146,12 @@ class OrderController extends Controller
         ];
         return response()->json($response, 404);
       }
-
+      $townships = Township::select('id', 'name')->get();
       $session_user_id = Session::where('user_id', $request->user_id)->get();
-      return response()->json($session_user_id, 200);
+      if(collect($session_user_id)->isEmpty()) {
+        return response()->json(['message'=>'Empty-cart', 'status'=>400 ]);
+      }
+      return response()->json(['cart'=>$session_user_id, 'tosnships'=>$townships], 200);
 
 
 
@@ -144,26 +159,22 @@ class OrderController extends Controller
     }
 
     public function store(Request $request)
-    {
-      // dd($request->json()->Orders);
-      $gtotalprice = 0;
-      $gtotalquantity = 0;
-      $products = $request->json()->all();
-      dd($products['Orders']);
-      foreach($products as $product) {
+    {      
+        $product = $request->json()->all();      
 
         $validator = Validator::make($product, [
-          'product_id' => 'required',
           'name' => 'required',
-          'quantity' => 'required',
-          'price' => 'required',
-          'totalprice' => 'required',
+          'phone' => 'required',
+          'address' => 'required',
           'user_id' => 'required',
+          'township_id' => 'required'
         ]);
+
         if($product['user_id'] == 0) {
           $required = 'user_id required!';
           return response()->json($required, 404); 
         }
+
         if ($validator->fails()) {
             $response = [
                 'success' => false,
@@ -174,49 +185,44 @@ class OrderController extends Controller
         }
 
 
-        $productt = Product::find($product['product_id']);
-        // dd($productt->quantity);
-        if( $productt->quantity < $product['quantity'] ) {
-          $response = $product['name']. " is Out Of Stock";
-          return response()->json($response, 400);
-        } 
+        $sessions = Session::where('user_id', $product['user_id'])->get()->toArray();
 
-        $cart_product = Cart_product::create([
-          'product_id' => $details['id'],
-          'name' => $details['name'],
-          'price' => $details['price'],
-          'quantity' => $details['quantity'],
-          'image' => $details['image'],
-          'cart_id' => $order_cart->id,
-        ]);
+        if($sessions == null) {
+          return response()->json([ 'message' => 'cart-is-empty','status' => 404]);
+        }
+        $datetime = new DateTime('tomorrow');
+        $delivery_date= $datetime->format('Y-m-d');
 
-        $gtotalprice += $product['totalprice'];
-        $gtotalquantity += $product['quantity'];
-      }
-      $userlocation = User::find($product['user_id']);
-      $deliveryprice = $userlocation['township']['deliveryprice'];
-      $order = Order::create([
-        'totalquantity' => $gtotalquantity,
-        'totalprice' =>  $gtotalprice + $deliveryprice,
-        'orderdate' =>  date('Y-m-d'),
-        'monthly' =>  date('Y-m'),
-        'yearly' =>  date('Y'),
-        'user_id' => $product['user_id'],
-        'deliverystatus' => 1,
-      ]);
-      foreach($products as $product) {
-        $pro = Order_detail::create([
-          'product_id' => $product['product_id'],
+        // $order_cart =  Cart::create([
+        $order_cart =  DB::table('app_card')->insertGetId([
           'name' => $product['name'],
-          'quantity' => $product['quantity'],
-          'price' => $product['price'],
-          'totalprice' => $product['totalprice'],
-          'user_id' => $product['user_id'],
-          'order_id' => $order['id'],
+          'customer_status' => 1,
+          'phone' => $product['phone'],
+          'address' => $product['address'],
+          'township_id' => $product['township_id'],
+          'delivery_date' => $delivery_date,
+          // delete"
+          'created_at' => date('Y-m-d h:i:s'),
+          'updated_at' => date('Y-m-d h:i:s')
+        
         ]);
-      }
-      $response = [ 'success' => true ];
-      return response()->json($response, 200); 
+        // dd($order_cart);
+        foreach($sessions as $s) {
+          // $cart_product = Cart_product::create([
+          $cart_product = DB::table('app_card_products')->insert([
+            'product_id' => $s['product_id'],
+            'name' => $s['name'],
+            'price' => $s['price'],
+            'quantity' => $s['quantity'],
+            // 'cart_id' => $order_cart->id,
+            'cart_id' => $order_cart,
+            'created_at' => date('Y-m-d h:i:s'),
+            'updated_at' => date('Y-m-d h:i:s')
+          ]);
+        }
+        Session::where('user_id', $product['user_id'])->delete();
+        return response()->json([ 'message' => 'Success','status' => 200]);
+        
     }
 
     public function orderdetail($id)
