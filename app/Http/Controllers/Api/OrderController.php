@@ -30,7 +30,7 @@ class OrderController extends Controller
         $productt = Product::find($product['product_id']);
         if( $productt->quantity < $product['quantity'] ) {
           $response = "Out Of Stock";
-          return response()->json($response, 400);
+          return response()->json($response, 401);
         }  
         $productt->update([
           'quantity' => $productt->quantity - $product['quantity'],
@@ -83,18 +83,18 @@ class OrderController extends Controller
     $product = Product::find($request->product_id);
     $user_null = AppUser::find($request->user_id);
     if($user_null == null) {
-      return response()->json(['message' => 'User Not Found!!', 'status' => 401]);
+      return response()->json(['message' => 'User Not Found!!'], 401);
     }
     if($product == null) {
-      return response()->json(['message' => "Product Not Found!",'status' => 401]);
+      return response()->json(['message' => "Product Not Found!"], 401);
     }
     if( $request->quantity == 0)
     {
-      return response()->json(['message' => 'Quantity must be greather than zero!', 'status' => 400]);
+      return response()->json(['message' => 'Quantity must be greather than zero!'], 401);
     }
     if($product->quantity < $request->quantity)
     {
-      return response()->json(['message' => 'Out Of Stock!', 'status' => 400]);
+      return response()->json(['message' => 'Out Of Stock!'], 401);
     }
     $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
     if($session_user_id == null) {
@@ -135,15 +135,15 @@ class OrderController extends Controller
       $product = Product::find($request->product_id);
       $user_null = AppUser::find($request->user_id);
       if($user_null == null) {
-        return response()->json(['message' => 'User Not Found!!', 'status' => 401]);
+        return response()->json(['message' => 'User Not Found!!'], 401);
       }
       if($product == null) {
-        return response()->json(['message' => "Product Not Found!",'status' => 401]);
+        return response()->json(['message' => "Product Not Found!"],401);
       }
 
       $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
       $session_user_id->delete();
-      return response()->json(['message'=> 'Success', 'status' => 200]);
+      return response()->json(['message'=> 'Success'],200);
 
     }
 
@@ -165,12 +165,12 @@ class OrderController extends Controller
 
       $user_null = AppUser::find($request->user_id);
       if($user_null == null) {
-        return response()->json(['message' => 'User Not Found!!', 'status' => 401]);
+        return response()->json(['message' => 'User Not Found!!'], 401);
       }
 
       $session_user_id = Session::where('user_id', $request->user_id)->get();
       if(collect($session_user_id)->isEmpty()) {
-        return response()->json(['message'=>'Empty-cart', 'status'=>400 ]);
+        return response()->json(['message'=>'Empty-cart'],401);
       }
       return response()->json($session_user_id, 200);
 
@@ -207,16 +207,16 @@ class OrderController extends Controller
         $user_null = AppUser::find($product['user_id']);
         $t_null = Township::find($product['township_id']);
         if($user_null == null) {
-          return response()->json(['message' => 'User Not Found!!', 'status' => 401]);
+          return response()->json(['message' => 'User Not Found!!'],401);
         }
         if($t_null == null) {
-          return response()->json(['message' => 'Township Not Found!!', 'status' => 401]);
+          return response()->json(['message' => 'Township Not Found!!'], 401);
         }
 
         $sessions = Session::where('user_id', $product['user_id'])->get()->toArray();
 
         if($sessions == null) {
-          return response()->json([ 'message' => 'cart-is-empty','status' => 401]);
+          return response()->json([ 'message' => 'cart-is-empty'], 401);
         }
         $datetime = new DateTime('tomorrow');
         $delivery_date= $datetime->format('Y-m-d');
