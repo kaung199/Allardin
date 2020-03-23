@@ -21,7 +21,6 @@ use Illuminate\Http\Request;
 Route::resource('products', 'Api\ProductController');
 Route::resource('townships', 'Api\TownshipController');
 Route::resource('customers', 'Api\CustomerController');
-Route::post('facebook_id', 'Api\CustomerController@facebookId');
 
 // Route::get('photo', 'Api/ProductController@store');
 Route::post('order', 'Api\OrderController@store');

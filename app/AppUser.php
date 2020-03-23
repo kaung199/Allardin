@@ -8,6 +8,6 @@ class AppUser extends Model
 {
     protected $table = 'app_users';
     protected $fillable = [
-        'name', 'phone', 'address', 'email', 'password'
+        'name', 'phone', 'address'
     ];
 }

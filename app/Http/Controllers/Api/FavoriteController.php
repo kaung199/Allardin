@@ -46,7 +46,8 @@ class FavoriteController extends Controller
     }
 
     public function myFavorites($user_id){
-        $id = Favorite::where('user_id', $user_id)->get();
+        $id = Favorite::with('products', 'productPhoto')
+            ->where('user_id', $user_id)->get();
         if (count($id)>0){
             return response()->json($id);
         }else{
