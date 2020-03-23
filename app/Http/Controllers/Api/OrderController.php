@@ -107,13 +107,13 @@ class OrderController extends Controller
         'total_price' => $request->quantity * $product->price
       ]);
 
-      return response()->json(['message' => "Success", 'status' => 200 ]);
+      return response()->json(['message' => "Success"], 200);
     }
     $session_user_id->update([
       'quantity' => $request->quantity,
       'total_price' => $request->quantity * $product->price
     ]);
-    return response()->json(['message' => "Success", 'status' => 200 ]);
+    return response()->json(['message' => "Success"], 200);
     }
 
     public function remove_cart(Request $request)
@@ -240,7 +240,7 @@ class OrderController extends Controller
           ]);
         }
         Session::where('user_id', $product['user_id'])->delete();
-        return response()->json([ 'message' => 'Success','status' => 200]);
+        return response()->json([ 'message' => 'Success'],200);
         
     }
 
