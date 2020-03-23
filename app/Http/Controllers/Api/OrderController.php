@@ -10,7 +10,9 @@ use App\User;
 use App\Product;
 use App\Order;
 use App\Township;
+use App\AppUser;
 use App\Order_detail;
+use App\Session;
 
 class OrderController extends Controller
 {         	
@@ -55,6 +57,90 @@ class OrderController extends Controller
       }
       $response = [ 'success' => true ];
       return response()->json($response, 200);
+    }
+
+    public function session(Request $request)
+    {
+      $product_v = $request->all();
+      $validator = Validator::make($product_v, [
+        'product_id' => 'required',
+        'quantity' => 'required',
+        'user_id' => 'required',
+      ]);
+
+      if ($validator->fails()) {
+        $response = [
+            'success' => false,
+            'data' => 'Validation Error.',
+            'message' => $validator->errors()
+        ];
+        return response()->json($response, 404);
+    }
+    $product = Product::find($request->product_id);
+    $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
+    if($session_user_id == null) {
+      $session_table = Session::create([
+        'product_id' => $request->product_id,
+        'user_id' => $request->user_id,
+        'name' => $product->name,
+        'quantity' => $request->quantity,
+        'price' => $product->price,
+        'total_price' => $request->quantity * $product->price
+      ]);
+
+      return response()->json(['message' => "Success", 'status' => 200 ]);
+    }
+    $session_user_id->update([
+      'quantity' => $request->quantity,
+      'total_price' => $request->quantity * $product->price
+    ]);
+    return response()->json(['message' => "Success", 'status' => 200 ]);
+    }
+
+    public function remove_cart(Request $request)
+    {
+      $product_v = $request->all();
+      $validator = Validator::make($product_v, [
+        'product_id' => 'required',
+        'user_id' => 'required',
+      ]);
+
+      if ($validator->fails()) {
+        $response = [
+            'success' => false,
+            'data' => 'Validation Error.',
+            'message' => $validator->errors()
+        ];
+        return response()->json($response, 404);
+      }
+    $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
+    $session_user_id->delete();
+    return response()->json(['message'=> 'Success', 'status' => 200]);
+
+    }
+
+    public function show_cart(Request $request)
+    {
+      $user_v = $request->all();
+      $validator = Validator::make($user_v, [
+        'user_id' => 'required',
+      ]);
+
+      if ($validator->fails()) {
+        $response = [
+            'success' => false,
+            'data' => 'Validation Error.',
+            'message' => $validator->errors()
+        ];
+        return response()->json($response, 404);
+      }
+
+      $session_user_id = Session::where('user_id', $request->user_id)->get();
+      return response()->json($session_user_id, 200);
+
+
+
+
     }
 
     public function store(Request $request)

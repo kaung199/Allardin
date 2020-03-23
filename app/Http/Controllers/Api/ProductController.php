@@ -87,6 +87,7 @@ class ProductController extends Controller
             return response()->json($product, 200);
         }
 
+        
 
         /**
          * Update the specified resource in storage.

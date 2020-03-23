@@ -36,7 +36,7 @@ class OrderController extends Controller
     public function cart_checkout(Ostore $request) 
     {
         $cart = session()->get('cart');
-
+        
         $order_cart =  Cart::create($request->all());
 
         foreach(session('cart') as $cart => $details) {
@@ -44,7 +44,7 @@ class OrderController extends Controller
             $product = Product::find($details['id']);
             $product->update([
                 'quantity' => $product->quantity - $details['quantity'],
-            ]);
+            ]); 
             $cart_product = Cart_product::create([
                     'product_id' => $details['id'],
                     'name' => $details['name'],
