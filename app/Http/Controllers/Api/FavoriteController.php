@@ -22,7 +22,7 @@ class FavoriteController extends Controller
                 if (count($data)>0){
                     return response()->json([
                         'message' => 'Not Found Favorites, please try again.',
-                    ], 404);
+                    ], 401);
                 }else{
                     $favorite = new Favorite();
                     $favorite->user_id = $request->user_id;
@@ -35,12 +35,12 @@ class FavoriteController extends Controller
             }else{
                 return response()->json([
                     'message' => 'Not Found Products, please try again.',
-                ], 404);
+                ], 401);
             }
         }else{
             return response()->json([
                 'message' => 'Not Found Users, please try again.',
-            ], 404);
+            ], 401);
         }
 
     }
@@ -50,10 +50,7 @@ class FavoriteController extends Controller
         if (count($id)>0){
             return response()->json($id);
         }else{
-            return response()->json([
-                'data' =>$id,
-                'message' => 'Not Found Favorites, please try again.'
-            ],404);
+            return response()->json($id);
         }
     }
 
@@ -73,17 +70,17 @@ class FavoriteController extends Controller
                 }else{
                     return response()->json([
                         'message' => 'Not Found Favorites, please try again.',
-                    ], 404);
+                    ], 401);
                 }
             }else{
                 return response()->json([
                     'message' => 'Not Found Products, please try again.',
-                ], 404);
+                ], 401);
             }
         }else{
             return response()->json([
                 'message' => 'Not Found Users, please try again.',
-            ], 404);
+            ], 401);
         }
     }
 }
