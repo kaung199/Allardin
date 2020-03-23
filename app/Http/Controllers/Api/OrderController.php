@@ -144,7 +144,7 @@ class OrderController extends Controller
       if($session_user_id == null) {
         return response()->json(['message' => "Not Found!"],401);
       }
-
+      $session_user_id->delete();
       return response()->json(['message'=> 'Success'],200);
 
     }
