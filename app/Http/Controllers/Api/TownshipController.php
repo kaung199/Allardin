@@ -40,7 +40,7 @@ class TownshipController extends Controller
                     'data' => 'Validation Error.',
                     'message' => $validator->errors()
                 ];
-                return response()->json($response, 404);
+                return response()->json($response, 401);
             }
 
             $townships = Township::create($input);
@@ -67,7 +67,7 @@ class TownshipController extends Controller
                     'data' => 'Empty',
                     'message' => 'Township not found.'
                 ];
-                return response()->json($response, 404);
+                return response()->json($response, 401);
             }
 
             return response()->json($data, 200);
@@ -97,7 +97,7 @@ class TownshipController extends Controller
                     'data' => 'Validation Error.',
                     'message' => $validator->errors()
                 ];
-                return response()->json($response, 404);
+                return response()->json($response, 401);
             }
             
             $township->update($input);
