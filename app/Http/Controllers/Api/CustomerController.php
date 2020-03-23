@@ -25,7 +25,7 @@ class CustomerController extends Controller
                     [   'message' => 'Success',
                         'id'         => $user->id,
                         'facebook_id' => $user->facebook_id,
-                    ], 401);
+                    ], 200);
             }else{
                 return response()->json(['message' => 'Unsuccess'], 401);
             }
@@ -62,11 +62,11 @@ class CustomerController extends Controller
                         'id'         => $user->id,
                         'facebook_id' => $user->facebook_id,
                         'message'      => 'Success',
-                    ]);
+                    ],200);
                 } else {
                     return response()->json([
                         'message' => 'Registration failed, please try again.',
-                    ], 400);
+                    ], 401);
                 }
             }
         }
