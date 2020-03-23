@@ -87,13 +87,36 @@ class OrderController extends Controller
         'price' => $product->price,
         'total_price' => $request->quantity * $product->price
       ]);
-      return response()->json("Success!!", 200);
+
+      return response()->json(['message' => "Success", 'status' => 200 ]);
     }
     $session_user_id->update([
       'quantity' => $request->quantity,
       'total_price' => $request->quantity * $product->price
     ]);
-    return response()->json("Success!", 200);
+    return response()->json(['message' => "Success", 'status' => 200 ]);
+    }
+
+    public function remove_cart(Request $request)
+    {
+      $product_v = $request->all();
+      $validator = Validator::make($product_v, [
+        'product_id' => 'required',
+        'user_id' => 'required',
+      ]);
+
+      if ($validator->fails()) {
+        $response = [
+            'success' => false,
+            'data' => 'Validation Error.',
+            'message' => $validator->errors()
+        ];
+        return response()->json($response, 404);
+      }
+    $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
+    $session_user_id->delete();
+    return response()->json(['message'=> 'Success', 'status' => 200]);
+
     }
 
     public function show_cart(Request $request)
