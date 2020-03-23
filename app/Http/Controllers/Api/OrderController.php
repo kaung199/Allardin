@@ -140,9 +140,11 @@ class OrderController extends Controller
       if($product == null) {
         return response()->json(['message' => "Product Not Found!"],401);
       }
-
       $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
-      $session_user_id->delete();
+      if($session_user_id == null) {
+        return response()->json(['message' => "Not Found!"],401);
+      }
+
       return response()->json(['message'=> 'Success'],200);
 
     }
@@ -169,9 +171,6 @@ class OrderController extends Controller
       }
 
       $session_user_id = Session::where('user_id', $request->user_id)->get();
-      if(collect($session_user_id)->isEmpty()) {
-        return response()->json(['message'=>'Empty-cart'],401);
-      }
       return response()->json($session_user_id, 200);
 
 
