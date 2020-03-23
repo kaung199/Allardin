@@ -51,8 +51,7 @@ class FavoriteController extends Controller
             return response()->json($id);
         }else{
             return response()->json([
-                'message' => 'Not Found Favorites, please try again.',
-                'data' => $id,
+                'data' => $id
             ],401);
         }
     }
