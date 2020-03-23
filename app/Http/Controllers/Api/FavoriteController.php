@@ -16,22 +16,31 @@ class FavoriteController extends Controller
 
         if (count($users)>0){
             if (count($products)>0){
-                $favorite = new Favorite();
-                $favorite->user_id = $request->user_id;
-                $favorite->product_id = $request->product_id;
-                $favorite->save();
-                return response()->json([
-                    'message'      => 'Success'
-                ]);
+                $data = Favorite::where('user_id', $request->user_id)
+                    ->where('product_id', $request->product_id)->get();
+
+                if (count($data)>0){
+                    return response()->json([
+                        'message' => 'Not Found Favorites, please try again.',
+                    ], 404);
+                }else{
+                    $favorite = new Favorite();
+                    $favorite->user_id = $request->user_id;
+                    $favorite->product_id = $request->product_id;
+                    $favorite->save();
+                    return response()->json([
+                        'message'      => 'Success'
+                    ], 200);
+                }
             }else{
                 return response()->json([
                     'message' => 'Not Found Products, please try again.',
-                ], 400);
+                ], 404);
             }
         }else{
             return response()->json([
                 'message' => 'Not Found Users, please try again.',
-            ], 400);
+            ], 404);
         }
 
     }
@@ -42,8 +51,9 @@ class FavoriteController extends Controller
             return response()->json($id);
         }else{
             return response()->json([
-                'message' => 'Not Found Favorites, please try again.',
-            ], 400);
+                'data' =>$id,
+                'message' => 'Not Found Favorites, please try again.'
+            ],404);
         }
     }
 
@@ -59,21 +69,21 @@ class FavoriteController extends Controller
                     $id->delete();
                     return response()->json([
                         'message'      => 'Success'
-                    ]);
+                    ],200);
                 }else{
                     return response()->json([
                         'message' => 'Not Found Favorites, please try again.',
-                    ], 400);
+                    ], 404);
                 }
             }else{
                 return response()->json([
                     'message' => 'Not Found Products, please try again.',
-                ], 400);
+                ], 404);
             }
         }else{
             return response()->json([
                 'message' => 'Not Found Users, please try again.',
-            ], 400);
+            ], 404);
         }
     }
 }

@@ -51,9 +51,6 @@ Route::get('yearlyorder', 'Api\OrderController@yearlyorder');
 
 Route::post('search', 'Api\OrderController@search');
 
-//App Card
-
-
 //Favorite
 Route::post('favorite', 'Api\FavoriteController@favoritePost');
 Route::get('my_favorites/{user_id?}', 'Api\FavoriteController@myFavorites');
