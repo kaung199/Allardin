@@ -170,11 +170,8 @@ class OrderController extends Controller
         return response()->json(['message' => 'User Not Found!!'], 401);
       }
 
-      $session_user_id = Session::where('user_id', $request->user_id)->get();
+      $session_user_id = Session::with('products', 'productPhoto')->where('user_id', $request->user_id)->get();
       return response()->json($session_user_id, 200);
-
-
-
 
     }
 
