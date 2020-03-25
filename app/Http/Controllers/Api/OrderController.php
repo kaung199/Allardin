@@ -68,19 +68,17 @@ class OrderController extends Controller
     public function session(Request $request)
     {
       $product_v = $request->all();
-      $validator = Validator::make($product_v, [
-        'product_id' => 'required',
-        'quantity' => 'required',
-        'user_id' => 'required',
-      ]);
-
-      if ($validator->fails()) {
-        $response = [
-            'success' => false,
-            'data' => 'Validation Error.',
-            'message' => $validator->errors()
-        ];
-        return response()->json($response, 401);
+      if($product_v['user_id'] == null) {
+        $required = 'user_id required!!';
+        return response()->json(['message' => $required ], 401); 
+      }
+      if($product_v['product_id'] == null) {
+        $required = 'product_id required!!';
+        return response()->json(['message' => $required ], 401); 
+      }
+      if($product_v['quantity'] == null) {
+        $required = 'quantity required!!';
+        return response()->json(['message' => $required ], 401); 
       }
       $product = Product::find($request->product_id);
       $user_null = AppUser::find($request->user_id);
@@ -112,7 +110,7 @@ class OrderController extends Controller
         return response()->json(['message' => "Success"], 200);
       }
       $session_user_id->update([
-        'quantity' => $request->quantity,
+        'quantity' => $session_user_id->quantity + $request->quantity,
         'total_price' => $request->quantity * $product->price
       ]);
       return response()->json(['message' => "Success"], 200);
@@ -121,17 +119,13 @@ class OrderController extends Controller
     public function remove_cart(Request $request)
     {
       $product_v = $request->all();
-      $validator = Validator::make($product_v, [
-        'product_id' => 'required',
-        'user_id' => 'required',
-      ]);
-      if ($validator->fails()) {
-        $response = [
-            'success' => false,
-            'data' => 'Validation Error.',
-            'message' => $validator->errors()
-        ];
-        return response()->json($response, 401);
+      if($product_v['user_id'] == null) {
+        $required = 'user_id required!!';
+        return response()->json(['message' => $required ], 401); 
+      }
+      if($product_v['product_id'] == null) {
+        $required = 'product_id required!!';
+        return response()->json(['message' => $required ], 401); 
       }
 
       $product = Product::find($request->product_id);
@@ -154,17 +148,10 @@ class OrderController extends Controller
     public function show_cart(Request $request)
     {
       $user_v = $request->all();
-      $validator = Validator::make($user_v, [
-        'user_id' => 'required',
-      ]);
 
-      if ($validator->fails()) {
-        $response = [
-            'success' => false,
-            'data' => 'Validation Error.',
-            'message' => $validator->errors()
-        ];
-        return response()->json($response, 401);
+      if($user_v['user_id'] == null) {
+        $required = 'user_id required!!';
+        return response()->json(['message' => $required ], 401); 
       }
 
       $user_null = AppUser::find($request->user_id);
@@ -179,33 +166,34 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {      
-        $product = $request->all();    
-        $validator = Validator::make($product, [
-          'name' => 'required',
-          'phone' => 'required',
-          'address' => 'required',
-          'user_id' => 'required',
-          'township_id' => 'required'
-        ]);
-        if($product['user_id'] == 0) {
+        $product = $request->all();   
+        if($product['user_id'] == null) {
           $required = 'user_id required!!';
-          return response()->json($required, 401); 
+          return response()->json(['message' => $required ], 401); 
+        }
+        if($product['name'] == null) {
+          $required = 'name required!!';
+          return response()->json(['message' => $required ], 401); 
+        }
+        if($product['phone'] == null) {
+          $required = 'phone required!!';
+          return response()->json(['message' => $required ], 401); 
+        }
+        if($product['address'] == null) {
+          $required = 'address required!!';
+          return response()->json(['message' => $required ], 401); 
         }
 
-        if ($validator->fails()) {
-            $response = [
-                'success' => false,
-                'data' => 'Validation Error.',
-                'message' => $validator->errors()
-            ];
-            return response()->json($response, 401);
+        if($product['township_id'] == null) {
+          $required = 'township_id required!!';
+          return response()->json(['message' => $required ], 401); 
         }
 
         $user_null = AppUser::find($product['user_id']);
         $t_null = Township::find($product['township_id']);
         if($user_null == null) {
           return response()->json(['message' => 'User Not Found!!'],401);
-        }
+        } 
         if($t_null == null) {
           return response()->json(['message' => 'Township Not Found!!'], 401);
         }
@@ -215,7 +203,7 @@ class OrderController extends Controller
         if($sessions == null) {
           return response()->json([ 'message' => 'cart-is-empty'], 401);
         }
-        
+
         $datetime = new DateTime('tomorrow');
         $delivery_date= $datetime->format('Y-m-d');
 
@@ -228,6 +216,7 @@ class OrderController extends Controller
           'delivery_date' => $delivery_date,
         
         ]);
+
         foreach($sessions as $s) {
           $cart_product = AppCardProduct::create([
             'product_id' => $s['product_id'],
@@ -237,6 +226,7 @@ class OrderController extends Controller
             'cart_id' => $order_cart->id,
           ]);
         }
+         
         Session::where('user_id', $product['user_id'])->delete();
         return response()->json([ 'message' => 'Success'],200);
         
