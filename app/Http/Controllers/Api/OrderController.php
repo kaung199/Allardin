@@ -180,7 +180,7 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {      
-        $product = $request->json()->all();      
+        $product = $request->all();      
 
         $validator = Validator::make($product, [
           'name' => 'required',
