@@ -170,7 +170,7 @@ class OrderController extends Controller
       }
 
       $session_user_id = Session::join('products_photos', 'session.product_id', '=', 'products_photos.product_id')
-                        ->with('products')->where('user_id', $request->user_id)->get();
+                        ->where('user_id', $request->user_id)->get();
       return response()->json($session_user_id, 200);
 
     }
