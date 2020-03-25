@@ -20,16 +20,28 @@ class FavoriteController extends Controller
                     ->where('product_id', $request->product_id)->get();
 
                 if (count($data)>0){
-                    return response()->json([
-                        'message' => 'Not Found Favorites, please try again.',
-                    ], 401);
+                    $id = Favorite::where('user_id', $request->user_id)
+                        ->where('product_id', $request->product_id)->first();
+                    if ($id != null){
+                        $id->delete();
+                        return response()->json([
+                            'message'      => 'Success',
+                            'status' => 0
+                        ],200);
+                    }else{
+                        return response()->json([
+                            'message' => 'Not Found Favorites, please try again.',
+                        ], 401);
+                    }
                 }else{
                     $favorite = new Favorite();
                     $favorite->user_id = $request->user_id;
                     $favorite->product_id = $request->product_id;
+                    $favorite->status = 1;
                     $favorite->save();
                     return response()->json([
-                        'message'      => 'Success'
+                        'message'      => 'Success',
+                        'status' => $favorite->status
                     ], 200);
                 }
             }else{
@@ -52,36 +64,6 @@ class FavoriteController extends Controller
             return response()->json($id);
         }else{
             return response()->json($id);
-        }
-    }
-
-    public function unFavoritePost(Request $request){
-        $users = User::where('id', $request->user_id)->get();
-        $products = Product::where('id', $request->product_id)->get();
-
-        if (count($users)>0) {
-            if (count($products) > 0) {
-                $id = Favorite::where('user_id', $request->user_id)
-                    ->where('product_id', $request->product_id)->first();
-                if ($id != null){
-                    $id->delete();
-                    return response()->json([
-                        'message'      => 'Success'
-                    ],200);
-                }else{
-                    return response()->json([
-                        'message' => 'Not Found Favorites, please try again.',
-                    ], 401);
-                }
-            }else{
-                return response()->json([
-                    'message' => 'Not Found Products, please try again.',
-                ], 401);
-            }
-        }else{
-            return response()->json([
-                'message' => 'Not Found Users, please try again.',
-            ], 401);
         }
     }
 }

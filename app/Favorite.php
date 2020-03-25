@@ -8,7 +8,7 @@ class Favorite extends Model
 {
     protected $table = 'favorites';
     protected $fillable = [
-        'user_id', 'product_id'
+        'user_id', 'product_id', 'status'
     ];
 
     public function products()

@@ -17,6 +17,7 @@ class CreateFavoritesTable extends Migration
             $table->bigIncrements('id');
             $table->integer('user_id')->unsigned();
             $table->integer('product_id')->unsigned();
+            $table->integer('status');
             $table->timestamps();
         });
     }
