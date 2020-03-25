@@ -20,7 +20,6 @@ class Product extends Model  implements Searchable
     {
         return $this->belongsTo('App\Category');
     }
-
     public function getSearchResult(): SearchResult
     {
         $url = route('products.show', $this->id);

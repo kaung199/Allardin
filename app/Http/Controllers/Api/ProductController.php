@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Api;
+use App\Favorite;
 use App\Product;
 use Validator;
 use Illuminate\Http\Request;
@@ -70,6 +71,8 @@ class ProductController extends Controller
         public function show($id)
         {
             $product = Product::with('photos')->find($id);
+            $favorite = Favorite::where('product_id', $id)->first();
+            $product["status"] = $favorite->status;
 
             if (is_null($product)) {
                 $response = [
