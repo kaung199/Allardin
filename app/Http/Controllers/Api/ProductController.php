@@ -74,7 +74,8 @@ class ProductController extends Controller
         }
 
         public function productDetail($user_id, $prod_id){
-            $product = Product::with('photos')->find($prod_id);
+            $product = Product::select('id', 'name', 'quantity', 'price', 'description')
+                ->with('photos')->find($prod_id);
             $favorite = Favorite::where('product_id', $prod_id)
                 ->where('user_id', $user_id)->first();
 
@@ -87,7 +88,6 @@ class ProductController extends Controller
                 return response()->json($response, 401);
             }
             $product["status"] = $favorite->status;
-            $product["user_id"] = $favorite->user_id;
             return response()->json($product, 200);
         }
 
