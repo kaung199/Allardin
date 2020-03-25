@@ -21,6 +21,7 @@ use Illuminate\Http\Request;
 Route::resource('products', 'Api\ProductController');
 Route::resource('townships', 'Api\TownshipController');
 Route::resource('customers', 'Api\CustomerController');
+Route::get('product_detail/{user_id}/{prod_id}', 'Api\ProductController@productDetail');
 
 // Route::get('photo', 'Api/ProductController@store');
 Route::post('order', 'Api\OrderController@store');

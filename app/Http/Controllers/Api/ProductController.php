@@ -70,9 +70,13 @@ class ProductController extends Controller
          */
         public function show($id)
         {
-            $product = Product::with('photos')->find($id);
-            $favorite = Favorite::where('product_id', $id)->first();
-            $product["status"] = $favorite->status;
+//
+        }
+
+        public function productDetail($user_id, $prod_id){
+            $product = Product::with('photos')->find($prod_id);
+            $favorite = Favorite::where('product_id', $prod_id)
+                ->where('user_id', $user_id)->first();
 
             if (is_null($product)) {
                 $response = [
@@ -82,7 +86,8 @@ class ProductController extends Controller
                 ];
                 return response()->json($response, 401);
             }
-
+            $product["status"] = $favorite->status;
+            $product["user_id"] = $favorite->user_id;
             return response()->json($product, 200);
         }
 
