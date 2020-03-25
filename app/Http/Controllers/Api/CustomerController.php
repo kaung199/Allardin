@@ -17,20 +17,6 @@ class CustomerController extends Controller
             return response()->json($users, 200);
         }
 
-        public function facebookId(Request $request){
-            $facebook = AppUser::where('facebook_id', $request->facebook_id)->get();
-            if (count($facebook)>0){
-                $user = AppUser::where('facebook_id', $request->facebook_id)->first();
-                return response()->json(
-                    [   'message' => 'Success',
-                        'id'         => $user->id,
-                        'facebook_id' => $user->facebook_id,
-                    ], 200);
-            }else{
-                return response()->json(['message' => 'Unsuccess'], 401);
-            }
-        }
-
         /**
          * Store a newly created resource in storage.
          *
@@ -39,28 +25,25 @@ class CustomerController extends Controller
          */
         public function store(Request $request)
         {
-            $users = AppUser::where('facebook_id', $request->facebook_id)->get();
+            $users = AppUser::where('phone', $request->phone)->get();
             if (count($users)>0){
-                return response()->json(['message' => 'Facebook ID is duplicate'], 401);
+                return response()->json(['message' => 'Phone is duplicate'], 401);
             }else{
                 $user = new AppUser();
                 $user->name = $request->name;
                 $user->phone = $request->phone;
                 $user->address = $request->address;
-                $user->facebook_id = $request->facebook_id;
-                $file = $request->file('image');
-                if (isset($file)){
-                    $extension = $file->getClientOriginalExtension();
-                    $filename = time() . '.' . $extension;
-                    $request->image->storeAs('public/user/', $filename);
-                    $user->image = $filename;
-                }
                 $user->save();
-                
+//                $file = $request->file('image');
+//                if (isset($file)){
+//                    $extension = $file->getClientOriginalExtension();
+//                    $filename = time() . '.' . $extension;
+//                    $request->image->storeAs('public/user/', $filename);
+//                    $user->image = $filename;
+//                }
                 if($user) {
                     return response()->json([
                         'id'         => $user->id,
-                        'facebook_id' => $user->facebook_id,
                         'message'      => 'Success',
                     ],200);
                 } else {
@@ -70,7 +53,6 @@ class CustomerController extends Controller
                 }
             }
         }
-
 
         /**
          * Display the specified resource.

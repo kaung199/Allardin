@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\AppCard;
+use App\AppCardProduct;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Validator;
@@ -170,11 +172,8 @@ class OrderController extends Controller
         return response()->json(['message' => 'User Not Found!!'], 401);
       }
 
-      $session_user_id = Session::where('user_id', $request->user_id)->get();
+      $session_user_id = Session::with('products', 'productPhoto')->where('user_id', $request->user_id)->get();
       return response()->json($session_user_id, 200);
-
-
-
 
     }
 
@@ -220,7 +219,7 @@ class OrderController extends Controller
         $datetime = new DateTime('tomorrow');
         $delivery_date= $datetime->format('Y-m-d');
 
-        $order_cart =  Cart::create([
+        $order_cart =  AppCard::create([
           'name' => $product['name'],
           'customer_status' => 1,
           'phone' => $product['phone'],
@@ -230,7 +229,7 @@ class OrderController extends Controller
         
         ]);
         foreach($sessions as $s) {
-          $cart_product = Cart_product::create([
+          $cart_product = AppCardProduct::create([
             'product_id' => $s['product_id'],
             'name' => $s['name'],
             'price' => $s['price'],
