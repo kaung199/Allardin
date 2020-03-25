@@ -82,40 +82,40 @@ class OrderController extends Controller
         ];
         return response()->json($response, 401);
       }
-    $product = Product::find($request->product_id);
-    $user_null = AppUser::find($request->user_id);
-    if($user_null == null) {
-      return response()->json(['message' => 'User Not Found!!'], 401);
-    }
-    if($product == null) {
-      return response()->json(['message' => "Product Not Found!"], 401);
-    }
-    if( $request->quantity == 0)
-    {
-      return response()->json(['message' => 'Quantity must be greather than zero!'], 401);
-    }
-    if($product->quantity < $request->quantity)
-    {
-      return response()->json(['message' => 'Out Of Stock!'], 401);
-    }
-    $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
-    if($session_user_id == null) {
-      $session_table = Session::create([
-        'product_id' => $request->product_id,
-        'user_id' => $request->user_id,
-        'name' => $product->name,
+      $product = Product::find($request->product_id);
+      $user_null = AppUser::find($request->user_id);
+      if($user_null == null) {
+        return response()->json(['message' => 'User Not Found!!'], 401);
+      }
+      if($product == null) {
+        return response()->json(['message' => "Product Not Found!"], 401);
+      }
+      if( $request->quantity == 0)
+      {
+        return response()->json(['message' => 'Quantity must be greather than zero!'], 401);
+      }
+      if($product->quantity < $request->quantity)
+      {
+        return response()->json(['message' => 'Out Of Stock!'], 401);
+      }
+      $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
+      if($session_user_id == null) {
+        $session_table = Session::create([
+          'product_id' => $request->product_id,
+          'user_id' => $request->user_id,
+          'name' => $product->name,
+          'quantity' => $request->quantity,
+          'price' => $product->price,
+          'total_price' => $request->quantity * $product->price
+        ]);
+
+        return response()->json(['message' => "Success"], 200);
+      }
+      $session_user_id->update([
         'quantity' => $request->quantity,
-        'price' => $product->price,
         'total_price' => $request->quantity * $product->price
       ]);
-
       return response()->json(['message' => "Success"], 200);
-    }
-    $session_user_id->update([
-      'quantity' => $request->quantity,
-      'total_price' => $request->quantity * $product->price
-    ]);
-    return response()->json(['message' => "Success"], 200);
     }
 
     public function remove_cart(Request $request)
@@ -179,8 +179,7 @@ class OrderController extends Controller
 
     public function store(Request $request)
     {      
-        $product = $request->json()->all();      
-
+        $product = $request->all();    
         $validator = Validator::make($product, [
           'name' => 'required',
           'phone' => 'required',
@@ -216,6 +215,7 @@ class OrderController extends Controller
         if($sessions == null) {
           return response()->json([ 'message' => 'cart-is-empty'], 401);
         }
+        
         $datetime = new DateTime('tomorrow');
         $delivery_date= $datetime->format('Y-m-d');
 
