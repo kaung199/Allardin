@@ -15,8 +15,4 @@ class Favorite extends Model
     {
         return $this->belongsTo('App\Product', 'product_id')->select('id', 'name', 'price');
     }
-    public function productPhoto()
-    {
-        return $this->belongsTo('App\ProductsPhoto', 'product_id')->select('id', 'filename');
-    }
 }
