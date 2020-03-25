@@ -20,8 +20,8 @@ class CreateAppCardProductsTable extends Migration
             $table->integer('price');
             $table->integer('quantity');
             $table->string('image')->nullable();
-            $table->unsignedInteger('cart_id');
-            $table->foreign('cart_id')->references('id')->on('cart');
+            $table->unsignedBigInteger('cart_id');
+            $table->foreign('cart_id')->references('id')->on('app_cards');
             $table->timestamps();
         });
     }
