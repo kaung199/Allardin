@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Api;
 
+use App\AppUser;
 use App\Favorite;
 use App\Product;
 use App\User;
@@ -11,7 +12,7 @@ use App\Http\Controllers\Controller;
 class FavoriteController extends Controller
 {
     public function favoritePost(Request $request){
-        $users = User::where('id', $request->user_id)->get();
+        $users = AppUser::where('id', $request->user_id)->get();
         $products = Product::where('id', $request->product_id)->get();
 
         if (count($users)>0){

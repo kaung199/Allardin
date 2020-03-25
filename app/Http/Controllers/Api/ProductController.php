@@ -95,7 +95,12 @@ class ProductController extends Controller
                 ];
                 return response()->json($response, 401);
             }
-            $product["status"] = $favorite->status;
+
+            if ($favorite->status == 1){
+                $product["status"] = $favorite->status;
+            }else{
+                $product["status"] = 0;
+            }
             $product["cart_status"] = $cart_status;
             return response()->json($product, 200);
         }
