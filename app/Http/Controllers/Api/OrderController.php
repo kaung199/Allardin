@@ -97,6 +97,7 @@ class OrderController extends Controller
         return response()->json(['message' => 'Out Of Stock!'], 401);
       }
       $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
+
       if($session_user_id == null) {
         $session_table = Session::create([
           'product_id' => $request->product_id,
@@ -109,11 +110,20 @@ class OrderController extends Controller
 
         return response()->json(['message' => "Success"], 200);
       }
-      $session_user_id->update([
-        'quantity' => $session_user_id->quantity + $request->quantity,
-        'total_price' => $request->quantity * $product->price
-      ]);
-      return response()->json(['message' => "Success"], 200);
+      if(isset($request->status)) {
+        $session_user_id->update([
+          'quantity' => $request->quantity,
+          'total_price' => $request->quantity * $product->price
+        ]);
+        return response()->json(['message' => "Success"], 200);
+      } else {
+        $session_user_id->update([
+          'quantity' => $session_user_id->quantity + $request->quantity,
+          'total_price' => $session_user_id->total_price + $request->quantity * $product->price
+        ]);
+        return response()->json(['message' => "Success"], 200);
+      }
+      
     }
 
     public function remove_cart(Request $request)
@@ -271,6 +281,7 @@ class OrderController extends Controller
                   'townships.deliveryprice',
                   'townships.deliveryman')
                 ->latest()->get();
+      dd($orders);
 
       return response()->json($orders, 200);    
     }
