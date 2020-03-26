@@ -60,7 +60,8 @@ class FavoriteController extends Controller
     }
 
     public function myFavorites($user_id){
-        $id = Favorite::with('products')
+        $id = Favorite::select('favorites.product_id', 'favorites.status', 'products.name', 'products.quantity', 'products.price', 'products_photos.filename')
+            ->join('products', 'favorites.product_id', '=', 'products.id')
             ->join('products_photos', 'favorites.product_id', '=', 'products_photos.product_id')
             ->where('user_id', $user_id)->get();
 
