@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Api;
 use App\AppUser;
 use App\Favorite;
 use App\Product;
+use App\ProductsPhoto;
 use App\User;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -59,8 +60,10 @@ class FavoriteController extends Controller
     }
 
     public function myFavorites($user_id){
-        $id = Favorite::with('products', 'productPhoto')
+        $id = Favorite::with('products')
+            ->join('products_photos', 'favorites.product_id', '=', 'products_photos.product_id')
             ->where('user_id', $user_id)->get();
+
         if (count($id)>0){
             return response()->json($id);
         }else{
