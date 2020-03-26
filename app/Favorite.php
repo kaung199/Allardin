@@ -14,4 +14,8 @@ class Favorite extends Model
     public function products(){
         return $this->belongsTo('App\Product', 'product_id')->select('id', 'name', 'price');
     }
+    public function photo(){
+
+        return $this->hasMany('App\ProductsPhoto', 'product_id')->select('id', 'filename', 'product_id');
+    }
 }

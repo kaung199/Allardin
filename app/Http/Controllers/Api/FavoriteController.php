@@ -61,8 +61,11 @@ class FavoriteController extends Controller
 
     public function myFavorites($user_id){
         $id = Favorite::with('products')
-            ->join('products_photos', 'favorites.product_id', '=', 'products_photos.product_id')
             ->where('user_id', $user_id)->get();
+        foreach ($id as $key => $value){
+            $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
+            $id[$key]["image"] = $photo->filename;
+        }
 
         if (count($id)>0){
             return response()->json($id);
