@@ -14,6 +14,9 @@
     <div class="shadow-lg p-3 mb-5 bg-white rounded">
         <div class="row">
             <div class="col-md-9">
+                @if($order->customer_status == 1)
+                    <h5 class="text-danger"><strong>Order By = Customer ( mobile )</strong></h5>
+                @endif
                 <h6><strong>Order_Date = {{ $order->created_at }}</strong></h6>
                 <h6><strong>Delivery_Date = {{ $order->delivery_date }}</strong></h6>
                 @if($order->remark != null)

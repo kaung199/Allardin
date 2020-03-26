@@ -284,7 +284,9 @@ class OrderController extends Controller
                 'monthly' =>  date('Y-m'),
                 'yearly' =>  date('Y'),
                 'deliverystatus' => 1,
-                'user_id' => $customer->id,
+                'user_id' => $customer->id, 
+                'app_user_id' => $cart->app_user_id,
+                'customer_status' => $cart->customer_status
     
             ]);
                 
