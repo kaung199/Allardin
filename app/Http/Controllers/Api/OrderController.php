@@ -205,6 +205,7 @@ class OrderController extends Controller
         if($user_null == null) {
           return response()->json(['message' => 'User Not Found!!'],401);
         } 
+
         if($t_null == null) {
           return response()->json(['message' => 'Township Not Found!!'], 401);
         }
@@ -214,37 +215,57 @@ class OrderController extends Controller
         if($sessions == null) {
           return response()->json([ 'message' => 'cart-is-empty'], 401);
         }
+        foreach($sessions as $s) {
 
+          $product_qv = Product::find($s['product_id']);
+          if($s['quantity'] > $product_qv->quantity) {
+            return response()->json([ 'message' => $s['name']. ' quantity must be less than '. $product_qv->quantity],401);
+          }
+          
+        }
         $datetime = new DateTime('tomorrow');
         $delivery_date= $datetime->format('Y-m-d');
 
-        $order_cart =  AppCard::create([
+        $order_cart =  Cart::create([  
           'name' => $product['name'],
+          'app_user_id' => $product['user_id'],
           'customer_status' => 1,
           'phone' => $product['phone'],
           'address' => $product['address'],
           'township_id' => $product['township_id'],
           'delivery_date' => $delivery_date,
-        
         ]);
 
         foreach($sessions as $s) {
-          $cart_product = AppCardProduct::create([
+          $cart_product = Cart_Product::create([
             'product_id' => $s['product_id'],
             'name' => $s['name'],
             'price' => $s['price'],
             'quantity' => $s['quantity'],
             'cart_id' => $order_cart->id,
           ]);
+
+          $product_q = Product::find($s['product_id']);
+          $grandqty = $product_q->quantity - $s['quantity'];
+          
+          $product_q->update([
+              'quantity' => $grandqty,
+          ]);
         }
-         
         Session::where('user_id', $product['user_id'])->delete();
+         
+        
         return response()->json([ 'message' => 'Success'],200);
         
     }
 
     public function orderdetail($id)
     {
+      $order_null = Order::find($id);
+      if($order_null == null) {
+        return response()->json(['message' => 'Order Not Found!!'],401);
+      } 
+
       $order = Order::where('orders.id', $id)
                   ->join('users', 'users.id', '=', 'orders.user_id')
                   ->join('townships', 'townships.id', '=', 'users.township_id')
@@ -253,40 +274,41 @@ class OrderController extends Controller
                     'order_details.quantity',
                     'order_details.price', 
                     'order_details.totalprice', 
-                    'users.name',  
-                    'users.address',  
-                    'users.phone',  
                     'townships.deliveryprice')
                   ->get();  
                
       return response()->json($order, 200);
     }
 
-    public function orders()
+    public function orders(Request $request)
     {
-      $orders = Order::orderBy('orders.id', 'desc')
-                ->join('users', 'users.id', '=', 'orders.user_id')
-                ->join('townships', 'townships.id', '=', 'users.township_id')
-                ->select('orders.id as order_id',
-                  'orders.totalquantity',
-                  'orders.totalprice',
-                  'orders.deliverystatus',
-                  'orders.created_at',
-                  'orders.orderdate',
-                  'users.id as user_id',
-                  'users.name',
-                  'users.phone',
-                  'users.address',
-                  'townships.id as township_id',
-                  'townships.name as township_name',
-                  'townships.deliveryprice',
-                  'townships.deliveryman')
-                ->latest()->get();
-      dd($orders);
+      if($request->user_id == null) {
+        $required = 'user_id required!!';
+        return response()->json(['message' => $required ], 401); 
+      }
+      $user_null = AppUser::find($request->user_id);
 
+      if($user_null == null) {
+        return response()->json(['message' => 'User Not Found!!'],401);
+      } 
+
+      $orders = Order::orderBy('orders.id', 'desc')
+                      ->where('orders.app_user_id', $request->user_id)
+                      ->select('id',
+                        'order_id',
+                        'totalquantity',
+                        'totalprice',
+                        'created_at as order_date'
+                        )
+                      ->get();
       return response()->json($orders, 200);    
     }
 
+
+
+
+
+    //unneeded
     public function deliverystatus(Request $request, $id)
     {
       $order = Order::find($id);

@@ -62,8 +62,11 @@
                 @if($order->orderby != null)
                 <h6><strong>Admin => {{ $order->orderby }}</strong></h6>
                 @endif
+                @if($order->customer_status == 1)
+                    <h6 class="text-danger"><strong>Order By => Customer ( mobile )</strong></h6>
+                @endif
                 @if($order->remark != null)
-                <h6><strong>Remark = {{ $order->remark }}</strong></h6>
+                    <h6><strong>Remark = {{ $order->remark }}</strong></h6>
                 @endif
                 
             </div>

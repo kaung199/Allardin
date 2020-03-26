@@ -24,7 +24,9 @@ class Order extends Model implements Searchable
         'deliverystatus', 
         'checkstatus',
         'dname','dphone', 
-        'user_id'
+        'user_id',
+        'app_user_id',
+        'customer_status'
     ];
 
     public function user()

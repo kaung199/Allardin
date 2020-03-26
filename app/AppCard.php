@@ -8,6 +8,6 @@ class AppCard extends Model
 {
     protected $table = 'app_cards';
     protected $fillable = [
-        'name', 'phone', 'address', 'township_id','customer_status', 'discount', 'delivery_date', 'remark'
+        'name','app_user_id', 'phone', 'address', 'township_id','customer_status', 'discount', 'delivery_date', 'remark'
     ];
 }

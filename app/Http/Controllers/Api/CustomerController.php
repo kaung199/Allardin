@@ -13,7 +13,6 @@ class CustomerController extends Controller
         public function index()
         {
             $users = AppUser::latest()->get();
-
             return response()->json($users, 200);
         }
 
@@ -28,7 +27,7 @@ class CustomerController extends Controller
             $users = AppUser::where('phone', $request->phone)->get();
             if (count($users)>0){
                 return response()->json(['message' => 'Phone is duplicate'], 401);
-            }else{
+            }else{ 
                 $user = new AppUser();
                 $user->name = $request->name;
                 $user->phone = $request->phone;

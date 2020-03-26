@@ -15,6 +15,7 @@ class CreateCartTable extends Migration
     {
         Schema::create('cart', function (Blueprint $table) {
             $table->Increments('id');
+            $table->integer('app_user_id')->nullable();
             $table->string('name');
             $table->integer('customer_status')->nullable();
             $table->string('phone');
@@ -23,7 +24,6 @@ class CreateCartTable extends Migration
             $table->integer('discount')->nullable();
             $table->string('delivery_date');
             $table->text('remark')->nullable();
-
             $table->timestamps();
         });
     }
