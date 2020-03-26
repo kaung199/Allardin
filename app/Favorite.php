@@ -11,4 +11,7 @@ class Favorite extends Model
         'user_id', 'product_id', 'status'
     ];
 
+    public function products(){
+        return $this->belongsTo('App\Product', 'product_id')->select('id', 'name', 'price');
+    }
 }
