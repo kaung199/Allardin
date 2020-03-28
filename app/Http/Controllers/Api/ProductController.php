@@ -81,13 +81,7 @@ class ProductController extends Controller
         public function productDetail($user_id, $prod_id){
             $product = Product::select('id', 'name', 'quantity', 'price', 'description')
                 ->with('photos')->find($prod_id);
-            $session_user_id = Session::where('user_id', $user_id)->where('product_id', $prod_id)->first();
-            if($session_user_id == null) {
-                $cart_status = 0;
-            }  else {
-                $cart_status = 1;
-            }
-            
+
             $favorite = Favorite::where('product_id', $prod_id)
                 ->where('user_id', $user_id)->first();
 
@@ -105,7 +99,6 @@ class ProductController extends Controller
             }else{
                 $product["status"] = 0;
             }
-            $product["cart_status"] = $cart_status;
             return response()->json($product, 200);
         }
 
