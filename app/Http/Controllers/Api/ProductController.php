@@ -20,10 +20,8 @@ class ProductController extends Controller
                 ->where('quantity', '!=', 0)
                 ->paginate(10);
             foreach ($products as $key=>$value){
-                $favorite = Favorite::where('product_id', $value->id)->first();
-                $photo = ProductsPhoto::where('product_id', $value->id)->first();
+                $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
                 $products[$key]["photo"] = $photo->filename;
-                $products[$key]['status'] = $favorite->status;
             }
             return response()->json($products, 200);
         }
