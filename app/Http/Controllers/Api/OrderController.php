@@ -278,17 +278,33 @@ class OrderController extends Controller
       } 
 
       $order = Order::where('orders.id', $id)
-                  ->join('users', 'users.id', '=', 'orders.user_id')
-                  ->join('townships', 'townships.id', '=', 'users.township_id')
                   ->join('order_details', 'order_details.order_id', '=', 'orders.id')
                   ->select('order_details.name as product_name',
                     'order_details.quantity',
                     'order_details.price', 
-                    'order_details.totalprice', 
-                    'townships.deliveryprice')
-                  ->get();  
+                    'order_details.totalprice')
+                  ->get();
+      $grand_total = 0;
+      foreach($order as $o) {
+        $grand_total += $o->totalprice ;
+      }
+      
+      $user = User::find($order_null->user_id);
+      $user_info   = [
+        'delivery_price' => $user->township->deliveryprice,
+        'name' => $user->name,
+        'phone' => $user->phone,
+        'address' => $user->address,
+      ];
+      $grand_total_price   = $grand_total + $user->township->deliveryprice;
+
+      
                
-      return response()->json($order, 200);
+      return response()->json([
+        'order_details' =>  $order, 
+        'user_info'  =>  $user_info,
+        'grand_total_price'  =>  $grand_total_price
+      ], 200);
     }
 
     public function orders(Request $request)
