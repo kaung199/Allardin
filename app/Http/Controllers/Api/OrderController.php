@@ -140,8 +140,6 @@ class OrderController extends Controller
         ]);
         return response()->json([
             'message' => "Success",
-            'quantity' => $session_user_id->quantity + $request->quantity,
-            'total_price' => $session_user_id->total_price + $request->quantity * $product->price
             ], 200);
       }
     }
