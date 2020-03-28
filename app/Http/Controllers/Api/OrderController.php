@@ -176,7 +176,7 @@ class OrderController extends Controller
         return response()->json(['message' => 'User Not Found!!'], 401);
       }
 
-      $session_user_id = Session::select('product_id', 'name', 'quantity', 'price', 'total_price')
+      $session_user_id = Session::select('id', 'product_id', 'name', 'quantity', 'price', 'total_price')
             ->where('user_id', $request->user_id)->get();
         foreach ($session_user_id as $key => $value){
             $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
