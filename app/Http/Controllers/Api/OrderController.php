@@ -112,9 +112,12 @@ class OrderController extends Controller
 
         return response()->json(['message' => "Success"], 200);
       }else{
+          $sum = $request->quantity +$session_user_id->quantity;
         if ($product->quantity == $session_user_id->quantity){
             return response()->json(['message' => 'Out Of Stock!'], 401);
         }elseif($product->quantity < $session_user_id->quantity){
+            return response()->json(['message' => 'Out Of Stock!'], 401);
+        }elseif ($sum > $product->quantity){
             return response()->json(['message' => 'Out Of Stock!'], 401);
         }
       }
