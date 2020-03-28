@@ -110,7 +110,7 @@ class OrderController extends Controller
           'total_price' => $request->quantity * $product->price
         ]);
 
-        return response()->json(['message' => "Success", 'cart_status' => 1], 200);
+        return response()->json(['message' => "Success"], 200);
       }else{
         if ($product->quantity == $session_user_id->quantity){
             return response()->json(['message' => 'Out Of Stock!'], 401);
@@ -123,13 +123,13 @@ class OrderController extends Controller
           'quantity' => $request->quantity,
           'total_price' => $request->quantity * $product->price
         ]);
-        return response()->json(['message' => "Success", 'cart_status' => 1], 200);
+        return response()->json(['message' => "Success"], 200);
       } else {
         $session_user_id->update([
           'quantity' => $session_user_id->quantity + $request->quantity,
           'total_price' => $session_user_id->total_price + $request->quantity * $product->price
         ]);
-        return response()->json(['message' => "Success", 'cart_status' => 1], 200);
+        return response()->json(['message' => "Success"], 200);
       }
     }
 
