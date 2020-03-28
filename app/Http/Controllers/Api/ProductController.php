@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api;
 use App\Favorite;
 use App\Product;
+use App\ProductsPhoto;
 use App\Session;
 use Validator;
 use Illuminate\Http\Request;
@@ -14,11 +15,16 @@ class ProductController extends Controller
 {
         public function index()
         {
-            $products = Product::join('products_photos', 'products.id', '=', 'products_photos.product_id')
-                ->select('products.id as product_id', 'products.name as product_name', 'price', 'products_photos.filename as photo')
+            $products = Product::select('id as product_id', 'name as product_name', 'price')
                 ->inRandomOrder()
                 ->where('quantity', '!=', 0)
                 ->paginate(10);
+            foreach ($products as $key=>$value){
+                $favorite = Favorite::where('product_id', $value->id)->first();
+                $photo = ProductsPhoto::where('product_id', $value->id)->first();
+                $products[$key]["photo"] = $photo->filename;
+                $products[$key]['status'] = $favorite->status;
+            }
             return response()->json($products, 200);
         }
 
