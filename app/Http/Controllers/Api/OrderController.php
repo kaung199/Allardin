@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Api;
 
 use App\AppCard;
 use App\AppCardProduct;
+use App\ProductsPhoto;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Validator;
@@ -92,11 +93,12 @@ class OrderController extends Controller
       {
         return response()->json(['message' => 'Quantity must be greather than zero!'], 401);
       }
-      if($product->quantity < $request->quantity)
-      {
-        return response()->json(['message' => 'Out Of Stock!'], 401);
-      }
+
       $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
+
+        if($product->quantity < $request->quantity){
+            return response()->json(['message' => 'Out Of Stock!'], 401);
+        }
 
       if($session_user_id == null) {
         $session_table = Session::create([
@@ -109,6 +111,12 @@ class OrderController extends Controller
         ]);
 
         return response()->json(['message' => "Success", 'cart_status' => 1], 200);
+      }else{
+        if ($product->quantity == $session_user_id->quantity){
+            return response()->json(['message' => 'Out Of Stock!'], 401);
+        }elseif($product->quantity < $session_user_id->quantity){
+            return response()->json(['message' => 'Out Of Stock!'], 401);
+        }
       }
       if(isset($request->status)) {
         $session_user_id->update([
@@ -123,7 +131,6 @@ class OrderController extends Controller
         ]);
         return response()->json(['message' => "Success", 'cart_status' => 1], 200);
       }
-      
     }
 
     public function remove_cart(Request $request)
@@ -169,10 +176,14 @@ class OrderController extends Controller
         return response()->json(['message' => 'User Not Found!!'], 401);
       }
 
-      $session_user_id = Session::join('products_photos', 'session.product_id', '=', 'products_photos.product_id')
-                        ->where('user_id', $request->user_id)->get();
-      return response()->json($session_user_id, 200);
+      $session_user_id = Session::select('product_id', 'name', 'quantity', 'price', 'total_price')
+            ->where('user_id', $request->user_id)->get();
+        foreach ($session_user_id as $key => $value){
+            $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
+            $session_user_id[$key]["photo"] = $photo->filename;
+        }
 
+      return response()->json($session_user_id, 200);
     }
 
     public function store(Request $request)
