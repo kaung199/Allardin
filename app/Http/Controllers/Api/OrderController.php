@@ -279,14 +279,19 @@ class OrderController extends Controller
       }
       
       $user = User::find($order_null->user_id);
-      $delivery_price   = $user->township->deliveryprice;
+      $user_info   = [
+        'delivery_price' => $user->township->deliveryprice,
+        'name' => $user->name,
+        'phone' => $user->phone,
+        'address' => $user->address,
+      ];
       $grand_total_price   = $grand_total + $user->township->deliveryprice;
 
       
                
       return response()->json([
         'order_details' =>  $order, 
-        'delivery_price'  =>  $delivery_price,
+        'user_info'  =>  $user_info,
         'grand_total_price'  =>  $grand_total_price
       ], 200);
     }
