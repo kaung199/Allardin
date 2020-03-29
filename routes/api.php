@@ -31,6 +31,8 @@ Route::get('session', 'Api\OrderController@session');
 Route::get('show_cart', 'Api\OrderController@show_cart');
 Route::get('remove_cart', 'Api\OrderController@remove_cart');
 
+Route::post('add_to_cart', 'Api\OrderController@add_to_cart');
+
 Route::get('/getorderdetail/{id}', 'Api\OrderController@orderdetail');
 
 

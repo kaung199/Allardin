@@ -114,6 +114,27 @@ class OrderController extends Controller
             'message' => "Success",
         ], 200);
       }else{
+
+          if(isset($request->status)) {
+              $session_user_id->update([
+                  'quantity' => $request->quantity,
+                  'total_price' => $request->quantity * $product->price
+              ]);
+              return response()->json([
+                  'message' => "Success",
+                  'quantity' => $request->quantity,
+                  'total_price' => $request->quantity * $product->price
+              ], 200);
+          } else {
+              $session_user_id->update([
+                  'quantity' => $session_user_id->quantity + $request->quantity,
+                  'total_price' => $session_user_id->total_price + $request->quantity * $product->price
+              ]);
+              return response()->json([
+                  'message' => "Success",
+              ], 200);
+          }
+
           $sum = $request->quantity +$session_user_id->quantity;
         if ($product->quantity == $session_user_id->quantity){
             return response()->json(['message' => 'Out Of Stock!'], 401);
@@ -123,25 +144,80 @@ class OrderController extends Controller
             return response()->json(['message' => 'Out Of Stock!'], 401);
         }
       }
-      if(isset($request->status)) {
-        $session_user_id->update([
-          'quantity' => $request->quantity,
-          'total_price' => $request->quantity * $product->price
-        ]);
-        return response()->json([
-            'message' => "Success",
-            'quantity' => $request->quantity,
-            'total_price' => $request->quantity * $product->price
-        ], 200);
-      } else {
-        $session_user_id->update([
-          'quantity' => $session_user_id->quantity + $request->quantity,
-          'total_price' => $session_user_id->total_price + $request->quantity * $product->price
-        ]);
-        return response()->json([
-            'message' => "Success",
-            ], 200);
-      }
+
+    }
+
+    public function add_to_cart(Request $request){
+        if ($request->user_id == null){
+            return response()->json(['message' => "users required" ], 401);
+        }elseif($request->product_id == null){
+            return response()->json(['message' => "products required" ], 401);
+        }elseif($request->quantity == null){
+            return response()->json(['message' => "quantity required" ], 401);
+        }elseif($request->status == null){
+            return response()->json(['message' => "status required" ], 401);
+        }
+        else{
+            $product = Product::find($request->product_id);
+            $user = AppUser::find($request->user_id);
+            if (count($product)>0){
+                if (count($user)>0){
+                    if ($request->quantity > 0){
+                        $session = Session::where('user_id', $request->user_id)
+                            ->where('product_id', $request->product_id)->first();
+                        if ($request->status == "plus"){
+                            $sum = $request->quantity +$session->quantity;
+//                            return response()->json($sum);
+                            if (count($session)>0){
+                                if($sum <= $product->quantity){
+
+                                    $session->update([
+                                        'quantity' => $session->quantity + $request->quantity,
+                                        'total_price' => $session->total_price + $request->quantity * $product->price
+                                    ]);
+                                    return response()->json([
+                                        'message' => "Success",
+                                    ], 200);
+
+                                }else{
+                                    return response()->json(['message' => 'not enough quantity!', 'qty' => $sum - $product->quantity], 401);
+                                }
+                            }else{
+                                if($product->quantity > (int)$request->quantity){
+                                    $session_table = Session::create([
+                                        'product_id' => $request->product_id,
+                                        'user_id' => $request->user_id,
+                                        'name' => $product->name,
+                                        'quantity' => $request->quantity,
+                                        'price' => $product->price,
+                                        'total_price' => $request->quantity * $product->price
+                                    ]);
+
+                                    return response()->json([
+                                        'message' => "Success",
+                                    ], 200);
+                                }else{
+                                    return response()->json(['message' => 'Out Of Stock!'], 401);
+                                }
+                            }
+
+                        }elseif ($request->status == "minus"){
+
+                            return response()->json("less");
+                        }
+
+                    }else{
+                        return response()->json(['message' => 'Quantity must be greather than zero!'], 401);
+                    }
+                }else{
+                    return response()->json(['message' => "User Not Found!"], 401);
+                }
+
+            }else{
+                return response()->json(['message' => 'Product Not Found!!'], 401);
+            }
+
+        }
     }
 
     public function remove_cart(Request $request)
