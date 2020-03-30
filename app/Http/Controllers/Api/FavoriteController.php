@@ -49,7 +49,7 @@ class FavoriteController extends Controller
             }else{
                 return response()->json([
                     'message' => 'Not Found Products, please try again.',
-                ], 403);
+                ], 401);
             }
         }else{
             return response()->json([
@@ -71,7 +71,7 @@ class FavoriteController extends Controller
         if (count($id)>0){
             return response()->json($id);
         }else{
-            return response()->json($id);
+            return response()->json($id, 403);
         }
     }
 }
