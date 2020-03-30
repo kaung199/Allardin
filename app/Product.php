@@ -30,4 +30,9 @@ class Product extends Model  implements Searchable
             $url
          );
     }
+
+    public function api_photo()
+    {
+        return $this->hasMany('App\ProductsPhoto')->select('id', 'filename as photo', 'product_id');
+    }
 }

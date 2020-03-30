@@ -13,7 +13,7 @@ use DB;
 
 class ProductController extends Controller
 {
-        public function index()
+        public function index(Request $request)
         {
             $products = Product::select('id as product_id', 'name as product_name', 'price')
                 ->inRandomOrder()
@@ -23,6 +23,17 @@ class ProductController extends Controller
                 $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
                 $products[$key]["photo"] = $photo->filename;
             }
+            foreach ($products as $key=>$value){
+                $favorite = Favorite::where('product_id', $value->product_id)
+                    ->where('user_id', $request->user_id)
+                    ->first();
+                if ($favorite->status == null){
+                    $products[$key]["status"] = 0;
+                }else{
+                    $products[$key]["status"] = $favorite->status;
+                }
+            }
+
             return response()->json($products, 200);
         }
 
@@ -80,7 +91,7 @@ class ProductController extends Controller
 
         public function productDetail($user_id, $prod_id){
             $product = Product::select('id', 'name', 'quantity', 'price', 'description')
-                ->with('photos')->find($prod_id);
+                ->with('api_photo')->find($prod_id);
 
             $favorite = Favorite::where('product_id', $prod_id)
                 ->where('user_id', $user_id)->first();

@@ -114,34 +114,27 @@ class OrderController extends Controller
             'message' => "Success",
         ], 200);
       }else{
-          $sum = $request->quantity +$session_user_id->quantity;
-        if ($product->quantity == $session_user_id->quantity){
-            return response()->json(['message' => 'Out Of Stock!'], 401);
-        }elseif($product->quantity < $session_user_id->quantity){
-            return response()->json(['message' => 'Out Of Stock!'], 401);
-        }elseif ($sum > $product->quantity){
-            return response()->json(['message' => 'Out Of Stock!'], 401);
-        }
+          if(isset($request->status)) {
+              $session_user_id->update([
+                  'quantity' => $request->quantity,
+                  'total_price' => $request->quantity * $product->price
+              ]);
+              return response()->json([
+                  'message' => "Success",
+                  'quantity' => $request->quantity,
+                  'total_price' => $request->quantity * $product->price
+              ], 200);
+          } else {
+              $session_user_id->update([
+                  'quantity' => $session_user_id->quantity + $request->quantity,
+                  'total_price' => $session_user_id->total_price + $request->quantity * $product->price
+              ]);
+              return response()->json([
+                  'message' => "Success",
+              ], 200);
+          }
       }
-      if(isset($request->status)) {
-        $session_user_id->update([
-          'quantity' => $request->quantity,
-          'total_price' => $request->quantity * $product->price
-        ]);
-        return response()->json([
-            'message' => "Success",
-            'quantity' => $request->quantity,
-            'total_price' => $request->quantity * $product->price
-        ], 200);
-      } else {
-        $session_user_id->update([
-          'quantity' => $session_user_id->quantity + $request->quantity,
-          'total_price' => $session_user_id->total_price + $request->quantity * $product->price
-        ]);
-        return response()->json([
-            'message' => "Success",
-            ], 200);
-      }
+
     }
 
     public function remove_cart(Request $request)
