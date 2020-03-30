@@ -71,7 +71,7 @@ class FavoriteController extends Controller
         if (count($id)>0){
             return response()->json($id);
         }else{
-            return response()->json($id, 404);
+            return response()->json($id, 422);
         }
     }
 }
