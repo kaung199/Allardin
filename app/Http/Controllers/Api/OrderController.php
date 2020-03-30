@@ -335,6 +335,66 @@ class OrderController extends Controller
       return response()->json($orders, 200);    
     }
 
+    public function ordersPending(Request $request)
+    {
+      if($request->user_id == null) {
+        $required = 'user_id required!!';
+        return response()->json(['message' => $required ], 401); 
+      }
+      $user_null = AppUser::find($request->user_id);
+
+      if($user_null == null) {
+        return response()->json(['message' => 'User Not Found!!'],401);
+      } 
+
+      $orders = Cart::orderBy('cart.id', 'desc')
+                      ->where('cart.app_user_id', $request->user_id)
+                      ->join('cart_product', 'cart.id', '=', 'cart_product.cart_id')
+                      ->join('townships', 'cart.township_id', '=', 'townships.id')
+                      ->select(
+                        'cart.id as cart_id','cart.created_at as order_date', 
+                        DB::raw("SUM(cart_product.quantity) as quantity"), 
+                        DB::raw("SUM(cart_product.price * cart_product.quantity) + townships.deliveryprice as totalprice"))
+                      ->groupBy('cart.id')
+                      ->groupBy('townships.deliveryprice')
+                      ->groupBy('cart.created_at')->get();
+      
+      return response()->json($orders, 200);    
+    }
+    public function ordersPendingDetail($id)
+    {
+      $cart_null = Cart::find($id);
+      if($cart_null == null) {
+        return response()->json(['message' => 'Cart_id Not Found!!'],401);
+      } 
+      $orders = Cart_product::where('cart_product.cart_id', $id)
+                      ->select(
+                        'name','quantity','price',
+                        DB::raw("quantity * price as totalprice"))->get();
+
+      $grand_total = 0;
+      foreach($orders as $o) {
+        $grand_total += $o->totalprice;
+      }
+
+      $township = Township::find($cart_null->township_id);
+                      
+      $user_info   = [
+        'delivery_price' => $township->deliveryprice,
+        'name' => $cart_null->name,
+        'phone' => $cart_null->phone,
+        'address' => $cart_null->address,
+      ];
+      $grand_total_price   = $township->deliveryprice + $grand_total;
+
+      
+      
+      return response()->json([
+        'orders'  =>  $orders, 
+        'user_info' =>  $user_info, 
+        'grand_total' =>$grand_total_price], 200);    
+    }
+
 
 
 

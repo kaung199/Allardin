@@ -32,9 +32,11 @@ Route::get('show_cart', 'Api\OrderController@show_cart');
 Route::get('remove_cart', 'Api\OrderController@remove_cart');
 
 Route::get('/getorderdetail/{id}', 'Api\OrderController@orderdetail');
+Route::get('/getorder-pending-detail/{id}', 'Api\OrderController@ordersPendingDetail');
 
 
 Route::get('getorder', 'Api\OrderController@orders');
+Route::get('getorder-pending', 'Api\OrderController@ordersPending');
 
 Route::put('/deliverystatus/{id}', 'Api\OrderController@deliverystatus');
 Route::post('/deleteorder/{id}', 'Api\OrderController@deleteorder');
