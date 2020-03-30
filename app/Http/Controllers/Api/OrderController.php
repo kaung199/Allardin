@@ -114,7 +114,6 @@ class OrderController extends Controller
             'message' => "Success",
         ], 200);
       }else{
-
           if(isset($request->status)) {
               $session_user_id->update([
                   'quantity' => $request->quantity,
@@ -134,15 +133,6 @@ class OrderController extends Controller
                   'message' => "Success",
               ], 200);
           }
-
-          $sum = $request->quantity +$session_user_id->quantity;
-        if ($product->quantity == $session_user_id->quantity){
-            return response()->json(['message' => 'Out Of Stock!'], 401);
-        }elseif($product->quantity < $session_user_id->quantity){
-            return response()->json(['message' => 'Out Of Stock!'], 401);
-        }elseif ($sum > $product->quantity){
-            return response()->json(['message' => 'Out Of Stock!'], 401);
-        }
       }
 
     }
@@ -165,9 +155,10 @@ class OrderController extends Controller
                     if ($request->quantity > 0){
                         $session = Session::where('user_id', $request->user_id)
                             ->where('product_id', $request->product_id)->first();
+
+                        $sum = $request->quantity + $session->quantity;
+//                        Plus
                         if ($request->status == "plus"){
-                            $sum = $request->quantity +$session->quantity;
-//                            return response()->json($sum);
                             if (count($session)>0){
                                 if($sum <= $product->quantity){
 
@@ -180,10 +171,13 @@ class OrderController extends Controller
                                     ], 200);
 
                                 }else{
-                                    return response()->json(['message' => 'not enough quantity!', 'qty' => $sum - $product->quantity], 401);
+                                    return response()->json([
+                                        'message' => 'not enough quantity!',
+                                        'stock qty' => $product->quantity - $session->quantity
+                                    ], 401);
                                 }
                             }else{
-                                if($product->quantity > (int)$request->quantity){
+                                if($product->quantity >= (int)$request->quantity){
                                     $session_table = Session::create([
                                         'product_id' => $request->product_id,
                                         'user_id' => $request->user_id,
@@ -201,9 +195,53 @@ class OrderController extends Controller
                                 }
                             }
 
+//                      Minus
                         }elseif ($request->status == "minus"){
+                            if (count($session)>0){
+                                if($product->quantity >= (int)$request->quantity){
+                                    if($session->quantity <= $product->quantity){
+                                        $result = $session->quantity - $request->quantity;
+                                        if ($result > 0){
+                                            $session->update([
+                                                'quantity' => $session->quantity - $request->quantity,
+                                                'total_price' => $session->total_price - $request->quantity * $product->price
+                                            ]);
+                                            return response()->json([
+                                                'message' => "Success",
+                                                'stock qty' => $session->quantity,
+                                            ], 200);
 
-                            return response()->json("less");
+                                        }else{
+                                            return response()->json([
+                                                'message' => 'Quantity must be less than zero!',
+                                                'stock qty' => $session->quantity,
+                                            ], 401);
+                                        }
+                                    }else{
+                                        return response()->json(['message' => 'Out Of Stockss!'], 401);
+                                    }
+                                }else{
+                                    return response()->json(['message' => 'Out Of Stock!'], 401);
+                                }
+
+                            }else{
+                                if($product->quantity >= (int)$request->quantity){
+                                    $session_table = Session::create([
+                                        'product_id' => $request->product_id,
+                                        'user_id' => $request->user_id,
+                                        'name' => $product->name,
+                                        'quantity' => $request->quantity,
+                                        'price' => $product->price,
+                                        'total_price' => $request->quantity * $product->price
+                                    ]);
+
+                                    return response()->json([
+                                        'message' => "Success",
+                                    ], 200);
+                                }else{
+                                    return response()->json(['message' => 'Out Of Stock!'], 401);
+                                }
+                            }
                         }
 
                     }else{
