@@ -15,7 +15,7 @@ class Product extends Model  implements Searchable
     public function photos()
     {
         return $this->hasMany('App\ProductsPhoto');
-    }
+    } 
     public function category()
     {
         return $this->belongsTo('App\Category');
