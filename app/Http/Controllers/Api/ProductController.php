@@ -27,7 +27,11 @@ class ProductController extends Controller
                 $favorite = Favorite::where('product_id', $value->product_id)
                     ->where('user_id', $request->user_id)
                     ->first();
-                $products[$key]["status"] = $favorite->status;
+                if ($favorite->status == null){
+                    $products[$key]["status"] = 0;
+                }else{
+                    $products[$key]["status"] = $favorite->status;
+                }
             }
 
             return response()->json($products, 200);
