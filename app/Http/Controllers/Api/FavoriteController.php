@@ -27,7 +27,7 @@ class FavoriteController extends Controller
                     if ($id != null){
                         $id->delete();
                         return response()->json([
-                            'message'      => 'Success',
+                            'message'      => 'Unfavorite',
                             'status' => 0
                         ],200);
                     }else{
@@ -42,14 +42,14 @@ class FavoriteController extends Controller
                     $favorite->status = 1;
                     $favorite->save();
                     return response()->json([
-                        'message'      => 'Success',
+                        'message'      => 'Favorite',
                         'status' => $favorite->status
                     ], 200);
                 }
             }else{
                 return response()->json([
                     'message' => 'Not Found Products, please try again.',
-                ], 401);
+                ], 403);
             }
         }else{
             return response()->json([
