@@ -111,7 +111,7 @@ class OrderController extends Controller
         ]);
 
         return response()->json([
-            'message' => "Success",
+            'message' => $request->quantity * $product->price
         ], 200);
       }else{
           if(isset($request->status)) {
@@ -120,8 +120,8 @@ class OrderController extends Controller
                   'total_price' => $request->quantity * $product->price
               ]);
               return response()->json([
-                  'message' => "Success",
                   'quantity' => $request->quantity,
+                  'price' => $product->price,
                   'total_price' => $request->quantity * $product->price
               ], 200);
           } else {
@@ -130,7 +130,7 @@ class OrderController extends Controller
                   'total_price' => $session_user_id->total_price + $request->quantity * $product->price
               ]);
               return response()->json([
-                  'message' => "Success",
+                  'message' => $session_user_id->total_price
               ], 200);
           }
       }
