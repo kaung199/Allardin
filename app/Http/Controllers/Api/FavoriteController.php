@@ -27,7 +27,7 @@ class FavoriteController extends Controller
                     if ($id != null){
                         $id->delete();
                         return response()->json([
-                            'message'      => 'Success',
+                            'message'      => 'Unfavorite',
                             'status' => 0
                         ],200);
                     }else{
@@ -42,7 +42,7 @@ class FavoriteController extends Controller
                     $favorite->status = 1;
                     $favorite->save();
                     return response()->json([
-                        'message'      => 'Success',
+                        'message'      => 'Favorite',
                         'status' => $favorite->status
                     ], 200);
                 }
@@ -71,7 +71,7 @@ class FavoriteController extends Controller
         if (count($id)>0){
             return response()->json($id);
         }else{
-            return response()->json($id);
+            return response()->json($id, 404);
         }
     }
 }
