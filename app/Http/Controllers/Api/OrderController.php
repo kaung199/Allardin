@@ -84,20 +84,20 @@ class OrderController extends Controller
       $product = Product::find($request->product_id);
       $user_null = AppUser::find($request->user_id);
       if($user_null == null) {
-        return response()->json(['message' => 'not found users, please try again.'], 401);
+        return response()->json(['message' => 'not found users, please try again.'], 404);
       }
       if($product == null) {
-        return response()->json(['message' => "not found products, please try again."], 401);
+        return response()->json(['message' => "not found products, please try again."], 404);
       }
       if( $request->quantity == 0)
       {
-        return response()->json(['message' => 'quantity must be greather than zero!'], 401);
+        return response()->json(['message' => 'quantity must be greather than zero!'], 404);
       }
 
       $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
 
         if($product->quantity < $request->quantity){
-            return response()->json(['message' => 'out of stock, please try again.'], 401);
+            return response()->json(['message' => 'out of stock, please try again.'], 404);
         }
 
       if($session_user_id == null) {
