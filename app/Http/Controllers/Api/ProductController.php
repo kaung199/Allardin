@@ -101,7 +101,7 @@ class ProductController extends Controller
                 $response = [
                     'message' => 'Products is required'
                 ];
-                return response()->json($response, 204);
+                return response()->json($response, 404);
             }
 
             if ($favorite->status == 1){

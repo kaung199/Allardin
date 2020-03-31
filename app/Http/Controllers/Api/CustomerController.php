@@ -48,7 +48,7 @@ class CustomerController extends Controller
                 } else {
                     return response()->json([
                         'message' => 'Registration failed, please try again.',
-                    ], 204);
+                    ], 404);
                 }
             }
         }
