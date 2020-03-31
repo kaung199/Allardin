@@ -74,19 +74,22 @@ class FavoriteController extends Controller
                 'message' => 'user is required, please try again.'
             ], 404);
         }
-        $id = Favorite::with('products')
-            ->select('id', 'product_id', 'status')
-            ->where('user_id', $request->user_id)->get();
-        foreach ($id as $key => $value){
-            $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
-            $id[$key]["photo"] = $photo->filename;
-        }
+        $users = AppUser::where('id', $request->user_id)->get();
+        if (count($users)>0){
+            $id = Favorite::with('products')
+                ->select('id', 'product_id', 'status')
+                ->where('user_id', $request->user_id)->get();
+            foreach ($id as $key => $value){
+                $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
+                $id[$key]["photo"] = $photo->filename;
+            }
 
-        if (count($id)>0){
-            return response()->json($id);
+            if (count($id)>0){
+                return response()->json($id);
+            }
         }else{
             return response()->json([
-                'message' => 'not found favorite, please try again.',
+                'message' => 'not found users, please try again.',
             ], 404);
         }
     }
