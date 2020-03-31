@@ -288,7 +288,10 @@ class OrderController extends Controller
 
       $order = Order::where('orders.id', $id)
                   ->join('order_details', 'order_details.order_id', '=', 'orders.id')
+                  ->join('products', 'order_details.product_id', '=', 'products.id')
+                  ->join('products_photos', 'products_photos.product_id', '=', 'products.id')
                   ->select('order_details.name as product_name',
+                  'products_photos.filename as photo',
                     'order_details.quantity',
                     'order_details.price', 
                     'order_details.totalprice')
@@ -368,14 +371,23 @@ class OrderController extends Controller
     }
     public function ordersPendingDetail($id)
     {
+      // dd($id);
       $cart_null = Cart::find($id);
       if($cart_null == null) {
         return response()->json(['message' => 'Cart_id Not Found!!'],401);
       } 
       $orders = Cart_product::where('cart_product.cart_id', $id)
+                    ->join('products', 'cart_product.product_id', '=', 'products.id')
                       ->select(
-                        'name','quantity','price',
-                        DB::raw("quantity * price as totalprice"))->get();
+                        'products.id as product_id',
+                        'cart_product.name as product_name',
+                        'cart_product.quantity as product_quantity',
+                        'cart_product.price as product_price',
+                        DB::raw("cart_product.quantity * cart_product.price as totalprice"))->get();
+      foreach ($orders as $key=>$value){
+        $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
+        $orders[$key]["photo"] = $photo->filename;
+      }
 
       $grand_total = 0;
       foreach($orders as $o) {
