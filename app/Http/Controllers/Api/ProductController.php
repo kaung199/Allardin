@@ -92,9 +92,9 @@ class ProductController extends Controller
         public function productDetail(Request $request){
 
             $product = Product::select('id', 'name', 'quantity', 'price', 'description')
-                ->with('api_photo')->find($request->prod_id);
+                ->with('api_photo')->find($request->product_id);
 
-            $favorite = Favorite::where('product_id', $request->prod_id)
+            $favorite = Favorite::where('product_id', $request->product_id)
                 ->where('user_id', $request->user_id)->first();
 
             if (is_null($product)) {
