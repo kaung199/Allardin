@@ -21,7 +21,7 @@ use Illuminate\Http\Request;
 Route::resource('products', 'Api\ProductController');
 Route::resource('townships', 'Api\TownshipController');
 Route::resource('customers', 'Api\CustomerController');
-Route::get('product_detail/{user_id}/{prod_id}', 'Api\ProductController@productDetail');
+Route::get('product_detail', 'Api\ProductController@productDetail');
 
 // Route::get('photo', 'Api/ProductController@store');
 Route::post('order', 'Api\OrderController@store');
@@ -55,7 +55,7 @@ Route::post('search', 'Api\OrderController@search');
 
 //Favorite
 Route::post('favorite', 'Api\FavoriteController@favoritePost');
-Route::get('my_favorites/{user_id?}', 'Api\FavoriteController@myFavorites');
+Route::get('my_favorites', 'Api\FavoriteController@myFavorites');
 
 Route::get('count_favorite/{user_id?}', 'Api\CountController@count_favorite');
 Route::get('count_cart/{user_id?}', 'Api\CountController@count_cart');

@@ -89,20 +89,19 @@ class ProductController extends Controller
 //
         }
 
-        public function productDetail($user_id, $prod_id){
-            $product = Product::select('id', 'name', 'quantity', 'price', 'description')
-                ->with('api_photo')->find($prod_id);
+        public function productDetail(Request $request){
 
-            $favorite = Favorite::where('product_id', $prod_id)
-                ->where('user_id', $user_id)->first();
+            $product = Product::select('id', 'name', 'quantity', 'price', 'description')
+                ->with('api_photo')->find($request->product_id);
+
+            $favorite = Favorite::where('product_id', $request->product_id)
+                ->where('user_id', $request->user_id)->first();
 
             if (is_null($product)) {
                 $response = [
-                    'success' => false,
-                    'data' => 'Empty',
-                    'message' => 'Product not found.'
+                    'message' => 'product is required, please try again.'
                 ];
-                return response()->json($response, 401);
+                return response()->json($response, 404);
             }
 
             if ($favorite->status == 1){
