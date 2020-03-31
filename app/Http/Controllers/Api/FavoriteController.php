@@ -13,6 +13,15 @@ use App\Http\Controllers\Controller;
 class FavoriteController extends Controller
 {
     public function favoritePost(Request $request){
+        if ($request->user_id == null){
+            return response()->json([
+                'message' => 'user is required, please try again.'
+            ], 404);
+        }elseif ($request->product_id == null){
+            return response()->json([
+                'message' => 'product is required, please try again.'
+            ], 404);
+        }
         $users = AppUser::where('id', $request->user_id)->get();
         $products = Product::where('id', $request->product_id)->get();
 
