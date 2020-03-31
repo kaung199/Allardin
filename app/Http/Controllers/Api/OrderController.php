@@ -127,7 +127,7 @@ class OrderController extends Controller
           } else {
               $sum = $request->quantity + $session_user_id->quantity;
               if($product->quantity < $sum){
-                  return response()->json(['message' => 'out of stock, please try again.'], 200);
+                  return response()->json(['message' => 'out of stock, please try again.'], 404);
               }
 
               $session_user_id->update([
@@ -146,25 +146,25 @@ class OrderController extends Controller
     {
       $product_v = $request->all();
       if($product_v['user_id'] == null) {
-        $required = 'user_id required!!';
-        return response()->json(['message' => $required ], 401); 
+        $required = 'user is required, please try again.';
+        return response()->json(['message' => $required ], 404);
       }
       if($product_v['product_id'] == null) {
-        $required = 'product_id required!!';
-        return response()->json(['message' => $required ], 401); 
+        $required = 'product is required, please try again.';
+        return response()->json(['message' => $required ], 404);
       }
 
       $product = Product::find($request->product_id);
       $user_null = AppUser::find($request->user_id);
       if($user_null == null) {
-        return response()->json(['message' => 'User Not Found!!'], 401);
+        return response()->json(['message' => 'not found users, please try again.'], 404);
       }
       if($product == null) {
-        return response()->json(['message' => "Product Not Found!"],401);
+        return response()->json(['message' => "not found products, please try again."],404);
       }
       $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
       if($session_user_id == null) {
-        return response()->json(['message' => "Not Found!"],401);
+        return response()->json(['message' => "not found add to cart, please try again."],404);
       }
       $session_user_id->delete();
       return response()->json(['message'=> 'Success'],200);
@@ -176,13 +176,13 @@ class OrderController extends Controller
       $user_v = $request->all();
 
       if($user_v['user_id'] == null) {
-        $required = 'user_id required!!';
-        return response()->json(['message' => $required ], 401); 
+        $required = 'user is required, please try again.';
+        return response()->json(['message' => $required ], 404);
       }
 
       $user_null = AppUser::find($request->user_id);
       if($user_null == null) {
-        return response()->json(['message' => 'User Not Found!!'], 401);
+        return response()->json(['message' => 'not found users, please try again.'], 404);
       }
 
       $session_user_id = Session::select('id', 'product_id', 'name', 'quantity', 'price', 'total_price')
