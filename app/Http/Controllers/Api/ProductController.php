@@ -18,7 +18,7 @@ class ProductController extends Controller
             $products = Product::select('id as product_id', 'name as product_name', 'price')
                 ->inRandomOrder()
                 ->where('quantity', '!=', 0)
-                ->paginate(20);
+                ->paginate(10);
             foreach ($products as $key=>$value){
                 $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
                 $products[$key]["photo"] = $photo->filename;

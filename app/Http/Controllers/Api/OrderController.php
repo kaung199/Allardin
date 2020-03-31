@@ -125,6 +125,11 @@ class OrderController extends Controller
                   'total_price' => $request->quantity * $product->price
               ], 200);
           } else {
+              $sum = $request->quantity + $session_user_id->quantity;
+              if($product->quantity < $sum){
+                  return response()->json(['message' => 'Out Of Stock!'], 401);
+              }
+
               $session_user_id->update([
                   'quantity' => $session_user_id->quantity + $request->quantity,
                   'total_price' => $session_user_id->total_price + $request->quantity * $product->price
