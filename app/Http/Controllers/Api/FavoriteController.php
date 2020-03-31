@@ -27,12 +27,12 @@ class FavoriteController extends Controller
                     if ($id != null){
                         $id->delete();
                         return response()->json([
-                            'message'      => 'Unfavorite',
+                            'message'      => 'unfavorite',
                             'status' => 0
                         ],200);
                     }else{
                         return response()->json([
-                            'message' => 'Not Found Favorites, please try again.',
+                            'message' => 'not found favorites, please try again.',
                         ], 404);
                     }
                 }else{
@@ -42,18 +42,18 @@ class FavoriteController extends Controller
                     $favorite->status = 1;
                     $favorite->save();
                     return response()->json([
-                        'message'      => 'Favorite',
+                        'message'      => 'favorite',
                         'status' => $favorite->status
                     ], 200);
                 }
             }else{
                 return response()->json([
-                    'message' => 'Not Found Products, please try again.',
+                    'message' => 'not found products, please try again.',
                 ], 404);
             }
         }else{
             return response()->json([
-                'message' => 'Not Found Users, please try again.',
+                'message' => 'not found users, please try again.',
             ], 404);
         }
 
@@ -62,7 +62,7 @@ class FavoriteController extends Controller
     public function myFavorites(Request $request){
         if ($request->user_id == null){
             return response()->json([
-                'message' => 'user is required'
+                'message' => 'user is required, please try again.'
             ], 404);
         }
         $id = Favorite::with('products')

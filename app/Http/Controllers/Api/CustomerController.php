@@ -26,7 +26,7 @@ class CustomerController extends Controller
         {
             $users = AppUser::where('phone', $request->phone)->get();
             if (count($users)>0){
-                return response()->json(['message' => 'Phone is duplicate'], 401);
+                return response()->json(['message' => 'phone is duplicate, please try again.'], 404);
             }else{ 
                 $user = new AppUser();
                 $user->name = $request->name;
@@ -43,11 +43,11 @@ class CustomerController extends Controller
                 if($user) {
                     return response()->json([
                         'id'         => $user->id,
-                        'message'      => 'Success',
+                        'message'      => 'success',
                     ],200);
                 } else {
                     return response()->json([
-                        'message' => 'Registration failed, please try again.',
+                        'message' => 'registration failed, please try again.',
                     ], 404);
                 }
             }
