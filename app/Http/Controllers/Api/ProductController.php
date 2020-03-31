@@ -99,7 +99,7 @@ class ProductController extends Controller
 
             if (is_null($product)) {
                 $response = [
-                    'message' => 'Products is required'
+                    'message' => 'Product is required'
                 ];
                 return response()->json($response, 404);
             }

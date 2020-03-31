@@ -55,7 +55,7 @@ Route::post('search', 'Api\OrderController@search');
 
 //Favorite
 Route::post('favorite', 'Api\FavoriteController@favoritePost');
-Route::get('my_favorites/{user_id?}', 'Api\FavoriteController@myFavorites');
+Route::get('my_favorites', 'Api\FavoriteController@myFavorites');
 
 Route::get('count_favorite/{user_id?}', 'Api\CountController@count_favorite');
 Route::get('count_cart/{user_id?}', 'Api\CountController@count_cart');

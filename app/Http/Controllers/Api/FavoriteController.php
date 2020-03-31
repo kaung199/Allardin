@@ -33,7 +33,7 @@ class FavoriteController extends Controller
                     }else{
                         return response()->json([
                             'message' => 'Not Found Favorites, please try again.',
-                        ], 401);
+                        ], 404);
                     }
                 }else{
                     $favorite = new Favorite();
@@ -49,20 +49,25 @@ class FavoriteController extends Controller
             }else{
                 return response()->json([
                     'message' => 'Not Found Products, please try again.',
-                ], 401);
+                ], 404);
             }
         }else{
             return response()->json([
                 'message' => 'Not Found Users, please try again.',
-            ], 401);
+            ], 404);
         }
 
     }
 
-    public function myFavorites($user_id){
+    public function myFavorites(Request $request){
+        if ($request->user_id == null){
+            return response()->json([
+                'message' => 'user is required'
+            ], 404);
+        }
         $id = Favorite::with('products')
             ->select('id', 'product_id', 'status')
-            ->where('user_id', $user_id)->get();
+            ->where('user_id', $request->user_id)->get();
         foreach ($id as $key => $value){
             $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
             $id[$key]["photo"] = $photo->filename;
@@ -70,8 +75,6 @@ class FavoriteController extends Controller
 
         if (count($id)>0){
             return response()->json($id);
-        }else{
-            return response()->json($id, 404);
         }
     }
 }
