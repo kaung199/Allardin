@@ -167,7 +167,7 @@ class OrderController extends Controller
         return response()->json(['message' => "not found add to cart, please try again."],404);
       }
       $session_user_id->delete();
-      return response()->json(['message'=> 'Success'],200);
+      return response()->json(['message'=> 'success'],200);
 
     }
 
@@ -192,7 +192,10 @@ class OrderController extends Controller
             $session_user_id[$key]["photo"] = $photo->filename;
         }
 
-      return response()->json($session_user_id, 200);
+        if (count($session_user_id)>0){
+            return response()->json($session_user_id);
+        }
+
     }
 
     public function store(Request $request)
