@@ -1052,10 +1052,41 @@ class OrderController extends Controller
     {
         $from = $request->from;
         $to = $request->to;
-        $totalsales = Totalsaleproduct::whereBetween('date', [$from, $to])
-        ->select('product_id', DB::raw("SUM(totalqty) as qty"), DB::raw("SUM(totalprice) as tp"), DB::raw("SUM(deliveryprice) as dp"))
-        ->groupBy('product_id')->get();
-        return view('orders.totalsale', \compact('totalsales', 'from', 'to'));  
+        if($request->search == 'deliverydate') {
+            $orders = Order::whereBetween('deliverydate', [$from, $to])
+                                ->join('order_details', 'order_details.order_id', '=', 'orders.id')
+                                ->select('order_details.product_id',
+                                'order_details.name as product_name',
+                                'order_details.price as product_price',
+                                'order_details.product_id',
+                                 DB::raw("SUM(order_details.quantity) as tqty"),
+                                  DB::raw("SUM(order_details.totalprice) as tp"))
+                                ->groupBy('order_details.product_id')
+                                ->groupBy('order_details.name')
+                                ->groupBy('order_details.price')
+                                ->get();
+            $deliverydate = 'deliverydate';
+            return view('orders.totalsale', \compact('orders','deliverydate', 'from', 'to'));
+        }
+        if($request->search == 'orderdate') {
+            $orders = Order::whereBetween('orderdate', [$from, $to])
+                                ->join('order_details', 'order_details.order_id', '=', 'orders.id')
+                                ->select('order_details.product_id',
+                                'order_details.name as product_name',
+                                'order_details.price as product_price',
+                                'order_details.product_id',
+                                 DB::raw("SUM(order_details.quantity) as tqty"),
+                                  DB::raw("SUM(order_details.totalprice) as tp"))
+                                ->groupBy('order_details.product_id')
+                                ->groupBy('order_details.name')
+                                ->groupBy('order_details.price')
+                                ->get();
+            $orderdate = 'orderdate';
+            return view('orders.totalsale', \compact('orders','orderdate', 'from', 'to'));
+        } else {
+            $totalsales = null;
+            return view('orders.totalsale', \compact('totalsales', 'from', 'to'));
+        }
     }
   
     public function searchdelivery(Request $request) 
@@ -1088,9 +1119,7 @@ class OrderController extends Controller
     }
 
     public function totalsale() {
-        $today = Carbon::now()->toDateString();
-        $totalsales = Totalsaleproduct::where('date', $today)->get();
-        return view('orders.totalsale', compact('totalsales'));
+        return view('orders.totalsale');
     }
 
     public function totalsaledetail($id) {
