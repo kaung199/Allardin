@@ -194,6 +194,10 @@ class OrderController extends Controller
 
         if (count($session_user_id)>0){
             return response()->json($session_user_id);
+        }else{
+            return response()->json([
+                'message' => 'not found session, please try again.',
+            ], 404);
         }
 
     }
