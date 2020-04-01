@@ -13,6 +13,7 @@ use App\Cart;
 use App\Cart_product;
 use App\Order_detail;
 use App\Order;
+use App\Stock;
 use Auth;
 use DB;
 use App\Product;
@@ -306,6 +307,14 @@ class OrderController extends Controller
 
             ]);
 
+            $stock_checks = Stock::where('product_id', $details['product_id'])->get();
+            foreach($stock_checks as $stock_check)
+            {
+                $stock_check->update([
+                    'r_qty' => $stock_check->r_qty - $details['quantity']
+                ]);
+            }
+
             //start
             $totalsale_pid = Totalsaleproduct::where('product_id', $details['product_id'])->where('date', date('Y-m-d'))->get();
 
@@ -473,7 +482,8 @@ class OrderController extends Controller
         return view('orders.orderdetail', compact('orderdetails','previous','next','delivery', 'deliveries'));
     }
 
-    public function editOrderDetail(Request $request){
+    public function editOrderDetail(Request $request)
+    {
         $update = Order::where('id', $request->order_id)->first();
         $update->remark = $request->remark;
         $update->save();
@@ -516,6 +526,7 @@ class OrderController extends Controller
             }
             $totalsaledetail->delete();
         }
+        
         if(Auth::user()->id == 1) {
             $order = Order::find($id);
             foreach($order->orderdetails as $orderproduct) {
@@ -523,6 +534,15 @@ class OrderController extends Controller
                 $product->update([
                     'quantity' => $product->quantity + $orderproduct->quantity,
                 ]);
+
+            $stock_checks = Stock::where('product_id', $orderproduct->product_id)->get();
+            foreach($stock_checks as $stock_check)
+            {
+                $stock_check->update([
+                    'r_qty' => $stock_check->r_qty + $orderproduct->quantity
+                ]);
+            }
+                
             }
             User::find($order->user->id)->delete();
             $order->delete();
@@ -530,6 +550,7 @@ class OrderController extends Controller
         }
         return redirect()->route('order')->with('permission', 'Permission Deny');
     }
+
     public function deliverystatus($id)
     {
         if(Auth::user()->role_id != 2) {

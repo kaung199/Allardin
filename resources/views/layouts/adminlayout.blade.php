@@ -217,6 +217,11 @@
         <i class="fas fa-mobile-alt text-success"></i>
           <span>Add Orders</span></a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" href="{{ route('stock-check') }}">
+          <i class="fas fa-battery-three-quarters text-danger"></i>
+          <span>Stock Check</span></a>
+      </li>
       @endif
       @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
         <li class="nav-item">
