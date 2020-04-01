@@ -24,6 +24,19 @@ class CustomerController extends Controller
          */
         public function store(Request $request)
         {
+            if ($request->name == null){
+                return response()->json([
+                    'message' => 'name is required, please try again.'
+                ], 404);
+            }elseif ($request->phone == null){
+                return response()->json([
+                    'message' => 'phone is required, please try again.'
+                ], 404);
+            }elseif ($request->address == null){
+                return response()->json([
+                    'message' => 'address is required, please try again.'
+                ], 404);
+            }
             $users = AppUser::where('phone', $request->phone)->get();
             if (count($users)>0){
                 return response()->json(['message' => 'phone is duplicate, please try again.'], 404);

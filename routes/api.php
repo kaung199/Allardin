@@ -59,3 +59,5 @@ Route::get('my_favorites', 'Api\FavoriteController@myFavorites');
 
 Route::get('count_favorite/{user_id?}', 'Api\CountController@count_favorite');
 Route::get('count_cart/{user_id?}', 'Api\CountController@count_cart');
+
+Route::get('pos_product', 'Api\POSProductController@index');
