@@ -331,7 +331,7 @@ class OrderController extends Controller
       $user_null = AppUser::find($request->user_id);
 
       if($user_null == null) {
-        return response()->json(['message' => 'not found user, please try again.'],404);
+        return response()->json(['message' => 'not found users, please try again.'],404);
       } 
 
       $orders = Order::orderBy('orders.id', 'desc')
@@ -343,7 +343,12 @@ class OrderController extends Controller
                         'created_at as order_date'
                         )
                       ->get();
-      return response()->json($orders, 200);    
+      if (count($orders)>0){
+          return response()->json($orders, 200);
+      }else{
+          return response()->json(['message' => 'not found order, please try again.'],404);
+      }
+
     }
 
     public function ordersPending(Request $request)
@@ -355,7 +360,7 @@ class OrderController extends Controller
       $user_null = AppUser::find($request->user_id);
 
       if($user_null == null) {
-        return response()->json(['message' => 'not found user, please try again.'],404);
+        return response()->json(['message' => 'not found users, please try again.'],404);
       } 
 
       $orders = Cart::orderBy('cart.id', 'desc')
