@@ -86,6 +86,10 @@ class FavoriteController extends Controller
 
             if (count($id)>0){
                 return response()->json($id);
+            }else{
+                return response()->json([
+                    'message' => '',
+                ], 204);
             }
         }else{
             return response()->json([
