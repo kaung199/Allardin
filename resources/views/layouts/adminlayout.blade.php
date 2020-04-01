@@ -211,7 +211,7 @@
         <i class="fas fa-id-card text-primary"></i>
           <span>Profile</span></a>
       </li>
-      @if(Auth::user()->role_id == 1)
+      @if(Auth::user()->role_id == 1 || Auth::user()->role_id == 2)
       <li class="nav-item">
         <a class="nav-link" href="{{ route('adminindex') }}">
         <i class="fas fa-mobile-alt text-success"></i>
