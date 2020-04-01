@@ -23,7 +23,7 @@ class CountController extends Controller
     public function count_cart($user_id){
         $session = Session::where('user_id', $user_id)->get();
         if (count($session)>0){
-            return response()->json(["count" => count($session)]);
+            return response()->json(["message" => count($session)]);
         }else{
             return response()->json([
                 'message' => 'not found add to cart, please try again.',
