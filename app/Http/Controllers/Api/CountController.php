@@ -22,9 +22,7 @@ class CountController extends Controller
             if (count($favorite)>0){
                 return response()->json(["count" => count($favorite)]);
             }else{
-                return response()->json([
-                    'count' => 0,
-                ], 404);
+                return response()->json(['count' => 0]);
             }
         }else{
             return response()->json([
@@ -45,9 +43,7 @@ class CountController extends Controller
             if (count($session)>0){
                 return response()->json(["count" => count($session)]);
             }else{
-                return response()->json([
-                    'count' => 0,
-                ], 404);
+                return response()->json(['count' => 0]);
             }
         }else{
             return response()->json([

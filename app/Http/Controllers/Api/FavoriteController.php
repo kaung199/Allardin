@@ -88,8 +88,8 @@ class FavoriteController extends Controller
                 return response()->json($id);
             }else{
                 return response()->json([
-                    'message' => '',
-                ], 204);
+                    'message' => 'not found favorite, please try again.',
+                ], 404);
             }
         }else{
             return response()->json([
