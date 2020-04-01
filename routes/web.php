@@ -47,6 +47,15 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
             return redirect()->route('dashboard');
         });
 
+
+        ///stock checked
+        Route::get('stock-check', 'StockController@index')->name('stock-check');
+        Route::get('search-stock-check', 'StockController@search')->name('search-stock-check');
+        Route::post('stock-check-create', 'StockController@store')->name('stock-check-create');
+        Route::patch('/stock-check-update/{id}', 'StockController@update')->name('stock-check-update');
+
+
+
         // voucher
         Route::get('voucher_data', 'VoucherController@index')->name('voucher_data');
         Route::get('voucher_search', 'VoucherController@order_search')->name('voucher_search');
