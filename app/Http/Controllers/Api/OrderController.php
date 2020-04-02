@@ -391,12 +391,20 @@ class OrderController extends Controller
                       ->join('cart_product', 'cart.id', '=', 'cart_product.cart_id')
                       ->join('townships', 'cart.township_id', '=', 'townships.id')
                       ->select(
-                        'cart.id as cart_id','cart.created_at as order_date', 
+                        'cart.id as cart_id','cart.created_at as order_date', 'townships.deliveryprice', 
                         DB::raw("SUM(cart_product.quantity) as quantity"), 
                         DB::raw("SUM(cart_product.price * cart_product.quantity) + townships.deliveryprice as totalprice"))
                       ->groupBy('cart.id')
                       ->groupBy('townships.deliveryprice')
                       ->groupBy('cart.created_at')->get();
+        foreach ($orders as $key=>$value){
+          $user = Cart::where('id', $value->cart_id)->first();
+          $orders[$key]['user_name'] = $user->name;
+          $orders[$key]['phone'] = $user->phone;
+          $orders[$key]['address'] = $user->address;
+          $orders[$key]['deliveryprice'] = $user->township->deliveryprice;
+          $value->totalprice += $user->deliveryprice;
+        }
       if (count($orders)>0){
         return response()->json($orders, 200);
       }else{
