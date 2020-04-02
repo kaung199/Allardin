@@ -194,6 +194,7 @@ class OrderController extends Controller
 
         if (count($session_user_id)>0){
             return response()->json($session_user_id);
+
         }else{
             return response()->json([
                 'message' => 'Your cart is empty, please try again.',
@@ -286,23 +287,32 @@ class OrderController extends Controller
         
     }
 
-    public function orderdetail($id)
+    public function orderdetail(Request $request)
     {
-      $order_null = Order::find($id);
+      if($request->order_id == null) {
+        $required = 'order_id is required, please try again.';
+        return response()->json(['message' => $required ], 404);
+      }
+
+      $order_null = Order::find($request->order_id);
       if($order_null == null) {
         return response()->json(['message' => 'not found orders, please try again.'],404);
       } 
 
-      $order = Order::where('orders.id', $id)
+      $order = Order::where('orders.id', $request->order_id)
                   ->join('order_details', 'order_details.order_id', '=', 'orders.id')
-                  ->join('products', 'order_details.product_id', '=', 'products.id')
-                  ->join('products_photos', 'products_photos.product_id', '=', 'products.id')
                   ->select('order_details.name as product_name',
-                  'products_photos.filename as photo',
                     'order_details.quantity',
+                    'order_details.product_id',
                     'order_details.price', 
                     'order_details.totalprice')
                   ->get();
+
+      foreach ($order as $key=>$value){
+        $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
+        $order[$key]["photo"] = $photo->filename;
+      }
+
       $grand_total = 0;
       foreach($order as $o) {
         $grand_total += $o->totalprice ;
@@ -342,11 +352,20 @@ class OrderController extends Controller
                       ->where('orders.app_user_id', $request->user_id)
                       ->select('id',
                         'order_id',
+                        'user_id as order_user_id',
                         'totalquantity',
                         'totalprice',
                         'created_at as order_date'
                         )
                       ->get();
+      foreach ($orders as $key=>$value){
+        $user = User::where('id', $value->order_user_id)->first();
+        $orders[$key]['user_name'] = $user->name;
+        $orders[$key]['phone'] = $user->phone;
+        $orders[$key]['address'] = $user->address;
+        $orders[$key]['deliveryprice'] = $user->township->deliveryprice;
+        $value->totalprice += $user->township->deliveryprice;
+      }
       if (count($orders)>0){
           return response()->json($orders, 200);
       }else{
@@ -372,23 +391,37 @@ class OrderController extends Controller
                       ->join('cart_product', 'cart.id', '=', 'cart_product.cart_id')
                       ->join('townships', 'cart.township_id', '=', 'townships.id')
                       ->select(
-                        'cart.id as cart_id','cart.created_at as order_date', 
+                        'cart.id as cart_id','cart.created_at as order_date', 'townships.deliveryprice', 
                         DB::raw("SUM(cart_product.quantity) as quantity"), 
                         DB::raw("SUM(cart_product.price * cart_product.quantity) + townships.deliveryprice as totalprice"))
                       ->groupBy('cart.id')
                       ->groupBy('townships.deliveryprice')
                       ->groupBy('cart.created_at')->get();
-      
-      return response()->json($orders, 200);    
+        foreach ($orders as $key=>$value){
+          $user = Cart::where('id', $value->cart_id)->first();
+          $orders[$key]['user_name'] = $user->name;
+          $orders[$key]['phone'] = $user->phone;
+          $orders[$key]['address'] = $user->address;
+          $orders[$key]['deliveryprice'] = $user->township->deliveryprice;
+          $value->totalprice += $user->deliveryprice;
+        }
+      if (count($orders)>0){
+        return response()->json($orders, 200);
+      }else{
+          return response()->json(['message' => 'Your order-pending is empty, please try again.'],404);
+      }   
     }
-    public function ordersPendingDetail($id)
+    public function ordersPendingDetail(Request $request)
     {
-      // dd($id);
-      $cart_null = Cart::find($id);
+      if($request->cart_id == null) {
+        $required = 'cart_id is required, please try again.';
+        return response()->json(['message' => $required ], 404);
+      }
+      $cart_null = Cart::find($request->cart_id);
       if($cart_null == null) {
         return response()->json(['message' => 'not found cart, please try again.'],404);
       } 
-      $orders = Cart_product::where('cart_product.cart_id', $id)
+      $orders = Cart_product::where('cart_product.cart_id', $request->cart_id)
                     ->join('products', 'cart_product.product_id', '=', 'products.id')
                       ->select(
                         'products.id as product_id',
@@ -535,6 +568,7 @@ class OrderController extends Controller
     public function deleteorder($id)
     {
       $order = Order::find($id);
+
       foreach($order['orderdetails'] as $orderdetail) {
         $product = Product::find($orderdetail['product_id']);
         $product->update([
