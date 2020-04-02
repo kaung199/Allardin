@@ -164,7 +164,7 @@ class OrderController extends Controller
       }
       $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
       if($session_user_id == null) {
-        return response()->json(['message' => "not found add to cart, please try again."],404);
+        return response()->json(['message' => "Your cart is empty, please try again."],404);
       }
       $session_user_id->delete();
       return response()->json(['message'=> 'success'],200);
@@ -196,7 +196,7 @@ class OrderController extends Controller
             return response()->json($session_user_id);
         }else{
             return response()->json([
-                'message' => 'not found session, please try again.',
+                'message' => 'Your cart is empty, please try again.',
             ], 404);
         }
 
@@ -240,7 +240,7 @@ class OrderController extends Controller
         $sessions = Session::where('user_id', $product['user_id'])->get()->toArray();
 
         if($sessions == null) {
-          return response()->json([ 'message' => 'cart is empty, please try again.'], 404);
+          return response()->json([ 'message' => 'Your cart is empty, please try again.'], 404);
         }
         foreach($sessions as $s) {
 
@@ -290,7 +290,7 @@ class OrderController extends Controller
     {
       $order_null = Order::find($id);
       if($order_null == null) {
-        return response()->json(['message' => 'not found order, please try again.'],404);
+        return response()->json(['message' => 'not found orders, please try again.'],404);
       } 
 
       $order = Order::where('orders.id', $id)
@@ -350,7 +350,7 @@ class OrderController extends Controller
       if (count($orders)>0){
           return response()->json($orders, 200);
       }else{
-          return response()->json(['message' => 'not found order, please try again.'],404);
+          return response()->json(['message' => 'Your order is empty, please try again.'],404);
       }
 
     }
