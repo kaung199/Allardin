@@ -358,9 +358,12 @@ class OrderController extends Controller
                         'created_at as order_date'
                         )
                       ->get();
-
       foreach ($orders as $key=>$value){
         $user = User::where('id', $value->order_user_id)->first();
+        $orders[$key]['user_name'] = $user->name;
+        $orders[$key]['phone'] = $user->phone;
+        $orders[$key]['address'] = $user->address;
+        $orders[$key]['deliveryprice'] = $user->township->deliveryprice;
         $value->totalprice += $user->township->deliveryprice;
       }
       if (count($orders)>0){
