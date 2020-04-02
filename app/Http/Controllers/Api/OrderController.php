@@ -307,6 +307,7 @@ class OrderController extends Controller
                     'order_details.price', 
                     'order_details.totalprice')
                   ->get();
+
       foreach ($order as $key=>$value){
         $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
         $order[$key]["photo"] = $photo->filename;
@@ -393,8 +394,11 @@ class OrderController extends Controller
                       ->groupBy('cart.id')
                       ->groupBy('townships.deliveryprice')
                       ->groupBy('cart.created_at')->get();
-      
-      return response()->json($orders, 200);    
+      if (count($orders)>0){
+        return response()->json($orders, 200);
+      }else{
+          return response()->json(['message' => 'Your order-pending is empty, please try again.'],404);
+      }   
     }
     public function ordersPendingDetail(Request $request)
     {
