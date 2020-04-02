@@ -31,8 +31,8 @@ Route::get('session', 'Api\OrderController@session');
 Route::get('show_cart', 'Api\OrderController@show_cart');
 Route::get('remove_cart', 'Api\OrderController@remove_cart');
 
-Route::get('/getorderdetail/{id}', 'Api\OrderController@orderdetail');
-Route::get('/getorder-pending-detail/{id}', 'Api\OrderController@ordersPendingDetail');
+Route::get('/getorderdetail', 'Api\OrderController@orderdetail');
+Route::get('/getorder-pending-detail', 'Api\OrderController@ordersPendingDetail');
 
 
 Route::get('getorder', 'Api\OrderController@orders');
