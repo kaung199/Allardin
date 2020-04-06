@@ -78,11 +78,9 @@ class CustomerController extends Controller
 
             if (is_null($user)) {
                 $response = [
-                    'success' => false,
-                    'data' => 'Empty',
-                    'message' => 'User not found.'
+                    'message' => 'not found user, please try again.'
                 ];
-                return response()->json($response, 401);
+                return response()->json($response);
             }
 
             return response()->json($user, 200);
