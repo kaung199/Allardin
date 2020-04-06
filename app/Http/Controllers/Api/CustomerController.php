@@ -137,4 +137,51 @@ class CustomerController extends Controller
             $data = $user->toArray();
             return response()->json($data, 200);
         }
+
+        public function phoneCheck(Request $request){
+            if ($request->phone == null){
+                return response()->json([
+                    'message' => 'phone is required, please try again.'
+                ], 404);
+            }
+            $user = AppUser::where('phone', $request->phone)->first();
+            if (is_null($user)){
+                return response()->json([
+                    'message' => 'not found phone, please try again.',
+                ]);
+            }else{
+                return response()->json([
+                    'message' => 'success',
+                ]);
+            }
+        }
+
+        public function profile(Request $request){
+            if ($request->user_id == null){
+                return response()->json([
+                    'message' => 'user id is required, please try again.'
+                ], 404);
+            }elseif ($request->name == null){
+                return response()->json([
+                    'message' => 'name is required, please try again.'
+                ], 404);
+            }elseif ($request->address == null){
+                return response()->json([
+                    'message' => 'address is required, please try again.'
+                ], 404);
+            }
+
+            $users = AppUser::where('id', $request->user_id)->get();
+            if (count($users)>0){
+                $user = AppUser::find($request->user_id);
+                $user->name = $request->name;
+                $user->address = $request->address;
+                $user->save();
+                return response()->json(['message' => 'success', 'id' => $user->id]);
+            }else{
+                return response()->json([
+                    'message' => 'registration failed, please try again.',
+                ], 404);
+            }
+        }
 }
