@@ -145,11 +145,11 @@ class CustomerController extends Controller
             $user = AppUser::where('phone', $request->phone)->first();
             if (is_null($user)){
                 return response()->json([
-                    'message' => 'not found phone, please try again.',
+                    'message' => 0,
                 ]);
             }else{
                 return response()->json([
-                    'message' => 'success',
+                    'message' => 1,
                 ]);
             }
         }
