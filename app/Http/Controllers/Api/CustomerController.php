@@ -150,6 +150,7 @@ class CustomerController extends Controller
             }else{
                 return response()->json([
                     'message' => 1,
+                    'id' => $user->id,
                 ]);
             }
         }
