@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Api;
 
 use App\AppUser;
+use App\Favorite;
+use App\Session;
 use App\User;
 use Validator;
 use Illuminate\Http\Request;
@@ -182,5 +184,14 @@ class CustomerController extends Controller
                     'message' => 'registration failed, please try again.',
                 ], 404);
             }
+        }
+
+        public function delete_user(){
+            AppUser::truncate();
+            Favorite::truncate();
+            Session::truncate();
+            return response()->json([
+                'message' => 'all delete',
+            ], 404);
         }
 }

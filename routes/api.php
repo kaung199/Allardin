@@ -64,3 +64,4 @@ Route::get('count_favorite', 'Api\CountController@count_favorite');
 Route::get('count_cart', 'Api\CountController@count_cart');
 
 Route::get('pos_product', 'Api\POSProductController@index');
+Route::get('delete_user', 'Api\CustomerController@delete_user');
