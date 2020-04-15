@@ -97,10 +97,21 @@ class OrderController extends Controller
       $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
 
         if($product->quantity < $request->quantity){
-            return response()->json(
-                [
-                    'message' => 'out of stock, please try again.'
-                ], 404);
+            if (isset($request->status)){
+                return response()->json(
+                    [
+                        'quantity' => $product->quantity,
+                        'price' => $product->price,
+                        'total_price' => $product->quantity * $product->price,
+                        'message' => 'out of stock, please try again.'
+                    ], 200);
+            }else{
+                return response()->json(
+                    [
+                        'message' => 'out of stock, please try again.'
+                    ], 404);
+            }
+
         }
 
       if($session_user_id == null) {
