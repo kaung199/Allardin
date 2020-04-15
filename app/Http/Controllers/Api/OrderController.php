@@ -96,24 +96,11 @@ class OrderController extends Controller
 
       $session_user_id = Session::where('user_id', $request->user_id)->where('product_id', $request->product_id)->first();
 
-        if(isset($request->status)) {
-            $sum = $request->quantity + $session_user_id->quantity;
-            if($product->quantity < $sum){
-                return response()->json(
-                    [
-                        'quantity' => $session_user_id->quantity,
-                        'price' => $session_user_id->price,
-                        'total_price' => $session_user_id->total_price,
-                        'message' => 'out of stock, please try again.'
-                    ], 404);
-            }
-        }else{
-            if($product->quantity < $request->quantity){
-                return response()->json(
-                    [
-                        'message' => 'out of stock, please try again.'
-                    ], 404);
-            }
+        if($product->quantity < $request->quantity){
+            return response()->json(
+                [
+                    'message' => 'out of stock, please try again.'
+                ], 404);
         }
 
       if($session_user_id == null) {
@@ -141,6 +128,14 @@ class OrderController extends Controller
                   'total_price' => $request->quantity * $product->price
               ], 200);
           } else {
+              $sum = $request->quantity + $session_user_id->quantity;
+              if($product->quantity < $sum){
+                  return response()->json(
+                      [
+                          'message' => 'out of stock, please try again.'
+                      ], 404);
+              }
+
               $session_user_id->update([
                   'quantity' => $session_user_id->quantity + $request->quantity,
                   'total_price' => $session_user_id->total_price + $request->quantity * $product->price
