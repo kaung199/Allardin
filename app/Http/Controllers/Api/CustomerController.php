@@ -162,10 +162,6 @@ class CustomerController extends Controller
                 return response()->json([
                     'message' => 'user id is required, please try again.'
                 ], 404);
-            }elseif ($request->name == null){
-                return response()->json([
-                    'message' => 'name is required, please try again.'
-                ], 404);
             }elseif ($request->address == null){
                 return response()->json([
                     'message' => 'address is required, please try again.'
@@ -175,7 +171,6 @@ class CustomerController extends Controller
             $users = AppUser::where('id', $request->user_id)->get();
             if (count($users)>0){
                 $user = AppUser::find($request->user_id);
-                $user->name = $request->name;
                 $user->address = $request->address;
                 $user->save();
                 return response()->json(['message' => 'success', 'id' => $user->id]);
