@@ -940,10 +940,16 @@ class OrderController extends Controller
 
     public function search(Request $request) 
     {
+        // dd($request->all());
         $from = $request->from;
         $to = $request->to;
         $deliveries = User::where('role_id', 3)->pluck('name', 'id');
-        $orders = Order::whereBetween('orderdate', [$from, $to])->orderBy('dname')->paginate(15);;
+        if($request->search_by == 'delivery_date') {            
+            $orders = Order::whereBetween('deliveryDate', [$from, $to])->orderBy('dname')->paginate(15);
+        }
+        if($request->search_by == 'order_date') {
+            $orders = Order::whereBetween('orderdate', [$from, $to])->orderBy('dname')->paginate(15);
+        }
         return view('orders.index', \compact('orders', 'deliveries', 'from', 'to'));  
     }
     public function searcho(Request $request) 

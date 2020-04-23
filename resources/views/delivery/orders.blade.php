@@ -119,7 +119,7 @@
                     <a href="{{ route('deliverystatus', $c->id) }}" class="btn btn-outline-info">Payment</a>
                     @endif
                     @if($c->deliverystatus == 4)
-                    <a class="btn btn-outline-success text-success">Complete</a>
+                    <a href="{{ route('deliverystatus', $c->id) }}" class="btn btn-outline-success text-success">Complete</a>
                     @endif
                 </td>
                 @else
@@ -252,7 +252,7 @@
                     <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-info">Payment</a>
                     @endif
                     @if($order->deliverystatus == 4)
-                    <a class="btn btn-outline-success text-success">Complete</a>
+                    <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-success text-success">Complete</a>
                     @endif
                 </td>
                 @else
