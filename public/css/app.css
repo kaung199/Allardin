@@ -6,6 +6,42 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+ a:hover {
+   cursor: pointer;
+ }
+ .printarea {
+	display: none;
+}
+.Bshow img{
+	width: 216px;
+}
+@media print {
+
+	body * {
+		visibility: hidden;
+	}
+
+	.printarea {
+	  display: block;
+	  top: 0;
+	  width: 100%;
+	  position: absolute;
+	}
+
+	.Bshow {
+	  top: 0;
+	  float: left !important;
+	  position: absolute;
+	  
+	}
+
+	.printarea *, .Bshow *{
+		visibility: visible;
+	   
+	}
+	
+
+}
 
 :root {
   --blue: #3490dc;

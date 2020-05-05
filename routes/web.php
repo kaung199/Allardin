@@ -47,7 +47,16 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
             return redirect()->route('dashboard');
         });
 
-
+        //pos
+        Route::post('/load_data', 'PosSaleController@load_data')->name('load_data');
+        Route::get("salesload/data",'PosSaleController@pageload');
+        Route::get('/pos', 'PosSaleController@pos')->name('pos');
+        Route::get("sales/data", 'PosSaleController@data');
+        Route::get("sales/remove", 'PosSaleController@remove');
+        Route::get("sales/allremove", 'PosSaleController@allremove');
+        Route::post("sales/confirm", 'PosSaleController@confirm');
+        Route::get("salesqualtity/qtyadd",'PosSaleController@qtyadd');
+        
         ///stock checked
         Route::get('stock-check', 'StockController@index')->name('stock-check');
         Route::get('search-stock-check', 'StockController@search')->name('search-stock-check');
@@ -229,6 +238,7 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
         Route::get('orderdetailpo/{id}', 'AccountController@orderdetailo')->name('orderdetailpo');
 
     });
+
 
 
     Route::get('/{vue_capture?}', function () {
