@@ -59,6 +59,17 @@ class DeliveryController extends Controller
                 ]);
                 return redirect('deliveries');
             }
+            if($request->role == pos) {
+                User::create([
+                    'name' => $request->name,
+                    'email' => $request->email,
+                    'phone' => $request->phone,
+                    'address' => $request->address,
+                    'role_id' => 5,
+                    'password' => Hash::make($request->password),
+                ]);
+                return redirect('admin');
+            }
         }
          return abort(404);
     }

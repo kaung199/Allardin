@@ -26,10 +26,51 @@
     </head>
 <body>
   <div class="adminindex">
-    <nav class="navbar  bg-danger">
-    <a href="{{route('pos')}}" class="text-white">
-        <span class="navbar-brand mb-0 h1">Kitchen Venus</span>
-    </a>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <a class="navbar-brand" href="{{ route('pos') }}">Kitchen Venus</a>
+  
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            @if(Auth::user()->role_id == 1)
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('dashboard') }}">
+                  <i class="fas fa-home fa-fw"></i>Home <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            @endif
+            <li class="nav-item">
+              <a class="nav-link" href="{{ route('report') }}">
+                <i class="fas fa-search-dollar"></i>SaleReport <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            @if(Auth::user()->role_id == 1)
+            <li class="nav-item">
+            <a class="nav-link" href="{{ route('total-sale') }}">
+              <i class="fas fa-file-pdf"></i> DailyTotalSale <span class="sr-only">(current)</span>
+            </a>
+            @endif
+            </li>
+            <li class="nav-item dropdown no-arrow">
+                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="fas fa-user-circle fa-fw"></i>{{ Auth::user()->name }}
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+                  <a class="dropdown-item">{{ Auth::user()->name }}</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="{{ route('logout') }}"
+                      onclick="event.preventDefault();
+                                    document.getElementById('logout-form').submit();">
+                      {{ __('Logout') }}
+                  </a>
+        
+                  <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                      @csrf
+                  </form>
+                </div>
+              </li>
+            
+          </ul>
+        </div>
       </nav>
 
         <div class="container pt-5 pb-5" style="min-height:900px">

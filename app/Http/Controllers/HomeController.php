@@ -43,8 +43,11 @@ class HomeController extends Controller
             case 4:
                     return redirect('/orderpreparep');
                 break;
+            case 5:
+                    return redirect('/pos');
+                break;
             default:
-                    return '/login'; 
+                    return '/admin'; 
                 break;
         }
     }

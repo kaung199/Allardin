@@ -350,6 +350,7 @@
                             var change_amount = paid - grand_total;
                             $('#change_amount').val(change_amount);
                         });
+                        $("#productcode").val("");
                     }
                     else
                     {
@@ -361,6 +362,7 @@
                                 popup: 'animated tada'
                             }
                         });
+                        $("#productcode").val("");
                     }
                 });
         }
