@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use App\Role;
-class PosTableSeeder extends Seeder
+class Pos extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,7 +12,7 @@ class PosTableSeeder extends Seeder
     public function run()
     {
         Role::create([
-            'name' => 'POS'
+            'name' => 'POS-Admin'
         ]);
     }
 }
