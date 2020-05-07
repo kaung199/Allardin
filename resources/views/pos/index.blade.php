@@ -340,7 +340,7 @@
                             var quantity = value['quantity'];
                             var price = value['price'];
                             var total = value['total'];
-                            html += '<tr class="'+product_id+'"><td>'+code+'</td><td>'+name+'</td><td><input type="number" autocomplete="off" size="3" name="quantity" id="qty'+product_id+'" value="'+quantity+'" style="width:50px;height:30px;text-align: center;" class="_qty" data-code="'+name+'"></td><td>'+price+'</td><td>'+total+'</td><td><a class="btn btn-danger" id="'+product_id+'" data-rowid="'+code+'"><i class="fa fa-trash"></i></a></td></tr>';
+                            html += '<tr class="'+product_id+'"><td>'+code+'</td><td>'+name+'</td><td><input type="number" autocomplete="off" size="3" name="quantity" id="qty'+product_id+'" value="'+quantity+'" style="width:50px;height:30px;text-align: center;" class="_qty" data-code="'+name+'"></td><td>'+price+'</td><td>'+total+'</td><td><a class="btn btn-danger _delete" id="'+product_id+'" data-rowid="'+product_id+'"><i class="fa fa-trash"></i></a></td></tr>';
                         });
                         $("#sales_table").html(html);
                         var grand_total = json.grand_total;
