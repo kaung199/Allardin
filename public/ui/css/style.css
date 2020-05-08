@@ -4,6 +4,14 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 */
+
+.getapp {
+	background-image: url(https://i.ibb.co/LR9C8k2/ios-banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center center;
+}
 .add-to-cart-button {
     width: 100%;
     color: #ffffff;
