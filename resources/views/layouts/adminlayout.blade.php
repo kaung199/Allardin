@@ -217,6 +217,18 @@
         <i class="fas fa-mobile-alt text-success"></i>
           <span>Add Orders</span></a>
       </li>
+      @if(Auth::user()->role_id == 1)
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="fas fa-file-pdf text-info"></i>
+          <span>POS Reports</span>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+          <a class="dropdown-item" href="{{ route('report') }}">Sale Report</a>
+          <a class="dropdown-item" href="{{ route('total-sale') }}">Daily Totalsale</a>
+        </div>
+      </li>
+      @endif
       <li class="nav-item">
         <a class="nav-link" href="{{ route('stock-check') }}">
           <i class="fas fa-battery-three-quarters text-danger"></i>
@@ -230,6 +242,7 @@
             <span>Barcode</span></a>
         </li>
       @endif
+      
     </ul>
 
     <div id="content-wrapper">

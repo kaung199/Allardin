@@ -26,6 +26,10 @@
                 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('searchbydate') }}" method="GET">
                     @csrf
                     <div class="input-group">
+                    <select name="search_by">
+                        <option value="delivery_date">Delivery Date</option>
+                        <option value="order_date">Order Date</option>
+                    </select> &nbsp;&nbsp;
                     <label for="from">From</label>
                     <input type="date" data-date-inline-picker="true" style="box-shadow: none;" name="from" class="form-control" aria-label="Search" aria-describedby="basic-addon2">
                     <label for="to">To</label>
@@ -160,7 +164,7 @@
                             <a href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-info">Payment</a>
                             @endif
                             @if($order->deliverystatus == 4)
-                            <a  class="btn btn-outline-success text-success">Complete</a>
+                            <a  href="{{ route('deliverystatus', $order->id) }}" class="btn btn-outline-success text-success">Complete</a>
                             @endif
                         @else
                                 @if($order->deliverystatus == 1)

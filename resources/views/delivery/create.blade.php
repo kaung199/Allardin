@@ -32,6 +32,7 @@
                 <option value="Admin">Admin</option>
                 <option value="Order">Order</option>
                 <option value="Delivery">Delivery</option>
+                <option value="pos">POS</option>
             </select>
             @error('role')
                 <div class="alert alert-danger">{{ $message }}</div>
