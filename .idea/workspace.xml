@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59c6330e-f9d5-4d8e-9968-7ef68406e2ef" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/select2.min.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/select2.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/views/adv_products/index.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/ProductController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/resources/views/layouts/adminlayout.blade.php" afterPath="$PROJECT_DIR$/resources/views/layouts/adminlayout.blade.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/web.php" afterPath="$PROJECT_DIR$/routes/web.php" />
-    </list>
+    <list default="true" id="59c6330e-f9d5-4d8e-9968-7ef68406e2ef" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -409,12 +401,12 @@
       <workItem from="1587439041321" duration="2250000" />
       <workItem from="1587445904668" duration="2751000" />
       <workItem from="1588908214128" duration="1459000" />
-      <workItem from="1588993483459" duration="21417000" />
+      <workItem from="1588993483459" duration="21492000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="288102000" />
+    <option name="totallyTimeSpent" value="288177000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
