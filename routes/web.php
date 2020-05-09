@@ -207,6 +207,10 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
 
         // Barcode
         Route::get('barcode', 'BarcodeController@barcode')->name('barcode');
+
+        //Advertise
+        Route::resource('adv_products', 'AdvertiseProductController');
+
     });
 
    

@@ -22,7 +22,7 @@
 
   <!-- Custom styles for this template-->
   <link href="/css/sb-admin.css" rel="stylesheet">
-
+  @yield('head')
 </head>
 
 <body id="page-top"> 
@@ -242,6 +242,13 @@
             <span>Barcode</span></a>
         </li>
       @endif
+      @if(Auth::user()->role_id == 1)
+        <li class="nav-item">
+          <a class="nav-link" href="{{ route('adv_products.index') }}">
+            <i class="fas fa-shopping-bag text-success"></i>
+            <span>Advertise Products</span></a>
+        </li>
+      @endif
       
     </ul>
 
@@ -316,7 +323,7 @@
 
   <!-- Custom scripts for all pages-->
   <script src="{{ asset('/tjs/sb-admin.min.js') }}"></script>
-
+  @yield('script')
 </body>
 
 </html>
