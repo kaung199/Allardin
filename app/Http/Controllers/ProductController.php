@@ -24,6 +24,16 @@ class ProductController extends Controller
         $products = Product::latest()->paginate(15);
         return view('products.index',compact('products'));
     }
+    public function min()
+    {
+        return view('products.min');
+    }
+    public function product_min_search(Request $request)
+    {
+        $products = Product::where('quantity', '<=', $request->qty)->paginate(20);
+        // $product->appends($request->all());
+        return view('products.min', \compact('products'));
+    }
     public function cart_product($id)
     {
         $cart = session()->get('order_cart');

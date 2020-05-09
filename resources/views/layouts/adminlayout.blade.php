@@ -149,6 +149,11 @@
           <span>Products</span></a>
       </li>
       <li class="nav-item">
+        <a class="nav-link" href="{{ route('product-min') }}">
+        <i class="fas fa-umbrella text-primary"></i>
+          <span>Products Min</span></a>
+      </li>
+      <li class="nav-item">
         <a class="nav-link" href="{{ url('townships') }}">
         <i class="fas fa-city text-warning"></i>
           <span>Townships</span></a>
