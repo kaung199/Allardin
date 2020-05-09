@@ -30,8 +30,8 @@ class ProductController extends Controller
     }
     public function product_min_search(Request $request)
     {
-        $products = Product::where('quantity', '<=', $request->qty)->paginate(100);
-        // $product->appends(['search' => $request->qty]);
+        $products = Product::where('quantity', '<=', $request->qty)->paginate(20);
+        // $product->appends($request->all());
         return view('products.min', \compact('products'));
     }
     public function cart_product($id)

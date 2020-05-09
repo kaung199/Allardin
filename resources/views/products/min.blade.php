@@ -8,6 +8,7 @@
 @endsection
 @section('contents') 
 <form action="{{ route('product-min-search') }}" method="GET">
+    @csrf
     <div class="o">
         <input type="number" name="qty" required>
         <button>search </button>
@@ -66,7 +67,7 @@
     </tbody>
     </table>
 </div>
-<div class="text-center">{{ $products->links() }}</div>
+<div class="text-center">{{ $products->appends(Request::only('qty'))->links() }}</div>
 @endif
    
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2"></script>
@@ -80,6 +81,25 @@
                     }
                 })      
         @endif
+
+        // function myFunction() {
+        //     var input, filter, table, tr, td, i, txtValue;
+        //     input = document.getElementById("myInput");
+        //     filter = input.value.toUpperCase();
+        //     table = document.getElementById("myTable");
+        //     tr = table.getElementsByTagName("tr");
+        //     for (i = 0; i < tr.length; i++) {
+        //         td = tr[i].getElementsByTagName("td")[0];
+        //         if (td) {
+        //         txtValue = td.textContent || td.innerText;
+        //         if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        //             tr[i].style.display = "";
+        //         } else {
+        //             tr[i].style.display = "none";
+        //         }
+        //         }       
+        //     }
+        // }
     
     </script>
 
