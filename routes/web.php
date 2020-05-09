@@ -51,7 +51,9 @@ Route::group(['middleware' => ['auth', 'admin', 'superadmin']], function ()
             return redirect()->route('dashboard');
         });
 
-        
+        //products min
+        Route::get('product-min', 'ProductController@min')->name('product-min');
+        Route::get('product-min-search', 'ProductController@product_min_search')->name('product-min-search');
         
         ///stock checked
         Route::get('stock-check', 'StockController@index')->name('stock-check');
