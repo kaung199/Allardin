@@ -23,6 +23,10 @@ Route::get('/orderlayout', function () {
     return view('layouts/orderprepare');
 });
 
+Route::get('/getapp', function () {
+    return view('products/getapp');
+});
+
 
 // Route::get('/vueui/{any}', function () {
 //     return view('home');
