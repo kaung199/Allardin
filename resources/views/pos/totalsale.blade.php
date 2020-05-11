@@ -9,9 +9,10 @@
 @section('contents') 
 <div class="row">
     <div class="col-md-6">
+        <input type="text" name='search' style="width:400px;outline:none;" id="myInput"  onkeyup="myFunction()">
     </div>
     <div class="col-md-6">
-        <div class="folat-right" style="float: right;">
+        <div class="folat-right" style="float:right;">
             <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0" action="{{ route('total-sale') }}" method="GET">
                 @csrf
                 <div class="input-group">
@@ -29,7 +30,7 @@
         </div>
     </div>
 </div>
-<table class="table table-striped table-bordered">
+<table class="table table-striped table-bordered" id="myTable">
     <thead>
     <tr>
         <th>Name</th>
@@ -61,6 +62,27 @@
         <th class="text-right">{{ $gt }}</th>
     </tr>
 </table>
-
-     
+<script>
+    function myFunction() {
+            var input, filter, table, tr, td, td1, i, txtValue;
+            input = document.getElementById("myInput");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("myTable");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                td1 = tr[i].getElementsByTagName("td")[1];
+                if (td || td1) {
+                txtValue = td.textContent || td.innerText;
+                txtValue1 = td1.textContent || td1.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1 || txtValue1.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+                }       
+                       
+            }
+        }
+</script>
 @endsection
