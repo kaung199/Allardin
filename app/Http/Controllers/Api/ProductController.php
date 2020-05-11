@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\Api;
+use App\AdvertiseProduct;
 use App\Favorite;
 use App\Product;
 use App\ProductsPhoto;
@@ -15,26 +16,29 @@ class ProductController extends Controller
 {
         public function index(Request $request)
         {
-            $products = Product::select('id as product_id', 'name as product_name', 'price')
+            $products = Product::select('id as product_id', 'name as product_name', 'price');
+            $adv_products = AdvertiseProduct::select('id as product_id', 'name as product_name', 'price')
+                ->union($products)
                 ->inRandomOrder()
                 ->where('quantity', '!=', 0)
                 ->paginate(20);
-            foreach ($products as $key=>$value){
+
+            foreach ($adv_products as $key=>$value){
                 $photo = ProductsPhoto::where('product_id', $value->product_id)->first();
-                $products[$key]["photo"] = $photo->filename;
+                $adv_products[$key]["photo"] = $photo->filename;
             }
-            foreach ($products as $key=>$value){
+            foreach ($adv_products as $key=>$value){
                 $favorite = Favorite::where('product_id', $value->product_id)
                     ->where('user_id', $request->user_id)
                     ->first();
                 if ($favorite->status == null){
-                    $products[$key]["status"] = 0;
+                    $adv_products[$key]["status"] = 0;
                 }else{
-                    $products[$key]["status"] = $favorite->status;
+                    $adv_products[$key]["status"] = $favorite->status;
                 }
             }
 
-            return response()->json($products, 200);
+            return response()->json($adv_products,200);
         }
 
         /**
